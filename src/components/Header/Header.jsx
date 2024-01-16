@@ -21,7 +21,7 @@ export const Header = () => {
                             <Link to='/services'>{t('header.services')}</Link>
                         </li>
                         <li>
-                            <Link to='/services'>{t('header.artbook')}</Link>
+                            <Link to='/artbook'>{t('header.artbook')}</Link>
                         </li>
                         <li>
                             <Link to='/services'>{t('header.history')}</Link>
