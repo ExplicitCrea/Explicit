@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const StyledLayout = styled.main`
+const StyledLayout = styled.div`
 
 `
 
