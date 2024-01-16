@@ -1,10 +1,14 @@
+import { Outlet } from 'react-router-dom'
+import { Header } from '../Header/Header'
 import StyledLayout from './StyledLayout'
+import usePreventZoom from '../../utils/usePreventZoom';
 
-export const Layout = ({children}) => {
+export const Layout = () => {
+    usePreventZoom();
     return (
         <StyledLayout>
-            <h1>Layout</h1>
-            {children}
+            <Header/>
+            <Outlet/>
         </StyledLayout>
     )
 }
