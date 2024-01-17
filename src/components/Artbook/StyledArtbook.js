@@ -11,7 +11,7 @@ const StyledGrid = styled.div`
   display: grid;
   width: 100%;
   grid-template-rows: 0.5fr 0.5fr 0.5fr;
-  grid-template-columns: repeat(11, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   gap: 12px;
   position: relative;
 `;
@@ -40,7 +40,7 @@ const StyledBruceGrannec = styled.img`
   object-fit: cover;
   border-radius: 10px;
   grid-row: 1;
-  grid-column: 7 / span 3;
+  grid-column: 7 / span 4;
   object-position: top;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
@@ -56,7 +56,7 @@ const StyledGg = styled.img`
   object-fit: cover;
   border-radius: 10px;
   grid-row: 1;
-  grid-column: 10 / span 2;
+  grid-column: 11 / span 2;
   background-color: purple;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
@@ -66,14 +66,14 @@ const StyledGg = styled.img`
 `;
 
 const StyledLoreal = styled.img`
-  width: 150%;
+  width: 89%;
   height: 100%;
   max-width: 100%;
   max-height: 100%;
   object-fit: cover;
   border-radius: 10px;
   grid-row: 2;
-  grid-column: 1 / span 3;
+  grid-column: 1 / span 4;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
   &:hover {
@@ -82,14 +82,14 @@ const StyledLoreal = styled.img`
 `;
 
 const StyledPg = styled.img`
-  width: 100%;
+  width: 80%;
+  position: relative;
+  left: 20%;
   height: 100%;
-  max-width: 100%;
-  max-height: 100%;
   object-fit: cover;
   border-radius: 10px;
   grid-row: 2;
-  grid-column: 4 / span 2;
+  grid-column: 4 / span 3;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
   &:hover {
@@ -105,7 +105,7 @@ const StyledLeGrandJd = styled.img`
   object-fit: cover;
   border-radius: 10px;
   grid-row: 2;
-  grid-column: 6 / span 4;
+  grid-column: 7 / span 4;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
   &:hover {
@@ -121,7 +121,7 @@ const StyledVzion = styled.img`
   object-fit: cover;
   border-radius: 10px;
   grid-row: 2;
-  grid-column: 10 / span 2;
+  grid-column: 11 / span 2;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
   &:hover {
@@ -164,7 +164,7 @@ const StyledWrldMag = styled.img`
 const StyledTheguill = styled.img`
   position: absolute;
   top: 0;
-  width: 80%;
+  width: 100%;
   height: 45%;
   max-width: 100%;
   max-height: 100%;
@@ -181,13 +181,13 @@ const StyledTheguill = styled.img`
 
 const StyledPota = styled.img`
   width: 100%;
-  height: 47.5%;
+  height: 45%;
   object-fit: cover;
   max-width: 100%;
   max-height: 100%;
   border-radius: 10px;
   grid-row: 3;
-  grid-column: 9 / span 1;
+  grid-column: 10 / span 1;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
   &:hover {
@@ -205,7 +205,7 @@ const StyledEdenLz = styled.img`
   object-fit: cover;
   border-radius: 10px;
   grid-row: 3;
-  grid-column: 10 / span 2;
+  grid-column: 11/ span 2;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
   &:hover {
@@ -215,16 +215,16 @@ const StyledEdenLz = styled.img`
 
 const StyledPaltay = styled.img`
   width: 100%;
-  height: 45%;
+  height: 50%;
   max-width: 100%;
   max-height: 100%;
   position: absolute;
-  bottom: 5%;
+  bottom: 0%;
   object-fit: cover;
   border-radius: 10px;
   object-position: right;
   grid-row: 3;
-  grid-column: 5 / span 7;
+  grid-column: 5 / span 8;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
   &:hover {
