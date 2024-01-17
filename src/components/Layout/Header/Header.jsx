@@ -1,7 +1,7 @@
 import StyledHeader from './StyledHeader'
-import logo from '../../assets/logo-header.png'
-import gb from '../../assets/gb.svg'
-import fr from '../../assets/fr.svg'
+import logo from '../../../assets/logo-header.png'
+import gb from '../../../assets/gb.svg'
+import fr from '../../../assets/fr.svg'
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
