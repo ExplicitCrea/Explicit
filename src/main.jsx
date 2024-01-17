@@ -5,7 +5,7 @@ import './utils/i18n';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { Home } from './pages/Home/Home.jsx'
 import { Layout } from './components/Layout/Layout.jsx';
-import { ArtbookPage } from './pages/ArtbookPage/ArtbookPage.jsx';
+import { Services } from './pages/Services/Services.jsx';
 
 const router = createBrowserRouter([
   {
@@ -17,8 +17,8 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: '/artbook',
-        element: <ArtbookPage/>
+        path: '/services',
+        element: <Services/>,
       }
     ],
   },
