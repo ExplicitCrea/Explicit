@@ -4,6 +4,7 @@ const StyledArtbook = styled.div`
   width: 100%;
   height: 100%;
   padding: 20px;
+  z-index: 50;
 `;
 
 const StyledGrid = styled.div`
@@ -24,6 +25,11 @@ const StyledOlympics = styled.img`
   border-radius: 10px;
   grid-row: 1;
   grid-column: 1 / span 6;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 const StyledBruceGrannec = styled.img`
@@ -36,6 +42,11 @@ const StyledBruceGrannec = styled.img`
   grid-row: 1;
   grid-column: 7 / span 3;
   object-position: top;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 const StyledGg = styled.img`
   width: 100%;
@@ -47,6 +58,11 @@ const StyledGg = styled.img`
   grid-row: 1;
   grid-column: 10 / span 2;
   background-color: purple;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 const StyledLoreal = styled.img`
@@ -58,6 +74,11 @@ const StyledLoreal = styled.img`
   border-radius: 10px;
   grid-row: 2;
   grid-column: 1 / span 3;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 const StyledPg = styled.img`
@@ -69,6 +90,11 @@ const StyledPg = styled.img`
   border-radius: 10px;
   grid-row: 2;
   grid-column: 4 / span 2;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 const StyledLeGrandJd = styled.img`
@@ -80,6 +106,11 @@ const StyledLeGrandJd = styled.img`
   border-radius: 10px;
   grid-row: 2;
   grid-column: 6 / span 4;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 const StyledVzion = styled.img`
@@ -91,6 +122,11 @@ const StyledVzion = styled.img`
   border-radius: 10px;
   grid-row: 2;
   grid-column: 10 / span 2;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 const StyledMahdiBa = styled.img`
@@ -102,6 +138,11 @@ const StyledMahdiBa = styled.img`
   border-radius: 10px;
   grid-row: 3;
   grid-column: 1 / span 2;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 const StyledWrldMag = styled.img`
@@ -113,6 +154,11 @@ const StyledWrldMag = styled.img`
   grid-row: 3;
   margin-left: 2px;
   grid-column: 3 / span 2;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 const StyledTheguill = styled.img`
@@ -126,6 +172,11 @@ const StyledTheguill = styled.img`
   border-radius: 10px;
   grid-row: 3;
   grid-column: 5 / span 5;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 const StyledPota = styled.img`
@@ -137,6 +188,11 @@ const StyledPota = styled.img`
   border-radius: 10px;
   grid-row: 3;
   grid-column: 9 / span 1;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 const StyledEdenLz = styled.img`
@@ -150,6 +206,11 @@ const StyledEdenLz = styled.img`
   border-radius: 10px;
   grid-row: 3;
   grid-column: 10 / span 2;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 const StyledPaltay = styled.img`
@@ -164,6 +225,11 @@ const StyledPaltay = styled.img`
   object-position: right;
   grid-row: 3;
   grid-column: 5 / span 7;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 export {
