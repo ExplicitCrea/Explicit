@@ -2,7 +2,14 @@
     "header": {
         "services": "Services",
         "artbook": "Art Book",
-        "history": "Our History",
+        "history": "Notre Histoire",
         "contact": "Contact"
+    },
+    "services": {
+        "subtitle": "Notre équipe se charge de toutes les phases du montage vidéo, de manière méticuleuse. Du dérushage à l'application d'effets visuels, jusqu’au mixage sonore. Nous sommes déterminés à vous offrir un produit final de qualité.",
+        "editing": "Montage vidéo",
+        "video": "Notre équipe se charge de toutes les phases du montage vidéo, de manière méticuleuse. Du dérushage à l'application d'effets visuels, jusqu’au mixage sonore. Nous sommes déterminés à vous offrir un produit final de qualité.",
+        "branding": "Confiez votre présence visuelle a notre service de création. Que vous représentiez une entreprise innovante ou que vous soyez indépendant, notre expertise façonnera vos valeur avec des directions graphiques uniques.",
+        "motion": "Vous souhaitez raconter une histoire ? Avec notre expertise en motion design, nous sauront l’illustrer et captiver votre audience."
     }
 }

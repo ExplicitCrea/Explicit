@@ -4,5 +4,12 @@
         "artbook": "Art Book",
         "history": "Our History",
         "contact": "Contact"
+    },
+    "services": {
+        "subtitle": "Our team meticulously handles every phase of video editing. From de-rushing to the application of visual effects, right through to sound mixing. We're committed to delivering a quality final product.",
+        "editing": "Video Editing",
+        "video": "Our team meticulously handles every phase of video editing. From de-rushing to the application of visual effects, right through to sound mixing. We're committed to delivering a quality final product.",
+        "branding": "Entrust your visual presence to our creative services. Whether you represent an innovative company or are self-employed, our expertise will shape your values with unique graphic directions.",
+        "motion": "Want to tell a story? With our expertise in motion design, we can illustrate it and captivate your audience."
     }
 }
