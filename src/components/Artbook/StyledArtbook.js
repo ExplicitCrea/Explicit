@@ -3,6 +3,7 @@ import styled from "styled-components";
 const StyledArtbook = styled.div`
   display: flex;
   justify-content: center;
+  margin-top: 66px;
   width: 95%;
   height: auto;
   z-index: 50;
@@ -49,12 +50,11 @@ const StyledBruceGrannec = styled.div`
 
 const StyledGg = styled.div`
   width: 100%;
-  max-width: 93%;
-  height: 100%;
+  height: 100%;;
   overflow: hidden;
   border-radius: 10px;
   grid-row: 1;
-  grid-column: 6 / span 3;
+  grid-column: 6;
 `;
 
 const StyledLoreal = styled.div`
@@ -110,7 +110,7 @@ const StyledVzion = styled.div`
   overflow: hidden;
   border-radius: 10px;
   grid-row: 2;
-  grid-column: 6 / span 1;
+  grid-column: 6;
 `;
 const StyledMahdiBa = styled.div`
   width: 150%;
