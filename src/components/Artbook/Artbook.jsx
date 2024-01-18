@@ -14,26 +14,63 @@ import wrld_mag from '../../assets/artbook/wrld_mag.webp'
 import { StyledArtbook, StyledGrid, StyledOlympics,
   StyledBruceGrannec, StyledGg, StyledLoreal,
   StyledLeGrandJd, StyledVzion, StyledMahdiBa, StyledWrldMag, StyledTheguill,
-  StyledPota, StyledEdenLz, StyledPaltay, StyledPg
+  StyledPota, StyledEdenLz, StyledPaltay, StyledPg, StyledImage
 } from './StyledArtbook';
 
 export const Artbook = () => {
   return (
     <StyledArtbook>
       <StyledGrid>
-        <StyledOlympics src={olympics} alt='Olympics'></StyledOlympics>
-        <StyledBruceGrannec src={bruce_grannec} alt='Bruce Grannec'></StyledBruceGrannec>
-        <StyledGg src={vignettegg} alt='GG'></StyledGg>
-        <StyledLoreal src={loreal} alt='l&apos;oreal Paris'></StyledLoreal>
-        <StyledPg src={pg} alt='Profession Gangster'></StyledPg>
-        <StyledLeGrandJd src={le_grand_jd} alt='Le Grand Jd'></StyledLeGrandJd>
-        <StyledVzion src={vzion} alt='Vzion'></StyledVzion>
-        <StyledMahdiBa src={mahdi_ba} alt='Mahdi Ba'></StyledMahdiBa>
-        <StyledWrldMag src={wrld_mag} alt='Wrld Mag'></StyledWrldMag>
-        <StyledTheguill src={theguill} alt='The Guill'></StyledTheguill>
-        <StyledPota src={pota} alt='Pota'></StyledPota>
-        <StyledEdenLz src={eden_lz} alt='Eden Lz'></StyledEdenLz>
-        <StyledPaltay src={paltay} alt='Paltay'></StyledPaltay>
+        <StyledOlympics>
+          <StyledImage src={olympics} alt='Olympics'></StyledImage>
+        </StyledOlympics>
+
+        <StyledBruceGrannec>
+          <StyledImage src={bruce_grannec} alt='Bruce Grannec'></StyledImage>
+        </StyledBruceGrannec>
+        <StyledGg>
+          <StyledImage src={vignettegg} alt='GG'></StyledImage>
+        </StyledGg>
+        <StyledLoreal>
+          <StyledImage src={loreal} alt='l&apos;oreal Paris'></StyledImage>
+        </StyledLoreal>
+
+        <StyledPg>
+        <StyledImage src={pg} alt='Profession Gangster'></StyledImage>
+        </StyledPg>
+
+        <StyledLeGrandJd>
+          <StyledImage src={le_grand_jd} alt='Le Grand Jd'></StyledImage>
+        </StyledLeGrandJd>
+
+        <StyledVzion>
+          <StyledImage src={vzion} alt='Vzion'></StyledImage>
+        </StyledVzion>
+
+        <StyledMahdiBa>
+          <StyledImage src={mahdi_ba} alt='Mahdi Ba'></StyledImage>
+        </StyledMahdiBa>
+
+        <StyledWrldMag>
+        <StyledImage src={wrld_mag} alt='Wrld Mag'></StyledImage>
+        </StyledWrldMag>
+        
+        <StyledTheguill>
+          <StyledImage src={theguill} alt='The Guill'></StyledImage>
+        </StyledTheguill>
+
+        <StyledPota>
+          <StyledImage src={pota} alt='Pota'></StyledImage>
+        </StyledPota>
+
+        <StyledEdenLz>
+          <StyledImage src={eden_lz} alt='Eden Lz'></StyledImage>
+        </StyledEdenLz>
+
+        <StyledPaltay>
+          <StyledImage src={paltay} alt='Paltay'></StyledImage>
+        </StyledPaltay>
+        
       </StyledGrid>
     </StyledArtbook>
   )
