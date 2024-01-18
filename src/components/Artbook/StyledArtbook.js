@@ -6,7 +6,6 @@ const StyledArtbook = styled.div`
   width: 95%;
   height: auto;
   z-index: 50;
-  border: 2px solid green;
 `;
 
 const StyledGrid = styled.div`
@@ -15,7 +14,6 @@ const StyledGrid = styled.div`
   grid-template-rows: repeat(4, 270px);
   grid-template-columns: repeat(6, minmax(0, 1fr));
   position: relative;
-  border: 1px solid red;
 `;
 
 const StyledImage = styled.img`
