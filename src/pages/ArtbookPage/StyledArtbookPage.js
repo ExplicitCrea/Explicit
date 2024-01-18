@@ -7,7 +7,7 @@ const StyledArtbooksPage = styled.section`
   width: 100%;
   height: 100%;
   color: white;
-  padding: 200px 50px 0px 50px;
+  padding: 92px 0px 40px 0px;
   background: rgb(44,41,100);
   background: linear-gradient(35deg, rgba(44,41,100,1) 56%, rgba(35,59,72,1) 79%);
 `;
