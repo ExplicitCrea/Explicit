@@ -1,236 +1,158 @@
 import styled from "styled-components";
 
 const StyledArtbook = styled.div`
+  display: flex;
+  justify-content: center;
   width: 100%;
-  height: 100%;
-  padding: 20px;
+  height: auto;
+  padding: 50px;
   z-index: 50;
 `;
 
 const StyledGrid = styled.div`
   display: grid;
-  width: 100%;
-  grid-template-rows: 0.5fr 0.5fr 0.5fr;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 12px;
+  justify-content: center;
+  gap: 10px;
+  grid-template-rows: repeat(4, 300px);
+  grid-template-columns: repeat(6, 300px);
   position: relative;
 `;
 
-const StyledOlympics = styled.img`
-  width: 120%;
+const StyledImage = styled.img`
+  min-width: 200px;
+  width: 100%;
   height: 100%;
-  max-width: 100%;
-  max-height: 100%;
   object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
+`;
+
+const StyledOlympics = styled.div`
+  width: auto;
+  overflow: hidden;
   border-radius: 10px;
   grid-row: 1;
-  grid-column: 1 / span 6;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-  &:hover {
-    transform: scale(1.1);
-  }
-`;
+  grid-column: 1 / span 3;
+`
 
-const StyledBruceGrannec = styled.img`
+const StyledBruceGrannec = styled.div`
   width: 100%;
   height: 100%;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
+  overflow: hidden;
   border-radius: 10px;
   grid-row: 1;
-  grid-column: 7 / span 4;
-  object-position: top;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-  &:hover {
-    transform: scale(1.1);
-  }
-`;
-const StyledGg = styled.img`
-  width: 100%;
+  grid-column: 4 / span 2;
+`
+
+const StyledGg = styled.div`
+  width: 93%;
   height: 100%;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
+  overflow: hidden;
   border-radius: 10px;
   grid-row: 1;
-  grid-column: 11 / span 2;
-  background-color: purple;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-  &:hover {
-    transform: scale(1.1);
-  }
-`;
+  grid-column: 6 / span 3;
+`
 
-const StyledLoreal = styled.img`
-  width: 89%;
-  height: 100%;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-  grid-row: 2;
-  grid-column: 1 / span 4;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-  &:hover {
-    transform: scale(1.1);
-  }
-`;
-
-const StyledPg = styled.img`
-  width: 80%;
-  position: relative;
-  left: 20%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-  grid-row: 2;
-  grid-column: 4 / span 3;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-  &:hover {
-    transform: scale(1.1);
-  }
-`;
-
-const StyledLeGrandJd = styled.img`
-  width: 100%;
-  height: 100%; 
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-  grid-row: 2;
-  grid-column: 7 / span 4;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-  &:hover {
-    transform: scale(1.1);
-  }
-`;
-
-const StyledVzion = styled.img`
-  width: 100%;
-  height: 75%;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-  grid-row: 2;
-  grid-column: 11 / span 2;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-  &:hover {
-    transform: scale(1.1);
-  }
-`;
-
-const StyledMahdiBa = styled.img`
+const StyledLoreal = styled.div`
   width: 100%;
   height: 100%;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
+  overflow: hidden;
   border-radius: 10px;
-  grid-row: 3;
+  grid-row: 2;
   grid-column: 1 / span 2;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-  &:hover {
-    transform: scale(1.1);
-  }
-`;
+`
 
-const StyledWrldMag = styled.img`
-  width: 200%;
-  object-fit: cover;
+const StyledPg = styled.div`
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
   border-radius: 10px;
-  max-width: 100%;
-  max-height: 100%;
+  grid-row: 2;
+  grid-column: 3/ span 1;
+`
+
+const StyledLeGrandJd = styled.div`
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  grid-row: 2;
+  grid-column: 4 / span 2;
+`
+
+const StyledTheguill = styled.div`
+  width: 100%;
+  height: 80%;
+  margin-left: 20%;
+  overflow: hidden;
+  border-radius: 10px;
   grid-row: 3;
-  margin-left: 2px;
   grid-column: 3 / span 2;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-  &:hover {
-    transform: scale(1.1);
-  }
-`;
+  `
 
-const StyledTheguill = styled.img`
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 45%;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
+  const StyledPota = styled.div`
+  width: 60%;
+  height: 80%;
+  overflow: hidden;
   border-radius: 10px;
+  margin-left: 40%;
   grid-row: 3;
-  grid-column: 5 / span 5;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-  &:hover {
-    transform: scale(1.1);
-  }
-`;
+  grid-column: 5 / span 1;
+`
 
-const StyledPota = styled.img`
+const StyledVzion = styled.div`
   width: 100%;
-  height: 45%;
-  object-fit: cover;
-  max-width: 100%;
-  max-height: 100%;
+  height: 80%;
+  overflow: hidden;
   border-radius: 10px;
-  grid-row: 3;
-  grid-column: 10 / span 1;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-  &:hover {
-    transform: scale(1.1);
-  }
-`;
+  grid-row: 2;
+  grid-column: 6 / span 1;
+  `
+const StyledMahdiBa = styled.div`
+  width: 150%;
+  height: 70%;
+  overflow: hidden;
+  border-radius: 10px;
+  grid-row: 3 / span 2;
+  grid-column: 1 / span 1;
+  `
 
-const StyledEdenLz = styled.img`
-  position: absolute;
-  top: -15%;
-  width: 100%;
-  height: 60%;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
+const StyledWrldMag = styled.div`
+  width: 90%;
+  margin-left: 50%;
+  height: 70%;
+  overflow: hidden;
   border-radius: 10px;
-  grid-row: 3;
-  grid-column: 11/ span 2;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-  &:hover {
-    transform: scale(1.1);
-  }
-`;
+  grid-row: 3 / span 2;
+  grid-column: 2 / span 1;
+  `
+const StyledEdenLz = styled.div`
+width: 100%;
+height: 100%;
+position: relative;
+top: -20%;
+overflow: hidden;
+border-radius: 10px;
+grid-row: 3;
+grid-column: 6 / span 1;
+`
 
-const StyledPaltay = styled.img`
-  width: 100%;
-  height: 50%;
-  max-width: 100%;
-  max-height: 100%;
-  position: absolute;
-  bottom: 0%;
-  object-fit: cover;
-  border-radius: 10px;
-  object-position: right;
-  grid-row: 3;
-  grid-column: 5 / span 8;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-  &:hover {
-    transform: scale(1.1);
-  }
-`;
+const StyledPaltay = styled.div`
+display: flex;
+width: 90%;
+height: 55%;
+margin-top: 21%;
+margin-left: 10%;
+overflow: hidden;
+
+border-radius: 10px;
+grid-row: 3;
+grid-column: 3 / span 4;
+`
 
 export {
   StyledArtbook,
@@ -248,4 +170,5 @@ export {
   StyledEdenLz,
   StyledPaltay,
   StyledPg,
+  StyledImage
 };
