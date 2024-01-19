@@ -4,15 +4,16 @@ const StyledArtbook = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 66px;
-  width: 95%;
+  width: 100%;
   height: auto;
   z-index: 50;
 `;
 
 const StyledGrid = styled.div`
   display: grid;
-  gap: 10px;
-  grid-template-rows: repeat(4, 270px);
+  width: 95%;
+  gap: 12px;
+  grid-template-rows: repeat(4, 310px);
   grid-template-columns: repeat(6, minmax(0, 1fr));
   position: relative;
 `;
@@ -32,16 +33,20 @@ const StyledImage = styled.img`
 
 const StyledOlympics = styled.div`
   width: 100%;
-  max-height: auto;
+  height: 100%;
+  max-height: 250px;
   overflow: hidden;
   border-radius: 10px;
   grid-row: 1;
+  margin-top: 6.5%;
   grid-column: 1 / span 3;
 `;
 
 const StyledBruceGrannec = styled.div`
   width: 100%;
   height: 100%;
+  max-height: 250px;
+  margin-top: 10%;
   overflow: hidden;
   border-radius: 10px;
   grid-row: 1;
@@ -50,7 +55,9 @@ const StyledBruceGrannec = styled.div`
 
 const StyledGg = styled.div`
   width: 100%;
-  height: 100%;;
+  height: 100%;
+  max-height: 250px;
+  margin-top: 20%;
   overflow: hidden;
   border-radius: 10px;
   grid-row: 1;
@@ -58,7 +65,7 @@ const StyledGg = styled.div`
 `;
 
 const StyledLoreal = styled.div`
-  width: 100%;
+  width: 85%;
   height: 100%;
   overflow: hidden;
   border-radius: 10px;
@@ -67,7 +74,8 @@ const StyledLoreal = styled.div`
 `;
 
 const StyledPg = styled.div`
-  width: 100%;
+  width: 130%;
+  margin-left: -30%;
   height: 100%;
   overflow: hidden;
   border-radius: 10px;
@@ -108,12 +116,29 @@ const StyledVzion = styled.div`
   width: 100%;
   height: 80%;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 10px; 
   grid-row: 2;
   grid-column: 6;
 `;
+
+const StyledComingSoon = styled.div`
+  position: absolute;
+  background-color: #404040;
+  font-family: Lexend;
+  font-size: 2.5em;
+  width: 70%;
+  text-align: center;
+  margin-right: 10%;
+  right: 0;
+  padding: 10px;
+  border-radius: 0px 15px 15px 0px;
+  bottom: 90px;
+  z-index: 10;
+`;
+
 const StyledMahdiBa = styled.div`
-  width: 150%;
+  position: relative;
+  width: 158%;
   height: 70%;
   overflow: hidden;
   border-radius: 10px;
@@ -122,14 +147,51 @@ const StyledMahdiBa = styled.div`
 `;
 
 const StyledWrldMag = styled.div`
-  width: 90%;
-  margin-left: 50%;
+  position: relative;
+  width: 80%;
+  margin-left: 60%;
   height: 70%;
   overflow: hidden;
   border-radius: 10px;
   grid-row: 3 / span 2;
   grid-column: 2 / span 1;
+  cursor: pointer;
+  
 `;
+
+const StyledImageWrlMag = styled.img`
+  min-width: 100px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transform: scale(2.5);
+`;
+
+const StyledImageWrlMagNoBackground = styled.img`
+  position: absolute;
+  z-index: 10;
+  top: 100px;
+  width: 100%;
+  height: 50%;
+  object-position: center;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+`;
+
+const StyledBackground = styled.div`
+  position: absolute;
+  z-index: 5; 
+  width: 100%;
+  height: 100%;
+  background-color: rgb(132,68,245, 0.8);
+`;
+
 const StyledEdenLz = styled.div`
   width: 100%;
   height: 100%;
@@ -145,7 +207,7 @@ const StyledPaltay = styled.div`
   display: flex;
   width: 90%;
   height: 56%;
-  margin-top: 233px;
+  margin-top: 268px;
   margin-left: 10%;
   overflow: hidden;
 
@@ -171,4 +233,8 @@ export {
   StyledPaltay,
   StyledPg,
   StyledImage,
+  StyledImageWrlMag,
+  StyledImageWrlMagNoBackground,
+  StyledBackground,
+  StyledComingSoon
 };

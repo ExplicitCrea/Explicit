@@ -11,6 +11,7 @@ import pota from "../../assets/artbook/pota.webp";
 import theguill from "../../assets/artbook/theguill.webp";
 import vignettegg from "../../assets/artbook/vignettegg.webp";
 import wrld_mag from "../../assets/artbook/wrld_mag.webp";
+import wrld_mag_no_background from "../../assets/artbook/wrld_mag_no_background.webp";
 import {
   StyledArtbook,
   StyledGrid,
@@ -28,6 +29,10 @@ import {
   StyledPaltay,
   StyledPg,
   StyledImage,
+  StyledImageWrlMag,
+  StyledImageWrlMagNoBackground,
+  StyledBackground,
+  StyledComingSoon
 } from "./StyledArtbook";
 
 export const Artbook = () => {
@@ -61,11 +66,14 @@ export const Artbook = () => {
         </StyledVzion>
 
         <StyledMahdiBa>
+          <StyledComingSoon>Coming soon</StyledComingSoon>
           <StyledImage src={mahdi_ba} alt="Mahdi Ba"></StyledImage>
         </StyledMahdiBa>
 
         <StyledWrldMag>
-          <StyledImage src={wrld_mag} alt="Wrld Mag"></StyledImage>
+          <StyledImageWrlMagNoBackground src={wrld_mag_no_background} alt="Wrld mag no background"></StyledImageWrlMagNoBackground>
+          <StyledBackground/>
+          <StyledImageWrlMag src={wrld_mag} alt="Wrld Mag"></StyledImageWrlMag>
         </StyledWrldMag>
 
         <StyledTheguill>
