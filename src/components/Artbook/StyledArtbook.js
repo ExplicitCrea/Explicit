@@ -3,7 +3,6 @@ import styled from "styled-components";
 const StyledArtbook = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 66px;
   width: 100%;
   height: auto;
   z-index: 50;
@@ -132,7 +131,7 @@ const StyledComingSoon = styled.div`
   right: 0;
   padding: 10px;
   border-radius: 0px 15px 15px 0px;
-  bottom: 90px;
+  bottom: 105px;
   z-index: 10;
 `;
 
