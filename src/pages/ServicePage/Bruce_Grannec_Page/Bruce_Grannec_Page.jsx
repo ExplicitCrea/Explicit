@@ -11,7 +11,7 @@ import {
   StyledDivLabelOnSide,
   StyledImgLabel,
   StyledContainer,
-  StyledParagrahAndLogo,
+  StyledDivParagrah,
   StyledDivLogo,
   StyledParagraph,
   StyledDivEventPicture,
@@ -25,11 +25,12 @@ export const Bruce_Grannec_Page = () => {
   return (
     <StyledPage>
       <StyledContainer>
+        
         <StyledDivLabelOnSide>
           <StyledImgLabel src={labelOnSide} alt='Label on side'/>
         </StyledDivLabelOnSide>
         
-        <StyledParagrahAndLogo>
+        <StyledDivParagrah>
           <StyledParagraph>
             Nous sommes fiers d&apos;avoir pu collaborer avec Bruce Grannec en fournissant des visuels exceptionnels
             pour son tournoi en collaboration avec FIFA 2023.
@@ -37,17 +38,21 @@ export const Bruce_Grannec_Page = () => {
             pour refléter le professionnalisme et l&apos;enthousiasme du tournoi, offrant à Bruce Grannec
             une présence visuelle distinctive et immersive sur sa plateforme de streaming.
           </StyledParagraph>
+        </StyledDivParagrah>
+
           <StyledDivLogo>
             <StyledStar src={whiteStar} alt="White Logo Explicite" />
             <StyledLogo src={whiteLogo} alt="White Star Explicite" />
           </StyledDivLogo>
-        </StyledParagrahAndLogo>
+
         <StyledDivEventPicture>
           <StyledImageEventPicture src={eventPicture} alt="Event Picture" />
         </StyledDivEventPicture>
+        
         <StyledDivCarousel>
           <Carousel/>
         </StyledDivCarousel>
+
       </StyledContainer>
     </StyledPage>
   )
