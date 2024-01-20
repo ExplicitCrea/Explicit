@@ -2,9 +2,13 @@ import styled from "styled-components";
 
 const CarouselContainer = styled.div`
 width: 100%;
-margin-top: 80%;
+height: 100%;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 `
-
 
 
 export {
