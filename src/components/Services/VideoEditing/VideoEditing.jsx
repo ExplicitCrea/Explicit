@@ -7,22 +7,26 @@ export const VideoEditing = () => {
     const { t } = useTranslation()
     return (
         <StyledVideoEditing>
-            <div>
+            <div className='text-container'>
                 <h1>{t('services.editing')}</h1>
                 <p>{t('services.video')}</p>
             </div>
-            <div>
-                <div>
+            <div className='video-container'>
+                <div className='carousel-container'>
                     <IoIosArrowBack />
-                        <ReactPlayer url='https://www.youtube.com/watch?v=LXb3EKWsInQ' />
+                        <div className='wrapper'>
+                            <ReactPlayer width='100%' height='100%' url='https://www.youtube.com/watch?v=LXb3EKWsInQ' />
+                        </div>
                     <IoIosArrowForward />
                 </div>
-                <div>
-                    <div>
+                <div className='title-container'>
+                    <div className='image-wrapper'>
                         <img src="https://via.placeholder.com/150" alt="placeholder" />
                     </div>
-                    <h2>{'titre de la vidéo'}</h2>
-                    <p>{'nom de chaine'}</p>
+                    <div className='text-title'>
+                        <h2>{'titre de la vidéo'}</h2>
+                        <p>{'nom de chaine'}</p>
+                    </div>
                 </div>
             </div>
         </StyledVideoEditing>
