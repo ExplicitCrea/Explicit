@@ -10,7 +10,7 @@ const StyledHeader = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 3;
+    z-index: 5;
     height: 80px;
     padding: 6px 12px;
 
@@ -19,9 +19,12 @@ const StyledHeader = styled.header`
         align-items: center;
         justify-content: flex-start;
 
-        img{
-            width: auto;
-            height: 74px;
+        .logo{
+            margin: 0!important;
+            img{
+                width: auto;
+                height: 74px;
+            }
         }
 
         nav>ul{
