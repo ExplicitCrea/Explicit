@@ -14,7 +14,9 @@ export const Header = () => {
     return (
         <StyledHeader>
             <div className='container'>
-                <img src={logo} alt='logo explicit' />
+                <Link className='logo' to='/'>
+                    <img src={logo} alt='logo explicit' />
+                </Link>
                 <nav>
                     <ul>
                         <li>
