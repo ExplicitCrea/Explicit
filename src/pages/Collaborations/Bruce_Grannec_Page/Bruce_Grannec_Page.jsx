@@ -12,7 +12,7 @@ export const Bruce_Grannec_Page = () => {
         <div className="label-on-side">
           <img src={labelOnSide} alt="Label on side" />
         </div>
-        {/* <div className="paragraph-and-logo-container"> */}
+        <div className="paragraph-and-logo-container">
           <div className="paragraph_container">
             <p>
               Nous sommes fiers d&apos;avoir pu collaborer avec Bruce Grannec en
@@ -37,14 +37,13 @@ export const Bruce_Grannec_Page = () => {
               alt="White Star Explicite"
             />
           </div>
-        {/* </div> */}
-        <div className="event_container">
-          <img src={eventPicture} alt="Event Picture" />
         </div>
-
-        <div className="carousel-container">
-          <Carousel />
-        </div>
+          <div className="event_container">
+            <img src={eventPicture} alt="Event Picture" />
+          </div>
+          <div className="carousel-container">
+            <Carousel />
+          </div>
       </div>
     </StyledPage>
   );
