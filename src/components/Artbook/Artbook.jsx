@@ -12,86 +12,72 @@ import theguill from "../../assets/artbook/theguill.webp";
 import vignettegg from "../../assets/artbook/vignettegg.webp";
 import wrld_mag from "../../assets/artbook/wrld_mag.webp";
 import wrld_mag_no_background from "../../assets/artbook/wrld_mag_no_background.webp";
-import {
-  StyledArtbook,
-  StyledGrid,
-  StyledOlympics,
-  StyledBruceGrannec,
-  StyledGg,
-  StyledLoreal,
-  StyledLeGrandJd,
-  StyledVzion,
-  StyledMahdiBa,
-  StyledWrldMag,
-  StyledTheguill,
-  StyledPota,
-  StyledEdenLz,
-  StyledPaltay,
-  StyledPg,
-  StyledImage,
-  StyledImageWrlMag,
-  StyledImageWrlMagNoBackground,
-  StyledBackground,
-  StyledComingSoon
-} from "./StyledArtbook";
+import { StyledArtbook } from "./StyledArtbook";
 
 export const Artbook = () => {
   return (
     <StyledArtbook>
-      <StyledGrid>
-        <StyledOlympics>
-          <StyledImage src={olympics} alt="Olympics"></StyledImage>
-        </StyledOlympics>
+      <div className="container">
+        <div className="olympics">
+          <img src={olympics} alt="Olympics" />
+        </div>
 
-        <StyledBruceGrannec>
-          <StyledImage src={bruce_grannec} alt="Bruce Grannec"></StyledImage>
-        </StyledBruceGrannec>
-        <StyledGg>
-          <StyledImage src={vignettegg} alt="GG"></StyledImage>
-        </StyledGg>
-        <StyledLoreal>
-          <StyledImage src={loreal} alt="l'oreal Paris"></StyledImage>
-        </StyledLoreal>
+        <div className="bruce-grannec">
+          <img src={bruce_grannec} alt="Bruce Grannec" />
+        </div>
 
-        <StyledPg>
-          <StyledImage src={pg} alt="Profession Gangster"></StyledImage>
-        </StyledPg>
+        <div className="gg">
+          <img src={vignettegg} alt="GG" />
+        </div>
 
-        <StyledLeGrandJd>
-          <StyledImage src={le_grand_jd} alt="Le Grand Jd"></StyledImage>
-        </StyledLeGrandJd>
+        <div className="loreal">
+          <img src={loreal} alt="l'oreal Paris" />
+        </div>
 
-        <StyledVzion>
-          <StyledImage src={vzion} alt="Vzion"></StyledImage>
-        </StyledVzion>
+        <div className="pg">
+          <img src={pg} alt="Profession Gangster" />
+        </div>
 
-        <StyledMahdiBa>
-          <StyledComingSoon>Coming soon</StyledComingSoon>
-          <StyledImage src={mahdi_ba} alt="Mahdi Ba"></StyledImage>
-        </StyledMahdiBa>
+        <div className="le-grand-jd">
+          <img src={le_grand_jd} alt="Le Grand Jd" />
+        </div>
 
-        <StyledWrldMag>
-          <StyledImageWrlMagNoBackground src={wrld_mag_no_background} alt="Wrld mag no background"></StyledImageWrlMagNoBackground>
-          <StyledBackground/>
-          <StyledImageWrlMag src={wrld_mag} alt="Wrld Mag"></StyledImageWrlMag>
-        </StyledWrldMag>
+        <div className="vzion">
+          <img src={vzion} alt="Vzion" />
+        </div>
 
-        <StyledTheguill>
-          <StyledImage src={theguill} alt="The Guill"></StyledImage>
-        </StyledTheguill>
+        <div className="mahdiBa">
+          <div className="coming-soon">Coming soon</div>
+          <img src={mahdi_ba} alt="Mahdi Ba" />
+        </div>
 
-        <StyledPota>
-          <StyledImage src={pota} alt="Pota"></StyledImage>
-        </StyledPota>
+        <div className="wrld-mag">
+          <div className="background">
+            <img
+              className="image-wrldmag-no-background"
+              src={wrld_mag_no_background}
+              alt="Wrld mag no background"
+            />
+            <img className="image-wrldmag" src={wrld_mag} alt="Wrld Mag" />
+          </div>
+        </div>
 
-        <StyledEdenLz>
-          <StyledImage src={eden_lz} alt="Eden Lz"></StyledImage>
-        </StyledEdenLz>
+        <div className="the-guill">
+          <img src={theguill} alt="The Guill" />
+        </div>
 
-        <StyledPaltay>
-          <StyledImage src={paltay} alt="Paltay"></StyledImage>
-        </StyledPaltay>
-      </StyledGrid>
+        <div className="pota">
+          <img src={pota} alt="Pota" />
+        </div>
+
+        <div className="edenLz">
+          <img src={eden_lz} alt="Eden Lz" />
+        </div>
+
+        <div className="paltay">
+          <img src={paltay} alt="Paltay" />
+        </div>
+      </div>
     </StyledArtbook>
   );
 };
