@@ -3,6 +3,7 @@ import styled from "styled-components";
 const StyledArtbook = styled.div`
   display: flex;
   justify-content: center;
+  padding: 20px;
   width: 100vw;
   height: 100vh;
 
@@ -12,6 +13,7 @@ const StyledArtbook = styled.div`
     width: 95%;
     height: 50%;
     margin-top: 10px;
+    padding: 20px;
     gap: 12px;
     grid-template-rows: 41% 55% 49% 53%;
     grid-template-columns: 10% 16% 16% 16% 8%;
@@ -22,7 +24,7 @@ const StyledArtbook = styled.div`
       height: 90%;
       margin-top: 20px;
       padding: 0px;
-      gap: 5px;
+      gap: 8px;
       grid-template-columns: 40% 15% 40%;
       grid-template-rows: 15% 19% 12% 10% 11% 11% 17% 10%;
     }
@@ -227,7 +229,8 @@ const StyledArtbook = styled.div`
     .wrld-mag {
       position: relative;
       width: 70%;
-      margin-left: 53%;
+      /* margin-left: 53%; */
+      left: 53%;
       height: 70%;
       overflow: hidden;
       border-radius: 10px;
@@ -243,6 +246,7 @@ const StyledArtbook = styled.div`
         margin-left: 0%;
         width: 100%;
         height: 125%;
+        left: 0;
       }
 
       .image-wrldmag {
@@ -310,12 +314,11 @@ const StyledArtbook = styled.div`
     }
 
     .paltay {
-      display: flex;
-      width: 94.9%;
-      height: 55%;
       position: relative;
+      width: 94.5%;
+      height: 55%;
       top: 95%;
-      margin-left: 5.4%;
+      left: 3.2vw;
       overflow: hidden;
       border-radius: 10px;
       grid-row: 3;
@@ -328,6 +331,7 @@ const StyledArtbook = styled.div`
         margin-top: 0;
         margin-left: 0;
         top: 0;
+        left: 0;
 
         img {
           object-position: right;
