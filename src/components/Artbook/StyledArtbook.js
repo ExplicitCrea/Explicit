@@ -17,6 +17,14 @@ const StyledArtbook = styled.div`
     grid-template-columns: 10% 16% 16% 16% 8%;
     position: relative;
 
+    @media (max-width: 768px) {
+      height: 100%;
+      padding: 0px;
+      gap: 5px;
+      grid-template-columns: 40% 15% 40%;
+      grid-template-rows: 10% 19% 12% 10% 11% 11% 17% 10%;
+    }
+
     img {
       min-width: 100px;
       width: 100%;
@@ -38,6 +46,13 @@ const StyledArtbook = styled.div`
       border-radius: 10px;
       grid-row: 1;
       grid-column: 1 / span 3;
+
+      @media (max-width: 768px) {
+        width: 100%;
+        grid-column: 1 / span 3;
+       
+
+      }
     }
 
     .bruce-grannec {
@@ -46,8 +61,13 @@ const StyledArtbook = styled.div`
       max-height: 250px;
       overflow: hidden;
       border-radius: 10px;
-      grid-row: 1;
+      grid-row: 1 / span 0;
       grid-column: 4 / span 2;
+      
+      @media (max-width: 768px) {
+        grid-column: 1;
+        grid-row: 7;
+      }
     }
 
     .gg {
@@ -57,7 +77,13 @@ const StyledArtbook = styled.div`
       overflow: hidden;
       border-radius: 10px;
       grid-row: 1;
+      display: non;
       grid-column: 6;
+      @media (max-width: 768px) {
+        grid-column: 2 / span 1;
+        grid-row: 3 / span 2;
+        display: none;
+      }
     }
 
     .loreal {
@@ -67,6 +93,15 @@ const StyledArtbook = styled.div`
       border-radius: 10px;
       grid-row: 2;
       grid-column: 1 / span 2;
+
+      @media (max-width: 768px) {
+        width: 100%;
+        height: 100%;
+        grid-column: 1;
+        grid-row: 2 / span 1;
+      
+      }
+      
     }
 
     .pg {
@@ -77,6 +112,13 @@ const StyledArtbook = styled.div`
       border-radius: 10px;
       grid-row: 2;
       grid-column: 3 / span 1;
+      @media (max-width: 768px) {
+        grid-column: 1 / span 2;
+        grid-row: 5/ span 1;
+        width: 100%;
+        margin-left: 0%;
+
+      }
     }
 
     .le-grand-jd {
@@ -86,6 +128,14 @@ const StyledArtbook = styled.div`
       border-radius: 10px;
       grid-row: 2;
       grid-column: 4 / span 2;
+
+      @media (max-width: 768px) {
+        grid-row: 2 / span 1;
+        grid-column: 2 / span 2;
+        width: 100%;
+        height: 80%;
+        
+      }
     }
 
     .the-guill {
@@ -96,6 +146,13 @@ const StyledArtbook = styled.div`
       border-radius: 10px;
       grid-row: 3;
       grid-column: 3 / span 2;
+      @media (max-width: 768px) {
+        grid-column: 1 / span 2;
+        grid-row: 6 / span 1;
+        width: 100%;
+      height: 100%;
+      margin-left: 0%;
+      }
     }
 
     .pota {
@@ -106,6 +163,17 @@ const StyledArtbook = styled.div`
       margin-left: 17%;
       grid-row: 3;
       grid-column: 5 / span 1;
+      @media (max-width: 768px) {
+        grid-column: 1 / span 3;
+        grid-row: 8 / span 1;
+        width: 100%;
+        height: 100%;
+        margin-left: 0%;
+
+        img {
+          object-position: 10% 30%;
+        }
+      }
     }
 
     .vzion {
@@ -115,6 +183,13 @@ const StyledArtbook = styled.div`
       border-radius: 10px;
       grid-row: 2;
       grid-column: 6;
+      @media (max-width: 768px) {
+        grid-column: 3 / span 1;
+        grid-row: 4 / span 2;
+        height: 100%;
+
+        
+      }
     }
 
     .coming-soon {
@@ -131,6 +206,7 @@ const StyledArtbook = styled.div`
       border-radius: 0px 15px 15px 0px;
       bottom: 105px;
       z-index: 10;
+      display: none;
     }
 
     .mahdiBa {
@@ -141,6 +217,14 @@ const StyledArtbook = styled.div`
       border-radius: 10px;
       grid-row: 3 / span 2;
       grid-column: 1 / span 1;
+
+      @media (max-width: 768px) {
+        grid-column: 1 / span 2;
+        grid-row: 3 / span 2;
+        width: 100%;
+        height: 100%;
+        
+      }
     }
 
     .wrld-mag {
@@ -154,6 +238,15 @@ const StyledArtbook = styled.div`
       grid-column: 2 / span 1;
       cursor: pointer;
 
+      @media (max-width: 768px) {
+        grid-column: 3 / span 1;
+        grid-row: 2 / span 1;
+        margin-top: 136px;
+        margin-left: 0%;
+        width: 100%;
+        height: 82.5%;
+      }
+
       .image-wrldmag {
         min-width: 100px;
         width: 100%;
@@ -161,6 +254,12 @@ const StyledArtbook = styled.div`
         object-fit: cover;
         cursor: pointer;
         transform: scale(2.5);
+        @media (max-width: 768px) {
+        position: relative;
+        bottom: 56px;
+        width: 100%;
+        height: 200%;
+      }
       }
 
       .image-wrldmag-no-background {
@@ -173,9 +272,14 @@ const StyledArtbook = styled.div`
         object-fit: cover;
         cursor: pointer;
         transition: transform 0.3s ease-in-out;
-
         &:hover {
           transform: scale(1.1);
+        }
+        @media (max-width: 768px) {
+          top: 0px;
+          left: 0px;
+          width: 100%;
+          height: 100%;
         }
       }
 
@@ -185,6 +289,7 @@ const StyledArtbook = styled.div`
         width: 100%;
         height: 100%;
         background-color: rgb(132, 68, 245, 0.8);
+        
       }
     }
 
@@ -197,6 +302,13 @@ const StyledArtbook = styled.div`
       border-radius: 10px;
       grid-row: 3;
       grid-column: 6 / span 1;
+      
+      @media (max-width: 768px) {
+        grid-column: 3 / span 1;
+        grid-row: 6 / span 1;
+        height: auto;
+        top: 0;
+      }
     }
 
     .paltay {
@@ -209,6 +321,18 @@ const StyledArtbook = styled.div`
       border-radius: 10px;
       grid-row: 3;
       grid-column: 3 / span 4;
+      @media (max-width: 768px) {
+        grid-column: 2 / span 2;
+        grid-row: 7 / span 1;
+        width: 100%;
+      height: 100%;
+      margin-top: 0;
+      margin-left: 0;
+        
+      img {
+          object-position: right;
+        }
+      }
     }
   }
 `;
