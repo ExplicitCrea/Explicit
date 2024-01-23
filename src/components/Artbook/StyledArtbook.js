@@ -10,7 +10,7 @@ const StyledArtbook = styled.div`
     display: grid;
     justify-content: center;
     width: 95%;
-    height: 50vh;
+    height: 50%;
     margin-top: 10px;
     gap: 12px;
     grid-template-rows: 41% 55% 49% 53%;
@@ -18,11 +18,13 @@ const StyledArtbook = styled.div`
     position: relative;
 
     @media (max-width: 768px) {
-      height: 100%;
+      width: 95%;
+      height: 90%;
+      margin-top: 20px;
       padding: 0px;
       gap: 5px;
       grid-template-columns: 40% 15% 40%;
-      grid-template-rows: 10% 19% 12% 10% 11% 11% 17% 10%;
+      grid-template-rows: 15% 19% 12% 10% 11% 11% 17% 10%;
     }
 
     img {
@@ -35,6 +37,10 @@ const StyledArtbook = styled.div`
       transition: transform 0.3s ease-in-out;
       &:hover {
         transform: scale(1.1);
+      }
+
+      @media (max-width: 768px) {
+        border-radius: 15px;
       }
     }
 
@@ -50,8 +56,6 @@ const StyledArtbook = styled.div`
       @media (max-width: 768px) {
         width: 100%;
         grid-column: 1 / span 3;
-       
-
       }
     }
 
@@ -63,7 +67,7 @@ const StyledArtbook = styled.div`
       border-radius: 10px;
       grid-row: 1 / span 0;
       grid-column: 4 / span 2;
-      
+
       @media (max-width: 768px) {
         grid-column: 1;
         grid-row: 7;
@@ -99,9 +103,7 @@ const StyledArtbook = styled.div`
         height: 100%;
         grid-column: 1;
         grid-row: 2 / span 1;
-      
       }
-      
     }
 
     .pg {
@@ -114,10 +116,9 @@ const StyledArtbook = styled.div`
       grid-column: 3 / span 1;
       @media (max-width: 768px) {
         grid-column: 1 / span 2;
-        grid-row: 5/ span 1;
+        grid-row: 5 / span 1;
         width: 100%;
         margin-left: 0%;
-
       }
     }
 
@@ -134,7 +135,6 @@ const StyledArtbook = styled.div`
         grid-column: 2 / span 2;
         width: 100%;
         height: 80%;
-        
       }
     }
 
@@ -150,8 +150,8 @@ const StyledArtbook = styled.div`
         grid-column: 1 / span 2;
         grid-row: 6 / span 1;
         width: 100%;
-      height: 100%;
-      margin-left: 0%;
+        height: 100%;
+        margin-left: 0%;
       }
     }
 
@@ -187,8 +187,6 @@ const StyledArtbook = styled.div`
         grid-column: 3 / span 1;
         grid-row: 4 / span 2;
         height: 100%;
-
-        
       }
     }
 
@@ -223,7 +221,6 @@ const StyledArtbook = styled.div`
         grid-row: 3 / span 2;
         width: 100%;
         height: 100%;
-        
       }
     }
 
@@ -240,11 +237,12 @@ const StyledArtbook = styled.div`
 
       @media (max-width: 768px) {
         grid-column: 3 / span 1;
-        grid-row: 2 / span 1;
-        margin-top: 136px;
+        grid-row: 3 / span 1;
+        position: relative;
+        top: -28%;
         margin-left: 0%;
         width: 100%;
-        height: 82.5%;
+        height: 125%;
       }
 
       .image-wrldmag {
@@ -255,11 +253,12 @@ const StyledArtbook = styled.div`
         cursor: pointer;
         transform: scale(2.5);
         @media (max-width: 768px) {
-        position: relative;
-        bottom: 56px;
-        width: 100%;
-        height: 200%;
-      }
+          min-width: 0px;
+          position: relative;
+          bottom: 56px;
+          width: 100%;
+          height: 200%;
+        }
       }
 
       .image-wrldmag-no-background {
@@ -289,7 +288,6 @@ const StyledArtbook = styled.div`
         width: 100%;
         height: 100%;
         background-color: rgb(132, 68, 245, 0.8);
-        
       }
     }
 
@@ -302,7 +300,7 @@ const StyledArtbook = styled.div`
       border-radius: 10px;
       grid-row: 3;
       grid-column: 6 / span 1;
-      
+
       @media (max-width: 768px) {
         grid-column: 3 / span 1;
         grid-row: 6 / span 1;
@@ -313,10 +311,11 @@ const StyledArtbook = styled.div`
 
     .paltay {
       display: flex;
-      width: 94.3%;
+      width: 94.9%;
       height: 55%;
-      margin-top: 220px;
-      margin-left: 5.8%;
+      position: relative;
+      top: 95%;
+      margin-left: 5.4%;
       overflow: hidden;
       border-radius: 10px;
       grid-row: 3;
@@ -325,11 +324,12 @@ const StyledArtbook = styled.div`
         grid-column: 2 / span 2;
         grid-row: 7 / span 1;
         width: 100%;
-      height: 100%;
-      margin-top: 0;
-      margin-left: 0;
-        
-      img {
+        height: 100%;
+        margin-top: 0;
+        margin-left: 0;
+        top: 0;
+
+        img {
           object-position: right;
         }
       }
