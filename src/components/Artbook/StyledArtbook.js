@@ -3,17 +3,19 @@ import styled from "styled-components";
 const StyledArtbook = styled.div`
   display: flex;
   justify-content: center;
-  width: 100%;
-  height: auto;
-  z-index: 50;
+  width: 100vw;
+  height: 100vh; 
+  border: 1px solid blue;
 `;
 
 const StyledGrid = styled.div`
   display: grid;
-  width: 95%;
+  justify-content: center;
+  width: 100%;
+  height: 50%;
   gap: 12px;
-  grid-template-rows: repeat(4, 310px);
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-rows: 41% 55% 49% 53%;
+  grid-template-columns: 11% 16% 16% 8%;
   position: relative;
 `;
 
@@ -32,20 +34,20 @@ const StyledImage = styled.img`
 
 const StyledOlympics = styled.div`
   width: 100%;
-  height: 100%;
+  height: auto;
   max-height: 250px;
   overflow: hidden;
   border-radius: 10px;
   grid-row: 1;
-  margin-top: 6.5%;
+  /* margin-top: 6.5%; */
   grid-column: 1 / span 3;
 `;
 
 const StyledBruceGrannec = styled.div`
   width: 100%;
-  height: 100%;
+  height: auto;
   max-height: 250px;
-  margin-top: 10%;
+  /* margin-top: 10%; */
   overflow: hidden;
   border-radius: 10px;
   grid-row: 1;
@@ -54,9 +56,9 @@ const StyledBruceGrannec = styled.div`
 
 const StyledGg = styled.div`
   width: 100%;
-  height: 100%;
+  height: auto;
   max-height: 250px;
-  margin-top: 20%;
+  /* margin-top: 20%; */
   overflow: hidden;
   border-radius: 10px;
   grid-row: 1;
@@ -64,8 +66,8 @@ const StyledGg = styled.div`
 `;
 
 const StyledLoreal = styled.div`
-  width: 85%;
-  height: 100%;
+  width: 90%;
+  height: auto;
   overflow: hidden;
   border-radius: 10px;
   grid-row: 2;
@@ -73,9 +75,9 @@ const StyledLoreal = styled.div`
 `;
 
 const StyledPg = styled.div`
-  width: 130%;
-  margin-left: -30%;
-  height: 100%;
+  width: 118%;
+  height: auto;
+  margin-left: -18%;
   overflow: hidden;
   border-radius: 10px;
   grid-row: 2;
@@ -84,7 +86,7 @@ const StyledPg = styled.div`
 
 const StyledLeGrandJd = styled.div`
   width: 100%;
-  height: 100%;
+  height: auto;
   overflow: hidden;
   border-radius: 10px;
   grid-row: 2;
@@ -92,8 +94,8 @@ const StyledLeGrandJd = styled.div`
 `;
 
 const StyledTheguill = styled.div`
-  width: 100%;
-  height: 80%;
+  width: 110%;
+  height: 90%;
   margin-left: 20%;
   overflow: hidden;
   border-radius: 10px;
@@ -102,11 +104,11 @@ const StyledTheguill = styled.div`
 `;
 
 const StyledPota = styled.div`
-  width: 60%;
-  height: 80%;
+  width: 50%;
+  height: 90%;
   overflow: hidden;
   border-radius: 10px;
-  margin-left: 40%;
+  margin-left: 50%;
   grid-row: 3;
   grid-column: 5 / span 1;
 `;
@@ -126,6 +128,7 @@ const StyledComingSoon = styled.div`
   font-family: Lexend;
   font-size: 2.5em;
   width: 70%;
+  height: auto;
   text-align: center;
   margin-right: 10%;
   right: 0;
@@ -137,7 +140,7 @@ const StyledComingSoon = styled.div`
 
 const StyledMahdiBa = styled.div`
   position: relative;
-  width: 158%;
+  width: 185%;
   height: 70%;
   overflow: hidden;
   border-radius: 10px;
@@ -147,7 +150,7 @@ const StyledMahdiBa = styled.div`
 
 const StyledWrldMag = styled.div`
   position: relative;
-  width: 80%;
+  width: 70%;
   margin-left: 60%;
   height: 70%;
   overflow: hidden;
@@ -161,7 +164,7 @@ const StyledWrldMag = styled.div`
 const StyledImageWrlMag = styled.img`
   min-width: 100px;
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   cursor: pointer;
   transform: scale(2.5);
@@ -193,9 +196,9 @@ const StyledBackground = styled.div`
 
 const StyledEdenLz = styled.div`
   width: 100%;
-  height: 100%;
+  height: 113%;
   position: relative;
-  top: -20%;
+  top: -23%;
   overflow: hidden;
   border-radius: 10px;
   grid-row: 3;
@@ -204,10 +207,10 @@ const StyledEdenLz = styled.div`
 
 const StyledPaltay = styled.div`
   display: flex;
-  width: 90%;
-  height: 56%;
-  margin-top: 268px;
-  margin-left: 10%;
+  width: 92%;
+  height: 55%;
+  margin-top: 220px;
+  margin-left: 8%;
   overflow: hidden;
 
   border-radius: 10px;
