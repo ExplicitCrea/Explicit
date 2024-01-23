@@ -5,16 +5,16 @@ const StyledArtbook = styled.div`
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  border: 1px solid blue;
 
   .container {
     display: grid;
     justify-content: center;
-    width: 100%;
-    height: 50%;
+    width: 95%;
+    height: 50vh;
+    margin-top: 10px;
     gap: 12px;
     grid-template-rows: 41% 55% 49% 53%;
-    grid-template-columns: 11% 16% 16% 8%;
+    grid-template-columns: 10% 16% 16% 16% 8%;
     position: relative;
 
     img {
@@ -37,7 +37,6 @@ const StyledArtbook = styled.div`
       overflow: hidden;
       border-radius: 10px;
       grid-row: 1;
-      /* margin-top: 6.5%; */
       grid-column: 1 / span 3;
     }
 
@@ -45,7 +44,6 @@ const StyledArtbook = styled.div`
       width: 100%;
       height: auto;
       max-height: 250px;
-      /* margin-top: 10%; */
       overflow: hidden;
       border-radius: 10px;
       grid-row: 1;
@@ -56,7 +54,6 @@ const StyledArtbook = styled.div`
       width: 100%;
       height: auto;
       max-height: 250px;
-      /* margin-top: 20%; */
       overflow: hidden;
       border-radius: 10px;
       grid-row: 1;
@@ -92,9 +89,9 @@ const StyledArtbook = styled.div`
     }
 
     .the-guill {
-      width: 110%;
+      width: 93%;
       height: 90%;
-      margin-left: 20%;
+      margin-left: 11%;
       overflow: hidden;
       border-radius: 10px;
       grid-row: 3;
@@ -102,11 +99,11 @@ const StyledArtbook = styled.div`
     }
 
     .pota {
-      width: 50%;
+      width: 83%;
       height: 90%;
       overflow: hidden;
       border-radius: 10px;
-      margin-left: 50%;
+      margin-left: 17%;
       grid-row: 3;
       grid-column: 5 / span 1;
     }
@@ -124,7 +121,7 @@ const StyledArtbook = styled.div`
       position: absolute;
       background-color: #404040;
       font-family: Lexend;
-      font-size: 2.5em;
+      font-size: 1.7em;
       width: 70%;
       height: auto;
       text-align: center;
@@ -149,7 +146,7 @@ const StyledArtbook = styled.div`
     .wrld-mag {
       position: relative;
       width: 70%;
-      margin-left: 60%;
+      margin-left: 53%;
       height: 70%;
       overflow: hidden;
       border-radius: 10px;
@@ -204,12 +201,11 @@ const StyledArtbook = styled.div`
 
     .paltay {
       display: flex;
-      width: 92%;
+      width: 94.3%;
       height: 55%;
       margin-top: 220px;
-      margin-left: 8%;
+      margin-left: 5.8%;
       overflow: hidden;
-
       border-radius: 10px;
       grid-row: 3;
       grid-column: 3 / span 4;

@@ -52,14 +52,13 @@ export const Artbook = () => {
         </div>
 
         <div className="wrld-mag">
-          <div className="background">
+          <div className="background"></div>
             <img
               className="image-wrldmag-no-background"
               src={wrld_mag_no_background}
               alt="Wrld mag no background"
             />
             <img className="image-wrldmag" src={wrld_mag} alt="Wrld Mag" />
-          </div>
         </div>
 
         <div className="the-guill">
