@@ -196,7 +196,7 @@ const StyledArtbook = styled.div`
       position: absolute;
       background-color: #404040;
       font-family: Lexend;
-      font-size: 1.7em;
+      font-size: 1.5em;
       width: 70%;
       height: auto;
       text-align: center;
@@ -206,7 +206,23 @@ const StyledArtbook = styled.div`
       border-radius: 0px 15px 15px 0px;
       bottom: 105px;
       z-index: 10;
-      display: none;
+
+      @media (max-width: 1600px) {
+        font-size: 1.3em;
+      }
+      @media (max-width: 1350px) {
+        font-size: 1em;
+      }
+
+      @media (max-width: 1110px) {
+        font-size: 0.8em;
+      }
+      
+      @media (max-width: 768px) {
+        font-size: 1em;
+        bottom: 50px;
+
+      }
     }
 
     .mahdiBa {

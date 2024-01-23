@@ -16,7 +16,7 @@ import { StyledArtbook } from "./StyledArtbook";
 
 export const Artbook = () => {
   return (
-    <StyledArtbook>
+    <StyledArtbook> 
       <div className="container">
         <div className="olympics">
           <img src={olympics} alt="Olympics" />
