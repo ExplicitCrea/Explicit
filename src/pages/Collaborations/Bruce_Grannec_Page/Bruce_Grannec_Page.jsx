@@ -2,6 +2,9 @@ import { Carousel } from "../../../components/Bruce_Grannec/Carousel";
 import labelOnSide from "../../../assets/Bruce_Grannec/label_on_side.webp";
 import whiteLogo from "../../../assets/Bruce_Grannec/white_logo.webp";
 import whiteStar from "../../../assets/Bruce_Grannec/white_star.webp";
+import logoFifa from "../../../assets/Bruce_Grannec/logo-fifa.webp"
+import logoFrenchBattle from "../../../assets/Bruce_Grannec/logo-french-battle.webp"
+import twitch from "../../../assets/Bruce_Grannec/twitch.webp"
 import eventPicture from "../../../assets/Bruce_Grannec/event_picture.webp";
 import { StyledPage } from "./StyledBruceGrannec";
 
@@ -12,7 +15,14 @@ export const Bruce_Grannec_Page = () => {
         <div className="label-on-side">
           <img src={labelOnSide} alt="Label on side" />
         </div>
-        <div className="paragraph-and-logo-container">
+        <div className="banner">
+          <div className="banner-items">
+            <img className="logo-fifa" src={logoFifa} alt="Fifa logo" />
+            <img className="logo-french-battle" src={logoFrenchBattle} alt="Logo French Battle" />
+            <img className="twitch" src={twitch} alt="Twitch Bruce Grannec" />
+          </div>
+
+        </div>
           <div className="paragraph_container">
             <p>
               Nous sommes fiers d&apos;avoir pu collaborer avec Bruce Grannec en
@@ -37,7 +47,7 @@ export const Bruce_Grannec_Page = () => {
               alt="White Star Explicite"
             />
           </div>
-        </div>
+
           <div className="event_container">
             <img src={eventPicture} alt="Event Picture" />
           </div>

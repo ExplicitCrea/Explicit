@@ -5,112 +5,197 @@ const StyledPage = styled.section`
   height: 100vh;
   background: url("src/assets/Bruce_Grannec/background.webp");
   background-size: cover;
-  padding: 96px 25px 26px 25px;
+  padding: 1% 0%;
   overflow: hidden;
+
+  @media screen and (max-width: 1000px) {
+      padding: 50px 0;
+      background: rgb(25,40,64);
+      background: linear-gradient(35deg, rgba(25,40,64,1) 56%, rgba(18,25,35,1) 79%);
+    }
 
   .container {
     display: grid;
-    padding: 10px;
     justify-content: center;
-    grid-column-gap: 50px;
+    align-content: center;
     position: relative;
+    grid-column-gap: 4%;
+    grid-row-gap: 2%;
     width: 100%;
-    aspect-ratio: 1/1;
-    grid-template-columns: 18% 22% 14% 30%;
-    grid-template-rows: 17% 25% 25% 29%;
-    /* border: 2px solid red; */
+    height: 100%;
+    grid-template-columns: 14% 7% 10% 18% 7%;
+    grid-template-rows: 28% 8% 12% 26%;
+
+    @media screen and (max-width: 1000px) {
+      justify-items: center;
+      padding: 96px 25px 10px 25px;
+      grid-template-columns: 5% 90% 5%;
+      grid-template-rows: 10vh 10vh 10vh 10vh 10vh;
+    }
 
     .label-on-side {
-        width: 80%;
-        aspect-ratio: 250 / 750;
-      grid-row: 1 / span 5;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 250 / 750;
+      grid-row: 1 / span 3;
       grid-column: 1;
-      /* border: 1px solid yellow; */
+      gap: 10px;
 
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
+
+      @media screen and (max-width: 1000px) {
+        display: none;
+      }
     }
 
-    .paragraph-and-logo-container {
-      display: flex;
-      width: 100%;
-      flex-direction: column;
-      grid-column: 2 / span 1;
-      grid-row: 1 / span 2;
-
-      .paragraph_container {
-        box-sizing: border-box;
+    .banner {
+      background: rgb(25,40,64);
+      background: linear-gradient(35deg, rgba(25,40,64,1) 56%, rgba(18,25,35,1) 79%);
+      box-shadow: 1px 3px 40px 10px rgba(0,0,0,0.5);
+      display: none;
+      @media screen and (max-width: 1000px) {
         width: 100%;
-        /* border: 1px solid green; */
-
-        p {
-          margin: 0;
-          background-color: rgba(0, 0, 0, 0.7);
-          font-family: Lexend;
-          font-size: 0.8em;
-
-          padding: 10px;
-          text-align: center;
-          color: white;
-          border-radius: 30px;
-        }
-
+        display: flex;
+        justify-content: center;
+       
+        grid-row: 2 / span 1 ;
+        grid-column: 2;
+        max-height: 70px;
+        border-radius: 5px;
+      }
+      
+      .banner-items {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 25%;
+        gap: 5px;
         
       }
-
-      .logo-container {
-        margin-top: 2%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 3px;
-        width: 100%;
-        height: 50%;
-        grid-row: 2;
-        grid-column: 2 / span 1;
-        /* border: 1px solid purple; */
-
-        .white-star {
-          width: 20%;
-          height: auto;
-          object-fit: cover;
-        }
-        .white-logo {
-          display: inline;
-          width: 40%;
-          height: auto;
-          object-fit: cover;
-        }
-      }
-    }
-
-    .event_container {
-      margin-left: 5%;
-      width: 80%;
-      height: 110%;
-      aspect-ratio: 4/3;
-      grid-column: 3 / span 2;
-      grid-row: 1 / span 2;
-      /* border: 1px solid pink; */
-
-      img {
+      .logo-fifa {
+        width: 140%;
+        height: auto;
         object-fit: cover;
+      }
+
+      .logo-french-battle {
         width: 100%;
-        height: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+      .twitch {
+        border-radius: 5px;
+        width: 120%;
+        height: auto;
+        object-fit: cover;
+      }
+
+
+    }
+
+    .paragraph_container {
+      box-sizing: border-box;
+      width: 70%;
+      max-width: 70%;
+      height: auto;
+      margin: 0 auto;
+      grid-column: 2 / span 2;
+      grid-row: 1 / span 1;
+
+      @media screen and (max-width: 1000px) {
+        grid-column: 2 / span 1;
+        grid-row: 6 / span 2;
+        width: 100%;
+      }
+
+      p {
+        margin: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        font-family: Lexend;
+        font-size: 0.8em;
+        padding: 8px;
+        text-align: center;
+        color: white;
+        width: 100%;
+        border-radius: 20px;
+
+        @media screen and (max-width: 1600px) {
+          font-size: 0.6em;
+        }
+        @media screen and (max-width: 1270px) {
+          font-size: 0.5em;
+        }
+        @media screen and (max-width: 1000px) {
+          font-size: 0.8em;
+        }
       }
     }
-    .carousel-container {
-      margin-left: 8%;
-      width: 60%;
-      aspect-ratio: 16/9;
-      grid-column: 2 / span 3;
-      grid-row: 3 / span 3;
-      /* border: 3px solid white; */
+
+    .logo-container {
+      margin-top: 2%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      width: 100%;
+      height: auto;
+      grid-row: 2;
+      grid-row: 2 / span 1;
+      grid-column: 2 / span 2;
+
+      @media screen and (max-width: 1000px) {
+        width: 50%;
+        grid-row: 5;
+        grid-column: 2 / span 2;
+        }
+
+      .white-star {
+        width: 23%;
+        height: auto;
+        object-fit: cover;
+      }
+      .white-logo {
+        display: inline;
+        width: 45%;
+        height: auto;
+        object-fit: cover;
+      }
     }
   }
+
+  .event_container {
+    width: 100%;
+    height: 110%;
+    aspect-ratio: 4/3;
+    grid-column: 4 / span 2;
+    grid-row: 1 / span 2;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+    @media screen and (max-width: 1000px) {
+        display: none;
+    }
+  }
+  .carousel-container {
+    width: 100%;
+    aspect-ratio: 16/9;
+    grid-column: 2 / span 3;
+    grid-row: 3 / span 0;
+    @media screen and (max-width: 1000px) {
+      grid-column: 2 / span 1;
+      grid-row: 3 / span 2;
+      }
+  }
+
 `;
 
 export { StyledPage };
