@@ -15,7 +15,7 @@ const StyledArtbook = styled.div`
     margin-top: 10px;
     padding: 20px;
     gap: 12px;
-    grid-template-rows: 41% 55% 49% 53%;
+    grid-template-rows: 45% 55% 49% 53%;
     grid-template-columns: 10% 16% 16% 16% 8%;
     position: relative;
 
@@ -116,6 +116,7 @@ const StyledArtbook = styled.div`
       border-radius: 10px;
       grid-row: 2;
       grid-column: 3 / span 1;
+
       @media (max-width: 768px) {
         grid-column: 1 / span 2;
         grid-row: 5 / span 1;
@@ -204,7 +205,7 @@ const StyledArtbook = styled.div`
       right: 0;
       padding: 10px;
       border-radius: 0px 15px 15px 0px;
-      bottom: 105px;
+      bottom: 40%;
       z-index: 10;
 
       @media (max-width: 1600px) {
@@ -217,11 +218,10 @@ const StyledArtbook = styled.div`
       @media (max-width: 1110px) {
         font-size: 0.8em;
       }
-      
+
       @media (max-width: 768px) {
         font-size: 1em;
-        bottom: 50px;
-
+        bottom: 25%;
       }
     }
 
@@ -245,7 +245,6 @@ const StyledArtbook = styled.div`
     .wrld-mag {
       position: relative;
       width: 70%;
-      /* margin-left: 53%; */
       left: 53%;
       height: 70%;
       overflow: hidden;
@@ -339,6 +338,7 @@ const StyledArtbook = styled.div`
       border-radius: 10px;
       grid-row: 3;
       grid-column: 3 / span 4;
+      
       @media (max-width: 768px) {
         grid-column: 2 / span 2;
         grid-row: 7 / span 1;
