@@ -6,13 +6,17 @@ const StyledPage = styled.section`
   background: url("src/assets/Bruce_Grannec/background.webp");
   background-size: cover;
   padding: 1% 0%;
-  overflow: hidden;
 
   @media screen and (max-width: 1000px) {
-      padding: 50px 0;
-      background: rgb(25,40,64);
-      background: linear-gradient(35deg, rgba(25,40,64,1) 56%, rgba(18,25,35,1) 79%);
-    }
+    height: auto;
+    padding-top: 136px;
+    background: rgb(25, 40, 64);
+    background: linear-gradient(
+      35deg,
+      rgba(25, 40, 64, 1) 56%,
+      rgba(18, 25, 35, 1) 79%
+    );
+  }
 
   .container {
     display: grid;
@@ -28,9 +32,12 @@ const StyledPage = styled.section`
 
     @media screen and (max-width: 1000px) {
       justify-items: center;
-      padding: 96px 25px 10px 25px;
-      grid-template-columns: 5% 90% 5%;
-      grid-template-rows: 10vh 10vh 10vh 10vh 10vh;
+      grid-column-gap: 0%;
+      grid-row-gap: 2%;
+      padding: 96px 20px;
+      grid-template-columns: 100%;
+      grid-template-rows: 25% auto 20% auto auto;
+
     }
 
     .label-on-side {
@@ -53,49 +60,62 @@ const StyledPage = styled.section`
     }
 
     .banner {
-      background: rgb(25,40,64);
-      background: linear-gradient(35deg, rgba(25,40,64,1) 56%, rgba(18,25,35,1) 79%);
-      box-shadow: 1px 3px 40px 10px rgba(0,0,0,0.5);
       display: none;
       @media screen and (max-width: 1000px) {
-        width: 100%;
+        margin-top: 26px;
         display: flex;
-        justify-content: center;
-       
-        grid-row: 2 / span 1 ;
-        grid-column: 2;
-        max-height: 70px;
+        width: 100%;
+        height: 200px;
+        min-height: 100px;
+        max-height: 150px;
+        grid-row: 1;
+        grid-column: 1;
         border-radius: 5px;
       }
-      
+
+      .background-banner {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        background: rgb(25, 40, 64);
+        background: linear-gradient(
+          35deg,
+          rgba(25, 40, 64, 1) 56%,
+          rgba(18, 25, 35, 1) 79%
+        );
+        box-shadow: 1px 3px 40px 10px rgba(0, 0, 0, 0.5);
+        
+
+      }
+
       .banner-items {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
-        width: 25%;
-        gap: 5px;
-        
+        width: 100%;
+        gap: 5%;
+
       }
       .logo-fifa {
-        width: 140%;
+        width: 30%;
         height: auto;
         object-fit: cover;
       }
 
       .logo-french-battle {
-        width: 100%;
+        width: 25%;
         height: auto;
         object-fit: cover;
+
       }
 
       .twitch {
         border-radius: 5px;
-        width: 120%;
+        width: 30%;
         height: auto;
         object-fit: cover;
+
       }
-
-
     }
 
     .paragraph_container {
@@ -108,9 +128,10 @@ const StyledPage = styled.section`
       grid-row: 1 / span 1;
 
       @media screen and (max-width: 1000px) {
-        grid-column: 2 / span 1;
-        grid-row: 6 / span 2;
+        grid-column: 1;
+        grid-row: 4;
         width: 100%;
+
       }
 
       p {
@@ -136,7 +157,7 @@ const StyledPage = styled.section`
       }
     }
 
-    .logo-container {
+    .explicit-container {
       margin-top: 2%;
       display: flex;
       align-items: center;
@@ -149,10 +170,10 @@ const StyledPage = styled.section`
       grid-column: 2 / span 2;
 
       @media screen and (max-width: 1000px) {
-        width: 50%;
-        grid-row: 5;
-        grid-column: 2 / span 2;
-        }
+        width: 75vw;
+        grid-row: 3;
+        grid-column: 1;
+      }
 
       .white-star {
         width: 23%;
@@ -168,7 +189,7 @@ const StyledPage = styled.section`
     }
   }
 
-  .event_container {
+  .event-container {
     width: 100%;
     height: 110%;
     aspect-ratio: 4/3;
@@ -182,20 +203,22 @@ const StyledPage = styled.section`
     }
 
     @media screen and (max-width: 1000px) {
-        display: none;
+      display: none;
     }
   }
   .carousel-container {
     width: 100%;
     aspect-ratio: 16/9;
+    height: auto;
     grid-column: 2 / span 3;
     grid-row: 3 / span 0;
     @media screen and (max-width: 1000px) {
-      grid-column: 2 / span 1;
-      grid-row: 3 / span 2;
-      }
-  }
+      aspect-ratio: 16/9;
+      grid-column: 1;
+      grid-row: 2;
 
+    }
+  }
 `;
 
 export { StyledPage };
