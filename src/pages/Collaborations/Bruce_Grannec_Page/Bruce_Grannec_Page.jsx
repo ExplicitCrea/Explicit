@@ -16,13 +16,15 @@ export const Bruce_Grannec_Page = () => {
           <img src={labelOnSide} alt="Label on side" />
         </div>
         <div className="banner">
-          <div className="banner-items">
-            <img className="logo-fifa" src={logoFifa} alt="Fifa logo" />
-            <img className="logo-french-battle" src={logoFrenchBattle} alt="Logo French Battle" />
-            <img className="twitch" src={twitch} alt="Twitch Bruce Grannec" />
+          <div className="background-banner">
+            <div className="banner-items">
+              <img className="logo-fifa" src={logoFifa} alt="Fifa logo" />
+              <img className="logo-french-battle" src={logoFrenchBattle} alt="Logo French Battle" />
+              <img className="twitch" src={twitch} alt="Twitch Bruce Grannec" />
+            </div>
           </div>
-
         </div>
+
           <div className="paragraph_container">
             <p>
               Nous sommes fiers d&apos;avoir pu collaborer avec Bruce Grannec en
@@ -35,7 +37,7 @@ export const Bruce_Grannec_Page = () => {
               sa plateforme de streaming.
             </p>
           </div>
-          <div className="logo-container">
+          <div className="explicit-container">
             <img
               className="white-star"
               src={whiteStar}
@@ -48,7 +50,7 @@ export const Bruce_Grannec_Page = () => {
             />
           </div>
 
-          <div className="event_container">
+          <div className="event-container">
             <img src={eventPicture} alt="Event Picture" />
           </div>
           <div className="carousel-container">
