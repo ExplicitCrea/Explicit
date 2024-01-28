@@ -49,6 +49,42 @@ const StyledNewsletter = styled.div`
             }
         }
     }
+
+    @media (max-width: 900px) {
+        margin-bottom: 300px;
+        div{
+            width: 90%;
+            position: relative;
+            input{
+                width: 100%;
+                border: 1px solid #fff;
+                border-radius: 50px;
+                height: 48px;
+                font-size: 16px;
+                padding: 0 12px;
+                margin-top: 36px;
+            }
+            input::placeholder{
+                font-size: 16px;
+            }
+            input:focus{
+                outline: none;
+            }
+            button{
+                top: 50%;
+                right: 7px;
+                position: absolute;
+                width: 36px;
+                height: 36px;
+                border: 1px solid #fff;
+                border-radius: 50%;
+                svg{
+                    width: 80%;
+                    height: 80%;
+                }
+            }
+        }
+    }
 `
 
 export default StyledNewsletter
