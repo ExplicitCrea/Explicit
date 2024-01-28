@@ -197,6 +197,82 @@ const StyledHome = styled.main`
         background: radial-gradient(50% 50% at 50% 50%, rgba(99, 78, 255, 0.22) 0%, rgba(99, 78, 255, 0.00) 100%);
         transform: rotate(194deg);
     }
+
+    @media (max-width: 900px) {
+        padding: 60px 0 0 0;
+        h1{
+            margin-top: 60px;
+            font-size: 24px;
+            width: 70%;
+        }
+
+        p{
+            margin-top: 24px;
+            font-size: 12px;
+            width: 80%;
+            text-align: center;
+        }
+
+        h2{
+            margin: 96px 0;
+            font-size: 18px;
+            width: 80%;
+            text-align: center;
+        }
+
+        .menu-container{
+            width: 60%;
+            height: 60%;
+            border-radius: 12px;
+            padding: 12px;
+
+            .link-container{
+                .link{
+                    border-radius: 12px;
+                    border: 1px solid #454357;
+                    h3{
+                        font-size: 20px;
+                        margin: 12px 0;
+                        margin: 12px 0 6px 0;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        .menu-container{
+            width: 80%;
+            height: 80%;
+            display: flex;
+            flex-direction: column-reverse;
+            .link-container{
+                display: flex;
+                flex-direction: column;
+                gap: 0;
+                margin: 0;
+                .link{
+                    margin: 3px 0;
+                    img{
+                        opacity: 1;
+                    }
+                    h3{
+                        margin: 12px 0;
+                    }
+                }
+            }
+        }
+        .classic-star{
+            width: 276px;
+            top: 12px;
+            left: -117px;
+        }
+        .reverse-star{
+            width: 500px;
+            top: 201px;
+            right: -243px;
+        }
+    }
 `
 
 export default StyledHome

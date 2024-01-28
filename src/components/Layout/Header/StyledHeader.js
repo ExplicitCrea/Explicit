@@ -30,6 +30,8 @@ const StyledHeader = styled.header`
     z-index: 5;
     height: 80px;
     padding: 6px 12px;
+    background: rgba(217, 217, 217, 0.07);
+    backdrop-filter: blur(15.444999694824219px);
     
     .logo{
         margin: 0!important;
@@ -112,6 +114,8 @@ const StyledHeader = styled.header`
         height: 60px;
         padding: 0;
         border-bottom: 0;
+        background: none;
+        backdrop-filter: none;
         .logo{
             display: none;
         }
@@ -131,6 +135,7 @@ const StyledHeader = styled.header`
                 }
             }
             .menu-mobil{
+                cursor: pointer;
                 svg{
                     width: 36px;
                     height: 36px;
@@ -169,6 +174,7 @@ const StyledHeader = styled.header`
             }
         }
     }
+
 `
 
 export default StyledHeader
