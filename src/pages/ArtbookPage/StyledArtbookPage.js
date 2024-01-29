@@ -6,6 +6,8 @@ const StyledArtbooksPage = styled.section`
   justify-content: center;
   color: white;
   padding: 92px 0px 40px 0px;
+  overflow: hidden;
+  min-height: 100vh;
   background: linear-gradient(
     35deg,
     rgba(44, 41, 100, 1) 56%,
