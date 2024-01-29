@@ -8,6 +8,7 @@ export const Layout = () => {
     return (
         <StyledLayout>
             <Header/>
+            <div className='white-border'/>
             <Outlet/>
         </StyledLayout>
     )
