@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const StyledPotatoz = styled.section`
-    background: url('src/assets/potatoz/background.png') no-repeat center center fixed;
+    background: url('/assets/potatoz/background.png') no-repeat center center fixed;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
