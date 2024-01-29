@@ -6,6 +6,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { Home } from './pages/Home/Home.jsx'
 import { Layout } from './components/Layout/Layout.jsx';
 import { Services } from './pages/Services/Services.jsx';
+import { Potatoz } from './pages/Potatoz/Potatoz.jsx';
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: '/services',
         element: <Services/>,
+      },
+      {
+        path: '/potatoz',
+        element: <Potatoz/>,
       }
     ],
   },
