@@ -5,16 +5,17 @@ const StyledArtbook = styled.div`
   justify-content: center;
   padding: 20px;
   width: 100vw;
-  height: 100vh;
 
   .container {
+    max-height: 600px;
+    max-width: 2193px;
     display: grid;
     justify-content: center;
-    width: 95%;
-    height: 50%;
+    width: 95vw;
+    height: 26vw;
     margin-top: 10px;
     padding: 20px;
-    gap: 12px;
+    gap: 0.8vw;
     grid-template-rows: 45% 55% 49% 53%;
     grid-template-columns: 10% 16% 16% 16% 8%;
     position: relative;
@@ -93,7 +94,7 @@ const StyledArtbook = styled.div`
     }
 
     .loreal {
-      width: 90%;
+      width: 89%;
       height: auto;
       overflow: hidden;
       border-radius: 10px;
@@ -330,10 +331,10 @@ const StyledArtbook = styled.div`
 
     .paltay {
       position: relative;
-      width: 94.5%;
-      height: 55%;
-      top: 95%;
-      left: 3.2vw;
+      width: 94%;
+      height: 54%;
+      top: 97%;
+      left: 5.8%;
       overflow: hidden;
       border-radius: 10px;
       grid-row: 3;
