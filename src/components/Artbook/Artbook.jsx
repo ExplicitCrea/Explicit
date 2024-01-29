@@ -1,22 +1,22 @@
-import bruce_grannec from "../../assets/artbook/bruce_grannec.webp";
-import eden_lz from "../../assets/artbook/eden_lz.webp";
-import loreal from "../../assets/artbook/loreal.webp";
-import le_grand_jd from "../../assets/artbook/le_grand_jd.webp";
-import vzion from "../../assets/artbook/vzion.webp";
-import mahdi_ba from "../../assets/artbook/mahdi_ba.webp";
-import olympics from "../../assets/artbook/olympics.webp";
-import paltay from "../../assets/artbook/paltay.webp";
-import pg from "../../assets/artbook/pg.webp";
-import pota from "../../assets/artbook/pota.webp";
-import theguill from "../../assets/artbook/theguill.webp";
-import vignettegg from "../../assets/artbook/vignettegg.webp";
-import wrld_mag from "../../assets/artbook/wrld_mag.webp";
-import wrld_mag_no_background from "../../assets/artbook/wrld_mag_no_background.webp";
+import bruce_grannec from "../../assets/artbook/bruce-brannec/bruce_grannec_500w.webp";
+import eden_lz from "../../assets/artbook/eden_lz/eden_lz_795w.webp";
+import loreal from "../../assets/artbook/loreal/loreal_500w.webp";
+import le_grand_jd from "../../assets/artbook/le_grand_jd/le_grand_jd_600w.jpg";
+import vzion from "../../assets/artbook/vzion/vzion_400w.webp";
+import mahdi_ba from "../../assets/artbook/mahdi_ba/mahdi_ba_400w.webp";
+import olympics from "../../assets/artbook/olympics/olympics_900w.webp";
+import paltay from "../../assets/artbook/paltay/paltay_1100w.webp";
+import pg from "../../assets/artbook/pg/pg_500w.webp";
+import potatoz from "../../assets/artbook/pota/pota_297w.webp";
+import theguill from "../../assets/artbook/theguill/theguill_600w.webp";
+import vignettegg from "../../assets/artbook/vignettegg/vignettegg_400w.webp";
+import wrld_mag from "../../assets/artbook/wrld_mag/wrld_mag_300w.webp";
+import wrld_mag_no_background from "../../assets/artbook/wrld_mag/wrld_mag_no_background_400w.webp";
 import { StyledArtbook } from "./StyledArtbook";
 
 export const Artbook = () => {
   return (
-    <StyledArtbook> 
+    <StyledArtbook>
       <div className="container">
         <div className="olympics">
           <img src={olympics} alt="Olympics" />
@@ -31,7 +31,7 @@ export const Artbook = () => {
         </div>
 
         <div className="loreal">
-          <img src={loreal} alt="l'oreal Paris" />
+          <img src={loreal} alt="L'oreal Paris" />
         </div>
 
         <div className="pg">
@@ -53,20 +53,20 @@ export const Artbook = () => {
 
         <div className="wrld-mag">
           <div className="background"></div>
-            <img
-              className="image-wrldmag-no-background"
-              src={wrld_mag_no_background}
-              alt="Wrld mag no background"
-            />
-            <img className="image-wrldmag" src={wrld_mag} alt="Wrld Mag" />
+          <img
+            className="image-wrldmag-no-background"
+            src={wrld_mag_no_background}
+            alt="Wrld mag no background"
+          />
+          <img className="image-wrldmag" src={wrld_mag} alt="Wrld Mag" />
         </div>
 
         <div className="the-guill">
           <img src={theguill} alt="The Guill" />
         </div>
 
-        <div className="pota">
-          <img src={pota} alt="Pota" />
+        <div className="potatoz">
+          <img src={potatoz} alt="Potatoz" />
         </div>
 
         <div className="edenLz">
