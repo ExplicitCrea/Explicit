@@ -26,7 +26,7 @@ const StyledArtbook = styled.div`
       padding: 0px;
       gap: 8px;
       grid-template-columns: 40% 15% 40%;
-    grid-template-rows: 15% 17% 11% 9% 11% 11% 16% 15%;
+      grid-template-rows: 15% 17% 11% 9% 11% 11% 16% 15%;
     }
 
     img {
@@ -264,7 +264,7 @@ const StyledArtbook = styled.div`
         left: 0;
       }
 
-      .image-wrldmag {
+      .wrldmag {
         min-width: 160px;
         width: 100%;
         height: auto;
@@ -280,7 +280,7 @@ const StyledArtbook = styled.div`
         }
       }
 
-      .image-wrldmag-no-background {
+      .wrldmag-no-background {
         position: absolute;
         z-index: 4;
         top: 70px;
@@ -301,7 +301,7 @@ const StyledArtbook = styled.div`
         }
       }
 
-      .background {
+      .wrld-background {
         position: absolute;
         z-index: 4;
         width: 100%;
@@ -338,7 +338,7 @@ const StyledArtbook = styled.div`
       border-radius: 10px;
       grid-row: 3;
       grid-column: 3 / span 4;
-      
+
       @media (max-width: 900px) {
         grid-column: 2 / span 2;
         grid-row: 7 / span 1;
