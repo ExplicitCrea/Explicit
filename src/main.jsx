@@ -6,10 +6,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { Home } from './pages/Home/Home.jsx'
 import { Layout } from './components/Layout/Layout.jsx';
 import { Services } from './pages/Services/Services.jsx';
-<<<<<<< HEAD
 import { ArtbookPage } from './pages/ArtbookPage/ArtbookPage.jsx';
-=======
->>>>>>> f29e625b7c1f489cf170d36722b6594f2405134e
 import { Potatoz } from './pages/Potatoz/Potatoz.jsx';
 
 const router = createBrowserRouter([
