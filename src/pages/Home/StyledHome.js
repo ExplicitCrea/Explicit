@@ -36,7 +36,7 @@ const StyledHome = styled.main`
 
     h2{
         z-index: 4;
-        margin: 8vw 0;
+        margin: 6vw 0;
         font-family: lexend;
         font-size: 2vw;
         color: #FFFFFF;
@@ -46,12 +46,12 @@ const StyledHome = styled.main`
 
     .menu-container{
         z-index: 4;
-        width: 50vw;
-        height: 50vw;
+        width: 40vw;
+        height: 40vw;
         background: rgba(217, 217, 217, 0.03);
         backdrop-filter: blur(29px);
-        border-radius: 3vw;
-        padding: calc(1vw + 0.2vw);
+        border-radius: 1.5vw;
+        padding: 1vw;
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: 100%;
@@ -59,9 +59,10 @@ const StyledHome = styled.main`
 
         .link-container{
             display: grid;
-            grid-template-columns: 99%;
-            grid-template-rows: 4% 4% 4% 4% 4% 4% 4% 4% 4% 4% 4% 4% 4% 4% 4% 4% 4% 4% 4% 4%;
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(20, 4%);
             gap: 1%;
+            margin: 1% 1% 1% 1%;
             .link{
                 width: 100%;
                 height: 100%;
@@ -69,13 +70,13 @@ const StyledHome = styled.main`
                 flex-direction: column;
                 align-items: center;
                 justify-content: flex-end;
-                border-radius: 3vw;
-                border: 0.2vw solid #454357;
+                border-radius: 1.5vw;
+                border: 0.1vw solid #454357;
                 background: rgba(15, 16, 28, 0.70);
                 text-decoration: none;
                 h3{
                     font-family: lexend;
-                    font-size: 2vw;
+                    font-size: 1.5vw;
                     color: #FFFFFF;
                     margin: 1vw 0;
                     text-align: center;
@@ -136,27 +137,27 @@ const StyledHome = styled.main`
 
     .classic-star{
         transform: rotate(146deg);
-        width: 70vw;
-        z-index: 0;
+        width: 65vw;
+        z-index: 2;
         position: absolute;
         top: 8vw;
         left: -28vw;
     }
 
     .reverse-star{
-        width: 100vw;
+        width: 65vw;
         position: absolute;
-        top: 53vw;
-        right: -52vw;
+        top: 43vw;
+        right: -32vw;
         z-index: 2;
     }
 
     .background-star{
-        width: 300vw;
+        width: 271vw;
         height: auto;
         position: absolute;
-        bottom: -137vw;
-        left: -157vw;
+        bottom: -122vw;
+        left: -140vw;
         z-index: 1;
         opacity: 0.2;
     }
@@ -195,6 +196,82 @@ const StyledHome = styled.main`
         border-radius: 50%;
         background: radial-gradient(50% 50% at 50% 50%, rgba(99, 78, 255, 0.22) 0%, rgba(99, 78, 255, 0.00) 100%);
         transform: rotate(194deg);
+    }
+
+    @media (max-width: 900px) {
+        padding: 60px 0 0 0;
+        h1{
+            margin-top: 60px;
+            font-size: 24px;
+            width: 70%;
+        }
+
+        p{
+            margin-top: 24px;
+            font-size: 12px;
+            width: 80%;
+            text-align: center;
+        }
+
+        h2{
+            margin: 96px 0;
+            font-size: 18px;
+            width: 80%;
+            text-align: center;
+        }
+
+        .menu-container{
+            width: 60%;
+            height: 60%;
+            border-radius: 12px;
+            padding: 12px;
+
+            .link-container{
+                .link{
+                    border-radius: 12px;
+                    border: 1px solid #454357;
+                    h3{
+                        font-size: 20px;
+                        margin: 12px 0;
+                        margin: 12px 0 6px 0;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        .menu-container{
+            width: 80%;
+            height: 80%;
+            display: flex;
+            flex-direction: column-reverse;
+            .link-container{
+                display: flex;
+                flex-direction: column;
+                gap: 0;
+                margin: 0;
+                .link{
+                    margin: 3px 0;
+                    img{
+                        opacity: 1;
+                    }
+                    h3{
+                        margin: 12px 0;
+                    }
+                }
+            }
+        }
+        .classic-star{
+            width: 276px;
+            top: 12px;
+            left: -117px;
+        }
+        .reverse-star{
+            width: 500px;
+            top: 201px;
+            right: -243px;
+        }
     }
 `
 
