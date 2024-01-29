@@ -6,21 +6,34 @@ const StyledArtbooksPage = styled.section`
   justify-content: center;
   color: white;
   padding: 92px 0px 40px 0px;
-  background: linear-gradient(35deg, rgba(44,41,100,1) 56%, rgba(35,59,72,1) 79%);
+  background: linear-gradient(
+    35deg,
+    rgba(44, 41, 100, 1) 56%,
+    rgba(35, 59, 72, 1) 79%
+  );
 
-  .explicit-container {
+  .explicit-star {
     position: absolute;
-    top: -23%;
-    left: -20%;
-    width: 50%;
+    top: -25vw;
+    left: -26vw;
+    width: 65vw;
     rotate: -123.72deg;
 
-    img {
-      width: 100%;
-      height: 100%;
+    @media (max-width: 900px) {
+      top: -40vw;
+      left: -41vw;
+      width: 103vw;
+    }
+    @media (max-width: 600px) {
+      top: -35vw;
+      left: -38vw;
+    }
+    @media (max-width: 500px) {
+      top: -33vw;
+    }
+    @media (max-width: 400px) {
+      top: -27vw;
     }
   }
 `;
-export {
-  StyledArtbooksPage,
-};
+export { StyledArtbooksPage };
