@@ -14,6 +14,7 @@ import vignettegg from "../../assets/artbook/vignettegg/vignettegg_400w.webp";
 import wrld_mag from "../../assets/artbook/wrld_mag/wrld_mag_300w.webp";
 import wrld_mag_no_background from "../../assets/artbook/wrld_mag/wrld_mag_no_background_400w.webp";
 import { StyledArtbook } from "./StyledArtbook";
+import { Link } from "react-router-dom";
 
 export const Artbook = () => {
   return (
@@ -67,9 +68,9 @@ export const Artbook = () => {
           <img src={theguill} alt="The Guill" width={600} height={239}/>
         </div>
 
-        <div className="potatoz">
+        <Link to="/potatoz" className="potatoz">
           <img src={potatoz} alt="Potatoz" width={297} height={518}/>
-        </div>
+        </Link>
 
         <div className="edenLz">
           <img src={eden_lz} alt="Eden Lz" width={795} height={701}/>
