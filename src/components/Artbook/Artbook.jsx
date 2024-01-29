@@ -77,8 +77,8 @@ export const Artbook = () => {
 
         <div className="paltay">
         <img
-          srcSet={`${paltay} 750w, ${paltay2} 1100w`}
-          sizes="(min-width: 900px) 750px"
+          srcSet={`${paltay} 1100w, ${paltay2} 750w`}
+          sizes="(max-width: 900px) 750px"
           src={paltay}
           alt="Paltay"
           width={1100} height={198}
