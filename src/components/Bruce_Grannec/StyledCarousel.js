@@ -1,16 +1,9 @@
 import styled from "styled-components";
 
-const CarouselContainer = styled.div`
+const CarouselImg = styled.img`
     width: 100%;
     height: 100%;
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-`
+    object-fit: cover;
+`;
 
-
-export {
-    CarouselContainer
-}
+export { CarouselImg };
