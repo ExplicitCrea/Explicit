@@ -21,28 +21,29 @@ const StyledPage = styled.section`
   }
 
   .container {
-    margin-top: calc(80px + 5vh);
+    margin-top: calc(80px + 50px);
     display: grid;
     width: 90vw;
     align-content: center;
     position: relative;
     grid-template-columns: repeat(20, 4%);
     grid-template-rows: repeat(20, 4%);
-    gap: 1.05%;
+    gap: 1%;
     border: 2px solid red;
 
     @media screen and (max-width: 1000px) {
+      margin-top: calc(80px + 30px);
       justify-items: center;
       grid-column-gap: 0%;
       grid-template-columns: 100%;
-      grid-template-rows: repeat(10, 10%);
-      /* grid-row-gap: 10px; */
+      grid-template-rows: repeat(20, 4%);
+      align-content: initial;
     }
 
     .label-on-side {
       width: 100%;
       height: auto;
-      max-width: 250px;
+      max-width: 240px;
       max-height: 728px;
       aspect-ratio: 250 / 750;
       grid-row: 1 / span 20;
@@ -54,10 +55,6 @@ const StyledPage = styled.section`
         height: 100%;
         object-fit: cover;
       }
-
-      @media screen and (max-width: 1600px) {
-        width: 250px;
-      }
       @media screen and (max-width: 1000px) {
         display: none;
       }
@@ -68,19 +65,17 @@ const StyledPage = styled.section`
       @media screen and (max-width: 1000px) {
         margin-top: 26px;
         display: flex;
-        width: 100%;
-        height: 200px;
-        min-height: 100px;
-        max-height: 150px;
-        grid-row: 1/ span 2;
+        grid-row: 1 / span 4;
         grid-column: 1;
-        border-radius: 5px;
+        width: 100%;
+        max-width: 570px;
       }
 
       .background-banner {
         display: flex;
         width: 100%;
         height: 100%;
+        border-radius: 10px;
         background: rgb(25, 40, 64);
         background: linear-gradient(
           35deg,
@@ -98,21 +93,24 @@ const StyledPage = styled.section`
         gap: 5%;
       }
       .logo-fifa {
-        width: 30%;
+        width: 25%;
         height: auto;
+        max-width: 143px;
         object-fit: cover;
       }
 
       .logo-french-battle {
-        width: 25%;
+        width: 30%;
+        max-width: 120px;
         height: auto;
         object-fit: cover;
       }
 
       .twitch {
         border-radius: 5px;
-        width: 30%;
+        width: 25%;
         height: auto;
+        max-width: 143px;
         object-fit: cover;
       }
     }
@@ -120,14 +118,19 @@ const StyledPage = styled.section`
     .paragraph_container {
       margin: 0 auto;
       width: 100%;
-
       grid-row: 1 / span 6;
       grid-column: 7 / span 4;
       border: 2px solid green;
 
       @media screen and (max-width: 1000px) {
         grid-column: 1;
-        grid-row: 9 / span 2;
+        grid-row: 16 / span 5;
+        width: 100%;
+      }
+
+      @media screen and (max-width: 400px) {
+        grid-column: 1;
+        grid-row: 14 / span 6;
         width: 100%;
       }
 
@@ -149,7 +152,10 @@ const StyledPage = styled.section`
           font-size: 0.5em;
         }
         @media screen and (max-width: 1000px) {
-          font-size: 0.8em;
+          width: 75%;
+          font-size: 10px;
+          min-width: 221px;
+          max-width: 300px;
         }
       }
     }
@@ -166,8 +172,19 @@ const StyledPage = styled.section`
       border: 2px solid green;
 
       @media screen and (max-width: 1000px) {
-        width: 30vw;
-        grid-row: 7 / span 2;
+        width: 45vw;
+        grid-row: 13 / span 3;
+        grid-column: 1;
+        max-width: 343px;
+      }
+      @media screen and (max-width: 480px) {
+        width: 60vw;
+        grid-row: 12 / span 3;
+        grid-column: 1;
+      }
+      @media screen and (max-width: 400px) {
+        width: 70vw;
+        grid-row: 11 / span 3;
         grid-column: 1;
       }
 
@@ -192,6 +209,7 @@ const StyledPage = styled.section`
     grid-column: 12 / span 7;
     grid-row: 1 / span 2;
     border: 2px solid green;
+    min-width: 400px;
 
     @media screen and (max-width: 1600px) {
       grid-column: 11 / span 8;
@@ -214,15 +232,6 @@ const StyledPage = styled.section`
       height: 100%;
       object-fit: cover;
     }
-    /* @media screen and (max-width: 1270px) {
-          width: 530px;
-        }
-        @media screen and (max-width: 1210px) {
-          width: 470px;
-        }
-        @media screen and (max-width: 1000px) {
-          display: none;
-        } */
   }
   .carousel-container {
     width: 100%;
@@ -240,9 +249,12 @@ const StyledPage = styled.section`
       grid-column: 7 / span 13;
     }
     @media screen and (max-width: 1000px) {
+      width: 90%;
+      min-width: initial;
       grid-column: 1;
-      width: 70%;
-      grid-row: 3 / span 1;
+      grid-row: 6 / span 1;
+      max-width: 440px;
+      max-height: 241px;
     }
   }
 `;
