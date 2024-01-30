@@ -119,7 +119,7 @@ const StyledPage = styled.section`
       margin: 0 auto;
       width: 100%;
       grid-row: 1 / span 6;
-      grid-column: 7 / span 4;
+      grid-column: 6 / span 5;
       border: 2px solid green;
 
       @media screen and (max-width: 1000px) {
@@ -168,7 +168,7 @@ const StyledPage = styled.section`
       gap: 3px;
       width: 100%;
       grid-row: 7 / span 2;
-      grid-column: 7 / span 4;
+      grid-column: 6 / span 5;
       border: 2px solid green;
 
       @media screen and (max-width: 1000px) {
@@ -203,17 +203,17 @@ const StyledPage = styled.section`
   }
 
   .event-container {
-    width: 80%;
+    width: 85%;
     height: auto;
     aspect-ratio: 4/3;
-    grid-column: 12 / span 7;
+    grid-column: 11 / span 8;
     grid-row: 1;
     border: 2px solid green;
     min-width: 400px;
 
-    @media screen and (max-width: 1600px) {
+    /* @media screen and (max-width: 1600px) {
       grid-column: 11 / span 8;
-    }
+    } */
     /* @media screen and (max-width: 1450px) {
       grid-column: 11 / span 9;
     } */
@@ -240,7 +240,7 @@ const StyledPage = styled.section`
     height: auto;
     aspect-ratio: 16/9;
     grid-row: 9;
-    grid-column: 7 / span 11;
+    grid-column: 6 / span 11;
     border: 2px solid green;
     @media screen and (max-width: 1000px) {
       width: 90%;
