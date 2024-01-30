@@ -28,9 +28,9 @@ export const Artbook = () => {
           <img src={bruce_grannec} alt="Bruce Grannec" width={500} height={219} />
         </div>
 
-        <div className="gg">
+        <Link to="/gg" className="gg">
           <img src={vignettegg} alt="GG" width={400} height={225}/>
-        </div>
+        </Link>
 
         <div className="loreal">
           <img src={loreal} alt="L'oreal Paris" width={500} height={286}/>
@@ -76,7 +76,7 @@ export const Artbook = () => {
           <img src={eden_lz} alt="Eden Lz" width={795} height={701}/>
         </div>
 
-        <div className="paltay">
+        <Link to="/paltay" className="paltay">
         <img
           srcSet={`${paltay} 1100w, ${paltay2} 750w`}
           sizes="(max-width: 900px) 750px"
@@ -84,7 +84,7 @@ export const Artbook = () => {
           alt="Paltay"
           width={1100} height={198}
         />
-        </div>
+        </Link>
       </div>
     </StyledArtbook>
   );
