@@ -9,6 +9,8 @@ import { Services } from './pages/Services/Services.jsx';
 import { Bruce_Grannec_Page } from './pages/Collaborations/Bruce_Grannec_Page/Bruce_Grannec_Page.jsx';
 import { ArtbookPage } from './pages/ArtbookPage/ArtbookPage.jsx';
 import { Potatoz } from './pages/Potatoz/Potatoz.jsx';
+import { Gg } from './pages/Gg/Gg.jsx';
+import { Paltay } from './pages/Paltay/Paltay';
 
 const router = createBrowserRouter([
   {
@@ -35,6 +37,14 @@ const router = createBrowserRouter([
       {
         path: '/potatoz',
         element: <Potatoz/>,
+      },
+      {
+        path: '/gg',
+        element: <Gg/>,
+      },
+      {
+        path: '/paltay',
+        element: <Paltay/>,
       }
     ],
   },
