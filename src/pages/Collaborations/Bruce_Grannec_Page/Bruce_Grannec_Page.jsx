@@ -1,11 +1,11 @@
 import { Carousel } from "../../../components/Bruce_Grannec/Carousel";
-import labelOnSide from "../../../assets/Bruce_Grannec/label_on_side.webp";
-import whiteLogo from "../../../assets/Bruce_Grannec/white_logo.webp";
-import whiteStar from "../../../assets/Bruce_Grannec/white_star.webp";
-import logoFifa from "../../../assets/Bruce_Grannec/logo-fifa.webp"
-import logoFrenchBattle from "../../../assets/Bruce_Grannec/logo-french-battle.webp"
-import twitch from "../../../assets/Bruce_Grannec/twitch.webp"
-import eventPicture from "../../../assets/Bruce_Grannec/event_picture.webp";
+import labelOnSide from "../../../assets/bruce_grannec/label_on_side.webp";
+import whiteLogo from "../../../assets/bruce_grannec/white_logo.webp";
+import whiteStar from "../../../assets/bruce_grannec/white_star.webp";
+import logoFifa from "../../../assets/bruce_grannec/logo-fifa.webp"
+import logoFrenchBattle from "../../../assets/bruce_grannec/logo-french-battle.webp"
+import twitch from "../../../assets/bruce_grannec/twitch.webp"
+import eventPicture from "../../../assets/bruce_grannec/event_picture.webp";
 import { StyledPage } from "./StyledBruceGrannec";
 
 export const Bruce_Grannec_Page = () => {

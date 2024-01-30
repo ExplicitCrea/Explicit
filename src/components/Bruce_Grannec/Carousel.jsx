@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import image1 from '../../assets/Bruce_Grannec/image1.webp';
-import image2 from '../../assets/Bruce_Grannec/image2.webp';
-import image3 from '../../assets/Bruce_Grannec/image3.webp';
+import image1 from '../../assets/bruce_grannec/image1.webp';
+import image2 from '../../assets/bruce_grannec/image2.webp';
+import image3 from '../../assets/bruce_grannec/image3.webp';
 import {
   CarouselContainer
 }
