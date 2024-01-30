@@ -2,16 +2,15 @@ import styled from "styled-components";
 
 const StyledPage = styled.section`
   display: flex;
-  background: url("src/assets/Bruce_Grannec/background.webp");
-  background-size: cover;
+  justify-content: center;
   border: 2px solid yellow;
   width: 100%;
-  height: 50vh;
-  justify-content: center;
   min-height: 100vh;
+  background: url("src/assets/Bruce_Grannec/background.webp");
+  background-size: cover;
 
   @media screen and (max-width: 1000px) {
-    height: auto;
+
     background: rgb(25, 40, 64);
     background: linear-gradient(
       35deg,
@@ -21,10 +20,10 @@ const StyledPage = styled.section`
   }
 
   .container {
-    margin-top: calc(80px + 50px);
+    margin-top: calc(80px + 40px);
     display: grid;
+    justify-content: center;
     width: 90vw;
-    align-content: center;
     position: relative;
     grid-template-columns: repeat(20, 4%);
     grid-template-rows: repeat(20, 4%);
@@ -33,6 +32,7 @@ const StyledPage = styled.section`
 
     @media screen and (max-width: 1000px) {
       margin-top: calc(80px + 30px);
+      width: 90vw;
       justify-items: center;
       grid-column-gap: 0%;
       grid-template-columns: 100%;
@@ -43,8 +43,8 @@ const StyledPage = styled.section`
     .label-on-side {
       width: 100%;
       height: auto;
-      max-width: 240px;
-      max-height: 728px;
+      max-width: 235px;
+      max-height: 720px;
       aspect-ratio: 250 / 750;
       grid-row: 1 / span 20;
       grid-column: 1 / span 5;
@@ -203,26 +203,26 @@ const StyledPage = styled.section`
   }
 
   .event-container {
-    width: 100%;
+    width: 80%;
     height: auto;
-    aspect-ratio: 16/9;
+    aspect-ratio: 4/3;
     grid-column: 12 / span 7;
-    grid-row: 1 / span 2;
+    grid-row: 1;
     border: 2px solid green;
     min-width: 400px;
 
     @media screen and (max-width: 1600px) {
       grid-column: 11 / span 8;
     }
-    @media screen and (max-width: 1450px) {
+    /* @media screen and (max-width: 1450px) {
       grid-column: 11 / span 9;
-    }
-    @media screen and (max-width: 1300px) {
-      grid-column: 11 / span 10;
-    }
-    @media screen and (max-width: 1100px) {
-      grid-column: 11 / span 10;
-    }
+    } */
+    /* @media screen and (max-width: 1300px) {
+      grid-column: 11 / span 9;
+    } */
+    /* @media screen and (max-width: 1100px) {
+      grid-column: 11 / span 9;
+    } */
     @media screen and (max-width: 1000px) {
       display: none;
     }
@@ -236,18 +236,12 @@ const StyledPage = styled.section`
   .carousel-container {
     width: 100%;
     max-width: 750px;
-    max-height: 426px;
+    max-height: 422px;
     height: auto;
     aspect-ratio: 16/9;
     grid-row: 9;
     grid-column: 7 / span 11;
     border: 2px solid green;
-    @media screen and (max-width: 1400px) {
-      grid-column: 7 / span 12;
-    }
-    @media screen and (max-width: 1200px) {
-      grid-column: 7 / span 13;
-    }
     @media screen and (max-width: 1000px) {
       width: 90%;
       min-width: initial;
