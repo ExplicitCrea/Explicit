@@ -8,9 +8,9 @@ const StyledVzion = styled.section`
 
   .background {
     position: absolute;
-    z-index: -5;
-    width: 100%;
-    height: auto;
+    background: url("src/assets/vzion/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   .main-wrapper {
@@ -58,7 +58,6 @@ const StyledVzion = styled.section`
         font-size: 43px;
         line-height: 53.75px;
         width: 655px;
-
       }
 
       button {
