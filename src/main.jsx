@@ -8,6 +8,7 @@ import { Layout } from './components/Layout/Layout.jsx';
 import { Services } from './pages/Services/Services.jsx';
 import { ArtbookPage } from './pages/ArtbookPage/ArtbookPage.jsx';
 import { Potatoz } from './pages/Potatoz/Potatoz.jsx';
+import { Gg } from './pages/Gg/Gg.jsx';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: '/potatoz',
         element: <Potatoz/>,
+      },
+      {
+        path: '/gg',
+        element: <Gg/>,
       }
     ],
   },

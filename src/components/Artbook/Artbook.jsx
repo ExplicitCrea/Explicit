@@ -28,9 +28,9 @@ export const Artbook = () => {
           <img src={bruce_grannec} alt="Bruce Grannec" width={500} height={219} />
         </div>
 
-        <div className="gg">
+        <Link to="/gg" className="gg">
           <img src={vignettegg} alt="GG" width={400} height={225}/>
-        </div>
+        </Link>
 
         <div className="loreal">
           <img src={loreal} alt="L'oreal Paris" width={500} height={286}/>
