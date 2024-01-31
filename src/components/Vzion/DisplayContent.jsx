@@ -22,9 +22,11 @@ export const DisplayContent = ({videoClick}) => {
       <div className="text-content">
         <h3>{title}</h3>
         <p>{paragraph}</p>
-        <button onClick={() => link && window.open(link, '_blank', 'noopener noreferrer')}>
-            consulter la vidéo
-        </button>
+        <div className="container_btn">
+          <button onClick={() => link && window.open(link, '_blank', 'noopener noreferrer')}>
+              consulter la vidéo
+          </button>
+        </div>
       </div>
     </StyledDisplayContent>
   );
