@@ -52,6 +52,14 @@ const StyledVzion = styled.section`
     display: flex;
     gap: 20px;
   }
+
+ .container-compare-slider {
+  margin: 250px 0px 100px 0px;
+  display: flex;
+  justify-content: center;
+
+ }
+
 `;
 
 export { StyledVzion };

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { DisplayContent } from "../../components/Vzion/DisplayContent"
+import { CompareSlider } from "../../components/Vzion/CompareSlider.jsx/CompareSlider";
 import video1 from "../../assets/vzion/video1.jpg";
 import video2 from "../../assets/vzion/video2.jpg";
 import video3 from "../../assets/vzion/video3.jpg";
@@ -29,6 +30,9 @@ export const Vzion = () => {
             </div>
             <DisplayContent videoClick={videoClick}/>
           </div>
+        </div>
+        <div className="container-compare-slider">
+          <CompareSlider/>
         </div>
       </div>
     </StyledVzion>
