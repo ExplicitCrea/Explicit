@@ -25,9 +25,9 @@ export const Vzion = () => {
           </div>
           <div className="second-wrapper">
             <div className="videos-vignettes">
-              <img src={video1} onClick={() => setVideoClick('video1')} alt="" />
-              <img src={video2} onClick={() => setVideoClick('video2')} alt="" />
-              <img src={video3} onClick={() => setVideoClick('video3')} alt="" />
+              <img src={video1} className="video1" onClick={() => setVideoClick('video1')} alt="" />
+              <img src={video2} className="video2" onClick={() => setVideoClick('video2')} alt="" />
+              <img src={video3} className="video3" onClick={() => setVideoClick('video3')} alt="" />
             </div>
             <DisplayContent videoClick={videoClick}/>
           </div>
@@ -36,7 +36,7 @@ export const Vzion = () => {
           <CompareSlider/>
           <p>Chez Explicit, chaque image est une toile vierge sur laquelle nous appliquons notre expertise en colorimétrie.</p>
         </div>
-        <div className="grid_container">
+        <div className="grid-container">
           <p>Explicit, c'est bien plus qu'une simple créativité artistique. C'est l'assurance de tournages exécutés avec un matériel professionnel pour vous offrir une expérience visuelle et auditive exceptionnelle.</p>
           <Grid/>
         </div>

@@ -2,7 +2,9 @@ import styled from "styled-components";
 
 const StyledContainer = styled.div`
     width: 35%;
-
+    @media (max-width: 1000px) {
+      width: 50%;
+    }
     
 
   .react-compare-slider {
