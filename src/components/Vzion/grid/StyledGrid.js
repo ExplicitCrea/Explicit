@@ -6,6 +6,7 @@ const StyledContainer = styled.div`
     justify-content: center;
     width: 100%;
     margin-bottom: 50px;
+    overflow: hidden;
     
 
     .grid {
