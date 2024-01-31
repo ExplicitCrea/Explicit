@@ -7,6 +7,7 @@ const StyledVzion = styled.section`
   color: white;
 
   .background {
+    overflow: hidden;
     position: absolute;
     background: url("src/assets/vzion/background.jpg");
     background-size: cover;
@@ -57,7 +58,22 @@ const StyledVzion = styled.section`
   margin: 250px 0px 100px 0px;
   display: flex;
   justify-content: center;
+  gap: 30px;
+  p {
+    font-size: 16px;
+    width: 237px;
+  }
+ }
 
+ .grid_container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px;
+  p {
+    width: 747px;
+    text-align: center;
+  }
  }
 
 `;
