@@ -1,12 +1,11 @@
 import styled from "styled-components";
 
 const StyledDisplayContent = styled.div`
-
   .text-content {
-      white-space: pre-line;
-      @media (max-width: 1000px) {
-        display: none;
-      }
+    white-space: pre-line;
+    @media (max-width: 1000px) {
+      display: none;
+    }
     h3 {
       margin: 0;
       font-size: 43px;
@@ -20,7 +19,6 @@ const StyledDisplayContent = styled.div`
         font-size: 1.5em;
         line-height: 35px;
       }
-      
     }
 
     p {
@@ -31,7 +29,7 @@ const StyledDisplayContent = styled.div`
         font-size: 0.8em;
       }
     }
-    
+
     .container_btn {
       @media (max-width: 1210px) {
         width: 100%;
@@ -51,7 +49,6 @@ const StyledDisplayContent = styled.div`
         border: 1px solid #ffffff;
       }
     }
-
   }
 `;
 

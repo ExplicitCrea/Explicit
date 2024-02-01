@@ -1,17 +1,16 @@
 import { useState, useEffect } from "react";
 import { StyledDisplayContent } from "./StyledDisplayContent";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
 export const DisplayContent = ({ videoClick }) => {
-  const {t, i18n} = useTranslation()
-  const videoData = t(`vzion.${videoClick}`)[0]
+  const { t, i18n } = useTranslation();
+  const videoData = t(`vzion.${videoClick}`)[0];
   const [title, setTitle] = useState("");
   const [paragraph, setParagraph] = useState("");
   const [link, setLink] = useState("");
 
-  
   useEffect(() => {
-    setTitle(videoData.title)
+    setTitle(videoData.title);
     setParagraph(videoData.paragraph);
     setLink(videoData.link);
   }, [videoClick, i18n.language]);
@@ -27,7 +26,7 @@ export const DisplayContent = ({ videoClick }) => {
               link && window.open(link, "_blank", "noopener noreferrer")
             }
           >
-            {t('vzion.displayContent.button')}
+            {t("vzion.displayContent.button")}
           </button>
         </div>
       </div>
