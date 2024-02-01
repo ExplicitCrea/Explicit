@@ -5,7 +5,7 @@ const StyledVzion = styled.section`
   font-family: lexend;
   width: 100%;
   color: white;
-  background: url("src/assets/vzion/background.jpg") no-repeat center/cover;
+  background: url("src/assets/vzion/background.webp") no-repeat center/cover;
 
   .main-wrapper {
     margin: 140px 75px 25px 75px;
