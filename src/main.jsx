@@ -10,6 +10,9 @@ import { ArtbookPage } from './pages/ArtbookPage/ArtbookPage.jsx';
 import { Potatoz } from './pages/Potatoz/Potatoz.jsx';
 import { Gg } from './pages/Gg/Gg.jsx';
 import { Paltay } from './pages/Paltay/Paltay';
+import { Olympics } from './pages/Olympics/Olympics.jsx';
+import { Jd } from './pages/Jd/Jd.jsx';
+import { Oreal } from './pages/Oreal/Oreal.jsx';
 
 const router = createBrowserRouter([
   {
@@ -40,6 +43,18 @@ const router = createBrowserRouter([
       {
         path: '/paltay',
         element: <Paltay/>,
+      },
+      {
+        path: '/olympics',
+        element: <Olympics/>,
+      },
+      {
+        path: '/le-grand-jd',
+        element: <Jd/>,
+      },
+      {
+        path: '/loreal',
+        element: <Oreal/>,
       }
     ],
   },
