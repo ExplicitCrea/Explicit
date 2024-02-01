@@ -10,12 +10,12 @@ import image6 from "../../../assets/vzion/grid/image6.jpg";
 export const Grid = () => {
   return (
       <StyledGrid>
-        <img src={image4} alt="" />
-        <img src={image1} alt="" />
-        <img src={image3} alt="" />
-        <img src={image2} alt="" />
-        <img src={image6} alt="" />
-        <img src={image5} alt="" />
+        <img src={image4} alt="Homme entrain de taper sur le clavier de son ordinateur" />
+        <img src={image1} alt="Retour caméra" />
+        <img src={image3} alt="Vu du dessus d'un setup" />
+        <img src={image2} alt="Caméra de cinema" />
+        <img src={image6} alt="Vu d'une scène de tournage vidéo" />
+        <img src={image5} alt="Camera de cinema avec retour vidéo" />
       </StyledGrid>
   );
 };

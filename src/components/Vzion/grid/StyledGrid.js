@@ -6,7 +6,6 @@ const StyledGrid = styled.div`
   display: grid;
   grid-template-rows: 50% 50%;
   grid-template-columns: 33.33% 33.33% 33.33%;
-  border: 2px solid yellow;
   max-width: 781px;
   max-height: 502px;
   img {
