@@ -11,5 +11,44 @@
         "video": "Our team meticulously handles every phase of video editing. From de-rushing to the application of visual effects, right through to sound mixing. We're committed to delivering a quality final product.",
         "branding": "Entrust your visual presence to our creative services. Whether you represent an innovative company or are self-employed, our expertise will shape your values with unique graphic directions.",
         "motion": "Want to tell a story? With our expertise in motion design, we can illustrate it and captivate your audience."
+    },
+    "vzion": {
+        "title": {
+            "paragraph": "Creator of mystery content in the form of mini-documentaries."
+        },
+        "tertiary-wrapper": {
+            "paragraph": "At Explicit, every image is a blank canvas on which we apply our colorimetry expertise."
+        },
+        "quaternary-wrapper": {
+            "paragraph": "Explicit is more than just artistic creativity. It's the assurance of shooting with professional equipment, to give you an exceptional visual and auditory experience."
+        },
+        "displayContent": {
+            "button": "see the video"
+        },
+        "video1": [
+            {
+              "id": "video1",
+              "title": "The darkest depths of the Internet [VOL.2]",
+              "paragraph": "In the series \"The Darkest Depths of the Internet\", each episode plunges you into the mysterious and often terrifying world of the Internet. Through captivating and carefully researched stories, each episode explores different topics related to the dark side of the web. With an average running time of 30 to 40 minutes, each episode is designed to keep viewers on the edge of their seats and take them on a dark and disturbing journey.\n\nWhether it's stories of mysterious disappearances linked to obscure forums, investigations into enigmatic websites with shady activities, or explorations of modern myths propagated by social media, \"The Darkest Depths of the Internet\" offers viewers an immersive and thrilling experience.\n\nThe oppressive atmosphere and gripping surges of horror find their essence in Explicit's expertise. Every scene is meticulously crafted to evoke a sense of dread, every sound orchestrated to send shivers down your spine. With an unrivaled mastery of horrific content creation, Explicit is the driving force behind the visual and aural intensity that thrills every episode.",
+              "link": "https://youtu.be/xy3yvweMHsM?si=SvUd7wsxILHwv3rM"
+            }
+          ],
+          "video2": [
+            {
+              "id": "video2",
+              "title": "160 years in prison for imitating real-life GTA scenes",
+              "paragraph": "Immerse yourself in the extraordinary story of Ryan Stone, a character worthy of a video game.\n\nIn this incredibly dynamic adventure, discover how Ryan Stone, an American citizen, became the unwitting protagonist of a story worthy of Grand Theft Auto. With electrifying editing and vivid colors, the video takes you down the virtual streets of real life.\n\nThis visual brilliance, this electrifying energy that drives the video, is all made possible by the creative talent of audiovisual agency \"Explicit\". Our expertise in dynamic editing and original visual creation is what brings this extraordinary visual experience to life. Explicit doesn't just tell a story, they transform it into an explosion of color and movement that captivates and intrigues." ,
+              "link": "https://youtu.be/Bjmrmb3DeQo?si=GANX2WZylkNMCkHV"
+            }
+          ],
+          "video3": [
+            {
+              "id": "video3",
+              "title": "The cult that recruited through a video game: Kanye Quest 3030",
+              "paragraph": "Immerse yourself in the spellbinding mystery of 'Kanye Quest 3030', a video game that goes far beyond appearances. Discover the mysterious terminals scattered throughout the game, revealing new horizons if the right word is entered.\n\nAs an audiovisual agency, Explicit deploys its creative talents to bring captivating visual experiences to life. With expertise in staging and editing, we offer you much more than just videos. If you want to capture the mysterious essence of a complex story like 'Kanye Quest 3030', Explicit has the know-how to create unique visual experiences that captivate and intrigue viewers.",
+              "link": "https://youtu.be/ZbfrIe1j928?si=-ePsTV5TXilyrdUs"
+            }
+          ]
+        
     }
 }
