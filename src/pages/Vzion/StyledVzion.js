@@ -136,6 +136,7 @@ const StyledVzion = styled.section`
 
     @media (max-width: 1000px) {
       width: 100%;
+      padding: 20px 20px;
     }
     p {
       width: 747px;
