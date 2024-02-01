@@ -14,7 +14,6 @@ export const Vzion = () => {
   
   return (
     <StyledVzion>
-      <div className="background">
         <div className="main-wrapper">
           <div className="title">
             <h2>VZION</h2>
@@ -32,15 +31,14 @@ export const Vzion = () => {
             <DisplayContent videoClick={videoClick}/>
           </div>
         </div>
-        <div className="container-compare-slider">
+        <div className="tertiary-wrapper">
           <CompareSlider/>
           <p>Chez Explicit, chaque image est une toile vierge sur laquelle nous appliquons notre expertise en colorimétrie.</p>
         </div>
-        <div className="grid-container">
+        <div className="quaternary-wrapper">
           <p>Explicit, c'est bien plus qu'une simple créativité artistique. C'est l'assurance de tournages exécutés avec un matériel professionnel pour vous offrir une expérience visuelle et auditive exceptionnelle.</p>
           <Grid/>
         </div>
-      </div>
     </StyledVzion>
   );
 };
