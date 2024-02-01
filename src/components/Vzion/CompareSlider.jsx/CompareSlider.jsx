@@ -4,8 +4,8 @@ import {
 } from "react-compare-slider";
 import { StyledContainer } from "./StyledCompareSlider";
 
-import before from "../../../assets/vzion/compare-slider/before.jpg";
-import after from "../../../assets/vzion/compare-slider/after.jpg";
+import before from "../../../assets/vzion/compare-slider/before.webp";
+import after from "../../../assets/vzion/compare-slider/after.webp";
 
 export const CompareSlider = () => {
   return (
