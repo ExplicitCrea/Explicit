@@ -6,9 +6,7 @@ const StyledVzion = styled.section`
   width: 100%;
   color: white;
   border: 5px solid green;
-  background: url("src/assets/vzion/background.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+  background: url("src/assets/vzion/background.jpg") no-repeat center/cover;
 
   .main-wrapper {
     margin: 140px 75px 25px 75px;
@@ -18,8 +16,8 @@ const StyledVzion = styled.section`
     @media (max-width: 1210px) {
       margin: 140px 75px 0px 75px;
     }
-    @media (max-width: 1000px) {
-      margin: 140px 15px 0px 15px;
+    @media (max-width: 900px) {
+      margin: 100px 20px 0px 20px;
     }
 
     .title {
@@ -101,12 +99,16 @@ const StyledVzion = styled.section`
     display: flex;
     justify-content: center;
     gap: 30px;
+    position: relative;
+    left: 135px;
 
     @media (max-width: 1300px) {
       margin: 100px 0px 100px 0px;
       flex-direction: column-reverse;
       align-items: center;
       gap: 15px;
+      position: initial;
+      left: 0px;
     }
     @media (max-width: 500px) {
       margin: 50px 0px 50px 0px;
@@ -116,9 +118,9 @@ const StyledVzion = styled.section`
       font-size: 16px;
       width: 237px;
       @media (max-width: 1300px) {
-      width: 60%;
-      text-align: center;
-    }
+        width: 60%;
+        text-align: center;
+      }
       @media (max-width: 1000px) {
         display: none;
       }
@@ -135,7 +137,6 @@ const StyledVzion = styled.section`
     border: 1px solid red;
 
     @media (max-width: 1000px) {
-      width: 100%;
       padding: 20px 20px;
     }
     p {
@@ -145,7 +146,6 @@ const StyledVzion = styled.section`
         display: none;
       }
     }
-   
   }
 `;
 

@@ -1,4 +1,4 @@
-import { StyledContainer } from "./StyledGrid";
+import { StyledGrid } from "./StyledGrid";
 
 import image1 from "../../../assets/vzion/grid/image1.jpg";
 import image2 from "../../../assets/vzion/grid/image2.jpg";
@@ -9,15 +9,13 @@ import image6 from "../../../assets/vzion/grid/image6.jpg";
 
 export const Grid = () => {
   return (
-    <StyledContainer>
-      <div className="grid">
+      <StyledGrid>
         <img src={image4} alt="" />
         <img src={image1} alt="" />
         <img src={image3} alt="" />
         <img src={image2} alt="" />
         <img src={image6} alt="" />
         <img src={image5} alt="" />
-      </div>
-    </StyledContainer>
+      </StyledGrid>
   );
 };
