@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledContainer = styled.div`
-    width: 40%;
+    width: 30%;
     @media (max-width: 1000px) {
       width: 70%;
       .__rcs-handle-button {
