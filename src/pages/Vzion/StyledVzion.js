@@ -5,14 +5,12 @@ const StyledVzion = styled.section`
   font-family: lexend;
   width: 100%;
   color: white;
-  border: 5px solid green;
   background: url("src/assets/vzion/background.jpg") no-repeat center/cover;
 
   .main-wrapper {
     margin: 140px 75px 25px 75px;
     display: flex;
     flex-direction: column;
-    border: 3px solid red;
     @media (max-width: 1210px) {
       margin: 140px 75px 0px 75px;
     }
@@ -125,7 +123,6 @@ const StyledVzion = styled.section`
         display: none;
       }
     }
-    border: 2px solid red;
   }
 
   .quaternary-wrapper {
@@ -134,7 +131,6 @@ const StyledVzion = styled.section`
     align-items: center;
     flex-direction: column;
     gap: 25px;
-    border: 1px solid red;
 
     @media (max-width: 1000px) {
       padding: 20px 20px;
