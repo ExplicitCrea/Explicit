@@ -3,17 +3,12 @@ import styled from "styled-components";
 const StyledVzion = styled.section`
   overflow: hidden;
   font-family: lexend;
-  color: white;
   width: 100%;
-  border: 2px solid red;
-
-  .background {
-    overflow: hidden;
-    position: absolute;
-    background: url("src/assets/vzion/background.jpg");
+  color: white;
+  border: 5px solid green;
+  background: url("src/assets/vzion/background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-  }
 
   .main-wrapper {
     margin: 140px 75px 25px 75px;
@@ -22,6 +17,9 @@ const StyledVzion = styled.section`
     border: 3px solid red;
     @media (max-width: 1210px) {
       margin: 140px 75px 0px 75px;
+    }
+    @media (max-width: 1000px) {
+      margin: 140px 15px 0px 15px;
     }
 
     .title {
@@ -51,6 +49,8 @@ const StyledVzion = styled.section`
     flex-direction: column;
     @media (max-width: 1000px) {
       gap: 20px;
+      width: 100%;
+      align-items: center;
     }
     img {
       width: 424px;
@@ -62,23 +62,27 @@ const StyledVzion = styled.section`
         width: 300px;
         height: auto;
       }
+      @media (max-width: 1000px) {
+        width: 60%;
+        aspect-ratio: initial;
+      }
     }
     .video1 {
       @media (max-width: 1000px) {
         position: relative;
-        left: 100px;
+        left: 15%;
       }
     }
     .video2 {
       @media (max-width: 1000px) {
         position: relative;
-        right: 100px;
+        right: 15%;
       }
     }
     .video3 {
       @media (max-width: 1000px) {
         position: relative;
-        left: 100px;
+        left: 15%;
       }
     }
   }
@@ -87,24 +91,34 @@ const StyledVzion = styled.section`
     display: flex;
     gap: 20px;
     @media (max-width: 1000px) {
-      justify-content: center;
+      margin: 0 auto;
       gap: 0px;
     }
   }
 
-  .container-compare-slider {
-    margin: 250px 0px 100px 0px;
+  .tertiary-wrapper {
+    margin: 200px 0px 100px 0px;
     display: flex;
     justify-content: center;
     gap: 30px;
 
-    @media (max-width: 1210px) {
+    @media (max-width: 1300px) {
       margin: 100px 0px 100px 0px;
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 15px;
+    }
+    @media (max-width: 500px) {
+      margin: 50px 0px 50px 0px;
     }
 
     p {
       font-size: 16px;
       width: 237px;
+      @media (max-width: 1300px) {
+      width: 60%;
+      text-align: center;
+    }
       @media (max-width: 1000px) {
         display: none;
       }
@@ -112,25 +126,25 @@ const StyledVzion = styled.section`
     border: 2px solid red;
   }
 
-  .grid-container {
+  .quaternary-wrapper {
     display: flex;
+    margin-bottom: 50px;
     align-items: center;
     flex-direction: column;
     gap: 25px;
+    border: 1px solid red;
 
-    
     @media (max-width: 1000px) {
-      width:80%;
-     margin: 0 auto;
+      width: 100%;
     }
     p {
       width: 747px;
       text-align: center;
-    @media (max-width: 1000px) {
-      display: none;
+      @media (max-width: 1000px) {
+        display: none;
+      }
     }
-    }
-    border: 2px solid red;
+   
   }
 `;
 
