@@ -1,11 +1,11 @@
 import { StyledGrid } from "./StyledGrid";
 
-import image1 from "../../../assets/vzion/grid/image1.jpg";
-import image2 from "../../../assets/vzion/grid/image2.jpg";
-import image3 from "../../../assets/vzion/grid/image3.jpg";
-import image4 from "../../../assets/vzion/grid/image4.jpg";
-import image5 from "../../../assets/vzion/grid/image5.jpg";
-import image6 from "../../../assets/vzion/grid/image6.jpg";
+import image1 from "../../../assets/vzion/grid/image1.webp";
+import image2 from "../../../assets/vzion/grid/image2.webp";
+import image3 from "../../../assets/vzion/grid/image3.webp";
+import image4 from "../../../assets/vzion/grid/image4.webp";
+import image5 from "../../../assets/vzion/grid/image5.webp";
+import image7 from "../../../assets/vzion/grid/image7.webp";
 
 export const Grid = () => {
   return (
@@ -14,8 +14,8 @@ export const Grid = () => {
         <img src={image1} alt="Retour caméra" />
         <img src={image3} alt="Vu du dessus d'un setup" />
         <img src={image2} alt="Caméra de cinema" />
-        <img src={image6} alt="Vu d'une scène de tournage vidéo" />
         <img src={image5} alt="Camera de cinema avec retour vidéo" />
+        <img src={image7} alt="Vu sur une fille devant son ordinateur de travail" />
       </StyledGrid>
   );
 };
