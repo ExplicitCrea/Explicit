@@ -1,21 +1,20 @@
 import { useState, useEffect } from "react";
 import { StyledDisplayContent } from "./StyledDisplayContent";
-import data from "./data.json"
+import { useTranslation } from 'react-i18next';
 
-export const DisplayContent = ({videoClick}) => {
+export const DisplayContent = ({ videoClick }) => {
+  const {t, i18n} = useTranslation()
+  const videoData = t(`vzion.${videoClick}`)[0]
+  const [title, setTitle] = useState("");
+  const [paragraph, setParagraph] = useState("");
+  const [link, setLink] = useState("");
 
-   
-   const [title, setTitle] = useState("")
-   const [paragraph, setParagraph] = useState("")
-   const [link, setLink] = useState("")
-
-   useEffect(() => {
-    const videoChoice = videoClick;
-    setTitle(data[videoChoice][0].title);
-    setParagraph(data[videoChoice][0].paragraph);
-    setLink(data[videoChoice][0].link);
-}, [videoClick]);
-
+  
+  useEffect(() => {
+    setTitle(videoData.title)
+    setParagraph(videoData.paragraph);
+    setLink(videoData.link);
+  }, [videoClick, i18n.language]);
 
   return (
     <StyledDisplayContent>
@@ -23,8 +22,12 @@ export const DisplayContent = ({videoClick}) => {
         <h3>{title}</h3>
         <p>{paragraph}</p>
         <div className="container_btn">
-          <button onClick={() => link && window.open(link, '_blank', 'noopener noreferrer')}>
-              consulter la vidéo
+          <button
+            onClick={() =>
+              link && window.open(link, "_blank", "noopener noreferrer")
+            }
+          >
+            {t('vzion.displayContent.button')}
           </button>
         </div>
       </div>
