@@ -24,9 +24,9 @@ export const Artbook = () => {
           <img src={olympics} alt="Olympics" width={900} height={231} />
         </Link>
 
-        <div className="bruce-grannec">
+        <Link to='/brucegrannec' className="bruce-grannec">
           <img src={bruce_grannec} alt="Bruce Grannec" width={500} height={219} />
-        </div>
+        </Link>
 
         <Link to="/gg" className="gg">
           <img src={vignettegg} alt="GG" width={400} height={225}/>
