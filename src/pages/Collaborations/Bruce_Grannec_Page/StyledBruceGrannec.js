@@ -15,6 +15,10 @@ const StyledPage = styled.section`
     rgba(18, 25, 35, 1) 79%
   );
 
+  @media screen and (max-width: 1000px) {
+      overflow: auto;
+    }
+
   .background-min {
     position: absolute;
     width: 126vw;
@@ -44,7 +48,7 @@ const StyledPage = styled.section`
     width: 90vw;
     position: relative;
     grid-template-columns: repeat(20, minmax(30px, 4%));
-    grid-template-rows: repeat(20, minmax(36px, 4%));
+    grid-template-rows: repeat(20, minmax(30px, 4%));
     gap: 0.8%;
 
     @media screen and (max-width: 1000px) {
@@ -141,12 +145,17 @@ const StyledPage = styled.section`
 
       @media screen and (max-width: 1000px) {
         grid-column: 1;
-        grid-row: 16 / span 5;
+        grid-row: 17 / span 5;
         max-width: 480px;
       }
 
-      @media screen and (max-width: 450px) {
+      @media screen and (max-width: 453px) {
         grid-row: 15 / span 6;
+      }
+
+      @media screen and (max-width: 400px) {
+        grid-row: 14 / span 5;
+        grid-column: 1;
       }
 
       p {
@@ -174,6 +183,7 @@ const StyledPage = styled.section`
       align-items: center;
       justify-content: center;
       margin: 0 auto;
+      padding-bottom: 20px;
       gap: 3px;
       width: 100%;
       height: 100%;
@@ -182,41 +192,46 @@ const StyledPage = styled.section`
 
       @media screen and (max-width: 1000px) {
         grid-row: 13 / span 3;
+        margin-top: 15px;
         grid-column: 1;
         max-width: 343px;
+        padding-bottom: 0px;
       }
-      @media screen and (max-width: 450px) {
+      @media screen and (max-width: 453px) {
         grid-row: 12 / span 3;
+        grid-column: 1;
+        margin-top: 0;
+      }
+
+      @media screen and (max-width: 400px) {
+        grid-row: 11 / span 3;
         grid-column: 1;
       }
 
       .white-star {
-        width: 20%;
+        width: 4vw;
         height: auto;
         object-fit: cover;
-        @media screen and (min-width: 1330px) {
-          width: 15%;
-        }
+        @media screen and (max-width: 1000px) {
+          width: 30%;
+      }
       }
       .white-logo {
         display: inline;
-        width: 40%;
+        width: 8vw;
         height: auto;
         object-fit: cover;
-        @media screen and (min-width: 1330px) {
-          width: 35%;
-        }
+        @media screen and (max-width: 1000px) {
+        width: 50%;
+      }
       }
     }
   }
 
   .event-container {
-    width: 75%;
-    height: auto;
-    aspect-ratio: 4/3;
-    grid-column: 11 / span 8;
-    grid-row: 1;
-
+    width: 28vw;
+    height: 325px;
+    grid-row: 1/span 5;
     min-width: 400px;
 
     @media screen and (max-width: 1000px) {
@@ -230,16 +245,17 @@ const StyledPage = styled.section`
     }
   }
   .carousel-container {
-    width: 100%;
-    max-width: 750px;
-    max-height: 422px;
+    width: 48vw;
+    max-width: 745px;
+    max-height: 441px;
     height: auto;
     aspect-ratio: 16/9;
     grid-row: 9;
-    grid-column: 6 / span 13;
+    grid-column: 6/ span 13;
 
     @media screen and (max-width: 1000px) {
       min-width: initial;
+      width: 80vw;
       aspect-ratio: 16/9;
       grid-column: 1;
       grid-row: 6 / span 7;
