@@ -20,9 +20,9 @@ export const Artbook = () => {
   return (
     <StyledArtbook>
       <div className="container">
-        <div className="olympics">
+        <Link to="/olympics" className="olympics">
           <img src={olympics} alt="Olympics" width={900} height={231} />
-        </div>
+        </Link>
 
         <div className="bruce-grannec">
           <img src={bruce_grannec} alt="Bruce Grannec" width={500} height={219} />
@@ -32,17 +32,17 @@ export const Artbook = () => {
           <img src={vignettegg} alt="GG" width={400} height={225}/>
         </Link>
 
-        <div className="loreal">
+        <Link to="/loreal" className="loreal">
           <img src={loreal} alt="L'oreal Paris" width={500} height={286}/>
-        </div>
+        </Link>
 
         <div className="pg">
           <img src={pg} alt="Profession Gangster" width={500} height={337}/>
         </div>
 
-        <div className="le-grand-jd">
+        <Link to='/le-grand-jd' className="le-grand-jd">
           <img src={le_grand_jd} alt="Le Grand Jd" width={600} height={337}/>
-        </div>
+        </Link>
 
         <Link to="/vzion" className="vzion">
           <img src={vzion} alt="Vzion" width={400} height={400}/>
