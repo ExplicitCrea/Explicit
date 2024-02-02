@@ -14,6 +14,10 @@ import { Paltay } from './pages/Paltay/Paltay';
 import { Olympics } from './pages/Olympics/Olympics.jsx';
 import { Jd } from './pages/Jd/Jd.jsx';
 import { Oreal } from './pages/Oreal/Oreal.jsx';
+import {History} from './pages/History/History.jsx'
+import { Contact } from './pages/Contact/Contact.jsx';
+import { Faq } from './pages/FAQ/Faq.jsx';
+import { LegalDisclaimer } from './pages/Legal Disclaimer/LegalDisclaimer.jsx';
 
 const router = createBrowserRouter([
   {
@@ -60,6 +64,20 @@ const router = createBrowserRouter([
       {
         path: '/loreal',
         element: <Oreal/>,
+        path: '/history',
+        element: <History/>,
+      },
+      {
+        path: '/contact',
+        element: <Contact/>,
+      },
+      {
+        path: '/Faq',
+        element: <Faq/>,
+      },
+      {
+        path: '/Legal Disclaimer',
+        element: <LegalDisclaimer/>,
       }
     ],
   },
