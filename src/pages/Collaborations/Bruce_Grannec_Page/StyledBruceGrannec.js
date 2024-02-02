@@ -3,11 +3,9 @@ import styled from "styled-components";
 const StyledPage = styled.section`
   display: flex;
   justify-content: center;
-  border: 2px solid yellow;
   width: 100%;
   min-height: 100vh;
-  background: url("src/assets/Bruce_Grannec/background.webp");
-  background-size: cover;
+  background: url("src/assets/Bruce_Grannec/background.webp") no-repeat fixed;
 
   @media screen and (max-width: 1000px) {
 
@@ -27,16 +25,17 @@ const StyledPage = styled.section`
     position: relative;
     grid-template-columns: repeat(20, 4%);
     grid-template-rows: repeat(20, 4%);
-    gap: 1%;
-    border: 2px solid red;
+    gap: 0.8%;
+
 
     @media screen and (max-width: 1000px) {
       margin-top: calc(80px + 30px);
       width: 90vw;
+      
       justify-items: center;
       grid-column-gap: 0%;
       grid-template-columns: 100%;
-      grid-template-rows: repeat(20, 4%);
+      grid-template-rows: repeat(auto-fill, minmax(30px, 4%));;
       align-content: initial;
     }
 
@@ -48,7 +47,7 @@ const StyledPage = styled.section`
       aspect-ratio: 250 / 750;
       grid-row: 1 / span 20;
       grid-column: 1 / span 5;
-      border: 2px solid green;
+  
 
       img {
         width: 100%;
@@ -63,9 +62,8 @@ const StyledPage = styled.section`
     .banner {
       display: none;
       @media screen and (max-width: 1000px) {
-        margin-top: 26px;
         display: flex;
-        grid-row: 1 / span 4;
+        grid-row: 1/ span 4;
         grid-column: 1;
         width: 100%;
         max-width: 570px;
@@ -93,14 +91,14 @@ const StyledPage = styled.section`
         gap: 5%;
       }
       .logo-fifa {
-        width: 25%;
+        width: 30%;
         height: auto;
         max-width: 143px;
         object-fit: cover;
       }
 
       .logo-french-battle {
-        width: 30%;
+        width: 28%;
         max-width: 120px;
         height: auto;
         object-fit: cover;
@@ -108,7 +106,7 @@ const StyledPage = styled.section`
 
       .twitch {
         border-radius: 5px;
-        width: 25%;
+        width: 30%;
         height: auto;
         max-width: 143px;
         object-fit: cover;
@@ -118,44 +116,37 @@ const StyledPage = styled.section`
     .paragraph_container {
       margin: 0 auto;
       width: 100%;
+      height: 100%;
       grid-row: 1 / span 6;
       grid-column: 6 / span 5;
-      border: 2px solid green;
+      max-width: 217px;
 
       @media screen and (max-width: 1000px) {
         grid-column: 1;
         grid-row: 16 / span 5;
-        width: 100%;
+        max-width: 480px;
       }
 
-      @media screen and (max-width: 400px) {
-        grid-column: 1;
-        grid-row: 14 / span 6;
-        width: 100%;
+      @media screen and (max-width: 450px) {
+        grid-row: 15 / span 6;
       }
 
       p {
         background-color: rgba(0, 0, 0, 0.6);
         font-family: Lexend;
-        font-size: 0.7em;
+        font-size: 0.66em;
         padding: 8px;
         text-align: center;
         color: white;
-        max-width: 265px;
         margin: 0 auto;
         border-radius: 20px;
-
-        @media screen and (max-width: 1500px) {
-          font-size: 0.6em;
-        }
-        @media screen and (max-width: 1190px) {
-          font-size: 0.5em;
+        width: 100%;
+        @media screen and (max-width: 1330px) {
+          font-size: 0.62em;
         }
         @media screen and (max-width: 1000px) {
           width: 75%;
-          font-size: 10px;
           min-width: 221px;
-          max-width: 300px;
         }
       }
     }
@@ -167,35 +158,29 @@ const StyledPage = styled.section`
       margin: 0 auto;
       gap: 3px;
       width: 100%;
+      height: 100%;
       grid-row: 7 / span 2;
       grid-column: 6 / span 5;
-      border: 2px solid green;
+      
 
       @media screen and (max-width: 1000px) {
-        width: 45vw;
         grid-row: 13 / span 3;
         grid-column: 1;
         max-width: 343px;
       }
-      @media screen and (max-width: 480px) {
-        width: 60vw;
+      @media screen and (max-width: 450px) {
         grid-row: 12 / span 3;
-        grid-column: 1;
-      }
-      @media screen and (max-width: 400px) {
-        width: 70vw;
-        grid-row: 11 / span 3;
         grid-column: 1;
       }
 
       .white-star {
-        width: 23%;
+        width: 20%;
         height: auto;
         object-fit: cover;
       }
       .white-logo {
         display: inline;
-        width: 45%;
+        width: 40%;
         height: auto;
         object-fit: cover;
       }
@@ -203,26 +188,14 @@ const StyledPage = styled.section`
   }
 
   .event-container {
-    width: 85%;
+    width: 75%;
     height: auto;
     aspect-ratio: 4/3;
     grid-column: 11 / span 8;
     grid-row: 1;
-    border: 2px solid green;
+
     min-width: 400px;
 
-    /* @media screen and (max-width: 1600px) {
-      grid-column: 11 / span 8;
-    } */
-    /* @media screen and (max-width: 1450px) {
-      grid-column: 11 / span 9;
-    } */
-    /* @media screen and (max-width: 1300px) {
-      grid-column: 11 / span 9;
-    } */
-    /* @media screen and (max-width: 1100px) {
-      grid-column: 11 / span 9;
-    } */
     @media screen and (max-width: 1000px) {
       display: none;
     }
@@ -240,15 +213,14 @@ const StyledPage = styled.section`
     height: auto;
     aspect-ratio: 16/9;
     grid-row: 9;
-    grid-column: 6 / span 11;
-    border: 2px solid green;
+    grid-column: 6 / span 13;
+
     @media screen and (max-width: 1000px) {
-      width: 90%;
       min-width: initial;
+      aspect-ratio: 16/9;
       grid-column: 1;
-      grid-row: 6 / span 1;
+      grid-row: 6 / span 7;
       max-width: 440px;
-      max-height: 241px;
     }
   }
 `;
