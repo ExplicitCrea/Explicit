@@ -5,7 +5,7 @@ const useWindowSize = (width) => {
 
   useEffect(() => {
     const handleSize = () => {
-      setIsSmallScreen(window.innerWidth < width);
+      setIsSmallScreen(window.innerWidth < width || window.innerWidth === width);
     };
 
     handleSize();
