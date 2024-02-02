@@ -6,11 +6,13 @@ import logoFifa from "../../../assets/bruce_grannec/logo-fifa.webp";
 import logoFrenchBattle from "../../../assets/bruce_grannec/logo-french-battle.webp";
 import twitch from "../../../assets/bruce_grannec/twitch.webp";
 import eventPicture from "../../../assets/bruce_grannec/event_picture.webp";
+import backgroundMin from "../../../assets/bruce_grannec/background-min.png";
 import { StyledPage } from "./StyledBruceGrannec";
 
 export const Bruce_Grannec_Page = () => {
   return (
     <StyledPage>
+      <img className="background-min" src={backgroundMin} alt="Background" />
       <div className="container">
         <div className="label-on-side">
           <img src={labelOnSide} alt="Label on side" />

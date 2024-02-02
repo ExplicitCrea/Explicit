@@ -2,19 +2,39 @@ import styled from "styled-components";
 
 const StyledPage = styled.section`
   display: flex;
+  position: relative;
   justify-content: center;
   width: 100%;
+  overflow: hidden;
+  max-height: 100vh;
   min-height: 100vh;
-  background: url("src/assets/Bruce_Grannec/background.webp") no-repeat fixed;
+  background: rgb(25, 40, 64);
+  background: linear-gradient(
+    35deg,
+    rgba(25, 40, 64, 1) 56%,
+    rgba(18, 25, 35, 1) 79%
+  );
 
-  @media screen and (max-width: 1000px) {
-
-    background: rgb(25, 40, 64);
-    background: linear-gradient(
-      35deg,
-      rgba(25, 40, 64, 1) 56%,
-      rgba(18, 25, 35, 1) 79%
-    );
+  .background-min {
+    position: absolute;
+    width: 126vw;
+    left: -58vw;
+    top: -27vw;
+    @media screen and (max-width: 1000px) {
+      position: absolute;
+      width: 700px;
+      left: -352px;
+      top: initial;
+      bottom: -268px;
+    }
+    @media screen and (max-width: 520px) {
+      left: -420px;
+      bottom: -240px;
+    }
+    @media screen and (max-width: 450px) {
+      left: -450px;
+      bottom: -240px;
+    }
   }
 
   .container {
@@ -23,19 +43,18 @@ const StyledPage = styled.section`
     justify-content: center;
     width: 90vw;
     position: relative;
-    grid-template-columns: repeat(20, 4%);
-    grid-template-rows: repeat(20, 4%);
+    grid-template-columns: repeat(20, minmax(30px, 4%));
+    grid-template-rows: repeat(20, minmax(36px, 4%));
     gap: 0.8%;
-
 
     @media screen and (max-width: 1000px) {
       margin-top: calc(80px + 30px);
       width: 90vw;
-      
+
       justify-items: center;
       grid-column-gap: 0%;
       grid-template-columns: 100%;
-      grid-template-rows: repeat(auto-fill, minmax(30px, 4%));;
+      grid-template-rows: repeat(auto-fill, minmax(30px, 4%));
       align-content: initial;
     }
 
@@ -47,7 +66,6 @@ const StyledPage = styled.section`
       aspect-ratio: 250 / 750;
       grid-row: 1 / span 20;
       grid-column: 1 / span 5;
-  
 
       img {
         width: 100%;
@@ -63,7 +81,7 @@ const StyledPage = styled.section`
       display: none;
       @media screen and (max-width: 1000px) {
         display: flex;
-        grid-row: 1/ span 4;
+        grid-row: 1 / span 4;
         grid-column: 1;
         width: 100%;
         max-width: 570px;
@@ -119,7 +137,7 @@ const StyledPage = styled.section`
       height: 100%;
       grid-row: 1 / span 6;
       grid-column: 6 / span 5;
-      max-width: 217px;
+      max-width: 260px;
 
       @media screen and (max-width: 1000px) {
         grid-column: 1;
@@ -161,7 +179,6 @@ const StyledPage = styled.section`
       height: 100%;
       grid-row: 7 / span 2;
       grid-column: 6 / span 5;
-      
 
       @media screen and (max-width: 1000px) {
         grid-row: 13 / span 3;
@@ -177,12 +194,18 @@ const StyledPage = styled.section`
         width: 20%;
         height: auto;
         object-fit: cover;
+        @media screen and (min-width: 1330px) {
+          width: 15%;
+        }
       }
       .white-logo {
         display: inline;
         width: 40%;
         height: auto;
         object-fit: cover;
+        @media screen and (min-width: 1330px) {
+          width: 35%;
+        }
       }
     }
   }
