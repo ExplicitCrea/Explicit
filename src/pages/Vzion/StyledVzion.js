@@ -133,7 +133,7 @@ const StyledVzion = styled.section`
     gap: 25px;
 
     @media (max-width: 1000px) {
-      padding: 20px 20px;
+      padding: 20px 45px 0px 45px;
     }
     p {
       width: 747px;
