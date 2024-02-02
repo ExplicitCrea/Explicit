@@ -1,11 +1,10 @@
-import { StyledGrid } from "./StyledGrid";
-
 import image1 from "../../../assets/vzion/grid/image1.webp";
 import image2 from "../../../assets/vzion/grid/image2.webp";
 import image3 from "../../../assets/vzion/grid/image3.webp";
 import image4 from "../../../assets/vzion/grid/image4.webp";
 import image5 from "../../../assets/vzion/grid/image5.webp";
 import image7 from "../../../assets/vzion/grid/image7.webp";
+import { StyledGrid } from "./StyledGrid";
 
 export const Grid = () => {
   return (
