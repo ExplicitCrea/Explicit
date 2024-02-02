@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const StyledGrid = styled.div`
   width: 100%;
+  height: 53vw;
   overflow: hidden;
   display: grid;
   grid-template-rows: 50% 50%;
