@@ -12,8 +12,6 @@ const StyledGrid = styled.div`
     width: 100%;
     height: 100%;
     object-fit: cover;
-    @media (max-width: 1000px) {
-    }
   }
 `;
 
