@@ -16,8 +16,8 @@ const StyledPage = styled.section`
   );
 
   @media screen and (max-width: 1000px) {
-      overflow: auto;
-    }
+    overflow: auto;
+  }
 
   .background-min {
     position: absolute;
@@ -45,7 +45,8 @@ const StyledPage = styled.section`
     margin-top: calc(80px + 40px);
     display: grid;
     justify-content: center;
-    width: 90vw;
+    width: 95vw;
+    height: auto;
     position: relative;
     grid-template-columns: repeat(20, minmax(30px, 4%));
     grid-template-rows: repeat(20, minmax(30px, 4%));
@@ -54,7 +55,6 @@ const StyledPage = styled.section`
     @media screen and (max-width: 1000px) {
       margin-top: calc(80px + 30px);
       width: 90vw;
-
       justify-items: center;
       grid-column-gap: 0%;
       grid-template-columns: 100%;
@@ -70,6 +70,7 @@ const StyledPage = styled.section`
       aspect-ratio: 250 / 750;
       grid-row: 1 / span 20;
       grid-column: 1 / span 5;
+      box-shadow: 0px 4px 30px 14px rgba(0, 0, 0, 0.2);
 
       img {
         width: 100%;
@@ -161,7 +162,7 @@ const StyledPage = styled.section`
       p {
         background-color: rgba(0, 0, 0, 0.6);
         font-family: Lexend;
-        font-size: 0.66em;
+        font-size: 0.7em;
         padding: 8px;
         text-align: center;
         color: white;
@@ -173,7 +174,8 @@ const StyledPage = styled.section`
         }
         @media screen and (max-width: 1000px) {
           width: 75%;
-          min-width: 221px;
+          font-size: 0.8em;
+          min-width: 200px;
         }
       }
     }
@@ -194,7 +196,7 @@ const StyledPage = styled.section`
         grid-row: 13 / span 3;
         margin-top: 15px;
         grid-column: 1;
-        max-width: 343px;
+        max-width: 300px;
         padding-bottom: 0px;
       }
       @media screen and (max-width: 453px) {
@@ -209,30 +211,31 @@ const StyledPage = styled.section`
       }
 
       .white-star {
-        width: 4vw;
+        width: 4.2vw;
         height: auto;
         object-fit: cover;
         @media screen and (max-width: 1000px) {
           width: 30%;
-      }
+        }
       }
       .white-logo {
         display: inline;
-        width: 8vw;
+        width: 8.2vw;
         height: auto;
         object-fit: cover;
         @media screen and (max-width: 1000px) {
-        width: 50%;
-      }
+          width: 50%;
+        }
       }
     }
   }
 
   .event-container {
-    width: 28vw;
-    height: 325px;
-    grid-row: 1/span 5;
+    width: 35vw;
+    height: 330px;
+    grid-row: 1 / span 5;
     min-width: 400px;
+    box-shadow: 0px 4px 30px 14px rgba(0, 0, 0, 0.2);
 
     @media screen and (max-width: 1000px) {
       display: none;
@@ -245,13 +248,13 @@ const StyledPage = styled.section`
     }
   }
   .carousel-container {
-    width: 48vw;
-    max-width: 745px;
+    width: 50vw;
+    max-width: 800px;
     max-height: 441px;
     height: auto;
     aspect-ratio: 16/9;
     grid-row: 9;
-    grid-column: 6/ span 13;
+    grid-column: 6 / span 13;
 
     @media screen and (max-width: 1000px) {
       min-width: initial;
