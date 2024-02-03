@@ -6,7 +6,6 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { Home } from './pages/Home/Home.jsx'
 import { Layout } from './components/Layout/Layout.jsx';
 import { Services } from './pages/Services/Services.jsx';
-import { Bruce_Grannec_Page } from './pages/Collaborations/Bruce_Grannec_Page/Bruce_Grannec_Page.jsx';
 import { ArtbookPage } from './pages/ArtbookPage/ArtbookPage.jsx';
 import { Potatoz } from './pages/Potatoz/Potatoz.jsx';
 import { Gg } from './pages/Gg/Gg.jsx';
@@ -18,6 +17,7 @@ import {History} from './pages/History/History.jsx'
 import { Contact } from './pages/Contact/Contact.jsx';
 import { Faq } from './pages/FAQ/Faq.jsx';
 import { LegalDisclaimer } from './pages/Legal Disclaimer/LegalDisclaimer.jsx';
+import { Bruce_Grannec_Page } from './pages/Bruce_Grannec_Page/Bruce_Grannec_Page.jsx';
 
 const router = createBrowserRouter([
   {

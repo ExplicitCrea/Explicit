@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import image1 from "../../assets/bruce_grannec/image1.webp";
-import image2 from "../../assets/bruce_grannec/image2.webp";
-import image3 from "../../assets/bruce_grannec/image3.webp";
+import image1 from "../../assets/bruce-grannec/carousel/diapo1.webp";
+import image2 from "../../assets/bruce-grannec/carousel/diapo2.webp";
+import image3 from "../../assets/bruce-grannec/carousel/diapo3.webp";
 import { CarouselImg } from "./StyledCarousel";
 
 export const Carousel = () => {

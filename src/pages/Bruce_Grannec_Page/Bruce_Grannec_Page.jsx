@@ -1,18 +1,25 @@
-import { Carousel } from "../../../components/Bruce_Grannec/Carousel";
-import labelOnSide from "../../../assets/bruce_grannec/label_on_side.webp";
-import whiteLogo from "../../../assets/bruce_grannec/white_logo.webp";
-import whiteStar from "../../../assets/bruce_grannec/white_star.webp";
-import logoFifa from "../../../assets/bruce_grannec/logo-fifa.webp";
-import logoFrenchBattle from "../../../assets/bruce_grannec/logo-french-battle.webp";
-import twitch from "../../../assets/bruce_grannec/twitch.webp";
-import eventPicture from "../../../assets/bruce_grannec/event_picture.webp";
-import backgroundMin from "../../../assets/bruce_grannec/background-min.png";
+import { Carousel } from "../../components/bruce-grannec/Carousel";
+import labelOnSide from "../../assets/bruce-grannec/main-page/label_on_side.webp";
+import whiteLogo from "../../assets/bruce-grannec/main-page/white_logo.webp";
+import whiteStar from "../../assets/bruce-grannec/main-page/white_star.webp";
+import logoFifa from "../../assets/bruce-grannec/main-page/logo-fifa.webp";
+import logoFrenchBattle from "../../assets/bruce-grannec/main-page/logo-french-battle.webp";
+import twitch from "../../assets/bruce-grannec/main-page/twitch.webp";
+import eventPicture from "../../assets/bruce-grannec/main-page/event_picture.webp";
+import backgroundXl from "../../assets/bruce-grannec/main-page/background/background-xl.webp";
+import backgroundMin from "../../assets/bruce-grannec/main-page/background/background-min.webp";
 import { StyledPage } from "./StyledBruceGrannec";
 
 export const Bruce_Grannec_Page = () => {
   return (
     <StyledPage>
-      <img className="background-min" src={backgroundMin} alt="Background" />
+      <img
+          srcSet={`${backgroundXl} 2500w, ${backgroundMin} 800w`}
+          sizes="(max-width: 1000px) 800px"
+          src={backgroundXl}
+          alt="Background"
+          className="background-min"
+        />
       <div className="container">
         <div className="label-on-side">
           <img src={labelOnSide} alt="Label on side" />
