@@ -8,18 +8,21 @@ import twitch from "../../assets/bruce-grannec/main-page/twitch.webp";
 import eventPicture from "../../assets/bruce-grannec/main-page/event_picture.webp";
 import backgroundXl from "../../assets/bruce-grannec/main-page/background/background-xl.webp";
 import backgroundMin from "../../assets/bruce-grannec/main-page/background/background-min.webp";
+import { useTranslation } from "react-i18next";
 import { StyledPage } from "./StyledBruceGrannec";
 
 export const Bruce_Grannec_Page = () => {
+  const { t } = useTranslation();
+
   return (
     <StyledPage>
       <img
-          srcSet={`${backgroundXl} 2500w, ${backgroundMin} 800w`}
-          sizes="(max-width: 1000px) 800px"
-          src={backgroundXl}
-          alt="Background"
-          className="background-min"
-        />
+        srcSet={`${backgroundXl} 2500w, ${backgroundMin} 800w`}
+        sizes="(max-width: 1000px) 800px"
+        src={backgroundXl}
+        alt="Background"
+        className="background-min"
+      />
       <div className="container">
         <div className="label-on-side">
           <img src={labelOnSide} alt="Label on side" />
@@ -37,17 +40,8 @@ export const Bruce_Grannec_Page = () => {
             </div>
           </div>
         </div>
-
         <div className="paragraph_container">
-          <p>
-            Nous sommes fiers d&apos;avoir pu collaborer avec Bruce Grannec en
-            fournissant des visuels exceptionnels pour son tournoi en
-            collaboration avec FIFA 2023. Notre équipe a conçu des assets animés
-            sur mesure pour enrichir son événement. Chaque élément visuel a été
-            soigneusement élaboré pour refléter le professionnalisme et
-            l&apos;enthousiasme du tournoi, offrant à Bruce Grannec une présence
-            visuelle distinctive et immersive sur sa plateforme de streaming.
-          </p>
+          <p>{t("bruce-grannec.paragraph")}</p>
         </div>
         <div className="explicit-container">
           <img
@@ -61,7 +55,6 @@ export const Bruce_Grannec_Page = () => {
             alt="White Star Explicite"
           />
         </div>
-
         <div className="event-container">
           <img src={eventPicture} alt="Event Picture" />
         </div>
