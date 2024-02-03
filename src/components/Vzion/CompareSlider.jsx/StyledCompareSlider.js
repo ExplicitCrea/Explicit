@@ -3,12 +3,11 @@ import styled from "styled-components";
 const StyledContainer = styled.div`
   width: 30%;
   .__rcs-handle-button {
-      width: 40px !important;
-      height: 40px !important;
-    }
+    width: 40px !important;
+    height: 40px !important;
+  }
   @media (max-width: 1000px) {
     width: 70%;
-    
   }
 
   .react-compare-slider {
