@@ -11,9 +11,9 @@ import { StyledVzion } from "./StyledVzion";
 
 export const Vzion = () => {
   const [videoClick, setVideoClick] = useState("video1");
-  const { t } = useTranslation();
-  const isSmallScreen = useWindowSize(1000);
   const [isActive, setIsActive] = useState(false);
+  const isSmallScreen = useWindowSize(1000);
+  const { t } = useTranslation();
 
   useEffect(() => {
     if (isSmallScreen) {
