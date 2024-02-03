@@ -19,7 +19,7 @@ export const Grid = () => {
       <img src={image5} alt="Camera de cinema avec retour vidéo" />
       <img
         src={image7}
-        alt="Vu sur une fille devant son ordinateur de travail"
+        alt="Vu sur une fille devant son ordinateur"
       />
     </StyledGrid>
   );

@@ -33,8 +33,6 @@ const StyledDisplayContent = styled.div`
     .container_btn {
       @media (max-width: 1210px) {
         width: 100%;
-        display: flex;
-        justify-content: center;
       }
 
       button {
