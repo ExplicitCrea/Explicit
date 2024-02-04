@@ -17,6 +17,7 @@ import {History} from './pages/History/History.jsx'
 import { Contact } from './pages/Contact/Contact.jsx';
 import { Faq } from './pages/FAQ/Faq.jsx';
 import { LegalDisclaimer } from './pages/Legal Disclaimer/LegalDisclaimer.jsx';
+import { Bruce_Grannec_Page } from './pages/Bruce_Grannec_Page/Bruce_Grannec_Page.jsx';
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: '/services',
         element: <Services/>,
+      }, 
+      {
+        path: '/brucegrannec',
+        element: <Bruce_Grannec_Page/>
       },
       {
         path: '/potatoz',
