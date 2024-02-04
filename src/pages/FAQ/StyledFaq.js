@@ -7,9 +7,8 @@ const StyledFaq = styled.div`
     position: relative;
     z-index: 0;
     overflow: hidden;
+    min-height: 100vh;
     .wrapper{
-        max-height: 100vh;
-        overflow: auto;
         width: 100%;
     }
     .background-filter {
