@@ -17,7 +17,8 @@ import {History} from './pages/History/History.jsx'
 import { Contact } from './pages/Contact/Contact.jsx';
 import { Faq } from './pages/FAQ/Faq.jsx';
 import { LegalDisclaimer } from './pages/Legal Disclaimer/LegalDisclaimer.jsx';
-import { Vzion } from './pages/Vzion/vzion.jsx';
+import { Bruce_Grannec_Page } from './pages/Bruce_Grannec_Page/Bruce_Grannec_Page.jsx';
+import { Vzion } from './pages/Vzion/Vzion.jsx';
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: '/services',
         element: <Services/>,
+      }, 
+      {
+        path: '/brucegrannec',
+        element: <Bruce_Grannec_Page/>
       },
       {
         path: '/potatoz',
@@ -60,6 +65,8 @@ const router = createBrowserRouter([
       {
         path: '/loreal',
         element: <Oreal/>,
+      },
+      {
         path: '/history',
         element: <History/>,
       },
@@ -79,6 +86,7 @@ const router = createBrowserRouter([
         path: '/vzion',
         element: <Vzion/>
       }
+      
       
     ],
   },
