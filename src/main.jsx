@@ -75,11 +75,11 @@ const router = createBrowserRouter([
         element: <Contact/>,
       },
       {
-        path: '/Faq',
+        path: '/faq',
         element: <Faq/>,
       },
       {
-        path: '/Legal Disclaimer',
+        path: '/legal-disclaimer',
         element: <LegalDisclaimer/>,
       },
       {
