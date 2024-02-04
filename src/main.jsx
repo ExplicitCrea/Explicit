@@ -18,6 +18,7 @@ import { Contact } from './pages/Contact/Contact.jsx';
 import { Faq } from './pages/FAQ/Faq.jsx';
 import { LegalDisclaimer } from './pages/Legal Disclaimer/LegalDisclaimer.jsx';
 import { Bruce_Grannec_Page } from './pages/Bruce_Grannec_Page/Bruce_Grannec_Page.jsx';
+import { Vzion } from './pages/Vzion/vzion.jsx';
 
 const router = createBrowserRouter([
   {
@@ -64,6 +65,8 @@ const router = createBrowserRouter([
       {
         path: '/loreal',
         element: <Oreal/>,
+      },
+      {
         path: '/history',
         element: <History/>,
       },
@@ -78,7 +81,12 @@ const router = createBrowserRouter([
       {
         path: '/Legal Disclaimer',
         element: <LegalDisclaimer/>,
+      },
+      {
+        path: '/vzion',
+        element: <Vzion/>
       }
+      
     ],
   },
 ]);
