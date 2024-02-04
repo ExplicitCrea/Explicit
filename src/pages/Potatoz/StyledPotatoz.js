@@ -35,7 +35,7 @@ const StyledPotatoz = styled.section`
             .wrapper{
                 position: relative;
                 width: 70%;
-                max-width: 1040px;
+                
                 aspect-ratio: 16 / 9;
                 display: flex;
                 justify-content: center;
