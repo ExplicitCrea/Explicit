@@ -5,12 +5,18 @@ const StyledVzion = styled.section`
   font-family: lexend;
   width: 100%;
   color: white;
-  background: url("src/assets/vzion/background.webp") no-repeat center/cover;
+  background: url("public/assets/vzion/background.webp") no-repeat center/cover;
+  @media (min-width: 2000px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
   .main-wrapper {
     margin: 140px 75px 25px 75px;
     display: flex;
     flex-direction: column;
+    max-width: 2000px;
     @media (max-width: 1210px) {
       margin: 140px 75px 0px 75px;
     }
@@ -28,6 +34,9 @@ const StyledVzion = styled.section`
         font-size: 120px;
         line-height: 121.44px;
         margin: 0;
+        @media (max-width: 1600px) {
+          font-size: 110px;
+        }
       }
       p {
         max-width: 417px;
@@ -36,6 +45,15 @@ const StyledVzion = styled.section`
         font-weight: 500;
         color: #7bffc0;
         margin: 0px 0px 10px 0px;
+
+        @media (min-width: 2000px) {
+          font-size: 15px;
+          max-width: 430px;
+        }
+        @media (max-width: 1030px) {
+          max-width: 328px;
+          font-size: 13px;
+        }
       }
     }
   }
@@ -99,6 +117,7 @@ const StyledVzion = styled.section`
     gap: 30px;
     position: relative;
     left: 135px;
+    width: 100%;
 
     @media (max-width: 1300px) {
       margin: 100px 0px 100px 0px;
@@ -115,6 +134,9 @@ const StyledVzion = styled.section`
     p {
       font-size: 16px;
       width: 237px;
+      @media (min-width: 2000px) {
+        font-size: 18px;
+      }
       @media (max-width: 1300px) {
         width: 60%;
         text-align: center;
@@ -138,6 +160,9 @@ const StyledVzion = styled.section`
     p {
       width: 747px;
       text-align: center;
+      @media (min-width: 2000px) {
+        font-size: 18px;
+      }
       @media (max-width: 1000px) {
         display: none;
       }
