@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
 const StyledPage = styled.section`
+border: 5px solid yellow;
   display: flex;
   position: relative;
   justify-content: center;
   width: 100%;
   overflow: hidden;
-  max-height: 100vh;
   min-height: 100vh;
+  padding-top: 100px;
   background: rgb(25, 40, 64);
   background: linear-gradient(
     35deg,
@@ -42,17 +43,17 @@ const StyledPage = styled.section`
   }
 
   .container {
-    margin-top: calc(80px + 40px);
+    border: 5px solid red;
     display: grid;
-    justify-content: center;
-    width: 95vw;
-    height: auto;
+    width: 95%;
+    max-width: 1500px;
+    max-height: 1100px;
     position: relative;
-    grid-template-columns: repeat(20, minmax(30px, 4%));
-    grid-template-rows: repeat(20, minmax(30px, 4%));
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));;
     gap: 0.8%;
 
-    @media screen and (max-width: 1000px) {
+    /* @media screen and (max-width: 1000px) {
       margin-top: calc(80px + 30px);
       width: 90vw;
       justify-items: center;
@@ -60,16 +61,14 @@ const StyledPage = styled.section`
       grid-template-columns: 100%;
       grid-template-rows: repeat(auto-fill, minmax(30px, 4%));
       align-content: initial;
-    }
+    } */
 
     .label-on-side {
       width: 100%;
       height: auto;
-      max-width: 235px;
-      max-height: 720px;
-      aspect-ratio: 250 / 750;
-      grid-row: 1 / span 20;
-      grid-column: 1 / span 5;
+      /* max-width: 350px; */
+      grid-row: 1 / span 10;
+      grid-column: 1 / span 3;
       box-shadow: 0px 4px 30px 14px rgba(0, 0, 0, 0.2);
 
       img {
@@ -137,46 +136,30 @@ const StyledPage = styled.section`
     }
 
     .paragraph_container {
-      margin: 0 auto;
-      width: 100%;
-      height: 100%;
-      grid-row: 1 / span 6;
-      grid-column: 6 / span 5;
-      max-width: 260px;
-
-      @media screen and (max-width: 1000px) {
-        grid-column: 1;
-        grid-row: 17 / span 5;
-        max-width: 480px;
-      }
-
-      @media screen and (max-width: 453px) {
-        grid-row: 15 / span 6;
-      }
-
-      @media screen and (max-width: 400px) {
-        grid-row: 14 / span 5;
-        grid-column: 1;
-      }
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    grid-row: 1/span 2;
+    grid-column: 4/span 4;
 
       p {
         background-color: rgba(0, 0, 0, 0.6);
         font-family: Lexend;
-        font-size: 0.7em;
+        font-size: 20px;
         padding: 8px;
         text-align: center;
         color: white;
         margin: 0 auto;
         border-radius: 20px;
         width: 100%;
-        @media screen and (max-width: 1330px) {
+        /* @media screen and (max-width: 1330px) {
           font-size: 0.62em;
         }
         @media screen and (max-width: 1000px) {
           width: 75%;
           font-size: 0.8em;
           min-width: 200px;
-        }
+        } */
       }
     }
 
@@ -185,12 +168,11 @@ const StyledPage = styled.section`
       align-items: center;
       justify-content: center;
       margin: 0 auto;
-      padding-bottom: 20px;
       gap: 3px;
       width: 100%;
       height: 100%;
-      grid-row: 7 / span 2;
-      grid-column: 6 / span 5;
+      grid-row: 4/span 2;
+      grid-column: 4/span 3;
 
       @media screen and (max-width: 1000px) {
         grid-row: 13 / span 3;
@@ -231,10 +213,10 @@ const StyledPage = styled.section`
   }
 
   .event-container {
-    width: 35vw;
-    height: 330px;
-    grid-row: 1 / span 5;
-    min-width: 400px;
+    width: 100%;
+    height: auto;
+    grid-row: 1/span 5;
+    grid-column: 8/span 5;
     box-shadow: 0px 4px 30px 14px rgba(0, 0, 0, 0.2);
 
     @media screen and (max-width: 1000px) {
@@ -248,22 +230,20 @@ const StyledPage = styled.section`
     }
   }
   .carousel-container {
-    width: 50vw;
-    max-width: 800px;
-    max-height: 441px;
+    width: 100%;
     height: auto;
     aspect-ratio: 16/9;
-    grid-row: 9;
-    grid-column: 6 / span 13;
+    grid-row: 6;
+    grid-column: 4/ span 7;
 
-    @media screen and (max-width: 1000px) {
+    /* @media screen and (max-width: 1000px) {
       min-width: initial;
       width: 80vw;
       aspect-ratio: 16/9;
       grid-column: 1;
       grid-row: 6 / span 7;
       max-width: 440px;
-    }
+    } */
   }
 `;
 
