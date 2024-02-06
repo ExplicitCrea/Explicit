@@ -4,7 +4,7 @@ const StyledFaq = styled.div`
     width: 100%;
     padding: 100px; 
     background-color: #191C2E;
-    position: relative;
+    position: absolute;
     z-index: 0;
     overflow: hidden;
     min-height: 100vh;
