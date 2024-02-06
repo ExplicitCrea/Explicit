@@ -45,12 +45,12 @@ export const Header = () => {
                             <Link to='/artbook'>{t('header.artbook')}</Link>
                         </li>
                         <li>
-                            <Link to='/services'>{t('header.history')}</Link>
+                            <Link to='/history'>{t('header.history')}</Link>
                         </li>
                     </ul>
                 </nav>
                 <div className='container-contact'>
-                    <Link className='contact' to='/services'>{t('header.contact')}</Link>
+                    <Link className='contact' to='/contact'>{t('header.contact')}</Link>
                     <button onClick={changeLanguage}><img src={i18n.language === 'en' ? gb : fr } alt='flag translation' /></button>
                 </div>
             </div>
