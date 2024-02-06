@@ -53,6 +53,11 @@ const StyledPage = styled.section`
     gap: 0.8%;
     overflow: hidden;
 
+    @media screen and (min-width: 2000px) {
+      max-width: 1500px;
+      max-height: 1000px;
+    }
+
     /* @media screen and (max-width: 1000px) {
       margin-top: calc(80px + 30px);
       width: 90vw;
@@ -151,6 +156,10 @@ const StyledPage = styled.section`
         margin: 0 auto;
         border-radius: 20px;
         width: 100%;
+
+        @media screen and (min-width: 2000px) {
+          font-size: 18px;
+      }
         @media screen and (max-width: 1400px) {
           font-size: 15px;
         }
