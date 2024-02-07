@@ -25,6 +25,7 @@ const StyledFooter = styled.footer`
       color: white;
       font-family: lexend;
       font-size: 18px;
+      padding: 0px 0px 18px 0px;
       text-decoration: none;
     }
   }
