@@ -17,6 +17,12 @@ const StyledCarousel = styled.div`
     height: auto;
     color: white;
     cursor: pointer;
+    @media screen and (max-width: 1200px) {
+      width: 45px;
+    }
+    @media screen and (max-width: 1000px) {
+      width: 5vw;
+    }
   }
 
   .container-arrow-left {
@@ -61,6 +67,11 @@ const StyledCarousel = styled.div`
     input {
       cursor: pointer;
       background-color: red;
+      height: auto;
+      
+      @media screen and (max-width: 1000px) {
+        width: 1.6vw;
+    }
     }
   }
 
