@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import diapo1 from "../../assets/bruce-grannec/carousel/diapo1.webp";
 import diapo2 from "../../assets/bruce-grannec/carousel/diapo2.webp";
 import diapo3 from "../../assets/bruce-grannec/carousel/diapo3.webp";
