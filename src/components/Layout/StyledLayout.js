@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
 const StyledLayout = styled.div`
-        height: 100vh;
+        height: 100%;
+        position: relative;
     .white-border{
         position: fixed;
         top: 78px;
