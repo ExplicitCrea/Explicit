@@ -1,69 +1,47 @@
 import styled from "styled-components";
 
-const StyledFooter = styled.div`
-
-*, ::before, ::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-      display: flex;
-      position: absolute;
-      left: 0px;
-      width: 100%;
-      height: auto;
-      
-      .container-footer{
-        width: 90%;
-        position: absolute;
-        bottom: 0px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        
-      .link{
-        text-decoration: none;
-        }
-        
-      .column {
-          z-index: 3;
-          position: relative;
-          bottom: 17px;
-          margin: 0px 0px 0px 75px;
-          height: 100%;
-          width: 14%;
-          text-align: center;
-          line-height: 300%;
-          
-      h3{
-          color: white;
-          font-family: lexend;
-          font-size: 18px;
-          padding: 3px 0px 0px 70px;
-          }
-}
-      }
-      img{
-        bottom: 0px;
-        position: absolute;
-      }
-      .logo{
-        img{
-          display: flex;
-          text-align: center;
-          width: auto;
-          height: 80px;
-          padding: 9px 50px 0px 0px;
-          margin: 28px 0px;
-          z-index: 3;
+const StyledFooter = styled.footer`
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: auto;
+  padding: 24px 0px;
+  
+  .column {
+    z-index: 3;
+    position: relative;
+    width: 15%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    a{
+      color: white;
+      font-family: lexend;
+      font-size: 18px;
+      text-decoration: none;
     }
-          }
+  }
+  .background{
+    bottom: 0px;
+    position: absolute;
+    width: 100%;
+  }
+  .logo{
+    img{
+      display: flex;
+      width: auto;
+      height: 80px;
+    }
+  }
 
-          @media (max-width: 900px) {
-          
-          
-          
-          }
-
+  @media (max-width: 900px) {
+  }
 `;
 export default StyledFooter
