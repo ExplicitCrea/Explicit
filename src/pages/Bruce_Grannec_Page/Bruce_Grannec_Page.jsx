@@ -16,13 +16,13 @@ export const Bruce_Grannec_Page = () => {
 
   return (
     <StyledPage>
-      <img
+      {/* <img
         srcSet={`${backgroundXl} 2500w, ${backgroundMin} 800w`}
         sizes="(max-width: 1000px) 800px"
         src={backgroundXl}
         alt="Background"
-        className="background-min"
-      />
+        className="background"
+      /> */}
       <div className="container">
         <div className="label-on-side">
           <img src={labelOnSide} alt="Label on side" />
