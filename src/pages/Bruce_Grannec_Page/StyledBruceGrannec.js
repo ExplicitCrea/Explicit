@@ -15,10 +15,12 @@ const StyledPage = styled.section`
     rgba(18, 25, 35, 1) 79%
     );
 
-    
+    border: 5px solid yellow;
+
   @media screen and (max-width: 1000px) {
     align-items: initial;
     overflow: auto;
+    height: auto;
     
   }
 
@@ -46,6 +48,7 @@ const StyledPage = styled.section`
     grid-template-rows: 28% 13% 58%;
     gap: 0.8%;
     overflow: hidden;
+    border: 5px solid red;
 
     @media screen and (min-width: 2000px) {
       max-width: 1500px;
@@ -61,7 +64,6 @@ const StyledPage = styled.section`
     gap: 0;
     grid-row-gap: 3%;
     overflow: initial;
-    height: auto;
     }
 
     .label-on-side {
