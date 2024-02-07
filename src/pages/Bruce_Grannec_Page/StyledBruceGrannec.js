@@ -13,15 +13,12 @@ const StyledPage = styled.section`
     35deg,
     rgba(25, 40, 64, 1) 56%,
     rgba(18, 25, 35, 1) 79%
-    );
-
-    border: 5px solid yellow;
+  );
 
   @media screen and (max-width: 1000px) {
     align-items: initial;
     overflow: auto;
     height: auto;
-    
   }
 
   .background {
@@ -30,10 +27,10 @@ const StyledPage = styled.section`
     left: -58vw;
     top: -27vw;
     @media screen and (max-width: 1000px) {
-    position: absolute;
-    width: 196vw;
-    left: -120vw;
-    top: 50vw;
+      position: absolute;
+      width: 196vw;
+      left: -120vw;
+      top: 50vw;
     }
   }
 
@@ -48,22 +45,20 @@ const StyledPage = styled.section`
     grid-template-rows: 28% 13% 58%;
     gap: 0.8%;
     overflow: hidden;
-    border: 5px solid red;
 
     @media screen and (min-width: 2000px) {
       max-width: 1500px;
       max-height: 1000px;
-
     }
 
     @media screen and (max-width: 1000px) {
-    grid-template-columns: 11vw 36vw 36vw 11vw;
-    grid-template-rows: 20vw 41vw 14vw 40vw;
-    max-height: initial;
-    max-width: initial;
-    gap: 0;
-    grid-row-gap: 3%;
-    overflow: initial;
+      grid-template-columns: 11vw 36vw 36vw 11vw;
+      grid-template-rows: 20vw 41vw 14vw 40vw;
+      max-height: initial;
+      max-width: initial;
+      gap: 0;
+      grid-row-gap: 3%;
+      overflow: initial;
     }
 
     .label-on-side {
@@ -88,7 +83,7 @@ const StyledPage = styled.section`
       @media screen and (max-width: 1000px) {
         display: flex;
         grid-row: 1 / span 1;
-        grid-column: 1/ span 4;
+        grid-column: 1 / span 4;
         width: 100%;
       }
 
@@ -137,19 +132,17 @@ const StyledPage = styled.section`
     }
 
     .paragraph_container {
-    margin: 0 auto;
-    width: 100%;
-    height: 100%;
-    grid-row: 1/span 1;
-    grid-column: 2/span 1;
-    
-    
-    @media screen and (max-width: 1000px) {
-      grid-row: 4;
-      grid-column: 1 / span 4;
-      width: 80%;
-      
-    }
+      margin: 0 auto;
+      width: 100%;
+      height: 100%;
+      grid-row: 1 / span 1;
+      grid-column: 2 / span 1;
+
+      @media screen and (max-width: 1000px) {
+        grid-row: 4;
+        grid-column: 1 / span 4;
+        width: 80%;
+      }
 
       p {
         background-color: rgba(0, 0, 0, 0.6);
@@ -161,12 +154,11 @@ const StyledPage = styled.section`
         margin: 0 auto;
         border-radius: 1vw;
 
-     
         width: 100%;
 
         @media screen and (min-width: 2000px) {
           font-size: 18px;
-      }
+        }
         @media screen and (max-width: 1400px) {
           font-size: 15px;
         }
@@ -197,7 +189,7 @@ const StyledPage = styled.section`
       width: 100%;
       height: 100%;
       grid-row: 2;
-      grid-column: 2/span 1;
+      grid-column: 2 / span 1;
 
       @media screen and (max-width: 1000px) {
         grid-row: 3;
@@ -227,8 +219,8 @@ const StyledPage = styled.section`
   .event-container {
     width: 100%;
     height: auto;
-    grid-row: 1/ span 2;
-    grid-column: 3/span 2;
+    grid-row: 1 / span 2;
+    grid-column: 3 / span 2;
     box-shadow: 0px 4px 30px 14px rgba(0, 0, 0, 0.2);
 
     @media screen and (max-width: 1000px) {
@@ -245,18 +237,17 @@ const StyledPage = styled.section`
     width: 100%;
     height: auto;
     grid-row: 3;
-    grid-column: 2/ span 2;
+    grid-column: 2 / span 2;
     position: relative;
     top: -10px;
 
     @media screen and (max-width: 1000px) {
       width: 100%;
-      grid-column: 2/ span 2;
+      grid-column: 2 / span 2;
       grid-row: 2 / span 1;
       top: 0px;
       max-height: 100%;
       max-width: 100%;
- 
     }
   }
 `;
