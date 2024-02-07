@@ -8,16 +8,11 @@ const StyledPage = styled.section`
   min-height: 100vh;
   padding-top: 100px;
   overflow: hidden;
-  background: rgb(25, 40, 64);
-  background: linear-gradient(
-    35deg,
-    rgba(25, 40, 64, 1) 56%,
-    rgba(18, 25, 35, 1) 79%
-  );
+  background: rgb(45,70,117);
+background: linear-gradient(111deg, rgba(45,70,117,1) 17%, rgba(29,48,75,1) 42%, rgba(18,21,25,1) 100%);
 
   @media screen and (max-width: 1000px) {
     align-items: initial;
-    overflow: auto;
     height: auto;
   }
 
@@ -47,8 +42,12 @@ const StyledPage = styled.section`
     overflow: hidden;
 
     @media screen and (min-width: 2000px) {
-      max-width: 1500px;
-      max-height: 1000px;
+      max-width: 1600px;
+      max-height: 1100px;
+    }
+    @media screen and (min-width: 2200px) {
+      max-width: 1800px;
+      max-height: 1300px;
     }
 
     @media screen and (max-width: 1000px) {
@@ -58,7 +57,6 @@ const StyledPage = styled.section`
       max-width: initial;
       gap: 0;
       grid-row-gap: 3%;
-      overflow: initial;
     }
 
     .label-on-side {
@@ -98,7 +96,6 @@ const StyledPage = styled.section`
           rgba(25, 40, 64, 1) 56%,
           rgba(18, 25, 35, 1) 79%
         );
-        box-shadow: 1px 3px 40px 10px rgba(0, 0, 0, 0.5);
       }
 
       .banner-items {
@@ -143,8 +140,8 @@ const StyledPage = styled.section`
         grid-column: 1 / span 4;
         width: 80%;
       }
-
       p {
+
         background-color: rgba(0, 0, 0, 0.6);
         font-family: Lexend;
         font-size: 16px;
@@ -155,9 +152,13 @@ const StyledPage = styled.section`
         border-radius: 1vw;
 
         width: 100%;
+        
 
+        @media screen and (min-width: 2400px) {
+          font-size: 22px;
+        }
         @media screen and (min-width: 2000px) {
-          font-size: 18px;
+          font-size: 20px;
         }
         @media screen and (max-width: 1400px) {
           font-size: 15px;
@@ -239,7 +240,7 @@ const StyledPage = styled.section`
     grid-row: 3;
     grid-column: 2 / span 2;
     position: relative;
-    top: -10px;
+    top: -15px;
 
     @media screen and (max-width: 1000px) {
       width: 100%;
