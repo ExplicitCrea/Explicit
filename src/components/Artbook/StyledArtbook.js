@@ -5,6 +5,9 @@ const StyledArtbook = styled.div`
   justify-content: center;
   padding: 20px;
   width: 100vw;
+  border: 5px solid red;
+  min-height: 100vh;
+  border: 5px solid yellow;
 
   .container {
     max-height: 600px;
@@ -18,6 +21,7 @@ const StyledArtbook = styled.div`
     gap: 0.8vw;
     grid-template-rows: 45% 55% 49% 53%;
     grid-template-columns: 10% 16% 16% 16% 8%;
+    border: 5px solid red;
     position: relative;
 
     @media (max-width: 900px) {
