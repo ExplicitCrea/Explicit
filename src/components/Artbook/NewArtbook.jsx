@@ -49,7 +49,7 @@ export const NewArtbook = () => {
           </Link>
   
           <div className="mahdiBa">
-            {/* <div className="coming-soon">Coming soon</div> */}
+            <div className="coming-soon">Coming soon</div>
             <img src={mahdi_ba} alt="Mahdi Ba" width={400} height={460}/>
           </div>
   
