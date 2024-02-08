@@ -18,6 +18,8 @@ import { Contact } from './pages/Contact/Contact.jsx';
 import { Faq } from './pages/FAQ/Faq.jsx';
 import { LegalDisclaimer } from './pages/Legal Disclaimer/LegalDisclaimer.jsx';
 import { Bruce_Grannec_Page } from './pages/Bruce_Grannec_Page/Bruce_Grannec_Page.jsx';
+import { Vzion } from './pages/Vzion/Vzion.jsx';
+import { Pg } from './pages/Pg/Pg.jsx';
 
 const router = createBrowserRouter([
   {
@@ -32,7 +34,6 @@ const router = createBrowserRouter([
         path: '/artbook',
         element: <ArtbookPage />,
       },
-
       {
         path: '/services',
         element: <Services/>,
@@ -64,6 +65,8 @@ const router = createBrowserRouter([
       {
         path: '/loreal',
         element: <Oreal/>,
+      },
+      {
         path: '/history',
         element: <History/>,
       },
@@ -72,13 +75,22 @@ const router = createBrowserRouter([
         element: <Contact/>,
       },
       {
-        path: '/Faq',
+        path: '/faq',
         element: <Faq/>,
       },
       {
-        path: '/Legal Disclaimer',
+        path: '/legal-disclaimer',
         element: <LegalDisclaimer/>,
+      },
+      {
+        path: '/vzion',
+        element: <Vzion/>
+      },
+      {
+        path: '/pg',
+        element: <Pg/>,
       }
+      
     ],
   },
 ]);
