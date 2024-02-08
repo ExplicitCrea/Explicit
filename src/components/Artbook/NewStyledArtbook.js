@@ -3,7 +3,6 @@ import styled from "styled-components";
 const NewStyledArtbook = styled.div`
   margin-top: 30px;
   z-index: 1;
-  border: 5px solid yellow;
 
   .container {
     display: grid;
@@ -14,8 +13,8 @@ const NewStyledArtbook = styled.div`
     grid-template-columns: 16% 10% 3% 7% 7% 6% 7% 14%;
     position: relative;
     gap: 0.8vw;
-    border: 5px solid red;
     @media (max-width: 900px) {
+      padding: 25px;
       height: 100%;
       margin-top: 20px;
       grid-template-columns: 35% 14% 47%;
@@ -193,7 +192,7 @@ const NewStyledArtbook = styled.div`
     @media (max-width: 900px) {
       padding: 8px;
       font-size: 0.8em;
-      bottom: 8vw
+      bottom: 8vw;
       /* bottom: 25%; */
     }
   }
