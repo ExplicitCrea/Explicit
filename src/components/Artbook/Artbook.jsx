@@ -36,17 +36,17 @@ export const Artbook = () => {
           <img src={loreal} alt="L'oreal Paris" width={500} height={286}/>
         </Link>
 
-        <div className="pg">
+        <Link to="/pg" className="pg">
           <img src={pg} alt="Profession Gangster" width={500} height={337}/>
-        </div>
+        </Link>
 
         <Link to='/le-grand-jd' className="le-grand-jd">
           <img src={le_grand_jd} alt="Le Grand Jd" width={600} height={337}/>
         </Link>
 
-        <div className="vzion">
+        <Link to="/vzion" className="vzion">
           <img src={vzion} alt="Vzion" width={400} height={400}/>
-        </div>
+        </Link>
 
         <div className="mahdiBa">
           <div className="coming-soon">Coming soon</div>

@@ -6,7 +6,6 @@ return (
     <StyledHistory>
         <img src={logohistoire} alt='notre histoire'></img>
         <div className='container'>
-            <h2>Fondée en 2019</h2>
             <p>De par le besoin d'évoluer sans cesse, un groupe de créatifs se sont réunis pour performer dans le domaine
             du divertissement et du partage sur internet. Le nom d'Explicit s'est instantanément inscrit
             dans la tête du collectif comme étant la valeur à ajouter.

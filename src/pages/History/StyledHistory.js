@@ -13,7 +13,7 @@ const StyledHistory = styled.div`
     overflow: hidden;
 
 img{
-    width: 25%;
+    width: 30%;
     height: auto;
 
 }
@@ -24,9 +24,6 @@ img{
     width: 45%;
     height: 64%;
     padding: 0px;
-    background: rgb(14 14 14 / 7%);
-    backdrop-filter: blur(29px);
-    border-radius: 10px;
     position: relative;
     z-index: 2;
 
@@ -40,8 +37,8 @@ p{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 95%;
-    font-size: 16px;
+    width: 115%;
+    font-size: 19px;
     text-align: center;
     font-family: lexend;
     color: white;
@@ -62,16 +59,15 @@ p{
 }
 
 .background-green{
-    width: 40%;
-    height: 110%;
+    width: 92%;
+    height: 279%;
     position: fixed;
-    bottom: 100px;
+    bottom: 4px;
     left: 0px;
     z-index: 0;
-    border-radius: 50%;
-    background: radial-gradient(50% 50% at 54% 30%, rgb(10 211 72 / 27%) 1.15%, rgba(100, 255, 169, 0.00) 99.99%, rgba(100, 255, 169, 0.00) 102%, rgba(100, 255, 169, 0.00) 100%);
-    transform: rotate(312deg);
-    
+    border-radius: 44%;
+    background: radial-gradient(43% 49% at 75% 45%, rgb(10 211 72 / 31%) 21.15%, rgba(100, 255, 169, 0.00) 100.99%, rgba(100, 255, 169, 0.00) 100%, rgba(100, 255, 169, 0.00) 100%);
+    transform: rotate(219deg);
 }
 @media screen and (max-width: 900px) {
     padding: 60px 40px 40px 40px;
@@ -89,8 +85,13 @@ p{
         }
 
     p {
-        font-size: 9px; 
+        font-size: 10px;
+        width: 103%;
+        height: auto; 
         }
+    }
+    .background-green{
+    width: 174%;
     }
 }
 
