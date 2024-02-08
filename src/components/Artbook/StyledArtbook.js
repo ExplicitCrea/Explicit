@@ -190,7 +190,7 @@ const StyledArtbook = styled.div`
     @media (max-width: 900px) {
       padding: 8px;
       font-size: 0.8em;
-      bottom: 8vw;
+      bottom: 16vw;
     }
     @media (max-width: 500px) {
       font-size: 0.5em;
