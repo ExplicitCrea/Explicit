@@ -3,6 +3,7 @@ import styled from "styled-components";
 const NewStyledArtbook = styled.div`
   margin-top: 30px;
   z-index: 1;
+  border: 5px solid yellow;
 
   .container {
     display: grid;
@@ -13,6 +14,14 @@ const NewStyledArtbook = styled.div`
     grid-template-columns: 16% 10% 3% 7% 7% 6% 7% 14%;
     position: relative;
     gap: 0.8vw;
+    border: 5px solid red;
+    @media (max-width: 900px) {
+      height: 100%;
+      margin-top: 20px;
+      grid-template-columns: 35% 14% 47%;
+      grid-template-rows: 8% 12% 11% 7% 7% 12% 13%;
+      gap: 2vw;
+    }
 
     img {
       border-radius: 10px;
@@ -33,6 +42,9 @@ const NewStyledArtbook = styled.div`
       border-radius: 10px;
       grid-row: 1;
       grid-column: 1 / span 4;
+      @media (max-width: 900px) {
+        grid-column: 1 / span 3;
+      }
     }
 
     @media (max-width: 900px) {
@@ -47,6 +59,12 @@ const NewStyledArtbook = styled.div`
     border-radius: 10px;
     grid-row: 1;
     grid-column: 5 / span 3;
+    @media (max-width: 900px) {
+      width: 100%;
+      height: 100%;
+      grid-column: 1;
+      grid-row: 6 / span 1;
+    }
   }
 
   .gg {
@@ -56,6 +74,10 @@ const NewStyledArtbook = styled.div`
     border-radius: 10px;
     grid-row: 1;
     grid-column: 8;
+    @media (max-width: 900px) {
+      grid-row: 7;
+      grid-column: 2 / span 2;
+    }
   }
 
   .loreal {
@@ -65,6 +87,9 @@ const NewStyledArtbook = styled.div`
     border-radius: 10px;
     grid-row: 2;
     grid-column: 1;
+    @media (max-width: 900px) {
+      width: 100%;
+    }
   }
 
   .pg {
@@ -75,6 +100,13 @@ const NewStyledArtbook = styled.div`
     grid-row: 2;
     grid-column: 2 / span 2;
     margin-left: 3.7vw;
+    @media (max-width: 900px) {
+      width: 100%;
+      height: 100%;
+      grid-column: 1 / span 2;
+      grid-row: 4;
+      margin-left: 0;
+    }
   }
 
   .le-grand-jd {
@@ -84,6 +116,11 @@ const NewStyledArtbook = styled.div`
     border-radius: 10px;
     grid-row: 2;
     grid-column: 5 / span 3;
+    @media (max-width: 900px) {
+      grid-column: 2 / span 2;
+      grid-row: 2;
+      height: 85%;
+    }
   }
 
   .the-guill {
@@ -93,6 +130,10 @@ const NewStyledArtbook = styled.div`
     grid-row: 3;
     grid-column: 3 / span 4;
     transition: transform 0.3s ease-in-out;
+    @media (max-width: 900px) {
+      grid-row: 5;
+      grid-column: 1 / span 2;
+    }
   }
 
   .potatoz {
@@ -102,6 +143,10 @@ const NewStyledArtbook = styled.div`
     grid-row: 3;
     grid-column: 7;
     transition: transform 0.3s ease-in-out;
+    @media (max-width: 900px) {
+      grid-column: 1;
+      grid-row: 7;
+    }
   }
 
   .vzion {
@@ -112,39 +157,46 @@ const NewStyledArtbook = styled.div`
     grid-row: 2;
     grid-column: 8;
     transition: transform 0.3s ease-in-out;
+    @media (max-width: 900px) {
+      height: 100%;
+      grid-row: 4;
+      grid-column: 3;
+    }
   }
 
   .coming-soon {
-      position: absolute;
-      background-color: #404040;
-      font-family: Lexend;
-      font-size: 1.5em;
-      width: 70%;
-      height: auto;
-      text-align: center;
-      margin-right: 10%;
-      right: 0;
-      padding: 10px;
-      border-radius: 0px 15px 15px 0px;
-      bottom: 5vw;
-      z-index: 4;
+    position: absolute;
+    background-color: #404040;
+    font-family: Lexend;
+    font-size: 1.5em;
+    width: 70%;
+    height: auto;
+    text-align: center;
+    margin-right: 10%;
+    right: 0;
+    padding: 10px;
+    border-radius: 0px 15px 15px 0px;
+    bottom: 6vw;
+    z-index: 4;
 
-      @media (max-width: 1600px) {
-        font-size: 1.3em;
-      }
-      @media (max-width: 1350px) {
-        font-size: 1em;
-      }
+    @media (max-width: 1600px) {
+      font-size: 1.3em;
+    }
+    @media (max-width: 1350px) {
+      font-size: 1em;
+    }
 
-      @media (max-width: 1110px) {
-        font-size: 0.8em;
-      }
+    @media (max-width: 1110px) {
+      font-size: 0.8em;
+    }
 
-      @media (max-width: 900px) {
-        font-size: 1em;
-        bottom: 25%;
-      }
-    } 
+    @media (max-width: 900px) {
+      padding: 8px;
+      font-size: 0.8em;
+      bottom: 8vw
+      /* bottom: 25%; */
+    }
+  }
 
   .mahdiBa {
     position: relative;
@@ -153,6 +205,12 @@ const NewStyledArtbook = styled.div`
     border-radius: 10px;
     grid-row: 3 / span 2;
     grid-column: 1;
+    @media (max-width: 900px) {
+      width: 100%;
+      height: 100%;
+      grid-column: 1 / span 2;
+      grid-row: 3 / span 1;
+    }
   }
 
   .wrld-mag {
@@ -166,14 +224,9 @@ const NewStyledArtbook = styled.div`
     cursor: pointer;
 
     @media (max-width: 900px) {
-      grid-column: 3 / span 1;
-      grid-row: 3 / span 1;
-      position: relative;
-      top: -28%;
-      margin-left: 0%;
-      width: 100%;
-      height: 125%;
-      left: 0;
+      grid-row: 3;
+      grid-column: 3;
+      margin-top: -14%;
     }
 
     .wrldmag {
@@ -198,8 +251,6 @@ const NewStyledArtbook = styled.div`
       top: 4vw;
       width: 100%;
       height: 50%;
-      /* object-position: center;
-        object-fit: cover; */
       @media (max-width: 900px) {
         top: 0px;
         left: 0px;
@@ -225,6 +276,12 @@ const NewStyledArtbook = styled.div`
     grid-row: 3;
     grid-column: 8;
     margin-top: -15%;
+    @media (max-width: 900px) {
+      height: 100%;
+      margin-top: 0;
+      grid-row: 5;
+      grid-column: 3;
+    }
   }
 
   .paltay {
@@ -237,17 +294,9 @@ const NewStyledArtbook = styled.div`
 
     @media (max-width: 900px) {
       grid-column: 2 / span 2;
-      grid-row: 7 / span 1;
+      grid-row: 6;
       width: 100%;
       height: 100%;
-      margin-top: 0;
-      margin-left: 0;
-      top: 0;
-      left: 0;
-
-      img {
-        object-position: right;
-      }
     }
   }
 `;
