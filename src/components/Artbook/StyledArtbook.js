@@ -40,6 +40,7 @@ const StyledArtbook = styled.div`
     .olympics {
       width: 100%;
       overflow: hidden;
+      border-radius: 10px;
       grid-row: 1;
       grid-column: 1 / span 4;
       @media (max-width: 900px) {
@@ -56,6 +57,7 @@ const StyledArtbook = styled.div`
   .bruce-grannec {
     width: 100%;
     overflow: hidden;
+    border-radius: 10px;
     grid-row: 1;
     grid-column: 5 / span 3;
     @media (max-width: 900px) {
@@ -68,6 +70,7 @@ const StyledArtbook = styled.div`
   .gg {
     width: 100%;
     overflow: hidden;
+    border-radius: 10px;
     grid-row: 1;
     grid-column: 8;
     @media (max-width: 900px) {
@@ -78,6 +81,7 @@ const StyledArtbook = styled.div`
 
   .loreal {
     width: 125%;
+    border-radius: 10px;
     overflow: hidden;
     grid-row: 2;
     grid-column: 1;
@@ -88,6 +92,7 @@ const StyledArtbook = styled.div`
 
   .pg {
     width: 130%;
+    border-radius: 10px;
     overflow: hidden;
     grid-row: 2;
     grid-column: 2 / span 2;
@@ -102,6 +107,7 @@ const StyledArtbook = styled.div`
   }
 
   .le-grand-jd {
+    border-radius: 10px;
     width: 100%;
     overflow: hidden;
     grid-row: 2;
@@ -114,6 +120,7 @@ const StyledArtbook = styled.div`
   }
 
   .the-guill {
+    border-radius: 10px;
     width: 100%;
     overflow: hidden;
     grid-row: 3;
@@ -126,6 +133,7 @@ const StyledArtbook = styled.div`
   }
 
   .potatoz {
+    border-radius: 10px;
     width: 100%;
     overflow: hidden;
     grid-row: 3;
@@ -138,6 +146,7 @@ const StyledArtbook = styled.div`
   }
 
   .vzion {
+    border-radius: 10px;
     width: 100%;
     height: 84%;
     overflow: hidden;
@@ -189,6 +198,7 @@ const StyledArtbook = styled.div`
   }
 
   .mahdiBa {
+    border-radius: 10px;
     position: relative;
     width: 100%;
     overflow: hidden;
@@ -202,6 +212,7 @@ const StyledArtbook = styled.div`
   }
 
   .wrld-mag {
+    border-radius: 10px;
     position: relative;
     width: 100%;
     overflow: hidden;
@@ -258,6 +269,7 @@ const StyledArtbook = styled.div`
   }
 
   .edenLz {
+    border-radius: 10px;
     width: 100%;
     height: 121%;
     overflow: hidden;
@@ -273,6 +285,7 @@ const StyledArtbook = styled.div`
   }
 
   .paltay {
+    border-radius: 10px;
     width: 100%;
     position: relative;
     overflow: hidden;
