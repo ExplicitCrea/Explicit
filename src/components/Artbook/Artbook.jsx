@@ -2,7 +2,7 @@ import bruce_grannec from "../../assets/artbook/bruce-brannec/bruce_grannec_500w
 import eden_lz from "../../assets/artbook/eden_lz/eden_lz_795w.webp";
 import loreal from "../../assets/artbook/loreal/loreal_500w.webp";
 import le_grand_jd from "../../assets/artbook/le_grand_jd/le_grand_jd_600w.webp";
-import vzion from "../../assets/artbook/vzion/vzion_400w.webp";
+import vzion from "../../assets/artbook/vzion/vzion.webp";
 import mahdi_ba from "../../assets/artbook/mahdi_ba/mahdi_ba_400w.webp";
 import olympics from "../../assets/artbook/olympics/olympics_900w.webp";
 import paltay from "../../assets/artbook/paltay/paltay_1100w.webp";
