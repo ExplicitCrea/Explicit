@@ -114,7 +114,7 @@ const NewStyledArtbook = styled.div`
     transition: transform 0.3s ease-in-out;
   }
 
-  /* .coming-soon {
+  .coming-soon {
       position: absolute;
       background-color: #404040;
       font-family: Lexend;
@@ -126,7 +126,7 @@ const NewStyledArtbook = styled.div`
       right: 0;
       padding: 10px;
       border-radius: 0px 15px 15px 0px;
-      bottom: 40%;
+      bottom: 5vw;
       z-index: 4;
 
       @media (max-width: 1600px) {
@@ -144,7 +144,7 @@ const NewStyledArtbook = styled.div`
         font-size: 1em;
         bottom: 25%;
       }
-    } */
+    } 
 
   .mahdiBa {
     position: relative;
