@@ -69,7 +69,9 @@ form{
         font-size: 15px;
         margin: 40px auto;
     }
-
+    .Toastify__toast-container {
+            padding: 80px 50px 0px 30px;
+}
     .background-filter {
         position: absolute;
         top: 0;
