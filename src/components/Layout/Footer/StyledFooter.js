@@ -45,14 +45,12 @@ const StyledFooter = styled.footer`
   @media (max-width: 900px) {
         height: 100px;
         width: 100%;
-        padding: 0px 0px;
-        
         .column{
               width: 17%;
-              margin: 21px 0px 0px 0px;
+              
           a{
               font-size: 13px;
-              margin: 0px 0px 6px 0px;
+              
     }
   }
   .logo{
@@ -63,9 +61,7 @@ const StyledFooter = styled.footer`
   }
   .background{
     height: 550px;
-    width: 130%;
-    padding: 0px 100px 0px 0px;
-    left: calc(10% - 13vw);
+    width: 100%;
   }
 }
 
