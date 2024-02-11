@@ -72,6 +72,21 @@ form{
     .Toastify__toast-container {
             padding: 80px 50px 0px 30px;
 }
+.coordonner {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    border: 0.8px solid rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    background-color: transparent;
+    width: 23%;
+    height: 23%;
+    top: 26%;
+    right: 150px;
+    text-align: center;
+    color: white;
+    font-family: lexend;
+}
     .background-filter {
         position: absolute;
         top: 0;

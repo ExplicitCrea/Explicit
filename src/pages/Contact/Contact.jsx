@@ -56,6 +56,13 @@ return (
             <button  type='submit' className="send-button">Envoyer</button>
             <input type="hidden" name="security" value="security"/>
     <ToastContainer />
+        <div className='coordonner'>
+        <h2>Contact</h2>
+                    <ul>
+                        <li>Adresse E-Mail: exemple@exemple.com</li>
+                        <li>Numero de téléphone :06 51 23 25 25 </li>
+                    </ul>
+        </div>
     </form>
         <div className='background-filter'/>
     </StyledContact>
