@@ -9,11 +9,12 @@ const StyledPage = styled.section`
   padding-top: 100px;
   overflow: hidden;
   background: rgb(45,70,117);
-background: linear-gradient(111deg, rgba(45,70,117,1) 17%, rgba(29,48,75,1) 42%, rgba(18,21,25,1) 100%);
+  background: linear-gradient(111deg, rgba(45,70,117,1) 17%, rgba(29,48,75,1) 42%, rgba(18,21,25,1) 100%);
 
   @media screen and (max-width: 1000px) {
     align-items: initial;
     height: auto;
+    overflow: auto;
   }
 
   .background {
@@ -39,7 +40,6 @@ background: linear-gradient(111deg, rgba(45,70,117,1) 17%, rgba(29,48,75,1) 42%,
     grid-template-columns: 22% 35% 27% 14%;
     grid-template-rows: 28% 13% 58%;
     gap: 0.8%;
-    overflow: hidden;
 
     @media screen and (min-width: 2000px) {
       max-width: 1600px;
