@@ -8,7 +8,9 @@ export const MotionDesign = () => {
         <StyledMotionDesign>
             <h1>Motion Design</h1>
             <p>{t('services.motion')}</p>
-            <ReactPlayer url='https://www.youtube.com/watch?v=LXb3EKWsInQ' />
+            <div className='video'>
+                <ReactPlayer width='100%' height='100%' url='https://www.youtube.com/watch?v=LXb3EKWsInQ' />
+            </div>
         </StyledMotionDesign>
     )
 }

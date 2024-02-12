@@ -14,23 +14,22 @@ const StyledServices = styled.main`
     }
 
     p{
-        font-size: 1.5vw;
+        font-size: 1.2vw;
         color: #FFFFFF;
         font-weight: 500;
     }
 
     .title{
-        font-size: 7vw;
+        font-size: 6vw;
         color: #634EFF;
-        margin: 0;
+        margin: 24px 0 0 0;
         text-align: center;
     }
 
     .description{
-        margin-bottom: 48px;
+        margin: 0 0 48px 0;
         text-align: center;
         max-width: 75vw;
-        margin: 36px 24px 0 24px;
     }
 
     .linear-background{

@@ -12,7 +12,7 @@ const StyledVideoEditing = styled.section`
         width: 40%;
         h1{
             width: 100%;
-            font-size: 7vw;
+            font-size: 6vw;
             margin: 0;
             line-height: 6vw;
         }
