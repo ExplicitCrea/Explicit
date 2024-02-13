@@ -6,6 +6,7 @@ import video from "../../assets/background1-services.png";
 import { MotionDesign } from '../../components/Services/MotionDesign/MotionDesign';
 import { Stupeflip } from "../../components/Services/Stupeflip/Stupeflip";
 import { Production } from "../../components/Services/Production/Production";
+import { Audio } from "../../components/Services/Audio/Audio";
 
 export const Services = () => {
   const { t } = useTranslation();
@@ -18,6 +19,7 @@ export const Services = () => {
       <MotionDesign/>
       <Stupeflip/>
       <Production/>
+      <Audio/>
       <div className="linear-background" />
       <div className="video-container-background">
         <img className="video-background" src={video} alt="background" />
