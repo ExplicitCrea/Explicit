@@ -6,14 +6,13 @@ const StyledMahdibaMobile = styled.div`
     justify-content: center;
     border: 5px solid red;
     width: 95vw;
-    padding: 0px 40px;
     min-height: 100vh;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 28% 15% 18% 20% 19%;
+    grid-template-rows: 52vw 29vw 38vw 41vw 33vw;
+    gap: 0.8%;
     .video {
       width: 100%;
       aspect-ratio: 16/9;
-      height: 100%;
       grid-row: 1;
       grid-column: 1 / span 2;
     }
@@ -40,6 +39,7 @@ const StyledMahdibaMobile = styled.div`
     }
 
     p {
+      margin: 0;
       font-size: 100%;
       text-align: center;
       color: white;
@@ -64,15 +64,15 @@ const StyledMahdibaMobile = styled.div`
     }
 
     .virtual-character {
-      width: 30%;
-      height: 100%;
+      width: 30vw;
+      height: 38vw;
       grid-row: 4;
       grid-column: 1;
     }
 
     .tv {
       width: 60vw;
-      height: 20vw;
+      height: 23vw;
       grid-row: 4;
       grid-column: 2;
     }
@@ -81,9 +81,9 @@ const StyledMahdibaMobile = styled.div`
     .virtualGlasses {
       grid-row: 5;
       grid-column: 1 / span 2;
-      width: 50vw;
+      width: 60vw;
       margin-top: 2vw;
-      margin-left: 5vw;
+      margin-left: 5%;
       height: auto;
     }
 `;
