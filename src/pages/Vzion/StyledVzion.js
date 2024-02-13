@@ -34,7 +34,7 @@ const StyledVzion = styled.section`
         font-size: 120px;
         line-height: 121.44px;
         margin: 0;
-        @media (max-width: 1600px) {
+        @media (max-width: 1400px) {
           font-size: 110px;
         }
       }
