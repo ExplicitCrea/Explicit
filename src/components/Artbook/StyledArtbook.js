@@ -80,7 +80,7 @@ const StyledArtbook = styled.div`
   }
 
   .loreal {
-    width: 125%;
+    width: 123%;
     border-radius: 10px;
     overflow: hidden;
     grid-row: 2;
@@ -154,10 +154,11 @@ const StyledArtbook = styled.div`
     grid-column: 8;
     transition: transform 0.3s ease-in-out;
     @media (max-width: 900px) {
-      height: 201%;
+      height: 204%;
       grid-row: 4;
       grid-column: 3;
-      margin-top: -77%;
+      position: relative;
+      top: -104%;
     }
   }
 
@@ -190,10 +191,10 @@ const StyledArtbook = styled.div`
     @media (max-width: 900px) {
       padding: 8px;
       font-size: 0.8em;
-      bottom: 16vw;
+      bottom: 21vw;
     }
     @media (max-width: 500px) {
-      font-size: 0.5em;
+      font-size: 0.6em;
     }
   }
 
