@@ -4,6 +4,8 @@ import { VideoEditing } from "../../components/Services/VideoEditing/VideoEditin
 import { Branding } from "../../components/Services/Branding/Branding";
 import video from "../../assets/background1-services.png";
 import { MotionDesign } from '../../components/Services/MotionDesign/MotionDesign';
+import { Stupeflip } from "../../components/Services/Stupeflip/Stupeflip";
+import { Production } from "../../components/Services/Production/Production";
 
 export const Services = () => {
   const { t } = useTranslation();
@@ -14,6 +16,8 @@ export const Services = () => {
       <VideoEditing />
       <Branding />
       <MotionDesign/>
+      <Stupeflip/>
+      <Production/>
       <div className="linear-background" />
       <div className="video-container-background">
         <img className="video-background" src={video} alt="background" />
