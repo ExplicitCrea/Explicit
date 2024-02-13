@@ -1,22 +1,11 @@
 import styled from "styled-components";
 
 const StyledMahdibaDesktop = styled.div`
-  background: url("src/assets/mahdiba/background.png");
-  background-size: cover;
-  background-position: top;
-  background-attachment: fixed;
-  min-height: 100vh;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  border: 5px solid yellow;
-
   .container {
     height: auto;
     width: 95vw;
-    border: 5px solid red;
-    max-width: 1900px;
+    /* max-width: 1900px; */
+    border: 10px solid green;
     .video {
       width: 100%;
       display: flex;
@@ -24,7 +13,7 @@ const StyledMahdibaDesktop = styled.div`
       .wrapper {
         aspect-ratio: 16 / 9;
         position: relative;
-        border: 5px solid green;
+
         max-width: 1200px;
         width: 70%;
 
@@ -44,20 +33,20 @@ const StyledMahdibaDesktop = styled.div`
     }
 
     .third-container {
+      width: 100%;
+      height: auto;
       display: flex;
-      border: 5px solid green;
       justify-content: center;
       position: relative;
-      bottom: 2%;
-      padding: 0px 50px;
-      gap: 10px;
-      width: 100%;
-
+      bottom: -50%;
+      border: 5px solid yellow;
       .second-wrapper {
-        position: relative;
         display: flex;
-        border: 5px solid blue;
-        max-width: 2000px;
+        gap: 10px;
+        border: 5px solid red;
+        position: relative;
+        max-width: 1400px;
+        
 
         .glasses {
           position: absolute;
@@ -102,7 +91,6 @@ const StyledMahdibaDesktop = styled.div`
         height: 8vw;
         border-radius: 25px;
         object-fit: cover;
-        border: 5px solid green;
       }
     }
   }

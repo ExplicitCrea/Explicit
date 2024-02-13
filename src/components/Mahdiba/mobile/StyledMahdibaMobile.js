@@ -4,11 +4,10 @@ const StyledMahdibaMobile = styled.div`
   .container {
     display: grid;
     justify-content: center;
-    border: 5px solid red;
     width: 95vw;
     min-height: 100vh;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 52vw 29vw 38vw 41vw 33vw;
+    grid-template-rows: 52vw 29vw 38vw 41vw 37vw;
     gap: 0.8%;
     .video {
       width: 100%;
@@ -22,7 +21,6 @@ const StyledMahdibaMobile = styled.div`
       height: 100%;
       grid-column: 1;
       grid-row: 2;
-      border: 5px solid white;
     }
 
     .diamond {
@@ -30,7 +28,6 @@ const StyledMahdibaMobile = styled.div`
       height: 100%;
       grid-column: 2;
       grid-row: 2;
-      border: 5px solid white;
     }
 
     img {
