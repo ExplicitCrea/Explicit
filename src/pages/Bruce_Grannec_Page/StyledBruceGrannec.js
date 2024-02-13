@@ -13,8 +13,6 @@ const StyledPage = styled.section`
 
   @media screen and (max-width: 1000px) {
     align-items: initial;
-    height: auto;
-    overflow: auto;
   }
 
   .background {
@@ -35,11 +33,13 @@ const StyledPage = styled.section`
     max-height: 850px;
     display: grid;
     width: 95vw;
+    height: auto;
     justify-content: center;
     position: relative;
     grid-template-columns: 22% 35% 27% 14%;
     grid-template-rows: 28% 13% 58%;
     gap: 0.8%;
+    border: 5px solid red;
 
     @media screen and (min-width: 2000px) {
       max-width: 1600px;
@@ -51,12 +51,14 @@ const StyledPage = styled.section`
     }
 
     @media screen and (max-width: 1000px) {
-      grid-template-columns: 11vw 36vw 36vw 11vw;
-      grid-template-rows: 20vw 41vw 14vw 40vw;
-      max-height: initial;
-      max-width: initial;
+      grid-template-columns: 100%;
+      grid-template-rows: 19vw 48vw 11vw 30vw;
+      max-height: unset;
+      max-width: unset;
       gap: 0;
       grid-row-gap: 3%;
+      /* Le height ici permet d'avoir la bonne hauteur mais je ne pense pas que ça soit top. */
+      height: 155vw;
     }
 
     .label-on-side {
@@ -150,7 +152,6 @@ const StyledPage = styled.section`
         color: white;
         margin: 0 auto;
         border-radius: 1vw;
-
         width: 100%;
         
 
@@ -194,7 +195,7 @@ const StyledPage = styled.section`
 
       @media screen and (max-width: 1000px) {
         grid-row: 3;
-        grid-column: 1 / span 4;
+        grid-column: 1;
       }
 
       .white-star {
@@ -243,8 +244,9 @@ const StyledPage = styled.section`
     top: -15px;
 
     @media screen and (max-width: 1000px) {
-      width: 100%;
-      grid-column: 2 / span 2;
+      width: 90%;
+      margin: 0 auto;
+      grid-column: 1;
       grid-row: 2 / span 1;
       top: 0px;
       max-height: 100%;

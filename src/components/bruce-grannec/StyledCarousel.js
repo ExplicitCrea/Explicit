@@ -31,7 +31,7 @@ const StyledCarousel = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.2);
     .arrow-left {
       top: 50%;
       right: 50%;
@@ -45,7 +45,7 @@ const StyledCarousel = styled.div`
     position: absolute;
     right: 0;
     top: 0;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.2);
 
     .arrow-right {
       top: 50%;
@@ -63,7 +63,6 @@ const StyledCarousel = styled.div`
     align-content: center;
     width: 100%;
     height: 10%;
-    border-radius: 10px;
     input {
       cursor: pointer;
       background-color: red;
