@@ -7,6 +7,8 @@ import { MotionDesign } from '../../components/Services/MotionDesign/MotionDesig
 import { Stupeflip } from "../../components/Services/Stupeflip/Stupeflip";
 import { Production } from "../../components/Services/Production/Production";
 import { Audio } from "../../components/Services/Audio/Audio";
+import { Graphics } from '../../components/Services/Graphics/Graphics';
+import { Threed } from '../../components/Services/3d/Threed';
 
 export const Services = () => {
   const { t } = useTranslation();
@@ -19,6 +21,8 @@ export const Services = () => {
       <MotionDesign/>
       <Stupeflip/>
       <Production/>
+      <Graphics/>
+      <Threed/>
       <Audio/>
       <div className="linear-background" />
       <div className="video-container-background">

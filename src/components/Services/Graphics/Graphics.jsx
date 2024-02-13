@@ -11,13 +11,13 @@ export const Graphics = () => {
       <p>
         Pour nos créateur de contenue en direct nous avons toute une gamme d’outils graphique adapté au streaming, pour vous permettre de mieux habillé vos contenues.Du simple waiting screen au plus petit détails de mise en forme.
       </p>
-      <div>
+      <div className="video-container">
         <div className='video'>
             <ReactPlayer width='100%' height='100%' url='https://www.youtube.com/watch?v=LXb3EKWsInQ' />
         </div>
-        <img src={icon} alt="icon" />
-        <img src={banner} alt="banner" />
-        <img src={frame} alt="frame" />
+        <img className="icon" src={icon} alt="icon" />
+        <img className="banner" src={banner} alt="banner" />
+        <img className="frame" src={frame} alt="frame" />
       </div>
     </StyledGraphics>
   )
