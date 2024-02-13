@@ -4,7 +4,7 @@ import { MahdibaMobile } from "../../components/Mahdiba/mobile/MahdibaMobile";
 import useWindowSize from "../../utils/useWindowSize";
 
 export const MahdibaPage = () => {
-  const isSmallScreen = useWindowSize(900)
+  const isSmallScreen = useWindowSize(1000)
   return (
     <StyledMahdibaPage>
       {isSmallScreen ? (

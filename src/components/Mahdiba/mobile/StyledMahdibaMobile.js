@@ -82,7 +82,6 @@ const StyledMahdibaMobile = styled.div`
       grid-row: 5;
       grid-column: 1 / span 2;
       width: 60vw;
-      margin-top: 2vw;
       margin-left: 5%;
       height: auto;
     }
