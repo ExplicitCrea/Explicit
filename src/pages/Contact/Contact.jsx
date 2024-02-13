@@ -3,6 +3,8 @@ import StyledContact from './StyledContact'
 import {SendEmail}  from '../../utils/E-mail/SendEmail';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { MdEmail } from "react-icons/md";
+import { BsFillTelephoneFill } from "react-icons/bs";
 
 export const Contact = () => {
     const notifySuccess = () => toast("Votre e-mail a été envoyé avec succès!");
@@ -20,9 +22,9 @@ export const Contact = () => {
                 .catch((error) => {
                     console.error('Failed to send email:', error);
                     alert('Erreur lors de l\'envoi de l\'e-mail. Veuillez réessayer.');
+                    alert('Veuillez remplir tous les champs du formulaire.');
                 });
         } else {
-            alert('Veuillez remplir tous les champs du formulaire.');
         }
     };
 
@@ -54,14 +56,21 @@ return (
                 <textarea type='text' name='message' placeholder='Ajouter un message' required/>
         </div>
             <button  type='submit' className="send-button">Envoyer</button>
-            <input type="hidden" name="security" value="security"/>
+            <input type="hidden" name="a_password"  tabindex="-1" autocomplete="off"/>
     <ToastContainer />
         <div className='coordonner'>
-        <h2>Contact</h2>
-                    <ul>
-                        <li>Adresse E-Mail: exemple@exemple.com</li>
-                        <li>Numero de téléphone :06 51 23 25 25 </li>
-                    </ul>
+                <h2>Pour nous contacter</h2>
+                    <li>
+                        <a href="mailto:Contact@explicitcrea.com">
+                            <MdEmail /> Contact@explicitcrea.com
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:07.83.82.05.02">
+                            <BsFillTelephoneFill />  07.83.82.05.02
+                        </a>
+                    </li>
+                    
         </div>
     </form>
         <div className='background-filter'/>

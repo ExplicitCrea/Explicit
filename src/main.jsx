@@ -20,7 +20,10 @@ import { LegalDisclaimer } from './pages/Legal Disclaimer/LegalDisclaimer.jsx';
 import { Bruce_Grannec_Page } from './pages/Bruce_Grannec_Page/Bruce_Grannec_Page.jsx';
 import { Vzion } from './pages/Vzion/Vzion.jsx';
 import { Pg } from './pages/Pg/Pg.jsx';
-import { WrldMag } from './pages/Wrld Mag/WrldMag.jsx';
+import { TheGuill } from './pages/TheGuill/TheGuill.jsx';
+
+
+
 
 const router = createBrowserRouter([
   {
@@ -92,8 +95,8 @@ const router = createBrowserRouter([
         element: <Pg/>,
       },
       {
-        path: '/wrld-mag',
-        element: <WrldMag/>,
+        path: '/theguill',
+        element: <TheGuill/>,
       }
       
     ],
