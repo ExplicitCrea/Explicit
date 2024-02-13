@@ -4,9 +4,13 @@ import glasses from "../../../assets/mahdiba/glasses.png";
 import virtualCharacter from "../../../assets/mahdiba/virtual-character.png";
 import tv from "../../../assets/mahdiba/tv.png";
 import virtualGlasses from "../../../assets/mahdiba/virtual-glasses.png";
+import { useTranslation } from "react-i18next";
 import { StyledMahdibaDesktop } from "./StyledMahdibaDesktop";
 
 export const MahdibaDesktop = () => {
+
+  const {t} = useTranslation()
+
   return (
     <StyledMahdibaDesktop>
       <div className="container">
@@ -26,16 +30,7 @@ export const MahdibaDesktop = () => {
             <img className="diamond" src={diamond} alt="" />
             <img src={virtualGlasses} alt="" />
             <p>
-              Voici notre réalisation pour le streamer et Youtuber "Mahdi Ba":
-              un streampack entièrement animé et illustré par nos équipes. Une
-              réalisation en 3D qui a demandé beaucoup de technicité et de
-              temps, pour un résultat très satisfaisant. Nous sommes extrêmement
-              fiers de ce projet, et le client est pleinement satisfait de son
-              expérience avec notre équipe.
-              <br />
-              Nous sommes reconnaissants de la confiance accordée par "Mahdi Ba"
-              et espérons pouvoir collaborer à nouveau sur d'autre projets à
-              l'avenir.
+              {t('mahdiba.paragraph')}
             </p>
             <img className="tv" src={tv} alt="" />
           </div>
