@@ -16,7 +16,7 @@ const StyledMahdibaDesktop = styled.div`
     height: auto;
     width: 95vw;
     border: 5px solid red;
-    max-width: 1500px;
+    max-width: 1900px;
     .video {
       width: 100%;
       display: flex;
@@ -32,7 +32,7 @@ const StyledMahdibaDesktop = styled.div`
           position: absolute;
           top: 38%;
           z-index: 1;
-          left: -27%;
+          left: -24%;
           object-fit: cover;
           width: 18vw;
           height: 24vw;
@@ -57,7 +57,7 @@ const StyledMahdibaDesktop = styled.div`
         position: relative;
         display: flex;
         border: 5px solid blue;
-        max-width: 1500px;
+        max-width: 2000px;
 
         .glasses {
           position: absolute;
