@@ -45,10 +45,13 @@ const StyledMahdibaMobile = styled.div`
       color: white;
       padding: 10px;
       font-family: lexend;
+      font-size: 3vw;
       border-radius: 10px;
       background-color: rgb(53, 53, 53);
       grid-column: 1 / span 2;
       grid-row: 3;
+      overflow: auto;
+      white-space: pre-wrap;
     }
 
     .virtual-characte-and-tv {

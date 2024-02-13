@@ -85,6 +85,7 @@ const StyledMahdibaDesktop = styled.div`
           font-family: lexend;
           background-color: rgb(53, 53, 53);
           border-radius: 10px;
+          white-space: pre-wrap;
         }
 
         .tv {
