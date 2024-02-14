@@ -64,6 +64,46 @@ const StyledBranding = styled.section`
         bottom: 36px;
         width: 15%;
     }
+
+    @media (max-width: 900px) {
+        width: 85%;
+        height: auto;
+        border-radius: 24px;
+        overflow: hidden;
+        .text-container {
+            position: unset;
+            h1{
+                font-size: 36px;
+                text-align: center;
+                margin: 24px 0 0 0;
+            }
+            p{
+                width: 80%;
+                font-size: 14px;
+                text-align: justify;
+            }
+        }
+        .poster-container{
+            flex-direction: column;
+            margin: 36px 0;
+            .little-poster{
+                width: 100%;
+                flex-direction: row;
+                justify-content: center;
+                img{
+                    width: 25%;
+                    margin: 0 6px;
+                }
+            }
+            .big-poster{
+                display: none;
+            }
+
+            .logo{
+                margin: 16px 0px;
+            }
+        }
+    }
 `
 
 export default StyledBranding
