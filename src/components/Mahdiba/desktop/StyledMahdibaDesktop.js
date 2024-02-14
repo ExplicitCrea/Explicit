@@ -13,7 +13,6 @@ const StyledMahdibaDesktop = styled.div`
       .wrapper {
         aspect-ratio: 16 / 9;
         position: relative;
-
         max-width: 1200px;
         width: 70%;
 
@@ -29,38 +28,42 @@ const StyledMahdibaDesktop = styled.div`
           max-width: 300px;
           border-radius: 5%;
         }
+        .glasses {
+          position: absolute;
+          z-index: 10;
+          bottom: -14%;
+          left: -17%;
+          width: 22vw;
+          max-width: 450px;
+        }
+
+        .diamond {
+          position: absolute;
+          z-index: 10;
+          bottom: -16%;
+          height: auto;
+          right: -21%;
+          width: 22vw;
+          max-width: 450px;
+        }
       }
     }
     .third-container {
       position: relative;
       top: -2vw;
+      width: 100%;
+      border: 5px solid yellow;
       .second-wrapper {
         display: flex;
         gap: 10px;
         border: 5px solid red;
         position: relative;
         margin: auto;
+        max-width: 1500px;
+        max-height: 800px;
 
-        .glasses {
-          position: absolute;
-        z-index: 10;
-        top: -8vw;
-        width: 20vw;
-        left: 4vw;
-        max-width: 400px;
-        max-height: 400px;
-        }
-
-        .diamond {
-          position: absolute;
-          z-index: 10;
-          top: -8vw;
-          height: auto;
-          right: -1vw;
-          width: 22vw;
-        }
         p {
-          font-size: 1vw;
+          font-size: 18px;
           z-index: 2;
           text-align: center;
           color: white;
@@ -70,7 +73,6 @@ const StyledMahdibaDesktop = styled.div`
           border-radius: 10px;
           white-space: pre-wrap;
           width: 100%;
-          overflow: auto;
         }
 
         .virtual-glasses {

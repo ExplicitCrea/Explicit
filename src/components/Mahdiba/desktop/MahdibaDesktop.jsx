@@ -22,12 +22,12 @@ export const MahdibaDesktop = () => {
               url="https://www.youtube.com/watch?v=LXb3EKWsInQ"
             />
             <img className="virtual-character" src={virtualCharacter} alt="" />
+            <img className="glasses" src={glasses} alt="" />
+            <img className="diamond" src={diamond} alt="" />
           </div>
         </div>
         <div className="third-container">
           <div className="second-wrapper">
-          <img className="glasses" src={glasses} alt="" />
-          <img className="diamond" src={diamond} alt="" />
             <img className="virtual-glasses" src={virtualGlasses} alt="" />
             <p>
               {t('mahdiba.paragraph')}
