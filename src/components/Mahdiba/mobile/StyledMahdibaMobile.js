@@ -37,7 +37,6 @@ const StyledMahdibaMobile = styled.div`
 
     p {
       margin: 0;
-      font-size: 100%;
       text-align: center;
       color: white;
       padding: 10px;

@@ -4,8 +4,8 @@ const StyledMahdibaDesktop = styled.div`
   .container {
     height: auto;
     width: 95vw;
-    /* max-width: 1900px; */
     border: 10px solid green;
+    max-width: 1745px;
     .video {
       width: 100%;
       display: flex;
@@ -31,40 +31,34 @@ const StyledMahdibaDesktop = styled.div`
         }
       }
     }
-
     .third-container {
-      width: 100%;
-      height: auto;
-      display: flex;
-      justify-content: center;
       position: relative;
-      bottom: -50%;
-      border: 5px solid yellow;
+      top: -2vw;
       .second-wrapper {
         display: flex;
         gap: 10px;
         border: 5px solid red;
         position: relative;
-        max-width: 1400px;
-        
+        margin: auto;
 
         .glasses {
           position: absolute;
-          z-index: 10;
-          top: -5vw;
-          width: 19vw;
-          left: -2vw;
+        z-index: 10;
+        top: -8vw;
+        width: 20vw;
+        left: 4vw;
+        max-width: 400px;
+        max-height: 400px;
         }
 
         .diamond {
           position: absolute;
           z-index: 10;
-          top: -7vw;
+          top: -8vw;
           height: auto;
-          right: -2vw;
-          width: 18vw;
+          right: -1vw;
+          width: 22vw;
         }
-
         p {
           font-size: 1vw;
           z-index: 2;
@@ -75,6 +69,18 @@ const StyledMahdibaDesktop = styled.div`
           background-color: rgb(53, 53, 53);
           border-radius: 10px;
           white-space: pre-wrap;
+          width: 100%;
+          overflow: auto;
+        }
+
+        .virtual-glasses {
+          z-index: 1;
+          width: 56vw;
+          height: 11vw;
+          border-radius: 10px;
+          object-fit: cover;
+          max-width: 520px;
+          max-height: 227px;
         }
 
         .tv {
@@ -82,15 +88,13 @@ const StyledMahdibaDesktop = styled.div`
           border-radius: 10px;
           position: relative;
           left: -1vw;
+          z-index: 1;
+          width: 56vw;
+          height: 11vw;
+          object-fit: cover;
+          max-width: 520px;
+          max-height: 227px;
         }
-      }
-
-      img {
-        z-index: 1;
-        width: 21vw;
-        height: 8vw;
-        border-radius: 25px;
-        object-fit: cover;
       }
     }
   }

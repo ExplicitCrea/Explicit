@@ -26,9 +26,9 @@ export const MahdibaDesktop = () => {
         </div>
         <div className="third-container">
           <div className="second-wrapper">
-            <img className="glasses" src={glasses} alt="" />
-            <img className="diamond" src={diamond} alt="" />
-            <img src={virtualGlasses} alt="" />
+          <img className="glasses" src={glasses} alt="" />
+          <img className="diamond" src={diamond} alt="" />
+            <img className="virtual-glasses" src={virtualGlasses} alt="" />
             <p>
               {t('mahdiba.paragraph')}
             </p>
