@@ -1,86 +1,114 @@
 import styled from "styled-components";
 
-
 const StyledTheGuill = styled.section`
-    width: 100%;
-    padding: 100px; 
-    background-color: #191C2E;
-    position: absolute;
-    z-index: 0;
-    overflow: hidden;
-    
-.background img {
-    width: 100%; 
-    height: auto; 
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
 
+.background-container {
+    height: 70vw;
+    width: 100%;
+    background: url(/assets/guill/background.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
 p {
-    width: 52%;
-    margin: 0px auto 0;
+    width: 47%;
+    left: -3vw;
+    margin: 0px auto;
     border: 1px solid #333;
-    padding: 9px;
-    border-radius: 30px;
+    padding: 25px;
+    border-radius: 34px;
     font-family: lexend;
-    font-size: 13px;
-    color: white;
-    background-color: transparent;
+    font-size: 16px;
+    color: aliceblue;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    top: 6vw;
+    background-color: rgb(255 255 255 / 42%);
     backdrop-filter: blur(50px);
     position: relative;
     z-index: 1;
 }
-.carousel-container{
+.container{
     position: relative;
-    width: 62%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 5vw;
-    margin-left: -69px;
-            svg{
-                width: 5vw;
-                height: 5vw;
-                color: #fff;
-                cursor: pointer;
+    right: -1vw;
+    width: 149%;
+    top: 9vw;
+
+                .video{
+                    width: 50%;
+                    height: auto;
+                    max-width: 1230px;
+                    aspect-ratio: 16 / 9;
+                    border-radius: 24px;
+                    overflow: hidden;
+                    margin: 12px;
+                    z-index: 0;
+                }
             }
-            .wrapper{
-                width: 100%;
-                aspect-ratio: 16/9;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-radius: 0vw;
-                overflow: hidden;
-                background-color: #000;
-            }
-        }
-        .container-icon{
+        .icon-down{
             display: flex;
-    flex-direction: row;
-    position: absolute;
-    width: 93%;
-    bottom: 185px;
+        flex-direction: row;
+        justify-content: end;
+        position: absolute;
+        right: 85vw;
+        width: 35%;
+        top: 37vw;
         img{
-        width: 15%;
+            width: 24%;
+            padding: 0px 0px 0px 65px;
+        };
+}
+.icon-right {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 42vw;
+    width: 26%;
+    top: 15vw;
+        img{
+            width: 24%;
+            padding: 22px 0 0 0;
         }
-        }
-        .container {
-            display: flex;
-            flex-direction: column;
-            width: 45%;
-            margin-left: auto;
-            margin-right: 0px;
-    
 }
 
-.container img {
-    display: flex;
-    flex-direction: row;
-    width: 30%;
+.logo {
+    position: absolute;
+    top: 100px;
+    border-radius: 40px;
+    width: 23%; 
+    right: 3vw;
 }
+.pannels {
+    position: absolute;
+    left: 0vw;
+    width: 19%;
+    z-index: 1;
+    top: 35vw;
+
+}
+@media (max-width: 900px) {
+    .background-container {
+        width: 370%;
+    top: -64vw;
+    left: -240vw;
+    height: 136%;
+    
+}
+.container{
+right: -243vw;
+    width: 49%;
+    top: 60vw;
+
+    p {
+        width: 47%;
+    left: -3vw;
+    top: 6vw;
+    }
+}
+}
+
+
+
+
 
 
 `;
