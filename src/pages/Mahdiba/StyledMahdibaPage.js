@@ -10,6 +10,9 @@ const StyledMahdibaPage = styled.section`
   display: flex;
   justify-content: center;
   padding-top: calc(68px + 200px);
+  @media (max-width: 1000px) {
+    padding-top: calc(68px + 30px);
+  }
 `;
 
 export { StyledMahdibaPage };
