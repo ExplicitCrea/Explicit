@@ -13,8 +13,7 @@ import Pannels from '../../assets/TheGuill/pannels.png'
 export const TheGuill = () => {
 return (
     <StyledTheGuill>
-    <div className="background-container">
-    
+        <div className="background-container">
             <p>
                 Nous sommes ravis d'avoir collaboré avec le streamer The Guill. 
                 Notre équipe a conçu et réalisé son stream pack pour sa chaîne Twitch. 
@@ -37,8 +36,8 @@ return (
                 <img src={Icon6} alt='icon'/>
             </div>
                 <img src= {Pannels} alt='pannel' className='pannels'/>
-        </div>
-        <img src={Logo} alt='logo' className='logo' />
+            </div>
+            <img src={Logo} alt='logo' className='logo' />
         </div>
     </StyledTheGuill>
 )

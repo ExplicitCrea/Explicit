@@ -15,13 +15,13 @@ p {
     left: -3vw;
     margin: 0px auto;
     border: 1px solid #333;
-    padding: 25px;
-    border-radius: 34px;
+    padding: 10px;
+    border-radius: 24px;
     font-family: lexend;
     font-size: 16px;
     color: aliceblue;
     text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-    top: 6vw;
+    top: 5vw;
     background-color: rgb(255 255 255 / 42%);
     backdrop-filter: blur(50px);
     position: relative;
@@ -30,81 +30,120 @@ p {
 .container{
     position: relative;
     right: -1vw;
-    width: 149%;
-    top: 9vw;
+    width: 130%;
+    top: 7vw;
+    
 
-                .video{
-                    width: 50%;
-                    height: auto;
-                    max-width: 1230px;
-                    aspect-ratio: 16 / 9;
-                    border-radius: 24px;
-                    overflow: hidden;
-                    margin: 12px;
-                    z-index: 0;
-                }
-            }
+    .video{
+        width: 50%;
+        height: auto;
+        max-width: 1230px;
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+        margin: 12px;
+        z-index: 0;
+        }
+    }
+
         .icon-down{
             display: flex;
-        flex-direction: row;
-        justify-content: end;
-        position: absolute;
-        right: 85vw;
-        width: 35%;
-        top: 37vw;
+            flex-direction: row;
+            justify-content: end;
+            position: absolute;
+            right: 63vw;
+            top: 37vw;
+
         img{
-            width: 24%;
-            padding: 0px 0px 0px 65px;
-        };
+            width: 16%;
+            padding: 0px 0px 0px 50px;
+        }
 }
+
 .icon-right {
     display: flex;
     flex-direction: column;
     position: absolute;
-    right: 42vw;
-    width: 26%;
-    top: 15vw;
-        img{
-            width: 24%;
-            padding: 22px 0 0 0;
-        }
+    right: 52vw;
+    width: 7%;
+    top: 17vw;
+    img{
+        padding: 8px;
+        margin: 0 0 5px 0px;
+    }
 }
 
 .logo {
     position: absolute;
-    top: 100px;
+    top: 84px;
     border-radius: 40px;
     width: 23%; 
-    right: 3vw;
+    right: 3vw
+
 }
 .pannels {
     position: absolute;
     left: 0vw;
-    width: 19%;
+    width: 28%;
     z-index: 1;
-    top: 35vw;
+    top: 36vw;
+    transform: rotate(-3deg);
 
 }
 @media (max-width: 900px) {
-    .background-container {
-        width: 370%;
-    top: -64vw;
-    left: -240vw;
-    height: 136%;
-    
-}
-.container{
-right: -243vw;
-    width: 49%;
-    top: 60vw;
 
-    p {
-        width: 47%;
-    left: -3vw;
-    top: 6vw;
+.background-container {
+    height: 100vh; 
+}
+
+p{
+    width: 91%;
+    left: 1%;
+    top: 68px;
+    font-size: 9px;
+}
+
+.container{
+    
+    width: 100%;
+    top: 22vw;
+    .video{
+        width: 68%;
     }
 }
+
+    .icon-down{
+        right: 64vw;
+        width: 70%;
+        top: 65vw;
+        img{
+        padding: 0 0 0 0 ;
+        }
+    }
+
+    .icon-right{
+        display: flex;
+        flex-direction: row-reverse;
+        right: 27vw;
+        top: 66vw;
+        width: 16%;
+        img{
+            width: 70%;
+    padding: 0px 1px 0px 1px;
+    }
 }
+
+
+
+    
+    
+
+    
+    
+
+}
+
+
+
 
 
 
