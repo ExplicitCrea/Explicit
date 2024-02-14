@@ -30,7 +30,6 @@ const StyledGraphics = styled.section`
       aspect-ratio: 16 / 9;
       border-radius: 24px;
       overflow: hidden;
-      margin: 12px 0 0 0;
     }
 
     .icon{
