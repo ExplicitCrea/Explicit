@@ -39,7 +39,6 @@ const StyledPage = styled.section`
     grid-template-columns: 22% 35% 27% 14%;
     grid-template-rows: 28% 13% 58%;
     gap: 0.8%;
-    border: 5px solid red;
 
     @media screen and (min-width: 2000px) {
       max-width: 1600px;
@@ -57,7 +56,6 @@ const StyledPage = styled.section`
       max-width: unset;
       gap: 0;
       grid-row-gap: 3%;
-      /* Le height ici permet d'avoir la bonne hauteur mais je ne pense pas que ça soit top. */
       height: 155vw;
     }
 
