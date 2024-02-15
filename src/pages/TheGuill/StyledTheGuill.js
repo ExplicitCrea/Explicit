@@ -1,6 +1,12 @@
 import styled from "styled-components";
 
 const StyledTheGuill = styled.section`
+min-height: 200vh;
+margin: 80px 0 0px 0px;
+width: 100%;
+background-color: #191C2E;
+position: fixed;
+overflow: hidden;
 
 .background-container {
     height: 70vw;
