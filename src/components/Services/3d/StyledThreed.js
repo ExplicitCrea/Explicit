@@ -27,6 +27,19 @@ const StyledThreed = styled.section`
     overflow: hidden;
     margin: 12px 0 0 0;
   }
+
+  @media (max-width: 900px) {
+    padding: 60px 0;
+    height: auto;
+    background-size: auto 137%;
+    p{
+      font-size: 13px;
+      width: 90%;
+    }
+    .video{
+      width: 80%;
+    }
+  }
 `
 
 export default StyledThreed

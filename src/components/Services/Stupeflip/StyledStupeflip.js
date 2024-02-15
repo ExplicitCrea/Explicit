@@ -5,6 +5,7 @@ const StyledStupeflip = styled.section`
   background: url('assets/services/stupeflip/background.png') center center no-repeat;
   background-size: cover;
   position: relative;
+  z-index: 1;
 
   h2{
     font-family: lexend;
@@ -32,6 +33,31 @@ const StyledStupeflip = styled.section`
     height: auto;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
+  }
+
+  @media (max-width: 900px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2{
+      width: 90%;
+      font-size: 18px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
+      padding: 3px 3px;
+      border-radius: 12px;
+    }
+    .video{
+      width: 90%;
+      margin: 12px 5% 36px 5%;
+      border: 2px solid white;
+    }
+    .character{
+      display: none;
+    }
   }
 `
 

@@ -5,6 +5,7 @@ const StyledGraphics = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  z-index: 1;
   h1{
     font-size: 4vw;
     text-align: center;
@@ -58,6 +59,17 @@ const StyledGraphics = styled.section`
       height: auto;
       max-width: 400px;
       margin: 0 12px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    h1{
+      font-size: 36px;
+    }
+    p{
+      font-size: 13px;
+      width: 90%;
+      text-align: justify;
     }
   }
 `
