@@ -26,6 +26,20 @@ const StyledMotionDesign = styled.section`
     overflow: hidden;
     margin: 12px 0 0 0;
   }
+
+  @media (max-width: 900px) {
+    h1{
+      font-size: 36px;
+    }
+    p{
+      width: 80%;
+      font-size: 13px;
+      text-align: justify;
+    }
+    .video{
+      width: 80%;
+    }
+  }
 `
 
 export default StyledMotionDesign

@@ -24,13 +24,7 @@ export const Audio = () => {
         effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
-        slidesPerView={'3'}
-        coverflowEffect={{
-          rotate: 15,
-          stretch: 0,
-          depth: 200,
-          modifier: 1,
-        }}
+        slidesPerView={'2'}
         loop={true}
         navigation={true}
         modules={[Navigation, EffectCoverflow]}

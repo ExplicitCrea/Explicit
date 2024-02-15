@@ -12,7 +12,7 @@ const StyledAudio = styled.section`
   }
   span{
     width: 50%;
-    font-size: 3.5vw;
+    font-size: 2.5vw;
     font-family: lexend;
     text-align: center;
     color: white;
@@ -26,26 +26,50 @@ const StyledAudio = styled.section`
     justify-content: center;
     border-radius: 50px;
     font-family: lexend;
-    font-size: 3vw;
+    font-size: 2vw;
     font-weight: 600;
-    color: #fff;
+    color: #634EFF;
     background: #64FFA9;
     margin: 36px 0;
     text-decoration: none;
     z-index: 1;
   }
   .mySwiper{
-    width: 80%;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    width: 90%;
+    padding-top: 20px;
+    padding-bottom: 20px;
     border-radius: 36px;
     .slider{
-      width: 15%;
+      width: 25%;
       border-radius: 24px;
-      div{
-        width: 70%;
-        height: 15vw;
-        border-radius: 24px;
+      .swiper-slide-shadow-coverflow{
+        border-radius: 48px;
+      }
+    }
+  }
+
+  @media (max-width: 900px) {
+    .title{
+      font-size: 36px;
+    }
+    span{
+      font-size: 19px;
+      width: 90%;
+    }
+    .contact{
+      width: 200px;
+      height: 40px;
+      font-size: 13px;
+    }
+    .mySwiper{
+      width: 90%;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      .slider{
+        width: 25%;
+        .swiper-slide-shadow-coverflow{
+          border-radius: 24px;
+        }
       }
     }
   }
