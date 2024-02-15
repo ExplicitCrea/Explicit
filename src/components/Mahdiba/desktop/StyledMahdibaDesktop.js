@@ -59,11 +59,13 @@ const StyledMahdibaDesktop = styled.div`
         border: 5px solid red;
         position: relative;
         margin: auto;
-        max-width: 1500px;
+        max-width: 1675px;
         max-height: 800px;
 
         p {
           font-size: 18px;
+          overflow: auto;
+          height: 150px;
           z-index: 2;
           text-align: center;
           color: white;
@@ -89,7 +91,7 @@ const StyledMahdibaDesktop = styled.div`
           z-index: 1;
           border-radius: 10px;
           position: relative;
-          left: -1vw;
+          left: -2vw;
           z-index: 1;
           width: 56vw;
           height: 11vw;

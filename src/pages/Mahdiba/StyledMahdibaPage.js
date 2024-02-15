@@ -9,7 +9,7 @@ const StyledMahdibaPage = styled.section`
   overflow: hidden;
   display: flex;
   justify-content: center;
-  padding-top: calc(68px + 200px);
+  padding-top: calc(68px + 10%);
   @media (max-width: 1000px) {
     padding-top: calc(68px + 30px);
   }

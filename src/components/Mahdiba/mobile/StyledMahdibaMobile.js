@@ -4,6 +4,7 @@ const StyledMahdibaMobile = styled.div`
   .container {
     display: grid;
     justify-content: center;
+    justify-items: center;
     width: 95vw;
     min-height: 100vh;
     grid-template-columns: 50% 50%;
@@ -17,17 +18,25 @@ const StyledMahdibaMobile = styled.div`
     }
 
     .glasses {
-      width: 100%;
+      width: 120%;
       height: 100%;
       grid-column: 1;
       grid-row: 2;
+      img {
+        width: 100%;
+        height: auto;
+      }
     }
 
     .diamond {
-      width: 100%;
+      width: 90%;
       height: 100%;
       grid-column: 2;
       grid-row: 2;
+      img {
+        width: 100%;
+        height: auto;
+      }
     }
 
     img {
@@ -72,15 +81,14 @@ const StyledMahdibaMobile = styled.div`
       grid-row: 4;
       grid-column: 2;
     }
-    
   }
-    .virtualGlasses {
-      grid-row: 5;
-      grid-column: 1 / span 2;
-      width: 60vw;
-      margin-left: 5%;
-      height: auto;
-    }
+  .virtualGlasses {
+    grid-row: 5;
+    grid-column: 1 / span 2;
+    width: 60vw;
+    margin-left: 5%;
+    height: auto;
+  }
 `;
 
 export { StyledMahdibaMobile };
