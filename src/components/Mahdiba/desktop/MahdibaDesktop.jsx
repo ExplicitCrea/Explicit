@@ -8,8 +8,7 @@ import { useTranslation } from "react-i18next";
 import { StyledMahdibaDesktop } from "./StyledMahdibaDesktop";
 
 export const MahdibaDesktop = () => {
-
-  const {t} = useTranslation()
+  const { t } = useTranslation();
 
   return (
     <StyledMahdibaDesktop>
@@ -29,13 +28,11 @@ export const MahdibaDesktop = () => {
         <div className="third-container">
           <div className="second-wrapper">
             <img className="virtual-glasses" src={virtualGlasses} alt="" />
-            <p>
-              {t('mahdiba.paragraph')}
-            </p>
+            <p>{t("mahdiba.paragraph")}</p>
             <img className="tv" src={tv} alt="" />
           </div>
         </div>
       </div>
     </StyledMahdibaDesktop>
-  )
-}
+  );
+};
