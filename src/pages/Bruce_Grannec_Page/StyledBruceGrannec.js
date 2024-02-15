@@ -8,8 +8,13 @@ const StyledPage = styled.section`
   min-height: 100vh;
   padding-top: 100px;
   overflow: hidden;
-  background: rgb(45,70,117);
-  background: linear-gradient(111deg, rgba(45,70,117,1) 17%, rgba(29,48,75,1) 42%, rgba(18,21,25,1) 100%);
+  background: rgb(45, 70, 117);
+  background: linear-gradient(
+    111deg,
+    rgba(45, 70, 117, 1) 17%,
+    rgba(29, 48, 75, 1) 42%,
+    rgba(18, 21, 25, 1) 100%
+  );
 
   @media screen and (max-width: 1000px) {
     align-items: initial;
@@ -141,7 +146,6 @@ const StyledPage = styled.section`
         width: 80%;
       }
       p {
-
         background-color: rgba(0, 0, 0, 0.6);
         font-family: Lexend;
         font-size: 16px;
@@ -151,12 +155,11 @@ const StyledPage = styled.section`
         margin: 0 auto;
         border-radius: 1vw;
         width: 100%;
-        
 
-        @media screen and (min-width: 2400px) {
+        @media screen and (min-width: 2200px) {
           font-size: 22px;
         }
-        @media screen and (min-width: 2000px) {
+        @media screen and (min-width: 2000px) and (max-width: 2200px) {
           font-size: 20px;
         }
         @media screen and (max-width: 1400px) {

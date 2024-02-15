@@ -9,21 +9,20 @@ export const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const prevDiapo = () => {
-    if(currentIndex === 0) {
-      setCurrentIndex(diapos.length-1)
-    }else {
-      setCurrentIndex(currentIndex-1)
+    if (currentIndex === 0) {
+      setCurrentIndex(diapos.length - 1);
+    } else {
+      setCurrentIndex(currentIndex - 1);
     }
-  }
+  };
 
   const afterDiapo = () => {
-    if(currentIndex === diapos.length-1){
-      setCurrentIndex(0)
+    if (currentIndex === diapos.length - 1) {
+      setCurrentIndex(0);
     } else {
-      setCurrentIndex(currentIndex + 1)
+      setCurrentIndex(currentIndex + 1);
     }
-  }
-
+  };
 
   return (
     <StyledCarousel>
@@ -74,7 +73,7 @@ export const Carousel = () => {
             name="radio-button"
             checked={currentIndex === diapo}
             onChange={() => setCurrentIndex(diapo)}
-            />
+          />
         ))}
       </div>
     </StyledCarousel>
