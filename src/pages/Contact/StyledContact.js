@@ -1,15 +1,31 @@
 import styled from 'styled-components'
 
-const StyledContact = styled.div`
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
+const StyledContact = styled.section`
 width: 100%;
-height: 100%; 
+min-height: 100vh;
 padding: 100px; 
 background-color: #191C2E;
-position: fixed;
-overflow: hidden;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+
+.linear-background{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(39deg, rgb(100 255 133 / 26%) 1.89%, rgb(40 32 143 / 45%) 81.57%);
+    z-index: 0;
+}
+
+h1{
+    color: white;
+    font-size:40px ;
+    font-family: lexend;
+    text-align: center;
+    z-index: 1;
+}
 
 form{
     display: flex;
@@ -17,45 +33,42 @@ form{
     position: relative;
     width: 35%;
     padding: 6px;
-    margin: 28px auto;
-}
-    
-    h1{
-    color: white;
-    font-size:40px ;
-    font-family: lexend;
-    text-align: center;
-    }
+    margin: 28px 0 0 0;
+    z-index: 1;
+
     label{
         color: white;
         font-size:15px ;
         font-family: lexend;
     }
+
     input, textarea{
-    display: flex;
-    flex: 1;
-    margin-right: 35px; 
-    width: 94%;
-    height: 100%;
-    margin-bottom: 20px;
-    border: 0.8px solid rgba(255, 255, 255, 0.1);
-    border-radius: 25px;
-    background-color: transparent;
-    padding: 12px;
-    outline: none;
-    text-align: left;
-    color: white;
+        display: flex;
+        flex: 1;
+        margin-right: 35px; 
+        width: 94%;
+        height: 100%;
+        margin-bottom: 20px;
+        border: 0.8px solid rgba(255, 255, 255, 0.1);
+        border-radius: 25px;
+        background-color: transparent;
+        padding: 12px;
+        outline: none;
+        text-align: left;
+        color: white;
     }
+
     textarea{
-    height: 130px;
+        height: 130px;
     
     }
-.container{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
+
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
     }
-    
+
     .send-button {
         display: flex;
         background-color: #2f2e2e;
@@ -69,93 +82,106 @@ form{
         font-size: 15px;
         margin: 40px auto;
     }
-    .Toastify__toast-container {
-            padding: 80px 50px 0px 30px;
-}
-.coordonner {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    border: 0.8px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    background-color: transparent;
-    width: 18vw;
-    font-size: 14px;
-    padding: 0px;
-    height: auto;
-    margin: 100px;
-    right: 103px;
-    text-align: center;
-    color: white;
-    font-family: lexend;
-    
+
+    .contact {
+        position: absolute;
+        top: 24px;
+        right: -260px;
+        display: flex;
+        flex-direction: column;
+        border: 0.8px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        background-color: transparent;
+        width: 260px;
+        font-size: 14px;
+        padding: 0px;
+        height: auto;
+        color: white;
+        font-family: lexend;
+
+        h2{
+            text-align: center;
+        }
+        
         li{
             flex-wrap: 1;
             margin-bottom: 14px;
-    }
-            a{
-                text-decoration: none;
-                color: white;
+            list-style: none;
         }
-}
-    .background-filter {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(39deg, rgb(100 255 133 / 26%) 1.89%, rgb(40 32 143 / 45%) 81.57%);
-        z-index: -1;
-    }
-
-    @media screen and (max-width: 1000px) {
-        form {
+        a{
             display: flex;
-            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+
+            svg{
+                width: 20px;
+                height: 20px;
+                margin: 0 12px;
+            }
+        }
+    }
+}
+
+.Toastify__toast-container {
+    padding: 80px 50px 0px 30px;
+}
+
+
+@media screen and (max-width: 1000px) {
+    padding: 92px 0 0 0;
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        padding: 0px;
+        margin: 0;
+
+        .contact {
+            position: unset;
             width: 100%;
-            padding: 0px;
-            margin: 30px auto;
+            li{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            margin: 0 0 12px 0;
         }
-        .container{
-            display: flex;
-            flex-direction: column;
-        
-        }
-        h1 {
-            font-size: 28px;
-            margin: 0px 0px 31px 0px;
-        }
-        label {
-            font-size:9px ;
-        }
-        input, textarea {
-            margin-right: 6px;
-            width: 98%;
-            height: 100%;
-            margin-bottom: 16px;
-            padding: 5px;
-        textarea{
-            height: 130px;
-    }
-}
-.coordonner {
-    width: 45%;
-    left: 23%;
-    transform: translate(-50%, -50%);
-    margin-top: -15px;
-    height: 43px;
-    list-style: none;
-    h2{
-    display: none;
-    }
-    a{
-    font-size: 10px;
-    }
-    li{
-        margin-bottom: 0px 
-    }
-}
 
+        input, textarea {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 16px;
+            border-radius: 12px;
+
+            textarea{
+                height: 130px;
+                padding: 12px 0 0 12px;
+            }
+        }
+
+        input{
+            height: 48px;
+            padding: 0 0 0 12px;
+        }
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        height: 124px;
+
+        input{
+            height: 48px;
+            padding: 0 0 0 12px;
+        }
+    }
+    h1 {
+        font-size: 28px;
+        margin: 0px 0px 31px 0px;
+    }
+    label {
+        font-size:9px ;
+    }
 }
 
 
