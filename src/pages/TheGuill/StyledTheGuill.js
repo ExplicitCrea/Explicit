@@ -1,24 +1,25 @@
 import styled from "styled-components";
 
 const StyledTheGuill = styled.section`
-min-height: 200vh;
-margin: 80px 0 0px 0px;
+min-height: 100vh;
+padding: 90px 0 0px 0px;
 width: 100%;
 background-color: #191C2E;
-position: fixed;
+position: relative;
 overflow: hidden;
 
-.background-container {
-    height: 70vw;
+.background {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: auto;
     width: 100%;
-    background: url(/assets/guill/background.png) no-repeat;
-    background-position: center;
-    background-size: cover;
-
+    z-index: 0;
 }
 p {
+    position: absolute;
+    left: 25%;
     width: 47%;
-    left: -3vw;
     margin: 0px auto;
     border: 1px solid #333;
     padding: 10px;
@@ -27,54 +28,55 @@ p {
     font-size: 16px;
     color: aliceblue;
     text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-    top: 5vw;
     background-color: rgb(255 255 255 / 42%);
     backdrop-filter: blur(50px);
-    position: relative;
     z-index: 1;
 }
 .container{
     position: relative;
-    right: -1vw;
-    width: 130%;
-    top: 7vw;
-    
+    width: 100%;
+    z-index: 1;
 
     .video{
         width: 50%;
         height: auto;
         max-width: 1230px;
-        aspect-ratio: 16 / 9;
+        aspect-ratio: 16/9;
         overflow: hidden;
-        margin: 12px;
-        z-index: 0;
+        margin: 192px 0 0 24px;
+    }
+
+    .icon-down{
+        position: absolute;
+        right: 63vw;
+        top: 37vw;
+            img{
+                width: 16%;
+                height: auto;
+                margin: 0 12px;
+            }
+    }
+
+    .icon-right {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 52vw;
+        top: 17vw;
+        img{
+            width: 7%;
+            height: auto;
+            margin: 12px 0;
         }
     }
 
-        .icon-down{
-            display: flex;
-            flex-direction: row;
-            justify-content: end;
-            position: absolute;
-            right: 63vw;
-            top: 37vw;
-
-        img{
-            width: 16%;
-            padding: 0px 0px 0px 50px;
-        }
-}
-
-.icon-right {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    right: 52vw;
-    width: 7%;
-    top: 17vw;
-    img{
-        padding: 8px;
-        margin: 0 0 5px 0px;
+    .pannels {
+        position: absolute;
+        left: 0vw;
+        width: 28%;
+        z-index: 1;
+        top: 36vw;
+        transform: rotate(-3deg);
     }
 }
 
@@ -83,17 +85,8 @@ p {
     top: 84px;
     border-radius: 40px;
     width: 23%; 
-    right: 3vw
-
-}
-.pannels {
-    position: absolute;
-    left: 0vw;
-    width: 28%;
+    right: 3vw;
     z-index: 1;
-    top: 36vw;
-    transform: rotate(-3deg);
-
 }
 @media (max-width: 900px) {
 
@@ -137,25 +130,7 @@ p{
     padding: 0px 1px 0px 1px;
     }
 }
-
-
-
-    
-    
-
-    
-    
-
 }
-
-
-
-
-
-
-
-
-
 `;
 
 export default StyledTheGuill
