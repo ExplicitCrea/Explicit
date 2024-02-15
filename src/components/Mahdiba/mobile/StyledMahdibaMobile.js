@@ -59,6 +59,18 @@ const StyledMahdibaMobile = styled.div`
       white-space: pre-wrap;
     }
 
+    p::-webkit-scrollbar {
+          width: 12px;
+        }
+        p::-webkit-scrollbar-track {
+          -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          border-radius: 10px;
+        }
+        p::-webkit-scrollbar-thumb {
+          border-radius: 25px;
+          -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+        }
+
     .virtual-characte-and-tv {
       display: flex;
       align-items: center;
