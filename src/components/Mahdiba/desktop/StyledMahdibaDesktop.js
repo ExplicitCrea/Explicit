@@ -4,7 +4,6 @@ const StyledMahdibaDesktop = styled.div`
   .container {
     height: auto;
     width: 95vw;
-    border: 10px solid green;
     max-width: 1745px;
     .video {
       width: 100%;
@@ -31,10 +30,10 @@ const StyledMahdibaDesktop = styled.div`
         .glasses {
           position: absolute;
           z-index: 10;
-          bottom: -14%;
-          left: -17%;
-          width: 22vw;
-          max-width: 450px;
+          bottom: -17%;
+          left: -21%;
+          width: 23vw;
+          max-width: 500px;
         }
 
         .diamond {
@@ -52,11 +51,9 @@ const StyledMahdibaDesktop = styled.div`
       position: relative;
       top: -2vw;
       width: 100%;
-      border: 5px solid yellow;
       .second-wrapper {
         display: flex;
         gap: 10px;
-        border: 5px solid red;
         position: relative;
         margin: auto;
         max-width: 1675px;
@@ -64,7 +61,6 @@ const StyledMahdibaDesktop = styled.div`
 
         p {
           font-size: 18px;
-          overflow: auto;
           height: 150px;
           z-index: 2;
           text-align: center;
@@ -74,9 +70,19 @@ const StyledMahdibaDesktop = styled.div`
           background-color: rgb(53, 53, 53);
           border-radius: 10px;
           white-space: pre-wrap;
-          width: 100%;
+          overflow: auto;
         }
-
+        p::-webkit-scrollbar {
+          width: 15px;
+        }
+        p::-webkit-scrollbar-track {
+          -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          border-radius: 10px;
+        }
+        p::-webkit-scrollbar-thumb {
+          border-radius: 25px;
+          -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+        }
         .virtual-glasses {
           z-index: 1;
           width: 56vw;
