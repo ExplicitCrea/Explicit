@@ -19,7 +19,7 @@ overflow: hidden;
 p {
     position: absolute;
     left: 25%;
-    width: 47%;
+    width: 45%;
     margin: 0px auto;
     border: 1px solid #333;
     padding: 10px;
@@ -43,17 +43,19 @@ p {
         max-width: 1230px;
         aspect-ratio: 16/9;
         overflow: hidden;
-        margin: 192px 0 0 24px;
+        margin: 180px 0 0 50px;
     }
 
     .icon-down{
         position: absolute;
-        right: 63vw;
-        top: 37vw;
+        display: flex;
+        justify-content: center;
+        right: 5vw;
+        margin: 0px 12px;
             img{
-                width: 16%;
                 height: auto;
-                margin: 0 12px;
+                margin: 0px 35px;
+                width: 6%;
             }
     }
 
@@ -61,10 +63,10 @@ p {
         display: flex;
         flex-direction: column;
         position: absolute;
-        right: 52vw;
-        top: 17vw;
+        width: 5%;
+        right: 40vw;
+        top: 7vw;
         img{
-            width: 7%;
             height: auto;
             margin: 12px 0;
         }
@@ -72,11 +74,27 @@ p {
 
     .pannels {
         position: absolute;
-        left: 0vw;
-        width: 28%;
+        left: 5vw;
+        width: 20%;
         z-index: 1;
-        top: 36vw;
-        transform: rotate(-3deg);
+        top: 27vw;
+        transform: skewX(15deg);
+        img{
+            width: 51%;
+            margin: 4px 0px;
+        }
+    }
+    .pannels2 {
+        position: absolute;
+        left: 17vw;
+        width: 20%;
+        z-index: 1;
+        top: 27vw;
+        transform: skewX(15deg);
+        img{
+        width: 51%;
+        margin: 4px 0px;
+        }
     }
 }
 
@@ -90,47 +108,67 @@ p {
 }
 @media (max-width: 900px) {
 
-.background-container {
-    height: 100vh; 
+.background{
+    height: 100vh;
+    width: auto;
+    margin: 34px 0;
 }
 
 p{
-    width: 91%;
+    width: 98%;
+    text-align: center;
     left: 1%;
-    top: 68px;
-    font-size: 9px;
+    top: 150px;
+    font-size: 8px;
 }
 
 .container{
-    
     width: 100%;
-    top: 22vw;
+    
     .video{
-        width: 68%;
+        width: 90%;
+        height: auto;
+        margin: 170px 0 0 20px;
+        
     }
-}
 
     .icon-down{
-        right: 64vw;
-        width: 70%;
-        top: 65vw;
-        img{
-        padding: 0 0 0 0 ;
-        }
+        display: flex;
+        flex-direction: row;
+        right: 42vw;
+        top: 85vw;
+            img{
+                margin: 0px 4px;
+                width: 26%;
+            }
     }
 
-    .icon-right{
+    .icon-right {
         display: flex;
         flex-direction: row-reverse;
-        right: 27vw;
-        top: 66vw;
-        width: 16%;
+        width: 13%;
+        right: 8vw;
+        top: 83vw;
+}
         img{
-            width: 70%;
-    padding: 0px 1px 0px 1px;
+            height: auto;
+            width: 97%;
+        }
+
+    .pannels {
+        left: 22vw;
+        width: 62%;
+        top: auto;
     }
 }
+.logo {
+display: none;
 }
+
+}
+
+
+
 `;
 
 export default StyledTheGuill

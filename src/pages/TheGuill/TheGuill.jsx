@@ -1,14 +1,17 @@
 import StyledTheGuill from './StyledTheGuill'
 import ReactPlayer from 'react-player'
-import Icon1 from '../../assets/TheGuill/icon1.png'
-import Icon2 from '../../assets/TheGuill/icon2.png'
-import Icon3 from '../../assets/TheGuill/icon3.png'
-import Icon4 from '../../assets/TheGuill/icon4.png'
-import Icon5 from '../../assets/TheGuill/icon5.png'
-import Icon6 from '../../assets/TheGuill/icon6.png'
-import Logo from '../../assets/TheGuill/logo.jpg'
-import Pannels from '../../assets/TheGuill/pannels.png'
-import background from '../../assets/TheGuill/background.png'
+import Icon1 from '../../assets/theguill/icon1.png'
+import Icon2 from '../../assets/theguill/icon2.png'
+import Icon3 from '../../assets/theguill/icon3.png'
+import Icon4 from '../../assets/theguill/icon4.png'
+import Icon5 from '../../assets/theguill/icon5.png'
+import Icon6 from '../../assets/theguill/icon6.png'
+import Logo from '../../assets/theguill/logo.jpg'
+import insta from '../../assets/theguill/insta.png'
+import background from '../../assets/theguill/background.png'
+import planning from '../../assets/theguill/planning.png'
+import razer from '../../assets/theguill/razer.png'
+import discord from '../../assets/theguill/discord.png'
 
 export const TheGuill = () => {
 return (
@@ -34,7 +37,14 @@ return (
                     <img src={Icon5} alt='icon'/>
                     <img src={Icon6} alt='icon'/>
                 </div>
-                <img src= {Pannels} alt='pannel' className='pannels'/>
+                <div className='pannels'>
+                    <img src= {insta} alt='pannel' className='insta'/>
+                    <img src= {planning} alt='planning' className='planning'/>
+                </div>
+                <div className='pannels2'>
+                    <img src={razer} alt='razer' className='razer'/>
+                    <img src={discord} alt='discord' className='discord'/>
+                </div>
             </div>
             <img src={Logo} alt='logo' className='logo' />
             <img src={background} alt='background' className='background' />
