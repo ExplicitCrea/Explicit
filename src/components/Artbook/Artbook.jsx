@@ -64,10 +64,10 @@ export const Artbook = () => {
           <img className="wrldmag" src={wrld_mag} alt="Wrld Mag" width={300} height={537} />
         </div>
 
-        <div className="the-guill">
+        <Link to ="/theguill" className="the-guill">
           <img src={theguill} alt="The Guill" width={600} height={239}/>
-        </div>
-
+        </Link>
+        
         <Link to="/potatoz" className="potatoz">
           <img src={potatoz} alt="Potatoz" width={297} height={518}/>
         </Link>
