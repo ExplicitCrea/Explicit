@@ -21,9 +21,7 @@ import { Bruce_Grannec_Page } from './pages/Bruce_Grannec_Page/Bruce_Grannec_Pag
 import { Vzion } from './pages/Vzion/Vzion.jsx';
 import { Pg } from './pages/Pg/Pg.jsx';
 import { TheGuill } from './pages/TheGuill/TheGuill.jsx';
-
-
-
+import { MahdibaPage } from './pages/Mahdiba/MahdibaPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -97,6 +95,10 @@ const router = createBrowserRouter([
       {
         path: '/theguill',
         element: <TheGuill/>,
+      }, 
+      {
+        path: '/mahdiba',
+        element: <MahdibaPage/>
       }
       
       
