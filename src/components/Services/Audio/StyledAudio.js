@@ -35,10 +35,9 @@ const StyledAudio = styled.section`
     z-index: 1;
   }
   .mySwiper{
-    width: 90%;
+    width: 100%;
     padding-top: 20px;
     padding-bottom: 20px;
-    border-radius: 36px;
     .slider{
       width: 25%;
       border-radius: 24px;
@@ -62,7 +61,6 @@ const StyledAudio = styled.section`
       font-size: 13px;
     }
     .mySwiper{
-      width: 90%;
       padding-top: 20px;
       padding-bottom: 20px;
       .slider{
