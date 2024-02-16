@@ -12,14 +12,16 @@ overflow: hidden;
     position: absolute;
     top: 0px;
     left: 0px;
-    height: auto;
-    width: 100%;
+    height: 100%;
+    width: auto;
     z-index: 0;
 }
 p {
+    overflow: auto;
+    max-height: 160px;
     position: absolute;
-    left: 25%;
-    width: 45%;
+    left: 36%;
+    width: 35%;
     margin: 0px auto;
     border: 1px solid #333;
     padding: 10px;
@@ -36,6 +38,7 @@ p {
     position: relative;
     width: 100%;
     z-index: 1;
+    margin-bottom: 8vw;
 
     .video{
         width: 50%;
@@ -92,8 +95,8 @@ p {
         top: 27vw;
         transform: skewX(15deg);
         img{
-        width: 51%;
-        margin: 4px 0px;
+            width: 51%;
+            margin: 4px 0px;
         }
     }
 }
@@ -106,69 +109,89 @@ p {
     right: 3vw;
     z-index: 1;
 }
-@media (max-width: 900px) {
 
-.background{
-    height: 100vh;
-    width: auto;
-    margin: 34px 0;
-}
-
-p{
-    width: 98%;
-    text-align: center;
-    left: 1%;
-    top: 150px;
-    font-size: 8px;
-}
-
-.container{
-    width: 100%;
-    
-    .video{
-        width: 90%;
+@media (min-width: 1400px) {
+    .background{
+        width: 100%;
         height: auto;
-        margin: 170px 0 0 20px;
-        
     }
 
-    .icon-down{
-        display: flex;
-        flex-direction: row;
-        right: 42vw;
-        top: 85vw;
-            img{
-                margin: 0px 4px;
-                width: 26%;
-            }
+    p{
+        left: 24%;
+        width: 48%;
     }
-
-    .icon-right {
-        display: flex;
-        flex-direction: row-reverse;
-        width: 13%;
-        right: 8vw;
-        top: 83vw;
 }
-        img{
+
+
+
+@media (max-width: 900px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 270px 0 0 0;
+
+    .background{
+        height: 100%;
+        width: auto;
+        margin: 34px 0;
+    }
+
+    p{
+        max-height: unset;
+        width: 90%;
+        text-align: justify;
+        font-size: 18px;
+        position: unset;
+    }
+
+    .container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .video{
+            width: 90%;
             height: auto;
-            width: 97%;
+            margin: 24px 0;
         }
 
-    .pannels {
-        left: 22vw;
-        width: 62%;
-        top: auto;
+        .icon-down{
+            display: none;
+        }
+
+        .icon-right {
+            display: none;
+        }
+
+        .pannels {
+            position: unset;
+            width: 100%;
+            transform: unset;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 45%;
+            }
+        }
+
+        .pannels2 {
+            position: unset;
+            width: 100%;
+            transform: unset;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 45%;
+            }
+        }
+    }
+    .logo {
+        display: none;
     }
 }
-.logo {
-display: none;
-}
-
-}
-
-
-
 `;
 
 export default StyledTheGuill
