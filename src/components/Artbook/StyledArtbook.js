@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
+
 const StyledArtbook = styled.div`
   margin-top: 30px;
   z-index: 1;
+
 
   .container {
     display: grid;
@@ -22,6 +24,7 @@ const StyledArtbook = styled.div`
       gap: 2vw;
     }
 
+
     img {
       width: 100%;
       height: 100%;
@@ -37,6 +40,7 @@ const StyledArtbook = styled.div`
       }
     }
 
+
     .olympics {
       width: 100%;
       overflow: hidden;
@@ -48,11 +52,13 @@ const StyledArtbook = styled.div`
       }
     }
 
+
     @media (max-width: 900px) {
       width: 100%;
       grid-column: 1 / span 3;
     }
   }
+
 
   .bruce-grannec {
     width: 100%;
@@ -67,6 +73,7 @@ const StyledArtbook = styled.div`
     }
   }
 
+
   .gg {
     width: 100%;
     overflow: hidden;
@@ -79,6 +86,7 @@ const StyledArtbook = styled.div`
     }
   }
 
+
   .loreal {
     width: 123%;
     border-radius: 10px;
@@ -89,6 +97,7 @@ const StyledArtbook = styled.div`
       width: 100%;
     }
   }
+
 
   .pg {
     width: 130%;
@@ -106,6 +115,7 @@ const StyledArtbook = styled.div`
     }
   }
 
+
   .le-grand-jd {
     border-radius: 10px;
     width: 100%;
@@ -118,6 +128,7 @@ const StyledArtbook = styled.div`
       height: 85%;
     }
   }
+
 
   .the-guill {
     border-radius: 10px;
@@ -132,6 +143,7 @@ const StyledArtbook = styled.div`
     }
   }
 
+
   .potatoz {
     border-radius: 10px;
     width: 100%;
@@ -144,6 +156,7 @@ const StyledArtbook = styled.div`
       grid-row: 7;
     }
   }
+
 
   .vzion {
     border-radius: 10px;
@@ -162,10 +175,12 @@ const StyledArtbook = styled.div`
     }
   }
 
+
   .coming-soon {
     position: absolute;
     background-color: #404040;
     font-family: Lexend;
+    color: white;
     font-size: 1.5em;
     width: 70%;
     height: auto;
@@ -177,6 +192,7 @@ const StyledArtbook = styled.div`
     bottom: 6vw;
     z-index: 4;
 
+
     @media (max-width: 1600px) {
       font-size: 1.3em;
     }
@@ -184,9 +200,11 @@ const StyledArtbook = styled.div`
       font-size: 1em;
     }
 
+
     @media (max-width: 1110px) {
       font-size: 0.8em;
     }
+
 
     @media (max-width: 900px) {
       padding: 8px;
@@ -197,6 +215,7 @@ const StyledArtbook = styled.div`
       font-size: 0.6em;
     }
   }
+
 
   .mahdiBa {
     border-radius: 10px;
@@ -212,6 +231,7 @@ const StyledArtbook = styled.div`
     }
   }
 
+
   .wrld-mag {
     border-radius: 10px;
     position: relative;
@@ -223,6 +243,7 @@ const StyledArtbook = styled.div`
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
 
+
     @media (max-width: 900px) {
       height: 59%;
       grid-row: 3;
@@ -231,135 +252,12 @@ const StyledArtbook = styled.div`
       border-radius: 4vw;
     }
 
+
     .wrldmag {
       min-width: 5vw;
       width: 100%;
       height: auto;
       object-fit: cover;
-      overflow: hidden;
-      border-radius: 10px;
-      grid-row: 2;
-      grid-column: 4 / span 2;
-
-      @media (max-width: 900px) {
-        grid-row: 2 / span 1;
-        grid-column: 2 / span 2;
-        width: 100%;
-        height: 80%;
-      }
-    }
-
-    .the-guill {
-      width: 93%;
-      height: 90%;
-      margin-left: 11%;
-      overflow: hidden;
-      border-radius: 10px;
-      grid-row: 3;
-      grid-column: 3 / span 2;
-      @media (max-width: 900px) {
-        grid-column: 1 / span 2;
-        grid-row: 6 / span 1;
-        width: 100%;
-        height: 100%;
-        margin-left: 0%;
-      }
-    }
-
-    .potatoz {
-      width: 83%;
-      height: 90%;
-      overflow: hidden;
-      border-radius: 10px;
-      margin-left: 17%;
-      grid-row: 3;
-      grid-column: 5 / span 1;
-      @media (max-width: 900px) {
-        grid-column: 1 / span 3;
-        grid-row: 8 / span 1;
-        width: 100%;
-        height: 100%;
-        margin-left: 0%;
-
-        img {
-          object-position: 10% 30%;
-        }
-      }
-    }
-
-    .vzion {
-      width: 100%;
-      height: 80%;
-      overflow: hidden;
-      border-radius: 10px;
-      grid-row: 2;
-      grid-column: 6;
-      @media (max-width: 900px) {
-        grid-column: 3 / span 1;
-        grid-row: 4 / span 2;
-        height: 100%;
-      }
-    }
-
-    .coming-soon {
-      position: absolute;
-      background-color: #404040;
-      font-family: Lexend;
-      font-size: 1.5em;
-      width: 70%;
-      height: auto;
-      text-align: center;
-      margin-right: 10%;
-      right: 0;
-      padding: 10px;
-      border-radius: 0px 15px 15px 0px;
-      bottom: 40%;
-      z-index: 4;
-
-      @media (max-width: 1600px) {
-        font-size: 1.3em;
-      }
-      @media (max-width: 1350px) {
-        font-size: 1em;
-      }
-
-      @media (max-width: 1110px) {
-        font-size: 0.8em;
-      }
-
-      @media (max-width: 900px) {
-        font-size: 1em;
-        bottom: 25%;
-      }
-    }
-
-    .mahdiBa {
-      position: relative;
-      width: 185%;
-      height: 70%;
-      overflow: hidden;
-      border-radius: 10px;
-      grid-row: 3 / span 2;
-      grid-column: 1 / span 1;
-      color: white;
-
-      @media (max-width: 900px) {
-        grid-column: 1 / span 2;
-        grid-row: 3 / span 2;
-        width: 100%;
-        height: 100%;
-      }
-    }
-
-    .wrld-mag {
-      position: relative;
-      width: 70%;
-      left: 53%;
-      height: 70%;
-      overflow: hidden;
-      border-radius: 10px;
-      grid-row: 3 / span 2;
-      grid-column: 2 / span 1;
       cursor: pointer;
       transform: scale(2.5);
       @media (max-width: 900px) {
@@ -370,6 +268,7 @@ const StyledArtbook = styled.div`
         height: 200%;
       }
     }
+
 
     .wrldmag-no-background {
       position: absolute;
@@ -384,6 +283,7 @@ const StyledArtbook = styled.div`
       }
     }
 
+
     .wrld-background {
       position: absolute;
       z-index: 4;
@@ -392,6 +292,7 @@ const StyledArtbook = styled.div`
       background-color: rgb(132, 68, 245, 0.8);
     }
   }
+
 
   .edenLz {
     border-radius: 10px;
@@ -409,6 +310,7 @@ const StyledArtbook = styled.div`
     }
   }
 
+
   .paltay {
     border-radius: 10px;
     width: 100%;
@@ -416,6 +318,7 @@ const StyledArtbook = styled.div`
     overflow: hidden;
     grid-row: 4;
     grid-column: 3 / span 6;
+
 
     @media (max-width: 900px) {
       grid-column: 2 / span 2;
@@ -428,4 +331,8 @@ const StyledArtbook = styled.div`
   }
 `;
 
+
 export { StyledArtbook };
+
+
+
