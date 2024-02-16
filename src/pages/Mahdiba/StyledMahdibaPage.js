@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledMahdibaPage = styled.section`
-  background: url("public/assets/mahdiba/background.webp");
+  background: url("/assets/mahdiba/background.webp");
   background-size: cover;
   background-position: top;
   min-height: 100vh;
