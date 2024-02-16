@@ -10,27 +10,27 @@ const StyledServices = styled.main`
 
     h1,p{
         font-family: lexend;
-        color: #FFFFFF;;
+        color: #FFFFFF;
+        z-index: 1;
     }
 
     p{
-        font-size: 1.5vw;
+        font-size: 1.2vw;
         color: #FFFFFF;
         font-weight: 500;
     }
 
     .title{
-        font-size: 7vw;
+        font-size: 6vw;
         color: #634EFF;
-        margin: 0;
+        margin: 24px 0 0 0;
         text-align: center;
     }
 
     .description{
-        margin-bottom: 48px;
+        margin: 0 0 48px 0;
         text-align: center;
         max-width: 75vw;
-        margin: 36px 24px 0 24px;
     }
 
     .linear-background{
@@ -50,6 +50,34 @@ const StyledServices = styled.main`
 
         .video-background{
             width: 100%;
+        }
+    }
+
+    @media (max-width: 900px) {
+        padding-top: 60px;
+        .title{
+            font-size: 36px;
+        }
+
+        h1{
+            font-size: 36px;
+        }
+
+        p{
+            font-size: 14px;
+            text-align: justify;
+            max-width: 550px;
+        }
+
+        .description{
+            max-width: unset;
+            padding: 0 24px;
+            font-size: 13px;
+            text-align: justify;
+            max-width: 550px;
+        }
+        .video-container-background{
+            top: 250px;
         }
     }
 `
