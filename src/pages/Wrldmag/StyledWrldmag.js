@@ -10,6 +10,7 @@ padding-top: 100px;
 position: relative;
 
 
+
 .container {
     width: 100%;
     height: auto;
@@ -75,16 +76,32 @@ position: relative;
                 height: auto;
                 object-fit: cover;
             }
+            
+    }
+    .third-wrapper {
+        position: relative;
+    }
+    .wrldmag {
+        position: absolute;
+        z-index: 5;
+        width: 100%;
+        top: 10vw;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .bg-bottom {
+        position: relative;
+    
+        img {
+            width: 100%;
+            height: auto;
+        }
+        
     }
 }
 
-.bg-bottom {
-    img {
-        width: 100%;
-        height: auto;
-    }
-    
-}
 
 
 `
