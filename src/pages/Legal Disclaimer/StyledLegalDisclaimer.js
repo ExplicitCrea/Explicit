@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 const StyledLegalDisclaimer = styled.div`
     padding: 80px;
+    height: 360%;
     background-color: #191C2E;
     display: flex;
     flex-direction: column;
