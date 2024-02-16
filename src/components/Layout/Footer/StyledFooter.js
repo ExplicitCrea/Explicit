@@ -25,6 +25,7 @@ const StyledFooter = styled.footer`
       color: white;
       font-family: lexend;
       font-size: 18px;
+      padding: 0px 0px 18px 0px;
       text-decoration: none;
     }
   }
@@ -42,6 +43,27 @@ const StyledFooter = styled.footer`
   }
 
   @media (max-width: 900px) {
+        height: 100px;
+        width: 100%;
+        .column{
+              width: 17%;
+              
+          a{
+              font-size: 13px;
+              
+    }
   }
+  .logo{
+    img{
+      height: 37px;
+      margin: 0px 0px 18px 0px;
+    }
+  }
+  .background{
+    height: 550px;
+    width: 100%;
+  }
+}
+
 `;
 export default StyledFooter

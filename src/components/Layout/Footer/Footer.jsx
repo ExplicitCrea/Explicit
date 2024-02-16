@@ -12,6 +12,9 @@ return (
                   <Link to='/history' className='link history'> 
                         Notre Histoire
                   </Link>
+                  <Link to='/' className='link Shop'> 
+                        Shop
+                  </Link>
             </div>
             <div className='column'>
                   <Link to="/contact" className='link contact'>
