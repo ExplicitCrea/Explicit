@@ -5,7 +5,7 @@ import { Header } from './Header/Header';
 import { Footer } from './Footer/Footer';
 export const Layout = () => {
     const location = useLocation();
-    const excludedPages = ['/faq', '/services','/legal-disclaimer','/artbook'];
+    const excludedPages = ['/faq', '/services','/legal-disclaimer','/artbook','/contact','/theguill'];
     const isExcludedPage = excludedPages.includes(location.pathname);
     usePreventZoom();
     return (
