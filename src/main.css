@@ -4,8 +4,10 @@
 @font-face {
     font-family: 'Mango';
     src: url('/assets/font/Mango/MG-SemiBoldItalic.woff2') format('woff2'),
-    url('/assets/font/Mango/MG-SemiBoldItalic.woff') format('woff');
+        url('/assets/font/Mango/MG-SemiBoldItalic.woff') format('woff');
     font-weight: bold;
 }
 
-
+html {
+    background-color: #191C2E;
+}

@@ -20,6 +20,10 @@ import { LegalDisclaimer } from './pages/Legal Disclaimer/LegalDisclaimer.jsx';
 import { Bruce_Grannec_Page } from './pages/Bruce_Grannec_Page/Bruce_Grannec_Page.jsx';
 import { Vzion } from './pages/Vzion/Vzion.jsx';
 import { Pg } from './pages/Pg/Pg.jsx';
+import { TheGuill } from './pages/TheGuill/TheGuill.jsx';
+
+
+
 
 const router = createBrowserRouter([
   {
@@ -89,6 +93,10 @@ const router = createBrowserRouter([
       {
         path: '/pg',
         element: <Pg/>,
+      },
+      {
+        path: '/theguill',
+        element: <TheGuill/>,
       }
       
       
