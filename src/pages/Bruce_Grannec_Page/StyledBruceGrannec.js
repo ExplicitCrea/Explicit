@@ -2,74 +2,73 @@ import styled from "styled-components";
 
 const StyledPage = styled.section`
   display: flex;
-  position: relative;
   justify-content: center;
-  width: 100%;
-  overflow: hidden;
-  max-height: 100vh;
+  align-items: center;
+  position: relative;
   min-height: 100vh;
-  background: rgb(25, 40, 64);
+  padding-top: 100px;
+  overflow: hidden;
+  background: rgb(45, 70, 117);
   background: linear-gradient(
-    35deg,
-    rgba(25, 40, 64, 1) 56%,
-    rgba(18, 25, 35, 1) 79%
+    111deg,
+    rgba(45, 70, 117, 1) 17%,
+    rgba(29, 48, 75, 1) 42%,
+    rgba(18, 21, 25, 1) 100%
   );
 
   @media screen and (max-width: 1000px) {
-    overflow: auto;
+    align-items: initial;
   }
 
-  .background-min {
+  .background {
     position: absolute;
     width: 126vw;
     left: -58vw;
     top: -27vw;
     @media screen and (max-width: 1000px) {
       position: absolute;
-      width: 700px;
-      left: -352px;
-      top: initial;
-      bottom: -268px;
-    }
-    @media screen and (max-width: 520px) {
-      left: -420px;
-      bottom: -240px;
-    }
-    @media screen and (max-width: 450px) {
-      left: -450px;
-      bottom: -240px;
+      width: 196vw;
+      left: -120vw;
+      top: 50vw;
     }
   }
 
   .container {
-    margin-top: calc(80px + 40px);
+    max-width: 1300px;
+    max-height: 850px;
     display: grid;
-    justify-content: center;
     width: 95vw;
     height: auto;
+    justify-content: center;
     position: relative;
-    grid-template-columns: repeat(20, minmax(30px, 4%));
-    grid-template-rows: repeat(20, minmax(30px, 4%));
+    grid-template-columns: 22% 35% 27% 14%;
+    grid-template-rows: 28% 13% 58%;
     gap: 0.8%;
 
+    @media screen and (min-width: 2000px) {
+      max-width: 1600px;
+      max-height: 1100px;
+    }
+    @media screen and (min-width: 2200px) {
+      max-width: 1800px;
+      max-height: 1300px;
+    }
+
     @media screen and (max-width: 1000px) {
-      margin-top: calc(80px + 30px);
-      width: 90vw;
-      justify-items: center;
-      grid-column-gap: 0%;
       grid-template-columns: 100%;
-      grid-template-rows: repeat(auto-fill, minmax(30px, 4%));
-      align-content: initial;
+      grid-template-rows: 19vw 48vw 11vw 30vw;
+      max-height: unset;
+      max-width: unset;
+      gap: 0;
+      grid-row-gap: 3%;
+      height: 155vw;
     }
 
     .label-on-side {
-      width: 100%;
-      height: auto;
-      max-width: 235px;
-      max-height: 720px;
-      aspect-ratio: 250 / 750;
-      grid-row: 1 / span 20;
-      grid-column: 1 / span 5;
+      width: auto;
+      max-height: 100%;
+      grid-row: 1 / span 3;
+      grid-column: 1 / span 1;
       box-shadow: 0px 4px 30px 14px rgba(0, 0, 0, 0.2);
 
       img {
@@ -86,10 +85,9 @@ const StyledPage = styled.section`
       display: none;
       @media screen and (max-width: 1000px) {
         display: flex;
-        grid-row: 1 / span 4;
-        grid-column: 1;
+        grid-row: 1 / span 1;
+        grid-column: 1 / span 4;
         width: 100%;
-        max-width: 570px;
       }
 
       .background-banner {
@@ -103,7 +101,6 @@ const StyledPage = styled.section`
           rgba(25, 40, 64, 1) 56%,
           rgba(18, 25, 35, 1) 79%
         );
-        box-shadow: 1px 3px 40px 10px rgba(0, 0, 0, 0.5);
       }
 
       .banner-items {
@@ -114,24 +111,24 @@ const StyledPage = styled.section`
         gap: 5%;
       }
       .logo-fifa {
-        width: 30%;
+        width: 30vw;
+        max-width: 260px;
         height: auto;
-        max-width: 143px;
         object-fit: cover;
       }
 
       .logo-french-battle {
-        width: 28%;
-        max-width: 120px;
+        width: 20vw;
+        max-width: 260px;
         height: auto;
         object-fit: cover;
       }
 
       .twitch {
-        border-radius: 5px;
-        width: 30%;
+        width: 30vw;
+        max-width: 260px;
+        border-radius: 8px;
         height: auto;
-        max-width: 143px;
         object-fit: cover;
       }
     }
@@ -140,42 +137,48 @@ const StyledPage = styled.section`
       margin: 0 auto;
       width: 100%;
       height: 100%;
-      grid-row: 1 / span 6;
-      grid-column: 6 / span 5;
-      max-width: 260px;
+      grid-row: 1 / span 1;
+      grid-column: 2 / span 1;
 
       @media screen and (max-width: 1000px) {
-        grid-column: 1;
-        grid-row: 17 / span 5;
-        max-width: 480px;
+        grid-row: 4;
+        grid-column: 1 / span 4;
+        width: 80%;
       }
-
-      @media screen and (max-width: 453px) {
-        grid-row: 15 / span 6;
-      }
-
-      @media screen and (max-width: 400px) {
-        grid-row: 14 / span 5;
-        grid-column: 1;
-      }
-
       p {
         background-color: rgba(0, 0, 0, 0.6);
         font-family: Lexend;
-        font-size: 0.7em;
+        font-size: 16px;
         padding: 8px;
         text-align: center;
         color: white;
         margin: 0 auto;
-        border-radius: 20px;
+        border-radius: 1vw;
         width: 100%;
-        @media screen and (max-width: 1330px) {
-          font-size: 0.62em;
+
+        @media screen and (min-width: 2200px) {
+          font-size: 22px;
+        }
+        @media screen and (min-width: 2000px) and (max-width: 2200px) {
+          font-size: 20px;
+        }
+        @media screen and (max-width: 1400px) {
+          font-size: 15px;
+        }
+        @media screen and (max-width: 1280px) {
+          font-size: 14px;
+        }
+        @media screen and (max-width: 1195px) {
+          font-size: 13px;
+        }
+        @media screen and (max-width: 1115px) {
+          font-size: 12px;
+        }
+        @media screen and (max-width: 1040px) {
+          font-size: 11px;
         }
         @media screen and (max-width: 1000px) {
-          width: 75%;
-          font-size: 0.8em;
-          min-width: 200px;
+          font-size: 3vw;
         }
       }
     }
@@ -185,56 +188,42 @@ const StyledPage = styled.section`
       align-items: center;
       justify-content: center;
       margin: 0 auto;
-      padding-bottom: 20px;
       gap: 3px;
       width: 100%;
       height: 100%;
-      grid-row: 7 / span 2;
-      grid-column: 6 / span 5;
+      grid-row: 2;
+      grid-column: 2 / span 1;
 
       @media screen and (max-width: 1000px) {
-        grid-row: 13 / span 3;
-        margin-top: 15px;
-        grid-column: 1;
-        max-width: 300px;
-        padding-bottom: 0px;
-      }
-      @media screen and (max-width: 453px) {
-        grid-row: 12 / span 3;
-        grid-column: 1;
-        margin-top: 0;
-      }
-
-      @media screen and (max-width: 400px) {
-        grid-row: 11 / span 3;
+        grid-row: 3;
         grid-column: 1;
       }
 
       .white-star {
-        width: 4.2vw;
+        width: 18%;
         height: auto;
         object-fit: cover;
         @media screen and (max-width: 1000px) {
-          width: 30%;
+          width: 10vw;
         }
       }
       .white-logo {
         display: inline;
-        width: 8.2vw;
+        width: 40%;
         height: auto;
         object-fit: cover;
         @media screen and (max-width: 1000px) {
-          width: 50%;
+          width: 25vw;
         }
       }
     }
   }
 
   .event-container {
-    width: 35vw;
-    height: 330px;
-    grid-row: 1 / span 5;
-    min-width: 400px;
+    width: 100%;
+    height: auto;
+    grid-row: 1 / span 2;
+    grid-column: 3 / span 2;
     box-shadow: 0px 4px 30px 14px rgba(0, 0, 0, 0.2);
 
     @media screen and (max-width: 1000px) {
@@ -248,21 +237,21 @@ const StyledPage = styled.section`
     }
   }
   .carousel-container {
-    width: 50vw;
-    max-width: 800px;
-    max-height: 441px;
+    width: 100%;
     height: auto;
-    aspect-ratio: 16/9;
-    grid-row: 9;
-    grid-column: 6 / span 13;
+    grid-row: 3;
+    grid-column: 2 / span 2;
+    position: relative;
+    top: -15px;
 
     @media screen and (max-width: 1000px) {
-      min-width: initial;
-      width: 80vw;
-      aspect-ratio: 16/9;
+      width: 90%;
+      margin: 0 auto;
       grid-column: 1;
-      grid-row: 6 / span 7;
-      max-width: 440px;
+      grid-row: 2 / span 1;
+      top: 0px;
+      max-height: 100%;
+      max-width: 100%;
     }
   }
 `;
