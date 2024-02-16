@@ -12,7 +12,7 @@ const StyledVideoEditing = styled.section`
         width: 40%;
         h1{
             width: 100%;
-            font-size: 7vw;
+            font-size: 6vw;
             margin: 0;
             line-height: 6vw;
         }
@@ -79,9 +79,59 @@ const StyledVideoEditing = styled.section`
         }
     }
 
+    @media (max-width: 900px) {
+        margin-top: 0;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 24px;
 
+        .text-container{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h1{
+                font-size: 36px;
+                line-height: 36px;
+                text-align: center;
+            }
+            p{
+                font-size: 14px;
+                margin-top: 24px;
+                text-align: justify;
+                max-width: 550px;
+            }
+        }
 
-
+        .video-container{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .title-container{
+                margin: 24px 0 0 0;
+                .image-wrapper{
+                    width: 48px;
+                    height: 48px;
+                }
+                .text-title{
+                    h2{
+                        font-size: 18px;
+                    }
+                    p{
+                        font-size: 13px;
+                    }
+                }
+            }
+            .carousel-container{
+                margin-top: 24px;
+                svg{
+                    width: 36px;
+                    height: 36px;
+                }
+            }
+        }
+    }
 `
 
 export default StyledVideoEditing
