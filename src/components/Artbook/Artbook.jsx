@@ -53,10 +53,10 @@ export const Artbook = () => {
           <img src={vzion} alt="Vzion" width={400} height={400} />
         </Link>
 
-        <div className="mahdiBa">
+        <Link to='/mahdiba' className="mahdiBa">
           <div className="coming-soon">Coming soon</div>
-          <img src={mahdi_ba} alt="Mahdi Ba" width={400} height={460} />
-        </div>
+          <img src={mahdi_ba} alt="Mahdi Ba" width={400} height={460}/>
+        </Link>
 
         <div className="wrld-mag">
           <div className="wrld-background"></div>

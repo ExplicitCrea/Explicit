@@ -236,6 +236,130 @@ const StyledArtbook = styled.div`
       width: 100%;
       height: auto;
       object-fit: cover;
+      overflow: hidden;
+      border-radius: 10px;
+      grid-row: 2;
+      grid-column: 4 / span 2;
+
+      @media (max-width: 900px) {
+        grid-row: 2 / span 1;
+        grid-column: 2 / span 2;
+        width: 100%;
+        height: 80%;
+      }
+    }
+
+    .the-guill {
+      width: 93%;
+      height: 90%;
+      margin-left: 11%;
+      overflow: hidden;
+      border-radius: 10px;
+      grid-row: 3;
+      grid-column: 3 / span 2;
+      @media (max-width: 900px) {
+        grid-column: 1 / span 2;
+        grid-row: 6 / span 1;
+        width: 100%;
+        height: 100%;
+        margin-left: 0%;
+      }
+    }
+
+    .potatoz {
+      width: 83%;
+      height: 90%;
+      overflow: hidden;
+      border-radius: 10px;
+      margin-left: 17%;
+      grid-row: 3;
+      grid-column: 5 / span 1;
+      @media (max-width: 900px) {
+        grid-column: 1 / span 3;
+        grid-row: 8 / span 1;
+        width: 100%;
+        height: 100%;
+        margin-left: 0%;
+
+        img {
+          object-position: 10% 30%;
+        }
+      }
+    }
+
+    .vzion {
+      width: 100%;
+      height: 80%;
+      overflow: hidden;
+      border-radius: 10px;
+      grid-row: 2;
+      grid-column: 6;
+      @media (max-width: 900px) {
+        grid-column: 3 / span 1;
+        grid-row: 4 / span 2;
+        height: 100%;
+      }
+    }
+
+    .coming-soon {
+      position: absolute;
+      background-color: #404040;
+      font-family: Lexend;
+      font-size: 1.5em;
+      width: 70%;
+      height: auto;
+      text-align: center;
+      margin-right: 10%;
+      right: 0;
+      padding: 10px;
+      border-radius: 0px 15px 15px 0px;
+      bottom: 40%;
+      z-index: 4;
+
+      @media (max-width: 1600px) {
+        font-size: 1.3em;
+      }
+      @media (max-width: 1350px) {
+        font-size: 1em;
+      }
+
+      @media (max-width: 1110px) {
+        font-size: 0.8em;
+      }
+
+      @media (max-width: 900px) {
+        font-size: 1em;
+        bottom: 25%;
+      }
+    }
+
+    .mahdiBa {
+      position: relative;
+      width: 185%;
+      height: 70%;
+      overflow: hidden;
+      border-radius: 10px;
+      grid-row: 3 / span 2;
+      grid-column: 1 / span 1;
+      color: white;
+
+      @media (max-width: 900px) {
+        grid-column: 1 / span 2;
+        grid-row: 3 / span 2;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .wrld-mag {
+      position: relative;
+      width: 70%;
+      left: 53%;
+      height: 70%;
+      overflow: hidden;
+      border-radius: 10px;
+      grid-row: 3 / span 2;
+      grid-column: 2 / span 1;
       cursor: pointer;
       transform: scale(2.5);
       @media (max-width: 900px) {
