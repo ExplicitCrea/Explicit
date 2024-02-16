@@ -5,8 +5,8 @@ import { Header } from './Header/Header';
 import { Footer } from './Footer/Footer';
 export const Layout = () => {
     const location = useLocation();
-    const excludedPages = ['/faq', '/services','/legal-disclaimer','/artbook','/contact','/theguill'];
-    const isExcludedPage = excludedPages.includes(location.pathname);
+    const includedPage = ['/', '/services'];
+    const isIncludedPage = includedPage.includes(location.pathname);
     usePreventZoom();
     return (
         <StyledLayout>
@@ -14,7 +14,7 @@ export const Layout = () => {
             <div className='white-border'/>
             <Outlet/>
             {
-                !isExcludedPage && <Footer/>
+                isIncludedPage && <Footer/>
             }
         </StyledLayout>
     )
