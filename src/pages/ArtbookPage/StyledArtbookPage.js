@@ -13,6 +13,9 @@ const StyledArtbooksPage = styled.section`
     rgba(44, 41, 100, 1) 56%,
     rgba(35, 59, 72, 1) 79%
   );
+  @media (max-width: 900px) {
+    padding-top: 10px;
+  }
 
   .explicit-star {
     position: absolute;
