@@ -23,17 +23,17 @@ export const Wrldmag = () => {
           </p>
         </div>
         <div className="second-wrapper">
-          <img src={image2} className="image-left" alt="" />
-          <img src={image1} className="image-center" alt="" />
-          <img src={image3} className="image-right" alt="" />
+          <div className="images-wrapper">
+            <img src={image2} className="image-left" alt="" />
+            <img src={image1} className="image-center" alt="" />
+            <img src={image3} className="image-right" alt="" />
+          </div>
         <div className="wrldmag">
           <img src={wrldmag} alt="" />
         </div>
+        <div className="bg-bottom">
+          <img src={bgBottom} alt="" />
         </div>
-        <div className="third-wrapper">
-          <div className="bg-bottom">
-            <img src={bgBottom} alt="" />
-          </div>
         </div>
       </div>
     </StyledWrldmag>
