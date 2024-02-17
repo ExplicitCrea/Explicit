@@ -59,11 +59,12 @@ const StyledNewsletter = styled.div`
     }
 
     @media (max-width: 900px) {
+        width: 100%;
         margin-bottom: 300px;
-        div{
+        form{
             width: 90%;
             position: relative;
-            input{
+            .email{
                 width: 100%;
                 border: 1px solid #fff;
                 border-radius: 50px;
@@ -72,11 +73,8 @@ const StyledNewsletter = styled.div`
                 padding: 0 12px;
                 margin-top: 36px;
             }
-            input::placeholder{
+            .email::placeholder{
                 font-size: 16px;
-            }
-            input:focus{
-                outline: none;
             }
             button{
                 top: 50%;

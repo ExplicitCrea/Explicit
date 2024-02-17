@@ -55,5 +55,17 @@
   },
   "mahdiba": {
     "paragraph": "Voici notre réalisation pour le streamer et Youtuber \"Mahdi Ba\": un streampack entièrement animé et illustré par nos équipes. Une réalisation en 3D qui a demandé beaucoup de technicité et de temps, pour un résultat très satisfaisant. Nous sommes extrêmement fiers de ce projet, et le client est pleinement satisfait de son expérience avec notre équipe.\n\nNous sommes reconnaissants de la confiance accordée par \"Mahdi Ba\" et espérons pouvoir collaborer à nouveau sur d'autre projets à l'avenir."
+  },
+  "home": {
+    "title": {
+      "main": "Vous Souhaitez Concrétiser Un Projet",
+      "secondary": "créatif"
+    },
+    "description": "Explicit est là pour répondre à tout type de demandes concernant le milieu de l’audiovisuel. Nous avons à nos côtés des artistes passionés et professionels qui seront prêts à travailler avec vous afin de mener à bien vos projets.",
+    "subtitle": "Découvrez nous !",
+    "newsletter": {
+      "title": "Sois tenu au courant de toutes les actualités !",
+      "placeholder": "Entre ton e-mail !"
+    }
   }
 }

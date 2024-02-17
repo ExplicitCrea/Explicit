@@ -32,12 +32,13 @@ const StyledHeader = styled.header`
     padding: 6px 12px;
     background: rgba(217, 217, 217, 0.07);
     backdrop-filter: blur(15.444999694824219px);
+    -webkit-backdrop-filter: blur(15.444999694824219px);
     
     .logo{
         margin: 0!important;
         img{
             width: auto;
-            height: 74px;
+            height: 60px;
         }
     }
 
@@ -125,6 +126,7 @@ const StyledHeader = styled.header`
             align-items: center;
             background: rgba(217, 217, 217, 0.07);
             backdrop-filter: blur(15.444999694824219px);
+            -webkit-backdrop-filter: blur(15.444999694824219px);
             width: 100%;
             padding: 6px 12px;
             border-bottom: 2px solid #FFF;
@@ -152,6 +154,7 @@ const StyledHeader = styled.header`
             flex-direction: column;
             background: rgba(217, 217, 217, 0.07);
             backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
             z-index: -1;
             padding: 24px 6px;
             transform: ${props => props.isOpen === null && 'translateX(100%)'};
