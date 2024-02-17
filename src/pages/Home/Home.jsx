@@ -6,34 +6,74 @@ import basket from '../../assets/basket.png'
 import starBackground from '../../assets/star-background.png'
 import starPurple from '../../assets/star-purple.png'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import { FaArrowAltCircleDown } from "react-icons/fa";
+import { useRef } from 'react'
 
 export const Home = () => {
+    const ref = useRef(null);
+    const {t} = useTranslation();
+
+    const handleScroll = () => {
+        window.scrollTo({
+        top: (ref.current.offsetTop - 80),
+        behavior: 'smooth'
+        });
+    }
+
+    const parallax = (e) => {
+        const star1 = document.querySelectorAll('.classic-star');
+        const star2 = document.querySelectorAll('.reverse-star');
+        star1.forEach(star => {
+            const clientX = e.clientX
+            const clientY = e.clientY
+            const width = window.innerWidth / 2
+            const height = window.innerHeight / 2
+            const x = (clientX - width) * 0.015
+            const y = (clientY - height) * 0.015
+            star.style.transform = `translateX(${x}px) translateY(${y}px)`
+        })
+        star2.forEach(star => {
+            const clientX = e.clientX
+            const clientY = e.clientY
+            const width = window.innerWidth / 2
+            const height = window.innerHeight / 2
+            const x = (clientX - width) * 0.01
+            const y = (clientY - height) * 0.01
+            star.style.transform = `translateX(${x}px) translateY(${y}px)`
+        })
+    }
+
+    document.addEventListener("mousemove", parallax);
+
+
     return (
         <StyledHome>
             <h1>
-                Vous Souhaitez Concrétiser Un Projet <span>Créatif</span> ?
+                {t('home.title.main')} <span>{t('home.title.secondary')}</span> ?
             </h1>
             <p>
-                Explicit est là pour répondre à tout type de demandes concernant le milieu de l’audiovisuel. 
-                Nous avons à nos côtés des artistes passionés et professionels qui seront prêts à travailler
-                avec vous afin de mener à bien vos projets.
+                {t('home.description')}
             </p>
-            <h2>Découvrez nous !</h2>
-            <div className='menu-container'>
+            <div onClick={handleScroll} className='scroll-container'>
+                <h2>{t('home.subtitle')}</h2>
+                <FaArrowAltCircleDown />
+            </div>
+            <div ref={ref} className='menu-container'>
                 <div className='link-container'>
                     <Link to="/services" className='link star'>
                         <img src={star} alt="star" />
                         <h3>Services</h3>
                     </Link>
-                    <Link to="" className='link contact'>
+                    <Link to="/contact" className='link contact'>
                         <h3>Contact</h3>
                     </Link>
-                    <Link className='link history'>
-                        <h3>Notre Histoire</h3>
+                    <Link to="/history" className='link history'>
+                        <h3>{t('header.history')}</h3>
                     </Link>
                 </div>
                 <div className='link-container'>
-                    <Link to=""  className='link book'>
+                    <Link to="/artbook"  className='link book'>
                         <img src={book} alt="book" />
                         <h3>Art Book</h3>
                     </Link>
