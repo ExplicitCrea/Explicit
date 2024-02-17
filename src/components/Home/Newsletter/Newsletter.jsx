@@ -3,9 +3,11 @@ import StyledNewsletter from './StyledNewsletter'
 import { IoIosArrowForward } from "react-icons/io";
 import jsonp from 'jsonp';
 import { Bounce, ToastContainer, toast } from 'react-toastify';
+import { useTranslation } from 'react-i18next';
 
 export const Newsletter = () => {
   const ref = useRef(null)
+  const {t} = useTranslation();
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -35,10 +37,10 @@ export const Newsletter = () => {
   return (
     <StyledNewsletter>
         <h1>
-            Sois tenu au courant de toutes les actualités !
+          {t('home.newsletter.title')}
         </h1>
         <form onSubmit={handleSubmit}>
-            <input className='email' ref={ref} type="email" name="Email" placeholder="Entre ton e-mail !"  required/>
+            <input className='email' ref={ref} type="email" name="Email" placeholder={t('home.newsletter.placeholder')}  required/>
             <input className='name' type="text" name="name" />
             <button><IoIosArrowForward /></button>
         </form>
