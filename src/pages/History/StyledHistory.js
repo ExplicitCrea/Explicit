@@ -14,7 +14,7 @@ const StyledHistory = styled.div`
     overflow: hidden;
 
 img{
-    width: 30%;
+    width: 34%;
     height: auto;
 
 }
