@@ -4,22 +4,20 @@ import image2 from "../../assets/wrldmag/image2.png";
 import image3 from "../../assets/wrldmag/image3.png";
 import wrldmag from "../../assets/wrldmag/wrldmag.png";
 import bgBottom from "../../assets/wrldmag/bg-bottom.png";
+import { useTranslation } from "react-i18next";
 import { StyledWrldmag } from "./StyledWrldmag";
 
 export const Wrldmag = () => {
+
+  const {t} = useTranslation()
+
   return (
     <StyledWrldmag>
       <div className="container">
         <div className="main-wrapper">
           <img src={logo} className="logo" alt="" />
           <p>
-            Nous sommes fiers d'avoir collaboré avec WRLD Mag, un média
-            spécialisé dans la culture musicale d’outre-Atlantique et française.
-            Notre équipe a eu la chance de pouvoir réaliser des vidéos ensemble,
-            d’élaborer une identité visuelle et de produire du contenu.
-            Ensemble, nous avons donné vie à la vision artistique de WRLD Mag,
-            créant une expérience visuelle mémorable et immersive pour leur
-            public passionné de musique
+            {t('wrldmag.paragraph')}
           </p>
         </div>
         <div className="second-wrapper">
