@@ -175,35 +175,41 @@ const StyledPage = styled.section`
 
     .explicit-container {
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       margin: 0 auto;
       gap: 3px;
       width: 100%;
       height: 100%;
       grid-row: 2;
       grid-column: 2 / span 1;
+      margin-bottom: 10px;
 
       @media screen and (max-width: 1000px) {
         grid-row: 3;
         grid-column: 1;
       }
 
+      /* Quand je réduis et je rétrici ça bouge trop, il faut mettre un max width */
+
       .white-star {
-        width: 18%;
-        height: auto;
+        width: auto;
+        height: 80%;
         object-fit: cover;
+        margin-bottom: 0.5vw;
         @media screen and (max-width: 1000px) {
           width: 10vw;
+          height: auto;
         }
       }
       .white-logo {
-        display: inline;
-        width: 40%;
-        height: auto;
+        width: auto;
+        height: 80%;
         object-fit: cover;
+        margin-bottom: 0.5vw;
         @media screen and (max-width: 1000px) {
           width: 25vw;
+          height: auto;
         }
       }
     }
