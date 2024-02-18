@@ -22,6 +22,7 @@ import { Vzion } from './pages/Vzion/Vzion.jsx';
 import { Pg } from './pages/Pg/Pg.jsx';
 import { TheGuill } from './pages/TheGuill/TheGuill.jsx';
 import { MahdibaPage } from './pages/Mahdiba/MahdibaPage.jsx';
+import { Wrldmag } from './pages/Wrldmag/Wrldmag.jsx'
 
 const router = createBrowserRouter([
   {
@@ -99,6 +100,11 @@ const router = createBrowserRouter([
       {
         path: '/mahdiba',
         element: <MahdibaPage/>
+      },
+      {
+        path: '/wrldmag',
+        element: <Wrldmag/>
+        
       }
       
       
