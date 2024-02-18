@@ -7,10 +7,11 @@ const StyledNewsletter = styled.div`
     justify-content: center;
     margin-bottom: 25vw;
     z-index: 4;
-    div{
+    position: relative;
+    form{
         width: 40vw;
         position: relative;
-        input{
+        .email{
             width: 100%;
             border: 0.15vw solid #fff;
             border-radius: 50vw;
@@ -23,14 +24,21 @@ const StyledNewsletter = styled.div`
             padding: 0 1vw;
             margin-top: 3vw;
         }
-        input::placeholder{
+        .email::placeholder{
             color: #9098B5;
             font-family: lexend;
             font-size: 1.2vw;
             text-align: center;
         }
-        input:focus{
+        .email:focus{
             outline: none;
+        }
+        .name{
+            position: absolute;
+            height: 5px;
+            background-color: transparent;
+            border: none;
+            bottom: -50vw; 
         }
         button{
             top: calc(50% - 1vw + 1.5vw);
@@ -51,11 +59,12 @@ const StyledNewsletter = styled.div`
     }
 
     @media (max-width: 900px) {
+        width: 100%;
         margin-bottom: 300px;
-        div{
+        form{
             width: 90%;
             position: relative;
-            input{
+            .email{
                 width: 100%;
                 border: 1px solid #fff;
                 border-radius: 50px;
@@ -64,11 +73,8 @@ const StyledNewsletter = styled.div`
                 padding: 0 12px;
                 margin-top: 36px;
             }
-            input::placeholder{
+            .email::placeholder{
                 font-size: 16px;
-            }
-            input:focus{
-                outline: none;
             }
             button{
                 top: 50%;

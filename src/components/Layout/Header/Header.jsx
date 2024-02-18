@@ -8,13 +8,19 @@ import fr from '../../../assets/fr.svg'
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { IoMenu, IoClose } from "react-icons/io5";
+import useWindowSize from '../../../utils/useWindowSize'
 
 export const Header = () => {
     const [isOpen, setIsOpen] = useState(null);
     const {t, i18n} = useTranslation();
+    const isSmallScreen = useWindowSize(900)
 
     const handleChange = () => {
         isOpen === true || null ? setIsOpen(false) : setIsOpen(true);
+    }
+
+    const handleClick = () => {
+        isSmallScreen && setIsOpen(false)
     }
 
     const changeLanguage = () => {
@@ -39,18 +45,18 @@ export const Header = () => {
                 <nav>
                     <ul>
                         <li>
-                            <Link to='/services'>{t('header.services')}</Link>
+                            <Link onClick={handleClick} to='/services'>{t('header.services')}</Link>
                         </li>
                         <li>
-                            <Link to='/artbook'>{t('header.artbook')}</Link>
+                            <Link onClick={handleClick} to='/artbook'>{t('header.artbook')}</Link>
                         </li>
                         <li>
-                            <Link to='/history'>{t('header.history')}</Link>
+                            <Link onClick={handleClick} to='/history'>{t('header.history')}</Link>
                         </li>
                     </ul>
                 </nav>
                 <div className='container-contact'>
-                    <Link className='contact' to='/contact'>{t('header.contact')}</Link>
+                    <Link onClick={handleClick} className='contact' to='/contact'>{t('header.contact')}</Link>
                     <button onClick={changeLanguage}><img src={i18n.language === 'en' ? gb : fr } alt='flag translation' /></button>
                 </div>
             </div>

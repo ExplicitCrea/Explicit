@@ -33,15 +33,29 @@ const StyledHome = styled.main`
         text-align: center;
         font-weight: 100;
     }
-
-    h2{
-        z-index: 4;
+    .scroll-container{
         margin: 6vw 0;
-        font-family: lexend;
-        font-size: 2vw;
-        color: #FFFFFF;
-        width: 36vw;
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 4;
+        cursor: pointer;
+        h2{
+            z-index: 4;
+            font-family: lexend;
+            font-size: 2vw;
+            color: #FFFFFF;
+            width: 36vw;
+            text-align: center;
+            margin: 0 0 12px 0;
+        }
+
+        svg{
+            width: 2vw;
+            height: 2vw;
+            color: #634EFF;
+        }
     }
 
     .menu-container{
@@ -85,7 +99,7 @@ const StyledHome = styled.main`
                 img{
                     width: 70%;
                     height: auto;
-                    opacity: 0.5;
+                    opacity: 0.8;
                     transition: 300ms;
                 }
                 :hover{
@@ -213,11 +227,20 @@ const StyledHome = styled.main`
             text-align: center;
         }
 
-        h2{
+        .scroll-container{           
             margin: 96px 0;
-            font-size: 18px;
-            width: 80%;
-            text-align: center;
+            h2{
+                font-size: 18px;
+                width: 80%;
+                text-align: center;
+            }
+
+            svg{
+                width: 36px;
+                height: 36px;
+            
+            }
+
         }
 
         .menu-container{
