@@ -18,6 +18,7 @@ const StyledPage = styled.section`
 
   @media screen and (max-width: 1000px) {
     align-items: initial;
+    padding-top: 80px;
   }
 
   .background {
@@ -34,6 +35,7 @@ const StyledPage = styled.section`
   }
 
   .container {
+    border: 5px solid red;
     max-width: 1300px;
     max-height: 850px;
     display: grid;
@@ -56,12 +58,12 @@ const StyledPage = styled.section`
 
     @media screen and (max-width: 1000px) {
       grid-template-columns: 100%;
-      grid-template-rows: 19vw 48vw 11vw 30vw;
+      grid-template-rows: 19vw 48vw 11vw 60vw;
       max-height: unset;
       max-width: unset;
       gap: 0;
       grid-row-gap: 3%;
-      height: 155vw;
+      height: auto;
     }
 
     .label-on-side {
@@ -132,55 +134,33 @@ const StyledPage = styled.section`
         object-fit: cover;
       }
     }
-
-    .paragraph_container {
-      margin: 0 auto;
-      width: 100%;
-      height: 100%;
-      grid-row: 1 / span 1;
-      grid-column: 2 / span 1;
-
-      @media screen and (max-width: 1000px) {
-        grid-row: 4;
-        grid-column: 1 / span 4;
-        width: 80%;
-      }
       p {
+        margin: 0 auto;
+        grid-row: 1 / span 1;
+        grid-column: 2 / span 1;
         background-color: rgba(0, 0, 0, 0.6);
         font-family: Lexend;
-        font-size: 16px;
+        font-size: clamp(11.5px, 1.17vw, 16px);
         padding: 8px;
         text-align: center;
         color: white;
         margin: 0 auto;
         border-radius: 1vw;
         width: 100%;
-
+        height: auto;
+        
         @media screen and (min-width: 2200px) {
           font-size: 22px;
         }
         @media screen and (min-width: 2000px) and (max-width: 2200px) {
           font-size: 20px;
-        }
-        @media screen and (max-width: 1400px) {
-          font-size: 15px;
-        }
-        @media screen and (max-width: 1280px) {
-          font-size: 14px;
-        }
-        @media screen and (max-width: 1195px) {
-          font-size: 13px;
-        }
-        @media screen and (max-width: 1115px) {
-          font-size: 12px;
-        }
-        @media screen and (max-width: 1040px) {
-          font-size: 11px;
-        }
+        } 
         @media screen and (max-width: 1000px) {
-          font-size: 3vw;
+          font-size: clamp(8px, 3.2vw, 30px);
+          grid-row: 4;
+          grid-column: 1 / span 4;
+          width: 80%;
         }
-      }
     }
 
     .explicit-container {
