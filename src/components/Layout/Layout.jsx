@@ -5,7 +5,7 @@ import { Header } from './Header/Header';
 import { Footer } from './Footer/Footer';
 export const Layout = () => {
     const location = useLocation();
-    const includedPage = ['/', '/services'];
+    const includedPage = ['/', '/services','/contact','/history'];
     const isIncludedPage = includedPage.includes(location.pathname);
     usePreventZoom();
     return (
