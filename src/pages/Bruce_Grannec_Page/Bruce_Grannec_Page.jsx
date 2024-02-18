@@ -40,9 +40,7 @@ export const Bruce_Grannec_Page = () => {
             </div>
           </div>
         </div>
-        <div className="paragraph_container">
           <p>{t("bruce-grannec.paragraph")}</p>
-        </div>
         <div className="explicit-container">
           <img
             className="white-star"
