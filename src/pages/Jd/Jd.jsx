@@ -9,8 +9,10 @@ import poster3 from '../../assets/jd/poster3.png'
 import carpentry from '../../assets/jd/carpentry.png'
 import pp from '../../assets/jd/pp.jpg'
 import ReactPlayer from 'react-player'
+import { useTranslation } from 'react-i18next'
 
 export const Jd = () => {
+    const { t } = useTranslation()
     return (
         <StyledJd>
             <div className='banner-container'>
@@ -22,15 +24,9 @@ export const Jd = () => {
                 <div className='presentation'>
                     <h1>RENCONTRE AVEC STUPEFLIP</h1>
                     <div className='video'>
-                        <ReactPlayer width='100%' height='100%' url='https://www.youtube.com/watch?v=LXb3EKWsInQ' />
+                        <ReactPlayer width='100%' height='100%' url='https://youtu.be/WbvqtvnWBZs' />
                     </div>
-                    <p>
-                        Plongez dans un monde d'inspiration impériale chinoise, où les histoires prennent vie grâce à l'expertise en illustration et en animation d’Explicit.
-
-                        Dans cette vidéo captivante issue d'une rencontre entre LeGrandJD et l'un des membres du groupe de musique légendaire Stupeflip, Explicit a donné vie à une aventure tout droit sortie de l'imagination de Julien Barthélémy. 
-
-                        Découvrez l'histoire étonnante d'un empereur et d'un peintre mis à l'épreuve par la création d'un tableau de crabe
-                    </p>
+                    <p>{t('jd.description')}</p>
                 </div>
                 <div className='deco'>
                     <img className='poster1' src={poster2} alt="poster" />
