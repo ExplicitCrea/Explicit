@@ -156,7 +156,7 @@ const StyledPage = styled.section`
           font-size: 20px;
         } 
         @media screen and (max-width: 1000px) {
-          font-size: clamp(8px, 3.2vw, 30px);
+          font-size: clamp(8px, 3vw, 30px);
           grid-row: 4;
           grid-column: 1 / span 4;
           width: 80%;
