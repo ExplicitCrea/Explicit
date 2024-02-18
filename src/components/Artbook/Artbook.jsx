@@ -58,7 +58,7 @@ export const Artbook = () => {
           <img src={mahdi_ba} alt="Mahdi Ba" width={400} height={460}/>
         </Link>
 
-        <div className="wrld-mag">
+        <Link to='/wrldmag' className="wrld-mag">
           <div className="wrld-background"></div>
           <img
             className="wrldmag-no-background"
@@ -74,7 +74,8 @@ export const Artbook = () => {
             width={300}
             height={537}
           />
-        </div>
+          <img className="wrldmag" src={wrld_mag} alt="Wrld Mag" width={300} height={537} />
+        </Link>
 
         <Link to ="/theguill" className="the-guill">
           <img src={theguill} alt="The Guill" width={600} height={239}/>
