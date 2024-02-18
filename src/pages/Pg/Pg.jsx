@@ -2,8 +2,10 @@ import ReactPlayer from 'react-player'
 import StyledPg from './StyledPg'
 import pp from '../../assets/pg/pp.png'
 import maf from '../../assets/pg/maf.png'
+import { useTranslation } from 'react-i18next'
 
 export const Pg = () => {
+    const { t } = useTranslation()
     return (
         <StyledPg>
             <div className='global'>
@@ -14,7 +16,7 @@ export const Pg = () => {
                             PROFESSION
                             <span>GANGSTER</span>
                         </h1>
-                        <p>Explicit accompagne le créateur de contenu PROFESSION GANGSTER dans sa direction artistique.</p>
+                        <p>{t('pg.description')}</p>
                     </div>
                 </div>
                 <div className='examples'>

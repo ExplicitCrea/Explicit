@@ -14,7 +14,7 @@ const StyledPg = styled.section`
     .global{
         width: 70%;
         margin: 0 0 0 26%;
-        max-width: 1530px;
+        max-width: 1200px;
         .presentation{
             display: flex;
             align-items: center;
@@ -73,8 +73,9 @@ const StyledPg = styled.section`
     }
 
     .deco{
+        bottom: -10%;
         position: absolute;
-        left: -11vw;
+        left: -10vw;
         width: 40vw;
         height: auto;
     }
