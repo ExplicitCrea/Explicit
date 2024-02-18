@@ -1,7 +1,11 @@
 import styled from "styled-components";
 
 const StyledContainer = styled.div`
-  width: 30%;
+  width: 40%;
+  max-width: 550px;
+  @media (min-width: 2000px) {
+    max-width: 600px;
+  }
   .__rcs-handle-button {
     width: 40px !important;
     height: 40px !important;

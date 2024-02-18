@@ -1,134 +1,241 @@
 import styled from "styled-components";
 
 const StyledArtbook = styled.div`
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-  width: 100vw;
+  margin-top: 30px;
+  z-index: 1;
 
   .container {
-    max-height: 600px;
-    max-width: 2193px;
     display: grid;
+    width: 100vw;
+    height: 40vw;
     justify-content: center;
-    width: 95vw;
-    height: 26vw;
-    margin-top: 10px;
-    padding: 20px;
-    gap: 0.8vw;
-    grid-template-rows: 45% 55% 49% 53%;
-    grid-template-columns: 10% 16% 16% 16% 8%;
+    grid-template-rows: 23% 30% 24% 17%;
+    grid-template-columns: 16% 10% 3% 7% 7% 6% 7% 14%;
     position: relative;
-
+    gap: 0.8vw;
     @media (max-width: 900px) {
-      width: 95%;
-      height: 90%;
+      padding: 20px;
+      height: 100%;
       margin-top: 20px;
-      padding: 0px;
-      gap: 8px;
-      grid-template-columns: 40% 15% 40%;
-      grid-template-rows: 15% 17% 11% 9% 11% 11% 16% 15%;
+      grid-template-columns: 34% 17% 44%;
+      grid-template-rows: 8% 14% 23% 11% 9% 13% 16%;
+      gap: 2vw;
     }
 
     img {
-      min-width: 60px;
       width: 100%;
       height: 100%;
-      object-fit: cover;
       border-radius: 10px;
+      object-fit: cover;
       cursor: pointer;
       transition: transform 0.3s ease-in-out;
       &:hover {
         transform: scale(1.1);
       }
-
       @media (max-width: 900px) {
-        border-radius: 15px;
+        border-radius: 4vw;
       }
     }
 
     .olympics {
       width: 100%;
-      height: auto;
-      max-height: 250px;
       overflow: hidden;
       border-radius: 10px;
       grid-row: 1;
-      grid-column: 1 / span 3;
-
+      grid-column: 1 / span 4;
       @media (max-width: 900px) {
-        width: 100%;
         grid-column: 1 / span 3;
       }
     }
 
-    .bruce-grannec {
+    @media (max-width: 900px) {
       width: 100%;
-      height: auto;
-      max-height: 250px;
-      overflow: hidden;
-      border-radius: 10px;
-      grid-row: 1 / span 0;
-      grid-column: 4 / span 2;
-
-      @media (max-width: 900px) {
-        grid-column: 1;
-        grid-row: 7;
-      }
+      grid-column: 1 / span 3;
     }
+  }
 
-    .gg {
+  .bruce-grannec {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    grid-row: 1;
+    grid-column: 5 / span 3;
+    @media (max-width: 900px) {
+      height: 100%;
+      grid-column: 1;
+      grid-row: 6 / span 1;
+    }
+  }
+
+  .gg {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    grid-row: 1;
+    grid-column: 8;
+    @media (max-width: 900px) {
+      grid-row: 7;
+      grid-column: 2 / span 2;
+    }
+  }
+
+  .loreal {
+    width: 123%;
+    border-radius: 10px;
+    overflow: hidden;
+    grid-row: 2;
+    grid-column: 1;
+    @media (max-width: 900px) {
       width: 100%;
-      height: auto;
-      max-height: 250px;
-      overflow: hidden;
-      border-radius: 10px;
-      grid-row: 1;
-      display: non;
-      grid-column: 6;
-      @media (max-width: 900px) {
-        grid-column: 2 / span 1;
-        grid-row: 3 / span 2;
-        display: none;
-      }
     }
+  }
 
-    .loreal {
-      width: 89%;
-      height: auto;
-      overflow: hidden;
-      border-radius: 10px;
-      grid-row: 2;
+  .pg {
+    width: 130%;
+    border-radius: 10px;
+    overflow: hidden;
+    grid-row: 2;
+    grid-column: 2 / span 2;
+    margin-left: 3.7vw;
+    @media (max-width: 900px) {
+      width: 100%;
+      height: 100%;
       grid-column: 1 / span 2;
-
-      @media (max-width: 900px) {
-        width: 100%;
-        height: 100%;
-        grid-column: 1;
-        grid-row: 2 / span 1;
-      }
+      grid-row: 4;
+      margin-left: 0;
     }
+  }
 
-    .pg {
-      width: 118%;
-      height: auto;
-      margin-left: -18%;
-      overflow: hidden;
-      border-radius: 10px;
+  .le-grand-jd {
+    border-radius: 10px;
+    width: 100%;
+    overflow: hidden;
+    grid-row: 2;
+    grid-column: 5 / span 3;
+    @media (max-width: 900px) {
+      grid-column: 2 / span 2;
       grid-row: 2;
-      grid-column: 3 / span 1;
+      height: 85%;
+    }
+  }
 
-      @media (max-width: 900px) {
-        grid-column: 1 / span 2;
-        grid-row: 5 / span 1;
-        width: 100%;
-        margin-left: 0%;
-      }
+  .the-guill {
+    border-radius: 10px;
+    width: 100%;
+    overflow: hidden;
+    grid-row: 3;
+    grid-column: 3 / span 4;
+    transition: transform 0.3s ease-in-out;
+    @media (max-width: 900px) {
+      grid-row: 5;
+      grid-column: 1 / span 2;
+    }
+  }
+
+  .potatoz {
+    border-radius: 10px;
+    width: 100%;
+    overflow: hidden;
+    grid-row: 3;
+    grid-column: 7;
+    transition: transform 0.3s ease-in-out;
+    @media (max-width: 900px) {
+      grid-column: 1;
+      grid-row: 7;
+    }
+  }
+
+  .vzion {
+    border-radius: 10px;
+    width: 100%;
+    height: 84%;
+    overflow: hidden;
+    grid-row: 2;
+    grid-column: 8;
+    transition: transform 0.3s ease-in-out;
+    @media (max-width: 900px) {
+      height: 204%;
+      grid-row: 4;
+      grid-column: 3;
+      position: relative;
+      top: -104%;
+    }
+  }
+
+  .coming-soon {
+    position: absolute;
+    background-color: #404040;
+    font-family: Lexend;
+    font-size: 1.5em;
+    width: 70%;
+    height: auto;
+    text-align: center;
+    margin-right: 10%;
+    right: 0;
+    padding: 10px;
+    border-radius: 0px 15px 15px 0px;
+    bottom: 6vw;
+    z-index: 4;
+
+    @media (max-width: 1600px) {
+      font-size: 1.3em;
+    }
+    @media (max-width: 1350px) {
+      font-size: 1em;
     }
 
-    .le-grand-jd {
+    @media (max-width: 1110px) {
+      font-size: 0.8em;
+    }
+
+    @media (max-width: 900px) {
+      padding: 8px;
+      font-size: 0.8em;
+      bottom: 21vw;
+    }
+    @media (max-width: 500px) {
+      font-size: 0.6em;
+    }
+  }
+
+  .mahdiBa {
+    border-radius: 10px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    grid-row: 3 / span 2;
+    grid-column: 1;
+    @media (max-width: 900px) {
+      height: 100%;
+      grid-column: 1 / span 2;
+      grid-row: 3 / span 1;
+    }
+  }
+
+  .wrld-mag {
+    border-radius: 10px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    grid-row: 3 / span 2;
+    grid-column: 2;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+
+    @media (max-width: 900px) {
+      height: 59%;
+      grid-row: 3;
+      grid-column: 3;
+      margin-top: -14%;
+      border-radius: 4vw;
+    }
+
+    .wrldmag {
+      min-width: 5vw;
       width: 100%;
       height: auto;
+      object-fit: cover;
       overflow: hidden;
       border-radius: 10px;
       grid-row: 2;
@@ -234,6 +341,7 @@ const StyledArtbook = styled.div`
       border-radius: 10px;
       grid-row: 3 / span 2;
       grid-column: 1 / span 1;
+      color: white;
 
       @media (max-width: 900px) {
         grid-column: 1 / span 2;
@@ -253,106 +361,68 @@ const StyledArtbook = styled.div`
       grid-row: 3 / span 2;
       grid-column: 2 / span 1;
       cursor: pointer;
-
+      transform: scale(2.5);
       @media (max-width: 900px) {
-        grid-column: 3 / span 1;
-        grid-row: 3 / span 1;
+        min-width: 0px;
         position: relative;
-        top: -28%;
-        margin-left: 0%;
+        bottom: 56px;
         width: 100%;
-        height: 125%;
-        left: 0;
-      }
-
-      .wrldmag {
-        min-width: 160px;
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        cursor: pointer;
-        transform: scale(2.5);
-        @media (max-width: 900px) {
-          min-width: 0px;
-          position: relative;
-          bottom: 56px;
-          width: 100%;
-          height: 200%;
-        }
-      }
-
-      .wrldmag-no-background {
-        position: absolute;
-        z-index: 4;
-        top: 70px;
-        width: 100%;
-        height: 50%;
-        object-position: center;
-        object-fit: cover;
-        cursor: pointer;
-        transition: transform 0.3s ease-in-out;
-        &:hover {
-          transform: scale(1.1);
-        }
-        @media (max-width: 900px) {
-          top: 0px;
-          left: 0px;
-          width: 100%;
-          height: 100%;
-        }
-      }
-
-      .wrld-background {
-        position: absolute;
-        z-index: 4;
-        width: 100%;
-        height: 100%;
-        background-color: rgb(132, 68, 245, 0.8);
+        height: 200%;
       }
     }
 
-    .edenLz {
+    .wrldmag-no-background {
+      position: absolute;
+      z-index: 4;
+      top: 4vw;
       width: 100%;
-      height: 113%;
-      position: relative;
-      top: -23%;
-      overflow: hidden;
-      border-radius: 10px;
-      grid-row: 3;
-      grid-column: 6 / span 1;
-
+      height: 50%;
       @media (max-width: 900px) {
-        grid-column: 3 / span 1;
-        grid-row: 6 / span 1;
-        height: auto;
-        top: 0;
+        top: 0px;
+        left: 0px;
+        height: 100%;
       }
     }
 
-    .paltay {
-      position: relative;
-      width: 94%;
-      height: 54%;
-      top: 97%;
-      left: 5.8%;
-      overflow: hidden;
-      border-radius: 10px;
-      grid-row: 3;
-      grid-column: 3 / span 4;
+    .wrld-background {
+      position: absolute;
+      z-index: 4;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(132, 68, 245, 0.8);
+    }
+  }
 
-      @media (max-width: 900px) {
-        grid-column: 2 / span 2;
-        grid-row: 7 / span 1;
-        width: 100%;
-        height: 100%;
-        margin-top: 0;
-        margin-left: 0;
-        top: 0;
-        left: 0;
+  .edenLz {
+    border-radius: 10px;
+    width: 100%;
+    height: 121%;
+    overflow: hidden;
+    grid-row: 3;
+    grid-column: 8;
+    margin-top: -14%;
+    @media (max-width: 900px) {
+      height: 100%;
+      margin-top: 0;
+      grid-row: 5;
+      grid-column: 3;
+    }
+  }
 
-        img {
-          object-position: right;
-        }
+  .paltay {
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    grid-row: 4;
+    grid-column: 3 / span 6;
+
+    @media (max-width: 900px) {
+      grid-column: 2 / span 2;
+      grid-row: 6;
+      object-position: right;
+      img {
+        object-position: right;
       }
     }
   }

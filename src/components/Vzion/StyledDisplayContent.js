@@ -8,11 +8,20 @@ const StyledDisplayContent = styled.div`
     }
     h3 {
       margin: 0;
-      font-size: 43px;
+      font-size: 36px;
       line-height: 53.75px;
       max-width: 655px;
-      @media (max-width: 1210px) {
+
+      @media (min-width: 2000px) {
+        font-size: 43px;
+        max-width: 900px;
+      }
+      @media (max-width: 1400px) {
         font-size: 1.9em;
+        line-height: 35px;
+      }
+      @media (max-width: 1210px) {
+        font-size: 1.8em;
         line-height: 35px;
       }
       @media (max-width: 1030px) {
@@ -22,7 +31,12 @@ const StyledDisplayContent = styled.div`
     }
 
     p {
-      @media (max-width: 1210px) {
+      font-size: 18px;
+
+      @media (min-width: 2000px) {
+        font-size: 20px;
+      }
+      @media (max-width: 1400px) {
         font-size: 0.9em;
       }
       @media (max-width: 1030px) {
@@ -37,7 +51,7 @@ const StyledDisplayContent = styled.div`
 
       button {
         color: #fc0000;
-        font-size: 16px;
+        font-size: 18px;
         line-height: 20px;
         cursor: pointer;
         font-weight: bold;
@@ -45,6 +59,15 @@ const StyledDisplayContent = styled.div`
         padding: 7px;
         background-color: #d9d9d900;
         border: 1px solid #ffffff;
+
+        @media (min-width: 2000px) {
+          font-size: 20px;
+        }
+
+        @media (max-width: 1400px) {
+          font-size: 14px;
+          padding: 5px;
+        }
       }
     }
   }
