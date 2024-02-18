@@ -1,14 +1,14 @@
 import ReactPlayer from 'react-player'
 import StyledThreed from './StyledThreed'
+import { useTranslation } from 'react-i18next'
 
 export const Threed = () => {
+  const { t } = useTranslation()
   return (
     <StyledThreed>
-      <p>
-        Des créations 3 dimensionnelles sur mesure, que ce soit de la conception de personnage de décors ou d’environement toute vos idée son a porté de mains, grace a nos services.
-      </p>
+      <p>{t('threed.description')}</p>
       <div className='video'>
-        <ReactPlayer width='100%' height='100%' url='https://www.youtube.com/watch?v=LXb3EKWsInQ' />
+        <ReactPlayer width='100%' height='100%' url='https://youtu.be/KpNqp44Olk0' />
       </div>
     </StyledThreed>
   )

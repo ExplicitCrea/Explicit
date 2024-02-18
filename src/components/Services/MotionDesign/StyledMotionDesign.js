@@ -7,6 +7,7 @@ const StyledMotionDesign = styled.section`
   align-items: center;
   justify-content: center;
   margin: 24px 0;
+  z-index: 4;
   h1{
       font-size: 4vw;
       text-align: center;

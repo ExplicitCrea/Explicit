@@ -70,5 +70,26 @@
   },
   "wrldmag": {
     "paragraph": "We're proud to have collaborated with WRLD Mag, a media outlet specializing in music culture across the Atlantic and in France. Our team was fortunate to have the opportunity to shoot videos together, develop a visual identity and produce content. Together, we brought WRLD Mag's artistic vision to life, creating a memorable and immersive visual experience for their music-loving audience."
+  },
+  "branding": {
+    "description": "Entrust your visual presence to our creative service. Whether you represent an innovative company or are self-employed, our expertise will shape your values with unique graphic directions."
+  },
+  "illustration": {
+    "description": "Would you like to take personalisation a step further? Our artists are ready to respond to your requests for all types of illustrations, with customised styles."
+  },
+  "stupeflip": {
+    "title": "We can give them life too!"
+  },
+  "graphics": {
+    "title": "Graphic asset",
+    "description": "For our live content creators, we have a whole range of graphics tools adapted to streaming, to help you dress up your content, from the simple waiting screen to the smallest formatting details."
+  },
+  "threed": {
+    "description": "Made-to-measure 3-dimensional creations, whether it's character design, scenery or the environment, all your ideas are within reach, thanks to our services."
+  },
+  "audio": {
+    "title": "Sound business",
+    "description": "As a complement to all our visual production services, we also had a sensitive alternative with auditory proposals such as dubbing, voice-overs or the production of personalised audio tracks.",
+    "conclusion": "You can also contact us by e-mail"
   }
 }
