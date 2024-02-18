@@ -11,14 +11,16 @@ import StyledAudio from "./StyledAudio"
 import { Card } from './Card/Card';
 import { ArrayAudio } from '../../../utils/ArrayAudio/ArrayAudio';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 
 export const Audio = () => {
+  const { t } = useTranslation()
   return (
     <StyledAudio>
-        <h1 className='title'>Metier du sons</h1>
+        <h1 className='title'>{t('audio.title')}</h1>
         <p className='description'>
-          En complément à tous nos services de productions visuelles nous avions aussi une alternative sensitive avec des propositions auditive comme du doublage, de la voix off ou de la production de piste audio personnaliser.
+          {t('audio.description')}
         </p>
         <Swiper
         effect={'coverflow'}
@@ -39,7 +41,7 @@ export const Audio = () => {
         }
       </Swiper>
       <span>
-        Vous pouvez aussi nous contacter par mail
+        {t('audio.conclusion')}
       </span>
       <Link className='contact' to='/contact'>Contact</Link>
     </StyledAudio>

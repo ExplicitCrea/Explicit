@@ -9,6 +9,7 @@ import { Production } from "../../components/Services/Production/Production";
 import { Audio } from "../../components/Services/Audio/Audio";
 import { Graphics } from '../../components/Services/Graphics/Graphics';
 import { Threed } from '../../components/Services/3d/Threed';
+import { Illustration } from "../../components/Services/Illustration/Illustration";
 
 export const Services = () => {
   const { t } = useTranslation();
@@ -19,6 +20,7 @@ export const Services = () => {
       <VideoEditing />
       <Branding />
       <MotionDesign/>
+      <Illustration/>
       <Stupeflip/>
       <Production/>
       <Graphics/>
