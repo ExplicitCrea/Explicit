@@ -89,6 +89,7 @@ const StyledArtbook = styled.div`
 
   .loreal {
     width: 123%;
+    position: relative;
     border-radius: 10px;
     overflow: hidden;
     grid-row: 2;
@@ -96,6 +97,43 @@ const StyledArtbook = styled.div`
     @media (max-width: 900px) {
       width: 100%;
     }
+
+    .coming-soon {
+    width: 70%;
+    position: absolute;
+    bottom: 4vw;
+    left: 3vw;
+    background-color: #404040;
+    font-family: Lexend;
+    color: white;
+    font-size: 1.5em;
+    height: auto;
+    text-align: center;
+    padding: 10px;
+    border-radius: 0px 15px 15px 0px;
+    z-index: 4;
+    @media (max-width: 1600px) {
+      font-size: 1.3em;
+    }
+    @media (max-width: 1350px) {
+      font-size: 1em;
+    }
+
+
+    @media (max-width: 1110px) {
+      font-size: 0.8em;
+    }
+    @media (max-width: 900px) {
+      padding: 8px;
+      font-size: 0.8em;
+      width: 85%;
+      bottom: 15vw;
+      left: 3vw;
+    }
+    @media (max-width: 500px) {
+      font-size: 0.6em;
+    }
+  }
   }
 
 
@@ -176,45 +214,7 @@ const StyledArtbook = styled.div`
   }
 
 
-  .coming-soon {
-    position: absolute;
-    background-color: #404040;
-    font-family: Lexend;
-    color: white;
-    font-size: 1.5em;
-    width: 70%;
-    height: auto;
-    text-align: center;
-    margin-right: 10%;
-    right: 0;
-    padding: 10px;
-    border-radius: 0px 15px 15px 0px;
-    bottom: 6vw;
-    z-index: 4;
-
-
-    @media (max-width: 1600px) {
-      font-size: 1.3em;
-    }
-    @media (max-width: 1350px) {
-      font-size: 1em;
-    }
-
-
-    @media (max-width: 1110px) {
-      font-size: 0.8em;
-    }
-
-
-    @media (max-width: 900px) {
-      padding: 8px;
-      font-size: 0.8em;
-      bottom: 21vw;
-    }
-    @media (max-width: 500px) {
-      font-size: 0.6em;
-    }
-  }
+  
 
 
   .mahdiBa {

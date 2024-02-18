@@ -19,7 +19,7 @@ import { Link } from "react-router-dom";
 
 export const Artbook = () => {
   return (
-    <StyledArtbook>
+    <StyledArtbook> 
       <div className="container">
         <Link to="/olympics" className="olympics">
           <img src={olympics} alt="Olympics" width={900} height={231} />
@@ -41,7 +41,8 @@ export const Artbook = () => {
         </Link>
 
 
-        <Link to="/loreal" className="loreal">
+        <Link className="loreal">
+          <div className="coming-soon">Coming soon</div>
           <img src={loreal} alt="L'oreal Paris" width={500} height={286} />
         </Link>
 
@@ -62,7 +63,6 @@ export const Artbook = () => {
 
 
         <Link to='/mahdiba' className="mahdiBa">
-          <div className="coming-soon">Coming soon</div>
           <img src={mahdi_ba} alt="Mahdi Ba" width={400} height={460} />
         </Link>
 
