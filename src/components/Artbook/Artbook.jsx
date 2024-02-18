@@ -16,13 +16,15 @@ import wrld_mag_no_background from "../../assets/artbook/wrld_mag/wrld_mag_no_ba
 import { StyledArtbook } from "./StyledArtbook";
 import { Link } from "react-router-dom";
 
+
 export const Artbook = () => {
   return (
-    <StyledArtbook>
+    <StyledArtbook> 
       <div className="container">
         <Link to="/olympics" className="olympics">
           <img src={olympics} alt="Olympics" width={900} height={231} />
         </Link>
+
 
         <Link to="/brucegrannec" className="bruce-grannec">
           <img
@@ -33,32 +35,39 @@ export const Artbook = () => {
           />
         </Link>
 
+
         <Link to="/gg" className="gg">
           <img src={vignettegg} alt="GG" width={400} height={225} />
         </Link>
 
-        <Link to="/loreal" className="loreal">
+
+        <Link className="loreal">
+          <div className="coming-soon">Coming soon</div>
           <img src={loreal} alt="L'oreal Paris" width={500} height={286} />
         </Link>
+
 
         <Link to="/pg" className="pg">
           <img src={pg} alt="Profession Gangster" width={500} height={337} />
         </Link>
 
+
         <Link to="/le-grand-jd" className="le-grand-jd">
           <img src={le_grand_jd} alt="Le Grand Jd" width={600} height={337} />
         </Link>
+
 
         <Link to="/vzion" className="vzion">
           <img src={vzion} alt="Vzion" width={400} height={400} />
         </Link>
 
+
         <Link to='/mahdiba' className="mahdiBa">
-          <div className="coming-soon">Coming soon</div>
-          <img src={mahdi_ba} alt="Mahdi Ba" width={400} height={460}/>
+          <img src={mahdi_ba} alt="Mahdi Ba" width={400} height={460} />
         </Link>
 
-        <div className="wrld-mag">
+
+        <Link to='/wrldmag' className="wrld-mag">
           <div className="wrld-background"></div>
           <img
             className="wrldmag-no-background"
@@ -74,19 +83,23 @@ export const Artbook = () => {
             width={300}
             height={537}
           />
+        </Link>
+
+
+        <div className="the-guill">
+          <img src={theguill} alt="The Guill" width={600} height={239} />
         </div>
 
-        <Link to ="/theguill" className="the-guill">
-          <img src={theguill} alt="The Guill" width={600} height={239}/>
-        </Link>
-        
+
         <Link to="/potatoz" className="potatoz">
           <img src={potatoz} alt="Potatoz" width={297} height={518} />
         </Link>
 
+
         <div className="edenLz">
           <img src={eden_lz} alt="Eden Lz" width={795} height={701} />
         </div>
+
 
         <Link to="/paltay" className="paltay">
           <img
@@ -102,3 +115,6 @@ export const Artbook = () => {
     </StyledArtbook>
   );
 };
+
+
+
