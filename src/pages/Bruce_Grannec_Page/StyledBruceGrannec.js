@@ -58,12 +58,12 @@ const StyledPage = styled.section`
 
     @media screen and (max-width: 1000px) {
       grid-template-columns: 100%;
-      grid-template-rows: 19vw 48vw 11vw 60vw;
+      grid-template-rows: 19vw 48vw 11vw 54vw;
       max-height: unset;
       max-width: unset;
       gap: 0;
       grid-row-gap: 3%;
-      height: auto;
+      height: 150vw;
     }
 
     .label-on-side {
@@ -134,18 +134,28 @@ const StyledPage = styled.section`
         object-fit: cover;
       }
     }
-      p {
-        margin: 0 auto;
+    .paragraph-container {
         grid-row: 1 / span 1;
         grid-column: 2 / span 1;
         background-color: rgba(0, 0, 0, 0.6);
+        border-radius: 1vw;
+
+        @media screen and (max-width: 1000px) {
+          grid-row: 4;
+          grid-column: 1 / span 4;
+          width: 80%;
+          margin: 0 auto;
+        }
+
+      p {
+        margin: 0 auto;
         font-family: Lexend;
         font-size: clamp(11.5px, 1.17vw, 16px);
         padding: 8px;
         text-align: center;
         color: white;
         margin: 0 auto;
-        border-radius: 1vw;
+       
         width: 100%;
         height: auto;
         
@@ -156,12 +166,12 @@ const StyledPage = styled.section`
           font-size: 20px;
         } 
         @media screen and (max-width: 1000px) {
-          font-size: clamp(8px, 3vw, 30px);
-          grid-row: 4;
-          grid-column: 1 / span 4;
-          width: 80%;
+          height: 100%;
+          padding: 5px;
+          font-size: clamp(8px, 3.1vw, 31px);
         }
     }
+  }
 
     .explicit-container {
       display: flex;
