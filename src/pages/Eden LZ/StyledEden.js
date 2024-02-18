@@ -67,7 +67,6 @@ h1{
         margin: -11% -7%;
 }
 
-
 .containers {
     position: absolute;
     left: 150px;
@@ -77,10 +76,11 @@ h1{
     align-items: flex-start;
 }
 
-    .logo-img {
+    img.logo-img {
         width: 14%;
+        position: relative;
         height: auto;
-        margin-top: 20px; 
+        top: 11vw;
 }
 
     .bloc-img {
@@ -94,6 +94,7 @@ h1{
         width: 39%;
         height: 7vw;
 }
+
     .text-overlay {
         position: absolute;
         top: 62%;
@@ -104,9 +105,14 @@ h1{
 }
 
     .text-overlay p {
-        font-size: 17px;
-        width: 104%;
-        margin: 0px -329px;
+        font-size: 18px;
+        font-family: 'lexend';
+        width: 29%;
+        margin: 0px -20px;
+}
+
+    p.long {
+        width: 50%;
 }
 
 .chapitre {
@@ -122,7 +128,7 @@ h1{
         left: 70%;
         top: 65%;
         color: white;
-        font-family: lexend;
+        font-family: "lexend";
 }
 
     .chapitre img {
@@ -146,6 +152,34 @@ h1{
         bottom: 4px;
         left: 53%;
         width: 17%;
+}
+@media (max-width: 1000px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .background{
+        height: 100%;
+        width: auto;
+    }
+    h1{
+        display: none;
+    }
+    .video{
+    width: 100%;
+    }
+
+    .container img {
+    display: none;
+    }
+
+    .container .logo {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: -11% -7%;
+    }
+
 }
 
 `
