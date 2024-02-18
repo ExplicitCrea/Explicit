@@ -11,9 +11,11 @@ import logo from "../../../assets/services/branding/logo.png"
 import logo2 from "../../../assets/services/branding/logo2.png"
 import { useState, useCallback } from 'react';
 import { throttle } from '../../../utils/throttle';
+import { useTranslation } from 'react-i18next';
 
 
 export const Branding = () => {
+  const { t } = useTranslation();
   const [rotate, setRotate] = useState({x: -0.71, y: 27.5});
 
   const onMouseMove = useCallback(throttle((e) => {
@@ -49,9 +51,7 @@ export const Branding = () => {
     <StyledBranding onMouseMove={onMouseMove} onMouseLeave={onMouseLeave}>
       <div className='text-container'>
         <h1>Branding</h1>
-        <p>
-          Confiez votre présence visuelle a notre service de création. Que vous représentiez une entreprise innovante ou que vous soyez indépendant, notre expertise façonnera vos valeur avec des directions graphiques uniques .
-        </p>
+        <p>{t("branding.description")}</p>
       </div>
       <div className="poster-container">
         <div className="little-poster">
