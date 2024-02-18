@@ -4,15 +4,14 @@ const StyledGg = styled.section`
     min-height: 100vh;
     background: url('/assets/gg/background.png') no-repeat center center fixed;
     background-size: auto 120%;
-    padding-top: 80px;
+    padding-top: 92px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    overflow: hidden;
 
     .container{
-        max-width: 1580px;
+        max-width: 1232px;
         max-height: 895px;
         width: 80vw;
         height: 40vw;
@@ -25,7 +24,7 @@ const StyledGg = styled.section`
         p{
             width: 50%;
             position: absolute;
-            bottom: 0.8vw;
+            bottom: -49%;
             right: 0;
             font-size: 18px;
             font-family: lexend;
@@ -35,8 +34,6 @@ const StyledGg = styled.section`
             z-index: 2;
             margin: 0;
             padding: 12px 12px;
-            max-height: 159px;
-            overflow: auto;
         }
         .left-container{
             height: 100%;
@@ -104,6 +101,14 @@ const StyledGg = styled.section`
             width: auto;
             height: 100%;
             z-index: 0;
+        }
+    }
+
+    @media (min-width: 1225px) {
+        .container{
+            p{
+                bottom: -13%;
+            }
         }
     }
 

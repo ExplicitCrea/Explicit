@@ -42,6 +42,7 @@ export const Jd = () => {
                 <img className='deco2 wave' src={waterWave} alt="vague" />
                 <img className='deco2' src={boat} alt="bateau" />
                 <img className='samourai' src={samourai} alt="samourai" />
+                <div className='background-filter'/>
             </div>
         </StyledJd>
     )
