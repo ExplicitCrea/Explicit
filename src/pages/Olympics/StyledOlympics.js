@@ -38,8 +38,6 @@ const StyledOlympics = styled.section`
     .text-container{
         width: 23%;
         p{
-            max-height: 200px;
-            overflow: auto;
             font-size: 1vw;
             font-family: lexend;
             font-weight: 600;

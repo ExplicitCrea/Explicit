@@ -15,17 +15,19 @@ export const Services = () => {
   const { t } = useTranslation();
   return (
     <StyledServices>
-      <h1 className="title">Services</h1>
-      <p className="description">{t("services.subtitle")}</p>
-      <VideoEditing />
-      <Branding />
-      <MotionDesign/>
-      <Illustration/>
-      <Stupeflip/>
-      <Production/>
-      <Graphics/>
-      <Threed/>
-      <Audio/>
+      <div className="global-container">
+        <h1 className="title">Services</h1>
+        <p className="description">{t("services.subtitle")}</p>
+        <VideoEditing />
+        <Branding />
+        <MotionDesign/>
+        <Illustration/>
+        <Stupeflip/>
+        <Production/>
+        <Graphics/>
+        <Threed/>
+        <Audio/>
+      </div>
       <div className="linear-background" />
       <div className="video-container-background">
         <img className="video-background" src={video} alt="background" />
