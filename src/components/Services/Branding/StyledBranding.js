@@ -12,6 +12,7 @@ const StyledBranding = styled.section`
     position: relative;
     margin: 10vw 0 0 0;
     z-index: 4;
+    border-radius: 80px;
 
     .text-container {
         position: absolute;

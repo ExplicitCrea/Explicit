@@ -3,8 +3,10 @@ import title from '../../assets/potatoz/title.png'
 import potatoz from '../../assets/potatoz/potatoz.png'
 import ReactPlayer from 'react-player'
 import follow from '../../assets/potatoz/follow.png'
+import { useTranslation } from 'react-i18next'
 
 export const Potatoz = () => {
+    const { t } = useTranslation()
     return (
         <StyledPotatoz>
             <div className='wrapper-title'>
@@ -13,18 +15,13 @@ export const Potatoz = () => {
             <div className='container'>
                 <div className='video'>
                     <div className='wrapper'>
-                        <ReactPlayer width='100%' height='100%' url='https://www.youtube.com/watch?v=LXb3EKWsInQ' />
+                        <ReactPlayer width='100%' height='100%' url='https://youtu.be/oZscojGNz_I' />
                         <img className='deco' src={potatoz} alt="potatoz"/>
                     </div>
                 </div>
                 <div className='description'>
                     <img className='follow' src={follow} alt="followers"/>
-                    <p>
-                        Nous sommes ravis d'avoir collaboré avec le streamer Potatoz. 
-                        Notre équipe a créé des visuels sur mesure pour sa chaîne Twitch, 
-                        des transitions fluides et une vidéo d'introduction captivante. 
-                        Chacun de ces éléments a été soigneusement conçu pour refléter le style de Potatoz
-                    </p>
+                    <p>{t('potatoz.description')}</p>
                 </div>
             </div>
         </StyledPotatoz>
