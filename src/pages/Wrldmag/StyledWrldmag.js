@@ -70,7 +70,7 @@ position: relative;
             }
             .image-center {
                 position: relative;
-                z-index: 5;
+                z-index: 2;
                 grid-row: 1;
                 grid-column: 2;
                 height: 100%;
