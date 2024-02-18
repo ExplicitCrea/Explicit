@@ -36,8 +36,8 @@ const StyledPage = styled.section`
 
   .container {
     border: 5px solid red;
-    max-width: 1300px;
-    max-height: 850px;
+    max-width: 1825px;
+    max-height: 1167px;
     display: grid;
     width: 95vw;
     height: auto;
@@ -46,14 +46,11 @@ const StyledPage = styled.section`
     grid-template-columns: 22% 35% 27% 14%;
     grid-template-rows: 28% 13% 58%;
     gap: 0.8%;
+    overflow: hidden;
 
     @media screen and (min-width: 2000px) {
-      max-width: 1600px;
-      max-height: 1100px;
-    }
-    @media screen and (min-width: 2200px) {
-      max-width: 1800px;
-      max-height: 1300px;
+      max-width: 2441px;
+      max-height: 1566px;
     }
 
     @media screen and (max-width: 1000px) {
@@ -150,7 +147,7 @@ const StyledPage = styled.section`
       p {
         margin: 0 auto;
         font-family: Lexend;
-        font-size: clamp(11.5px, 1.17vw, 16px);
+        font-size: clamp(13px, 1.2vw, 20px);
         padding: 8px;
         text-align: center;
         color: white;
@@ -160,10 +157,10 @@ const StyledPage = styled.section`
         height: auto;
         
         @media screen and (min-width: 2200px) {
-          font-size: 22px;
+          font-size: 1.15vw;
         }
         @media screen and (min-width: 2000px) and (max-width: 2200px) {
-          font-size: 20px;
+          font-size: 24px;
         } 
         @media screen and (max-width: 1000px) {
           height: 100%;
@@ -189,14 +186,11 @@ const StyledPage = styled.section`
         grid-row: 3;
         grid-column: 1;
       }
-
-      /* Quand je réduis et je rétrici ça bouge trop, il faut mettre un max width */
-
       .white-star {
         width: auto;
         height: 80%;
         object-fit: cover;
-        margin-bottom: 0.5vw;
+        margin-bottom: 0.7vw;
         @media screen and (max-width: 1000px) {
           width: 10vw;
           height: auto;
@@ -206,7 +200,7 @@ const StyledPage = styled.section`
         width: auto;
         height: 80%;
         object-fit: cover;
-        margin-bottom: 0.5vw;
+        margin-bottom: 0.7vw;
         @media screen and (max-width: 1000px) {
           width: 25vw;
           height: auto;
