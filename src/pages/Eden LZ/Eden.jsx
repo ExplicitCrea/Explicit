@@ -31,7 +31,7 @@ return (
         <p>
           Nous sommes fiers d'avoir collaboré avec le YouTuber Eden LZ dans la réalisation de montages vidéo et 
         </p>
-        <p>
+        <p className='long'>
           d'effets de motion. 
           Notre travail pour Eden LZ reflète notre engagement envers la qualité visuelle et notre capacité à donner vie à des concepts à travers des montages vidéo.
         </p>
