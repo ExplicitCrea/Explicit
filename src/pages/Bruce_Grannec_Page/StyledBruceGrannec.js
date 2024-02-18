@@ -147,7 +147,7 @@ const StyledPage = styled.section`
       p {
         margin: 0 auto;
         font-family: Lexend;
-        font-size: clamp(13px, 1.2vw, 20px);
+        font-size: clamp(13px, 1.2vw, 22px);
         padding: 8px;
         text-align: center;
         color: white;

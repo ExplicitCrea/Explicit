@@ -65,10 +65,11 @@ const StyledCarousel = styled.div`
       cursor: pointer;
       background-color: red;
       height: auto;
+      width: clamp(15px, 1.2vw, 50px);
       
       @media screen and (max-width: 1000px) {
-        width: 1.6vw;
-    }
+        width: clamp(9px, 2.2vw, 15px);
+      }
     }
   }
 
