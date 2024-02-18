@@ -57,7 +57,7 @@ return (
             <div>
                 <input type='phone' name='phone'  placeholder='+33 01 23 45 67 89' required/>
             </div>
-                <label type="entreprise">Nom d'entreprise/Pseudonyme*</label>
+                <label type="entreprise">Ex. nom de l'entreprise/Pseudonyme*</label>
             <div>
                 <input type='text' name='entreprise'  placeholder=' Ex.nom de l entreprise/Pseudo' required /> 
             </div>

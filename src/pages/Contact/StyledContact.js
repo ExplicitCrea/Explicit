@@ -51,7 +51,7 @@ form{
         margin-bottom: 20px;
         border: 0.8px solid rgba(255, 255, 255, 0.1);
         border-radius: 25px;
-        background-color: transparent;
+        background-color: #0000002e;
         padding: 12px;
         outline: none;
         text-align: left;
