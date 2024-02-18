@@ -41,6 +41,10 @@ const StyledGraphics = styled.section`
       height: auto;
       max-width: 400px;
       margin: 0 12px;
+      transition: all 0.4s ease-in-out;
+    }
+    .icon:hover{
+      transform: scale(1.1);
     }
     .banner{
       position: absolute;
@@ -50,6 +54,10 @@ const StyledGraphics = styled.section`
       height: auto;
       max-width: 400px;
       margin: 0 12px;
+      transition: all 0.4s ease-in-out;
+    }
+    .banner:hover{
+      transform: scale(1.1);
     }
     .frame{
       position: absolute;
@@ -59,6 +67,10 @@ const StyledGraphics = styled.section`
       height: auto;
       max-width: 400px;
       margin: 0 12px;
+      transition: all 0.4s ease-in-out;
+    }
+    .frame:hover{
+      transform: scale(1.1);
     }
   }
 
