@@ -12,6 +12,7 @@ const StyledHistory = styled.div`
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    z-index: 0;
 
 img{
     width: 34%;
