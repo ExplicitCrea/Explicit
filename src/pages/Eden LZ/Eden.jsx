@@ -22,7 +22,7 @@ return (
         <img src={photos} alt='photo'/>
       </div>
       <div className='video'>
-        <ReactPlayer width='100%' height='100%' url='https://youtu.be/JmCJ09jtXm4' />
+        <ReactPlayer width='100%' height='100%' url='https://youtu.be/4vF-72KeuKw' />
       </div>
       <div className='containers'>
         <img src={Logo} alt='Logo' className='logo-img'/>

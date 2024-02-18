@@ -115,44 +115,45 @@ h1{
         width: 50%;
 }
 
-.chapitre {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-}
+    .chapitre {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
 
-    h2 {
-        position: absolute;
-        font-size: 30px;
-        left: 70%;
-        top: 65%;
-        color: white;
-        font-family: "lexend";
-}
+        h2 {
+            position: absolute;
+            font-size: 30px;
+            left: 70%;
+            top: 65%;
+            color: white;
+            font-family: "lexend";
+    }
 
-    .chapitre img {
-        position: absolute;
-        border-radius: 25px;
-}
+        .chapitre img {
+            position: absolute;
+            border-radius: 25px;
+    }
 
-    .img-top-right {
-        top: 32vw;
-        right: 145px;
-        width: 14%;
-}
+        .img-top-right {
+            top: 32vw;
+            right: 145px;
+            width: 14%;
+    }
 
-    .img-middle {
-        top: 80%;
-        left: 69%;
-        width: 16%;
-}
+        .img-middle {
+            top: 80%;
+            left: 69%;
+            width: 16%;
+    }
 
-    .img-bottom {
-        bottom: 4px;
-        left: 53%;
-        width: 17%;
-}
+        .img-bottom {
+            bottom: 4px;
+            left: 53%;
+            width: 17%;
+    }
+
 @media (max-width: 1000px) {
     display: flex;
     flex-direction: column;
@@ -162,26 +163,80 @@ h1{
         height: 100%;
         width: auto;
     }
+
     h1{
         display: none;
     }
+
+    h2{
+        display: none;
+    }
+
     .video{
-    width: 100%;
+        width: 90%;
+        margin: auto 0px;
     }
 
-    .container img {
-    display: none;
-    }
-
-    .container .logo {
-    display: block;
-    width: 100%;
-    height: auto;
-    margin: -11% -7%;
-    }
-
+    .container img:not(.logo) {
+        display: none; 
 }
+        img.logo{
+            width: 100%;
+            height: 60vw;
+            margin-top: 5px;
+    }
 
+    .containers {
+        left: -4%;
+        bottom: -17%;
+    }
+
+        .barre-img {
+            display: none;
+        }
+
+        .bloc-img {
+            height: 53vh;
+            width: 76%;
+        }
+
+        .text-overlay {
+            position: absolute;
+            top: 66%;
+            left: 42%;
+            transform: translate(-50%, -50%);
+            color: black;
+            text-align: justify;
+        }
+
+        .text-overlay p {
+            font-size: 9px;
+            width: 65%;
+            margin: 0px 0px 6px -26px;
+        }
+
+        p.long {
+            width: 98%;
+            margin: -7px 0px 24px -26px;
+        }
+
+        img.logo-img {
+            width: 46%;
+            left: 9vw;
+            height: auto;
+            top: 33vw;
+        }
+
+    .chapitre img:not(.img-bottom) {
+        display: none;
+    }
+
+        .img-bottom {
+            left: 42%;
+            top: 117vw;
+            width: 57%;
+    }
+}
 `
 
 export default StyledEden
