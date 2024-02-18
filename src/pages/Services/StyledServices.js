@@ -2,11 +2,12 @@ import styled from 'styled-components'
 
 const StyledServices = styled.main`
     background-color: #191C2E;
-    padding-top: 6vw;
+    padding: 6vw 0 14vw 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
+    overflow: hidden;
 
     h1,p{
         font-family: lexend;
@@ -54,7 +55,7 @@ const StyledServices = styled.main`
     }
 
     @media (max-width: 900px) {
-        padding-top: 60px;
+        padding: 60px 0 120px 0;
         .title{
             font-size: 36px;
         }
