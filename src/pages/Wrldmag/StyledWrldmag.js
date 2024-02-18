@@ -15,7 +15,6 @@ const StyledWrldmag = styled.section`
   .container {
     width: 100%;
     height: auto;
-    border: 5px solid yellow;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -67,34 +66,25 @@ const StyledWrldmag = styled.section`
       }
     }
     .second-wrapper {
-      border: 5px solid red;
       width: 100%;
       position: relative;
       .images-wrapper {
-        display: grid;
-        grid-template-rows: 100%;
-        grid-template-columns: 30% 40% 30%;
+        display: flex;
         align-items: center;
+        justify-content: space-between;
+        position: relative;
         .image-left {
-          position: relative;
-          z-index: 1;
-          grid-row: 1;
-          object-position: left;
-          height: 85%;
+          width: 33%;
         }
         .image-center {
-          position: relative;
-          z-index: 2;
-          grid-row: 1;
-          grid-column: 2;
-          height: 100%;
+          width: 40%;
+          position: absolute;
+          top: -10%;
+          left: calc(50% - 20%);
+          box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.5);
         }
         .image-right {
-          position: relative;
-          z-index: 1;
-          grid-row: 1;
-          grid-column: 3;
-          height: 85%;
+          width: 33%;
         }
         img {
           width: 100%;
@@ -123,6 +113,53 @@ const StyledWrldmag = styled.section`
           }
         }
       }
+  }
+
+  @media (max-width: 900px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    .container {
+      .second-wrapper{
+        .images-wrapper {
+          width: 100%;
+          flex-wrap: wrap;
+          justify-content: center;
+          margin-bottom: 22vw;
+          .image-right, .image-left {
+            width: 50%;
+          }
+          .image-center {
+            width: 50%;
+            position: unset;
+            margin-top: -20px;
+          }
+        }
+
+        .wrldmag-container{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          top: 33vw;
+          img {
+            width: 185%;
+            height: auto;
+          }
+        }
+
+        .bg-bottom{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            width: 180%;
+            height: auto;
+          }
+        }
+      }
+    }
   }
 `;
 

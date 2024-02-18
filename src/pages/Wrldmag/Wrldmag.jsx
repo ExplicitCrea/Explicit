@@ -21,8 +21,8 @@ export const Wrldmag = () => {
         <div className="second-wrapper">
           <div className="images-wrapper">
             <img src={image2} className="image-left" alt="" />
-            <img src={image1} className="image-center" alt="" />
             <img src={image3} className="image-right" alt="" />
+            <img src={image1} className="image-center" alt="" />
           </div>
             <div className="wrldmag-container">
               <img className="wrldmag-large" src={wrldmagLarge} alt="" />
