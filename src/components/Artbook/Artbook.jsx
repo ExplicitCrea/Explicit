@@ -95,10 +95,9 @@ export const Artbook = () => {
           <img src={potatoz} alt="Potatoz" width={297} height={518} />
         </Link>
 
-
-        <div className="edenLz">
-          <img src={eden_lz} alt="Eden Lz" width={795} height={701} />
-        </div>
+        <Link to="/eden-lz" className="edenLz">
+          <img src={eden_lz} alt="Eden Lz" width={795} height={701}/>
+        </Link>
 
 
         <Link to="/paltay" className="paltay">
