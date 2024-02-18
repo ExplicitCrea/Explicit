@@ -1,6 +1,25 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 const StyledStupeflip = styled.section`
+
+  @keyframes rightToLeft {
+    0%{
+    transform: translateX(100%);
+    }
+    100%{
+    transform: translateX(0%);
+    }
+  }
+
+  @keyframes leftToRight {
+    0%{
+    transform: translateX(0%);
+    }
+    100%{
+    transform: translateX(100%);
+    }
+  }
+
   width: 100%;
   background: url('assets/services/stupeflip/background.png') center center no-repeat;
   background-size: cover;
@@ -12,6 +31,7 @@ const StyledStupeflip = styled.section`
     font-size: 1.5vw;
     text-align: center;
     color: white;
+    text-shadow: 0px 0px 8px #000000;
   }
 
   .video{
@@ -33,6 +53,21 @@ const StyledStupeflip = styled.section`
     height: auto;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
+    ${props => props.isVisible === true && css`
+      animation: rightToLeft cubic-bezier(0.71, -0.01, 0.4, 0.97) 600ms forwards;
+    `}
+    ${props => props.isVisible === false && css`
+      animation: leftToRight cubic-bezier(0.71, -0.01, 0.4, 0.97) 600ms forwards;
+    `}
+  }
+
+  .background-filter{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
   }
 
   @media (max-width: 900px) {
@@ -45,10 +80,6 @@ const StyledStupeflip = styled.section`
       width: 90%;
       font-size: 18px;
       color: white;
-      background-color: rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(10px);
-      padding: 3px 3px;
-      border-radius: 12px;
     }
     .video{
       width: 90%;
