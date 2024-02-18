@@ -1,6 +1,7 @@
 import React from 'react'
 import StyledHistory from './StyledHistory'
 import logohistoire from '../../assets/logohistoire.png'
+
 export const History = () => {
 return (
     <StyledHistory>

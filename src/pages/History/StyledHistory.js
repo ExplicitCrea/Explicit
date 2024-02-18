@@ -3,10 +3,11 @@ import styled from 'styled-components'
 const StyledHistory = styled.div`
     position: fixed;
     width: 100%;
-    height: 100%;
     padding: 40px;
     background-color: #191C2E;
+    justify-content: center;
     align-items: center;
+    min-height: 100vh;
     position: absolute;
     display: flex;
     flex-direction: column;
