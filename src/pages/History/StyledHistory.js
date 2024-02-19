@@ -1,16 +1,15 @@
 import styled from 'styled-components'
 
-const StyledHistory = styled.div`
-    position: fixed;
-    width: 100%;
-    padding: 40px;
-    background-color: #191C2E;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    position: absolute;
+const StyledHistory = styled.section`
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    padding: 80px 40px 21vw;
+    background-color: #191C2E;
+    min-height: 100vh;
     overflow: hidden;
     z-index: 0;
 
@@ -29,12 +28,6 @@ img{
     position: relative;
     z-index: 2;
 
-h2{
-    text-align: center;
-    color: white;
-    font-size: 40px;
-}
-
 p{
     display: flex;
     flex-direction: column;
@@ -44,6 +37,7 @@ p{
     text-align: center;
     font-family: lexend;
     color: white;
+    z-index: 2;
 }
 
 }
@@ -71,6 +65,7 @@ p{
     background: radial-gradient(43% 49% at 75% 45%, rgb(10 211 72 / 31%) 21.15%, rgba(100, 255, 169, 0.00) 100.99%, rgba(100, 255, 169, 0.00) 100%, rgba(100, 255, 169, 0.00) 100%);
     transform: rotate(219deg);
 }
+
 @media screen and (max-width: 900px) {
     padding: 60px 40px 40px 40px;
     img{
@@ -81,10 +76,6 @@ p{
         width: 112%;
         height: 76%;
         margin-bottom: 64px;
-    
-    h2 {
-        font-size: 25px; 
-        }
 
     p {
         font-size: 10px;
