@@ -28,11 +28,13 @@ const StyledAudio = styled.section`
     font-family: lexend;
     font-size: 2vw;
     font-weight: 600;
-    color: #634EFF;
+    color: white;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     background: #64FFA9;
     margin: 36px 0;
     text-decoration: none;
     z-index: 1;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
   .mySwiper{
     width: 100%;

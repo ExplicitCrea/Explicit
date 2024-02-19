@@ -63,7 +63,6 @@ const StyledPotatoz = styled.section`
             p{
                 display: flex;
                 justify-content: center;
-                height: 150px;
                 width: auto;
                 max-width: 1200px;
                 font-size: 18px;

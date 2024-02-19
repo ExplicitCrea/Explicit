@@ -2,9 +2,20 @@ import { useTranslation } from 'react-i18next'
 import StyledVideoEditing from './StyledVideoEditing'
 import ReactPlayer from 'react-player'
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { ArrayVideos } from '../../../utils/ArrayServices/ArrayVideos';
+import { useState } from 'react';
 
 export const VideoEditing = () => {
-    const { t } = useTranslation()
+    const [index, setIndex] = useState(0);
+    const { t } = useTranslation();
+
+    const handleClick = (direction) => {
+        const lastIndex = ArrayVideos.length - 1;
+        if(lastIndex === index && direction === 'right') return setIndex(0)
+        if(0 === index && direction === 'left') return setIndex(lastIndex)
+        direction === 'left' ? setIndex(index - 1) : setIndex(index + 1);
+    }
+
     return (
         <StyledVideoEditing>
             <div className='text-container'>
@@ -13,19 +24,19 @@ export const VideoEditing = () => {
             </div>
             <div className='video-container'>
                 <div className='carousel-container'>
-                    <IoIosArrowBack />
+                    <IoIosArrowBack onClick={() => handleClick('left')} />
                         <div className='wrapper'>
-                            <ReactPlayer width='100%' height='100%' url='https://www.youtube.com/watch?v=LXb3EKWsInQ' />
+                            <ReactPlayer width='100%' height='100%' url={ArrayVideos[index].url} />
                         </div>
-                    <IoIosArrowForward />
+                    <IoIosArrowForward onClick={() => handleClick('right')}/>
                 </div>
                 <div className='title-container'>
                     <div className='image-wrapper'>
-                        <img src="https://via.placeholder.com/150" alt="placeholder" />
+                        <img src={ArrayVideos[index].img} alt="placeholder" />
                     </div>
                     <div className='text-title'>
-                        <h2>{'titre de la vidéo'}</h2>
-                        <p>{'nom de chaine'}</p>
+                        <h2>{ArrayVideos[index].title}</h2>
+                        <p>{ArrayVideos[index].name}</p>
                     </div>
                 </div>
             </div>

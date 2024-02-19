@@ -11,6 +11,7 @@ const StyledFooter = styled.footer`
   height: auto;
   padding: 24px 0px;
   
+  
   .column {
     z-index: 3;
     position: relative;

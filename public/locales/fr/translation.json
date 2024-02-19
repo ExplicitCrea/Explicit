@@ -67,5 +67,47 @@
       "title": "Sois tenu au courant de toutes les actualités !",
       "placeholder": "Entre ton e-mail !"
     }
+  },
+  "wrldmag": {
+    "paragraph": "Nous sommes fiers d'avoir collaboré avec WRLD Mag, un média spécialisé dans la culture musicale d’outre-Atlantique et française. Notre équipe a eu la chance de pouvoir réaliser des vidéos ensemble, d’élaborer une identité visuelle et de produire du contenu. Ensemble, nous avons donné vie à la vision artistique de WRLD Mag, créant une expérience visuelle mémorable et immersive pour leur public passionné de musique"
+  },
+  "branding": {
+    "description": "Confiez votre présence visuelle a notre service de création. Que vous représentiez une entreprise innovante ou que vous soyez indépendant, notre expertise façonnera vos valeur avec des directions graphiques uniques."
+  },
+  "illustration": {
+    "description": "Vous souhaitez pousser la personnalisation encore plus loin ? Nos artistes seront prêt à répondre à vos demandes pour tout type d’illustrations, avec des styles sur mesures."
+  },
+  "stupeflip": {
+    "title": "Nous Pouvons aussi leurs donné vie !"
+  },
+  "graphics": {
+    "title": "Asset graphique",
+    "description": "Pour nos créateur de contenue en direct nous avons toute une gamme d’outils graphique adapté au streaming, pour vous permettre de mieux habillé vos contenues.Du simple waiting screen au plus petit détails de mise en forme."
+  },
+  "threed": {
+    "description": "Des créations 3 dimensionnelles sur mesure, que ce soit de la conception de personnage de décors ou d’environement toute vos idée son a porté de mains, grace a nos services."
+  },
+  "audio": {
+    "title": "Metier du sons",
+    "description": "En complément à tous nos services de productions visuelles nous avions aussi une alternative sensitive avec des propositions auditive comme du doublage, de la voix off ou de la production de piste audio personnaliser.",
+    "conclusion": "Vous pouvez aussi nous contacter par mail"
+  },
+  "pg": {
+    "description": "Explicit accompagne le créateur de contenu PROFESSION GANGSTER dans sa direction artistique."
+  },
+  "jo": {
+    "description": "Explorez l'essence du temps à travers les yeux de la créativité d'Explicit. Notre collaboration avec l'évènement Paris 2024 nous a permis de façonner une vidéo en 3D captivante, un voyage d'une minute à travers les époques et les mondes. De gladiateurs en lutte aux splendeurs de l'Empire romain, des années 1920 à notre époque contemporaine, chaque univers prend vie grâce à notre maîtrise de la 3D.Plongez dans une immersion visuelle unique qui transcende le temps et l'espace, apportant une dimension épique au projet de merch Paris 2024."
+  },
+  "gg": {
+    "description": "Nous sommes honorés d'avoir contribué à la réalisation d'un tournoi e-sportif Minecraft, organisé par The Guill et offrant un cash prize de 12 000 euros. Explicit a apporté sa créativité en développant une direction artistique et en concevant des scènes pour l'événement. Chaque détail a été soigneusement orchestré pour créer une expérience visuelle immersive, ajoutant une dimension unique à ce tournoi !"
+  },
+  "potatoz": {
+    "description": "Nous sommes ravis d'avoir collaboré avec le streamer Potatoz. Notre équipe a créé des visuels sur mesure pour sa chaîne Twitch, des transitions fluides et une vidéo d'introduction captivante. Chacun de ces éléments a été soigneusement conçu pour refléter le style de Potatoz"
+  },
+  "paltay": {
+    "description": "Nous sommes fiers d'avoir collaboré avec Paltay, un streamer et YouTuber. Notre équipe a donné vie à sa chaîne Twitch en créant des scènes sur mesure, agrémentées d'illustrations et d'assets créatifs. Chaque élément a été soigneusement conçu pour apporter une touche unique et immersive à son contenu, offrant à Paltay et à sa communauté une expérience visuelle vraiment unique."
+  },
+  "jd": {
+    "description": "Plongez dans un monde d'inspiration impériale chinoise, où les histoires prennent vie grâce à l'expertise en illustration et en animation d’Explicit. Dans cette vidéo captivante issue d'une rencontre entre LeGrandJD et l'un des membres du groupe de musique légendaire Stupeflip, Explicit a donné vie à une aventure tout droit sortie de l'imagination de Julien Barthélémy. Découvrez l'histoire étonnante d'un empereur et d'un peintre mis à l'épreuve par la création d'un tableau de crabe"
   }
 }
