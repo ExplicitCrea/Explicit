@@ -66,7 +66,6 @@ const StyledPage = styled.section`
       max-height: 100%;
       grid-row: 1 / span 3;
       grid-column: 1 / span 1;
-      box-shadow: 0px 4px 30px 14px rgba(0, 0, 0, 0.2);
 
       img {
         width: 100%;
@@ -130,22 +129,22 @@ const StyledPage = styled.section`
       }
     }
     .paragraph-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        grid-row: 1 / span 1;
-        grid-column: 2 / span 1;
-        background-color: rgba(0, 0, 0, 0.6);
-        border-radius: 1vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      grid-row: 1 / span 1;
+      grid-column: 2 / span 1;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 1vw;
 
-        @media screen and (max-width: 1000px) {
-          grid-row: 4;
-          grid-column: 1 / span 4;
-          width: 80%;
-          margin: auto;
-          padding: 8px;
-          border-radius: 5vw;
-        }
+      @media screen and (max-width: 1000px) {
+        grid-row: 4;
+        grid-column: 1 / span 4;
+        width: 80%;
+        margin: auto;
+        padding: 8px;
+        border-radius: 5vw;
+      }
 
       p {
         margin: 0 auto;
@@ -155,23 +154,20 @@ const StyledPage = styled.section`
         text-align: center;
         color: white;
         margin: 0 auto;
-       
+
         width: 100%;
         height: auto;
-        
-        @media screen and (min-width: 2200px) {
+
+        @media screen and (min-width: 2000px) {
           font-size: 1.15vw;
         }
-        @media screen and (min-width: 2000px) and (max-width: 2200px) {
-          font-size: 24px;
-        } 
         @media screen and (max-width: 1000px) {
           height: 100%;
           padding: 2px;
           font-size: clamp(9px, 3.2vw, 32px);
         }
+      }
     }
-  }
 
     .explicit-container {
       display: flex;
