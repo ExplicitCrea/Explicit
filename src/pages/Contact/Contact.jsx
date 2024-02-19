@@ -5,8 +5,10 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { MdEmail } from "react-icons/md";
 import { BsFillTelephoneFill } from "react-icons/bs";
+import { useTranslation } from "react-i18next";
 
 export const Contact = () => {
+    const { t } = useTranslation();
     const notifySuccess = () => toast("Votre e-mail a été envoyé avec succès!");
     const form = useRef();
     const handleSubmit = (e) => {
@@ -27,10 +29,10 @@ export const Contact = () => {
 
 return (
     <StyledContact>
-        <h1>Nous Contacter</h1>
+        <h1>{t("contact.title")}</h1>
         <form ref={form} onSubmit={handleSubmit}>
             <div className='contact'>
-                <h2>Pour nous contacter</h2>
+                <h2>{t("contact.title2")}</h2>
                 <li>
                     <a href="mailto:Contact@explicitcrea.com">
                         <MdEmail /> Contact@explicitcrea.com
@@ -43,29 +45,29 @@ return (
                 </li>
             </div>
             <div>
-                <label type="text">Votre Prénom / Nom</label>
+                <label type="text">{t("contact.label")}</label>
             </div>
             <div className='container'>
-                <input type='text' name='prenom'  placeholder='Prénom' required/>
-                <input type='text' name='nom'     placeholder='Nom' required/>
+                <input type='text' name='prenom'  placeholder={t("contact.input")} required/>
+                <input type='text' name='nom'     placeholder={t("contact.input2")} required/>
             </div>
-                <label type="mail"> Adresse E-Mail*</label>
+                <label type="mail"> {t("contact.label2")}</label>
             <div>
                 <input type='email' name='email'  placeholder='exemple@exemple.com' required/>
             </div>
-                <label type="phone">Numéro de Téléphone</label>
+                <label type="phone">{t("contact.label3")}</label>
             <div>
                 <input type='phone' name='phone'  placeholder='+33 01 23 45 67 89' required/>
             </div>
-                <label type="entreprise">Ex. nom de l'entreprise/Pseudonyme*</label>
+                <label type="entreprise">{t("contact.label4")}</label>
             <div>
-                <input type='text' name='entreprise'  placeholder=' Ex.nom de l entreprise/Pseudo' required /> 
+                <input type='text' name='entreprise'  placeholder={t("contact.input3")}  required /> 
             </div>
-                <label type="message">Message*</label>
+                <label type="message">{t("contact.label5")}</label>
             <div>
-                    <textarea type='text' name='message' placeholder='Ajouter un message' required/>
+                    <textarea type='text' name='message' placeholder={t("contact.textarea")} required/>
             </div>
-                <button  type='submit' className="send-button">Envoyer</button>
+                <button  type='submit' className="send-button">{t("contact.button")}</button>
                 <input type="hidden" name="a_password"  tabIndex="-1" autoComplete="off"/>
             <ToastContainer />
         </form>

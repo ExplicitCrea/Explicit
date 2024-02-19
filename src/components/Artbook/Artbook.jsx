@@ -86,9 +86,9 @@ export const Artbook = () => {
         </Link>
 
 
-        <div className="the-guill">
+        <Link to='/theguill' className="the-guill">
           <img src={theguill} alt="The Guill" width={600} height={239} />
-        </div>
+        </Link>
 
 
         <Link to="/potatoz" className="potatoz">
