@@ -35,7 +35,6 @@ const StyledPage = styled.section`
   }
 
   .container {
-    border: 5px solid red;
     max-width: 1825px;
     max-height: 1167px;
     display: grid;
@@ -46,7 +45,6 @@ const StyledPage = styled.section`
     grid-template-columns: 22% 35% 27% 14%;
     grid-template-rows: 28% 13% 58%;
     gap: 0.8%;
-    overflow: hidden;
 
     @media screen and (min-width: 2000px) {
       max-width: 2441px;
@@ -72,7 +70,7 @@ const StyledPage = styled.section`
 
       img {
         width: 100%;
-        height: 100%;
+        height: auto;
         object-fit: cover;
       }
       @media screen and (max-width: 1000px) {
@@ -132,6 +130,9 @@ const StyledPage = styled.section`
       }
     }
     .paragraph-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         grid-row: 1 / span 1;
         grid-column: 2 / span 1;
         background-color: rgba(0, 0, 0, 0.6);
@@ -141,13 +142,15 @@ const StyledPage = styled.section`
           grid-row: 4;
           grid-column: 1 / span 4;
           width: 80%;
-          margin: 0 auto;
+          margin: auto;
+          padding: 8px;
+          border-radius: 5vw;
         }
 
       p {
         margin: 0 auto;
         font-family: Lexend;
-        font-size: clamp(13px, 1.2vw, 22px);
+        font-size: clamp(11.7px, 1.17vw, 22px);
         padding: 8px;
         text-align: center;
         color: white;
@@ -164,8 +167,8 @@ const StyledPage = styled.section`
         } 
         @media screen and (max-width: 1000px) {
           height: 100%;
-          padding: 5px;
-          font-size: clamp(8px, 3.1vw, 31px);
+          padding: 2px;
+          font-size: clamp(9px, 3.2vw, 32px);
         }
     }
   }
@@ -180,7 +183,6 @@ const StyledPage = styled.section`
       height: 100%;
       grid-row: 2;
       grid-column: 2 / span 1;
-      margin-bottom: 10px;
 
       @media screen and (max-width: 1000px) {
         grid-row: 3;
@@ -188,22 +190,24 @@ const StyledPage = styled.section`
       }
       .white-star {
         width: auto;
-        height: 80%;
+        height: 6vw;
         object-fit: cover;
-        margin-bottom: 0.7vw;
+        margin-bottom: 1.5vw;
         @media screen and (max-width: 1000px) {
-          width: 10vw;
+          width: 15vw;
           height: auto;
+          margin-bottom: 0;
         }
       }
       .white-logo {
         width: auto;
-        height: 80%;
+        height: 6vw;
         object-fit: cover;
-        margin-bottom: 0.7vw;
+        margin-bottom: 1.5vw;
         @media screen and (max-width: 1000px) {
-          width: 25vw;
+          width: 30vw;
           height: auto;
+          margin-bottom: 0;
         }
       }
     }
@@ -227,12 +231,12 @@ const StyledPage = styled.section`
     }
   }
   .carousel-container {
-    width: 100%;
+    width: 105%;
     height: auto;
     grid-row: 3;
     grid-column: 2 / span 2;
     position: relative;
-    top: -15px;
+    top: -20px;
 
     @media screen and (max-width: 1000px) {
       width: 90%;
