@@ -12,16 +12,14 @@ import background from '../../assets/theguill/background.png'
 import planning from '../../assets/theguill/planning.png'
 import razer from '../../assets/theguill/razer.png'
 import discord from '../../assets/theguill/discord.png'
+import { useTranslation } from "react-i18next";
 
 export const TheGuill = () => {
+const { t } = useTranslation();
 return (
     <StyledTheGuill>
         <p>
-            Nous sommes ravis d'avoir collaboré avec le streamer The Guill. 
-            Notre équipe a conçu et réalisé son stream pack pour sa chaîne Twitch. 
-            Des graphismes, des animations captivantes et une identité visuelle unique ont été intégrés pour offrir à ses spectateurs une expérience immersive. 
-            Ensemble, nous avons façonné un univers visuel qui reflète le style distinctif de Guill et renforce l'impact visuel de sa chaîne !"
-            et renforce l'impact visuel de sa chaine !
+            {t("guill.paragraph")}
         </p>
         <div className='container'>
             <div className='video'>
