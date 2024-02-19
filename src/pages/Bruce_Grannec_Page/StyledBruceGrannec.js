@@ -190,7 +190,7 @@ const StyledPage = styled.section`
         object-fit: cover;
         margin-bottom: 1.5vw;
         @media screen and (max-width: 1000px) {
-          width: 15vw;
+          width: 14vw;
           height: auto;
           margin-bottom: 0;
         }
