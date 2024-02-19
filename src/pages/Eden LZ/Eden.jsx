@@ -11,11 +11,13 @@ import com from '../../assets/eden-lz/com.png'
 import chapitre from '../../assets/eden-lz/chapitre.png'
 import chapitres from '../../assets/eden-lz/chapitre1.png'
 import bloc from '../../assets/eden-lz/bloc.png'
+import { useTranslation } from "react-i18next";
 
 export const Eden = () => {
+const { t } = useTranslation();
 return (
     <StyledEden>
-      <h1>MONTAGE VIDEO</h1>
+      <h1>{t("eden.title")}</h1>
       <div className='container'>
         <img src={photo} alt='photo'/>
         <img src={logo} alt='logo' className='logo'/>
@@ -29,11 +31,10 @@ return (
         <img src={bloc} alt='bloc' className='bloc-img'/>
       <div class="text-overlay">
         <p>
-          Nous sommes fiers d'avoir collaboré avec le YouTuber Eden LZ dans la réalisation de montages vidéo et 
+          {t("eden.paragraphe")}
         </p>
         <p className='long'>
-          d'effets de motion. 
-          Notre travail pour Eden LZ reflète notre engagement envers la qualité visuelle et notre capacité à donner vie à des concepts à travers des montages vidéo.
+          {t("eden.paragraphes")}
         </p>
       </div>
         <img src={barre}alt='barre'className='barre-img'/>
