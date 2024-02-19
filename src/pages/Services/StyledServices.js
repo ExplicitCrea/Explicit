@@ -2,36 +2,48 @@ import styled from 'styled-components'
 
 const StyledServices = styled.main`
     background-color: #191C2E;
-    padding-top: 6vw;
+    padding: 6vw 0 14vw 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-
-    h1,p{
-        font-family: lexend;
-        color: #FFFFFF;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    .global-container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* max-width: 1440px;
         z-index: 1;
+        overflow: hidden; */
+        h1,p{
+            font-family: lexend;
+            color: #FFFFFF;
+            z-index: 1;
+        }
+    
+        p{
+            font-size: 1.2vw;
+            color: #FFFFFF;
+            font-weight: 500;
+        }
+    
+        .title{
+            font-size: 6vw;
+            color: #634EFF;
+            margin: 24px 0 0 0;
+            text-align: center;
+        }
+    
+        .description{
+            margin: 0 0 48px 0;
+            text-align: center;
+            max-width: 75vw;
+        }
     }
 
-    p{
-        font-size: 1.2vw;
-        color: #FFFFFF;
-        font-weight: 500;
-    }
-
-    .title{
-        font-size: 6vw;
-        color: #634EFF;
-        margin: 24px 0 0 0;
-        text-align: center;
-    }
-
-    .description{
-        margin: 0 0 48px 0;
-        text-align: center;
-        max-width: 75vw;
-    }
 
     .linear-background{
         position: absolute;
@@ -54,7 +66,7 @@ const StyledServices = styled.main`
     }
 
     @media (max-width: 900px) {
-        padding-top: 60px;
+        padding: 60px 0 120px 0;
         .title{
             font-size: 36px;
         }

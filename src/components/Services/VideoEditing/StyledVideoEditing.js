@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 const StyledVideoEditing = styled.section`
     width: 100%;
+    height: 40vw;
     padding: 0 36px;
     display: flex;
     justify-content: space-between;
@@ -50,12 +51,15 @@ const StyledVideoEditing = styled.section`
         }
 
         .title-container{
+            width: 90%;
             display: flex;
             align-items: center;
             margin: 3vw 0 0 4vw;
             .image-wrapper{
                 width: 5vw;
                 height: 5vw;
+                min-width: 5vw;
+                min-height: 5vw;
                 border-radius: 50%;
                 overflow: hidden;
                 img{
@@ -64,6 +68,7 @@ const StyledVideoEditing = styled.section`
                 }
             }
             .text-title{
+                width: 83%;
                 margin-left: 0.6vw;
                 h2{
                     margin: 0;
@@ -84,6 +89,7 @@ const StyledVideoEditing = styled.section`
         flex-direction: column;
         align-items: center;
         padding: 0 24px;
+        height: unset;
 
         .text-container{
             width: 100%;
@@ -109,17 +115,28 @@ const StyledVideoEditing = styled.section`
             flex-direction: column;
             align-items: center;
             .title-container{
+                width: 90%;
                 margin: 24px 0 0 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
                 .image-wrapper{
                     width: 48px;
                     height: 48px;
                 }
                 .text-title{
+                    display: flex;
+                    flex-direction: column-reverse;
+                    align-items: center;
+                    justify-content: center;
                     h2{
-                        font-size: 18px;
+                        font-size: 13px;
+                        text-align: center;
+                        height: 60px;
                     }
                     p{
-                        font-size: 13px;
+                        font-size: 18px;
                     }
                 }
             }

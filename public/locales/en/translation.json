@@ -67,5 +67,47 @@
       "title": "Keep up to date with all the latest news!",
       "placeholder": "Enter your e-mail!"
     }
+  },
+  "wrldmag": {
+    "paragraph": "We're proud to have collaborated with WRLD Mag, a media outlet specializing in music culture across the Atlantic and in France. Our team was fortunate to have the opportunity to shoot videos together, develop a visual identity and produce content. Together, we brought WRLD Mag's artistic vision to life, creating a memorable and immersive visual experience for their music-loving audience."
+  },
+  "branding": {
+    "description": "Entrust your visual presence to our creative service. Whether you represent an innovative company or are self-employed, our expertise will shape your values with unique graphic directions."
+  },
+  "illustration": {
+    "description": "Would you like to take personalisation a step further? Our artists are ready to respond to your requests for all types of illustrations, with customised styles."
+  },
+  "stupeflip": {
+    "title": "We can give them life too!"
+  },
+  "graphics": {
+    "title": "Graphic asset",
+    "description": "For our live content creators, we have a whole range of graphics tools adapted to streaming, to help you dress up your content, from the simple waiting screen to the smallest formatting details."
+  },
+  "threed": {
+    "description": "Made-to-measure 3-dimensional creations, whether it's character design, scenery or the environment, all your ideas are within reach, thanks to our services."
+  },
+  "audio": {
+    "title": "Sound business",
+    "description": "As a complement to all our visual production services, we also had a sensitive alternative with auditory proposals such as dubbing, voice-overs or the production of personalised audio tracks.",
+    "conclusion": "You can also contact us by e-mail"
+  },
+  "pg": {
+    "description": "Explicit supports content creator PROFESSION GANGSTER in its artistic direction."
+  },
+  "jo": {
+    "description": "Explore the essence of time through the creative eyes of Explicit. Our collaboration with the Paris 2024 event has enabled us to create a captivating 3D video, a one-minute journey through time and worlds. From wrestling gladiators to the splendours of the Roman Empire, from the 1920s to the present day, each world is brought to life through our mastery of 3D. Immerse yourself in a unique visual immersion that transcends time and space, bringing an epic dimension to the Paris 2024 merchandising project."
+  },
+  "gg": {
+    "description": "We are honoured to have contributed to the realisation of a Minecraft e-sports tournament, organised by The Guill and offering a cash prize of 12,000 euros. Explicit brought its creativity to bear by developing the art direction and designing the stages for the event. Every detail was carefully orchestrated to create an immersive visual experience, adding a unique dimension to the tournament!"
+  },
+  "potatoz": {
+    "description": "We're delighted to have worked with streamer Potatoz. Our team created bespoke visuals for his Twitch channel, smooth transitions and a captivating introductory video. Each of these elements has been carefully designed to reflect Potatoz's style."
+  },
+  "paltay": {
+    "description": "We're proud to have worked with streamer and YouTuber Paltay. Our team brought his Twitch channel to life by creating bespoke scenes, complete with illustrations and creative assets. Each element has been carefully designed to add a unique and immersive touch to his content, giving Paltay and his community a truly unique visual experience."
+  },
+  "jd": {
+    "description": "Immerse yourself in a world of Chinese imperial inspiration, where stories come to life thanks to Explicit's expertise in illustration and animation. In this captivating video, the result of a meeting between LeGrandJD and one of the members of the legendary music group Stupeflip, Explicit has brought to life an adventure straight from Julien Barthélémy's imagination. Discover the astonishing story of an emperor and a painter put to the test by the creation of a crab painting."
   }
 }
