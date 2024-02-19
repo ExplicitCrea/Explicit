@@ -20,7 +20,7 @@ export const Olympics = () => {
                 <img className='deco' src={deco1} alt="decoration"/>
             </div>
             <div className='video'>
-                <ReactPlayer width='100%' height='100%' url='https://www.youtube.com/shorts/srydA31W3wI' />
+                <ReactPlayer width='100%' height='100%' url='https://youtu.be/CvuDmcbTggg' />
             </div>
             <div className='text-container'>
                 <p>{t('jo.description')}</p>
