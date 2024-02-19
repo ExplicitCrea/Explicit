@@ -2,15 +2,16 @@ import StyledFooter from './StyledFooter'
 import background from './../../../assets/footer.png'
 import logo from '../../../assets/logo-header.png'
 import { Link } from 'react-router-dom'
+import { useTranslation } from "react-i18next";
 
 export const Footer = () => {
-
+const { t } = useTranslation();
 return (
       <StyledFooter>
             <img className='background' src={background} alt='footer'/>
             <div className='column'>
                   <Link to='/history' className='link history'> 
-                        Notre Histoire
+                        {t("footer.title")}
                   </Link>
                   <Link to='/' className='link Shop'> 
                         Shop
@@ -34,12 +35,12 @@ return (
                         Services
                   </Link>
                   <Link to="/faq" className='link Help'>
-                        Aide
+                        {t("footer.title2")}
                   </Link>
             </div>
             <div className='column'>
                   <Link to="/legal-disclaimer" className='link Legal Disclaimer'>
-                        Mention légal
+                        {t("footer.title3")}
                   </Link>
                   <Link className='link CGU'>
                         CGU CGV
