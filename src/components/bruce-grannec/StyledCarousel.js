@@ -13,11 +13,14 @@ const StyledCarousel = styled.div`
 
   .arrow {
     position: absolute;
-    width: clamp(40px, 4vw, 85px);
+    width: clamp(40px, 4vw, 55px);
     height: auto;
     color: white;
     cursor: pointer;
 
+    @media screen and (min-width: 2000px) {
+      width: clamp(40px, 4vw, 80px);
+    }
     @media screen and (max-width: 1000px) {
       width: 7vw;
     }
@@ -65,8 +68,11 @@ const StyledCarousel = styled.div`
       cursor: pointer;
       background-color: red;
       height: auto;
-      width: clamp(15px, 1.2vw, 50px);
-      
+      width: clamp(15px, 1.2vw, 18px);
+
+      @media screen and (min-width: 2000px) {
+      width: clamp(18px, 1.2vw, 25px);
+    }
       @media screen and (max-width: 1000px) {
         width: clamp(9px, 2.2vw, 15px);
       }

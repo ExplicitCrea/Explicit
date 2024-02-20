@@ -35,20 +35,22 @@ const StyledPage = styled.section`
   }
 
   .container {
-    max-width: 1825px;
-    max-height: 1167px;
+    max-width: 1600px;
+    max-height: 850px;
     display: grid;
     width: 95vw;
     height: auto;
     justify-content: center;
     position: relative;
-    grid-template-columns: 22% 35% 27% 14%;
-    grid-template-rows: 28% 13% 58%;
-    gap: 0.8%;
+    grid-template-columns: 18% 35% 25% 12%;
+    grid-template-rows: 28% 13% 57%;
+    row-gap: 0.8%;
+    column-gap: 3.3%;
+    overflow: hidden;
 
     @media screen and (min-width: 2000px) {
-      max-width: 2441px;
-      max-height: 1566px;
+      max-width: 2048px;
+      max-height: 1130px;
     }
 
     @media screen and (max-width: 1000px) {
@@ -63,7 +65,6 @@ const StyledPage = styled.section`
 
     .label-on-side {
       width: auto;
-      max-height: 100%;
       grid-row: 1 / span 3;
       grid-column: 1 / span 1;
 
@@ -149,17 +150,16 @@ const StyledPage = styled.section`
       p {
         margin: 0 auto;
         font-family: Lexend;
-        font-size: clamp(11.7px, 1.17vw, 22px);
+        font-size: clamp(10px, 1.0vw, 17px);
         padding: 8px;
         text-align: center;
         color: white;
         margin: 0 auto;
-
         width: 100%;
         height: auto;
 
         @media screen and (min-width: 2000px) {
-          font-size: 1.15vw;
+          font-size: clamp(19px, 1.1vw, 22px);
         }
         @media screen and (max-width: 1000px) {
           height: 100%;
@@ -186,31 +186,51 @@ const StyledPage = styled.section`
       }
       .white-star {
         width: auto;
-        height: 6vw;
+        height: 4.7vw;
         object-fit: cover;
-        margin-bottom: 1.5vw;
+        margin-bottom: 1.2vw;
+        max-height: 111px;
+        min-height: 30px;
+
+        @media screen and (max-width: 1300px) {
+          margin-bottom: 1.4vw;
+        }
+
         @media screen and (max-width: 1000px) {
           width: 14vw;
           height: auto;
           margin-bottom: 0;
         }
+        @media screen and (min-width: 2000px) {
+          margin-bottom: 0.9vw;
+        }
       }
       .white-logo {
         width: auto;
-        height: 6vw;
+        height: 4.7vw;
         object-fit: cover;
-        margin-bottom: 1.5vw;
+        margin-bottom: 1.2vw;
+        max-height: 111px;
+        min-height: 30px;
+
+        @media screen and (max-width: 1300px) {
+          margin-bottom: 1.4vw;
+        }
+
         @media screen and (max-width: 1000px) {
           width: 30vw;
           height: auto;
           margin-bottom: 0;
+        }
+        @media screen and (min-width: 2000px) {
+          margin-bottom: 0.9vw;
         }
       }
     }
   }
 
   .event-container {
-    width: 100%;
+    width: 80%;
     height: auto;
     grid-row: 1 / span 2;
     grid-column: 3 / span 2;
@@ -227,7 +247,7 @@ const StyledPage = styled.section`
     }
   }
   .carousel-container {
-    width: 105%;
+    width: 89%;
     height: auto;
     grid-row: 3;
     grid-column: 2 / span 2;
