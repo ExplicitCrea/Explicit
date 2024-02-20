@@ -29,15 +29,14 @@ return (
       <div className='containers'>
         <img src={Logo} alt='Logo' className='logo-img'/>
         <img src={bloc} alt='bloc' className='bloc-img'/>
-      <div class="text-overlay">
+        <img src={barre}alt='barre'className='barre-img'/>
+      </div>
+      <div className="text-overlay">
         <p>
           {t("eden.paragraphe")}
-        </p>
-        <p className='long'>
           {t("eden.paragraphes")}
         </p>
-      </div>
-        <img src={barre}alt='barre'className='barre-img'/>
+      <div/>
       </div>
       <div className='chapitre'>
         <h2>MOTION</h2>

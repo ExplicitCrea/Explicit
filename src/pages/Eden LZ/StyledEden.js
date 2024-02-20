@@ -50,22 +50,22 @@ h1{
     top: 8vw;
     width: 50%;
     height: 100%;
-}
+    }
 
-    .container img,
-    .container.logo {
-        border-radius: 45px;
-        width: 100%;
-        height: 42%;
-}
+        .container img,
+        .container.logo {
+            border-radius: 45px;
+            width: 100%;
+            height: 42%;
+    }
 
-    .container img:last-child {
-        margin-top: 7%;
-}
+        .container img:last-child {
+            margin-top: 7%;
+    }
 
-    .logo {
-        margin: -11% -7%;
-}
+        .logo {
+            margin: -11% -7%;
+    }
 
 .containers {
     position: absolute;
@@ -76,44 +76,39 @@ h1{
     align-items: flex-start;
 }
 
-    img.logo-img {
-        width: 14%;
-        position: relative;
-        height: auto;
-        top: 11vw;
-}
+        img.logo-img {
+            width: 14%;
+            position: relative;
+            height: auto;
+            top: 11vw;
+    }
 
-    .bloc-img {
-        width: 40%;
-        height: 30vw;
-}
+        .bloc-img {
+            width: 40%;
+            height: 30vw;
+    }
 
-    .barre-img {
-        position: absolute;
-        bottom: 90px;
-        width: 39%;
-        height: 7vw;
-}
+        .barre-img {
+            position: absolute;
+            bottom: 90px;
+            width: 39%;
+            height: 7vw;
+    }
 
     .text-overlay {
         position: absolute;
-        top: 62%;
-        left: 37%;
-        transform: translate(-50%, -50%);
+        top: 85%;
+        left: -1%;
+        transform: translate(14%, -44%);
         color: black;
         text-align: justify;
-}
+    }
 
-    .text-overlay p {
-        font-size: 18px;
-        font-family: 'lexend';
-        width: 29%;
-        margin: 0px -20px;
-}
-
-    p.long {
-        width: 50%;
-}
+        .text-overlay p {
+            font-size: 11px;
+            font-family: 'lexend';
+            width: 21%;
+        }
 
     .chapitre {
         display: flex;
