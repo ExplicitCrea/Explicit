@@ -16,7 +16,7 @@ min-height: 100vh;
     position: absolute;
     top: 0px;
     left: 0px;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     z-index: -1;
 }
@@ -67,48 +67,53 @@ h1{
             margin: -11% -7%;
     }
 
-.containers {
-    position: absolute;
-    left: 150px;
-    bottom: -7vw;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
+    .containers {
+        position: absolute;
+        left: -47%;
+        bottom: -85px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-        img.logo-img {
-            width: 14%;
+        .logo-img {
+            width: 12%;
             position: relative;
             height: auto;
-            top: 11vw;
-    }
-
-        .bloc-img {
-            width: 40%;
-            height: 30vw;
-    }
+            top: -245px;
+            left: -7%;
+    }   
 
         .barre-img {
             position: absolute;
-            bottom: 90px;
-            width: 39%;
-            height: 7vw;
-    }
+            bottom: 58px;
+            width: 25%;
+            height: 30%;
+        }
+}
 
     .text-overlay {
+        max-height: 30vh;
+        top: 82%;
         position: absolute;
-        top: 85%;
-        left: -1%;
-        transform: translate(14%, -44%);
-        color: black;
-        text-align: justify;
-    }
+        left: 10%;
+        width: 34vw;
+        margin: 0px auto;
+        border: 1px solid #333;
+        padding: 6px;
+        border-radius: 14px;
+        color: aliceblue;
+        text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
+        background-color: rgb(255 255 255 / 50%);
+        backdrop-filter: blur(50px);
+        overflow: hidden;
 
-        .text-overlay p {
-            font-size: 11px;
-            font-family: 'lexend';
-            width: 21%;
+        p{
+            width: auto;
+            font-family: lexend;
+            font-size: 16px;
+            text-align: justify;
         }
+    }
 
     .chapitre {
         display: flex;
@@ -131,28 +136,25 @@ h1{
     }
 
         .img-top-right {
-            top: 32vw;
-            right: 145px;
-            width: 14%;
+            top: 66%;
+            right: 78px;
+            width: 15%;
     }
 
         .img-middle {
             top: 80%;
-            left: 69%;
-            width: 16%;
-    }
+            left: 70%;
+            width: 15%;
+        }
 
         .img-bottom {
-            bottom: 4px;
-            left: 53%;
-            width: 17%;
-    }
+            bottom: 10px;
+            left: 54%;
+            width: 16%;
+}
 
-@media (max-width: 1000px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 
+@media (max-width: 900px) {
     .background{
         height: 100%;
         width: auto;
@@ -167,6 +169,7 @@ h1{
     }
 
     .video{
+        position: absolute;
         width: 90%;
         margin: auto 0px;
     }
@@ -175,6 +178,7 @@ h1{
         display: none; 
 }
         img.logo{
+            position: relative;
             width: 100%;
             height: 60vw;
             margin-top: 5px;
@@ -194,32 +198,25 @@ h1{
             width: 76%;
         }
 
-        .text-overlay {
-            position: absolute;
-            top: 66%;
-            left: 42%;
-            transform: translate(-50%, -50%);
-            color: black;
-            text-align: justify;
+    .text-overlay {
+        top: 90%;
+        height: auto;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        
+        p {
+            font-size: 11px;
         }
-
-        .text-overlay p {
-            font-size: 9px;
-            width: 65%;
-            margin: 0px 0px 6px -26px;
-        }
-
-        p.long {
-            width: 98%;
-            margin: -7px 0px 24px -26px;
-        }
-
-        img.logo-img {
-            width: 46%;
-            left: 9vw;
-            height: auto;
-            top: 33vw;
-        }
+    }
+        .containers{
+            .logo-img {
+                width: 50%;
+                left: -25vw;
+                height: auto;
+                top: -61vw;
+            }
+}
 
     .chapitre img:not(.img-bottom) {
         display: none;
@@ -227,8 +224,8 @@ h1{
 
         .img-bottom {
             left: 42%;
-            top: 117vw;
-            width: 57%;
+            top: 116vw;
+            width: 45%;
     }
 }
 `

@@ -28,7 +28,6 @@ return (
       </div>
       <div className='containers'>
         <img src={Logo} alt='Logo' className='logo-img'/>
-        <img src={bloc} alt='bloc' className='bloc-img'/>
         <img src={barre}alt='barre' className='barre-img'/>
       </div>
       <div className="text-overlay">
