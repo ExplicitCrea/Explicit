@@ -20,15 +20,15 @@ return (
       <h1>{t("eden.title")}</h1>
       <div className='container'>
         <img src={photo} alt='photo'/>
-        <img src={logo} alt='logo' className='logo'/>
-        <img src={photos} alt='photo'/>
+        <img src={logo}  className='logo'/>
+        <img src={photos} />
       </div>
       <div className='video'>
         <ReactPlayer width='100%' height='100%' url='https://youtu.be/4vF-72KeuKw' />
       </div>
       <div className='containers'>
-        <img src={Logo} alt='Logo' className='logo-img'/>
-        <img src={barre}alt='barre' className='barre-img'/>
+        <img src={Logo}  className='logo-img'/>
+        <img src={barre} className='barre-img'/>
       </div>
       <div className="text-overlay">
         <p>
@@ -39,11 +39,11 @@ return (
       </div>
       <div className='chapitre'>
         <h2>MOTION</h2>
-        <img src={com} alt='com' className='img-top-right'/>
-        <img src={chapitre} alt='chapitre' className='img-middle'/>
-        <img src={chapitres} alt='chapitre' className='img-bottom'/>
+        <img src={com} className='img-top-right'/>
+        <img src={chapitre}  className='img-middle'/>
+        <img src={chapitres} className='img-bottom'/>
       </div>
-      <img src={background} alt='background' className='background' />
+      <img src={background} className='background' />
     </StyledEden>
   )
 }
