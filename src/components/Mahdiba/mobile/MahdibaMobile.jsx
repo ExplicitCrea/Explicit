@@ -17,7 +17,7 @@ export const MahdibaMobile = () => {
           <ReactPlayer
             width="100%"
             height="100%"
-            url="https://www.youtube.com/watch?v=LXb3EKWsInQ"
+            url="https://youtu.be/gHm0yFf-RBE"
           />
         </div>
         <img className="glasses" src={glasses} alt="Lunette de soleil" />
