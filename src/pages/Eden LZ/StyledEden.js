@@ -209,13 +209,14 @@ h1{
             font-size: 11px;
         }
     }
-        .containers{
-            .logo-img {
-                width: 50%;
-                left: -25vw;
-                height: auto;
-                top: -61vw;
-            }
+
+    .containers{
+        .logo-img {
+            width: 50%;
+            left: -25vw;
+            height: auto;
+            top: -61vw;
+        }
 }
 
     .chapitre img:not(.img-bottom) {
