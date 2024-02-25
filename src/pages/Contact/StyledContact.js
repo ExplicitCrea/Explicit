@@ -129,7 +129,7 @@ form{
 
 
 @media screen and (max-width: 1000px) {
-    padding: 92px 0 0 0;
+    padding: 92px 0 200px 0;
     form {
         display: flex;
         flex-direction: column;

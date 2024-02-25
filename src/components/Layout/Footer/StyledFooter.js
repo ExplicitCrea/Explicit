@@ -50,7 +50,7 @@ const StyledFooter = styled.footer`
               width: 17%;
               
           a{
-              font-size: 13px;
+              font-size: 10px;
               
     }
   }
@@ -61,8 +61,9 @@ const StyledFooter = styled.footer`
     }
   }
   .background{
-    height: 550px;
-    width: 100%;
+    height: auto;
+    width: 400%;
+    left: calc(0px - 200%);
   }
 }
 

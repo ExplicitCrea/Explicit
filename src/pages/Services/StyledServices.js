@@ -67,29 +67,27 @@ const StyledServices = styled.main`
 
     @media (max-width: 900px) {
         padding: 60px 0 120px 0;
-        .title{
-            font-size: 36px;
-        }
+        .global-container{
+            .title{
+                font-size: 36px;
+            }
 
-        h1{
-            font-size: 36px;
-        }
-
-        p{
-            font-size: 14px;
-            text-align: justify;
-            max-width: 550px;
-        }
-
-        .description{
-            max-width: unset;
-            padding: 0 24px;
-            font-size: 13px;
-            text-align: justify;
-            max-width: 550px;
-        }
-        .video-container-background{
-            top: 250px;
+            p{
+                font-size: 14px;
+                text-align: justify;
+                max-width: 550px;
+            }
+    
+            .description{
+                max-width: unset;
+                padding: 0 24px;
+                font-size: 13px;
+                text-align: justify;
+                max-width: 550px;
+            }
+            .video-container-background{
+                top: 250px;
+            }
         }
     }
 `

@@ -40,7 +40,7 @@ const StyledProduction = styled.section`
 
   @keyframes closeDoor {
     0%{
-      margin-bottom: 10vw;
+      margin-bottom: 15vw;
     }
     100%{
       margin-bottom: 0;
@@ -51,7 +51,7 @@ const StyledProduction = styled.section`
   width: 100%;
   position: relative;
   z-index: 2;
-  margin-bottom: 10vw;
+  margin-bottom: 15vw;
   ${props => props.isVisible === false && props.isSmallScreen === false && css`
     animation: closeDoor cubic-bezier(0.71, -0.01, 0.4, 0.97) 600ms forwards;
   `}
@@ -70,6 +70,10 @@ const StyledProduction = styled.section`
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    .middle{
+      width: 53%!important;
+      height: auto!important;
+    }
     img{
       width: 45%;
       height: auto;
