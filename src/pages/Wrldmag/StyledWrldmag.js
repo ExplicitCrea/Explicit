@@ -94,9 +94,9 @@ const StyledWrldmag = styled.section`
       }
         .wrldmag-container {
           position: absolute;
-          z-index: 5;
+          z-index: 1;
           width: 100%;
-          top: 8vw;
+          top: 4vw;
           img {
             width: 100%;
             height: auto;

@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 const StyledPotatoz = styled.section`
     background: url('/assets/potatoz/background.png') no-repeat center center fixed;
+    position: relative;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -10,6 +11,13 @@ const StyledPotatoz = styled.section`
     padding-top: 80px;
     overflow: hidden;
 
+    .background{
+        position: absolute;
+        width: 80%;
+        z-index: 0;
+        max-width: 1100px;
+    }
+
     .wrapper-title{
         width: 100%;
         height: 150px;
@@ -17,6 +25,7 @@ const StyledPotatoz = styled.section`
         display: flex;
         align-items: center;
         justify-content: center;
+        z-index: 1;
         .title {
             max-width: 950px;
             width: 60%;
@@ -27,6 +36,7 @@ const StyledPotatoz = styled.section`
     .container{
         display: flex;
         flex-direction: column;
+        z-index: 1;
         .video{
             width: 100%;
             display: flex;
@@ -35,16 +45,16 @@ const StyledPotatoz = styled.section`
             .wrapper{
                 position: relative;
                 width: 70%;
-                
+                max-width: 900px;
                 aspect-ratio: 16 / 9;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 .deco{
-                    max-width: 1641px;
+                    max-width: 200px;
                     position: absolute;
-                    top: -133px;
-                    left: -58vw;
+                    top: 21%;
+                    left: -15%;
                     width: 111vw;
                     height: auto;
                 }
@@ -55,6 +65,7 @@ const StyledPotatoz = styled.section`
             justify-content: center;
             align-items: center;
             padding: 36px 10%;
+            z-index: 1;
             img{
                 height: 150px;
                 width: auto;
@@ -64,7 +75,7 @@ const StyledPotatoz = styled.section`
                 display: flex;
                 justify-content: center;
                 width: auto;
-                max-width: 1200px;
+                max-width: 1100px;
                 font-size: 18px;
                 font-family: lexend;
                 font-weight: 400;
@@ -73,16 +84,7 @@ const StyledPotatoz = styled.section`
                 margin: 0 0 0 12px;
                 padding: 24px 24px;
                 overflow: auto;
-            }
-        }
-    }
-
-    @media (min-width: 1500px) {
-        .container{
-            .wrapper{
-                .deco{
-                    left: -850px!important;
-                }
+                text-align: center;
             }
         }
     }
@@ -116,6 +118,12 @@ const StyledPotatoz = styled.section`
 
         .wrapper-title{
             width: 180%;
+        }
+
+        .background{
+            width: auto;
+            height: 80%;
+            z-index: 0;
         }
     }
 `

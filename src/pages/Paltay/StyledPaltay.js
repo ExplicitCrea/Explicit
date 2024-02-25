@@ -8,6 +8,7 @@ const StyledPaltay = styled.section`
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    overflow: hidden;
 
     .background {
         position: absolute;
@@ -43,22 +44,6 @@ const StyledPaltay = styled.section`
         margin-top: 17vw;
     }
 
-    .picture{
-        position: absolute;
-        bottom: -42vw;
-        width: 50%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #181A1B;
-        border-radius: 12px;
-        padding: 60px;
-        img{
-            width: 10%;
-            height: auto;
-        }
-    }
-
     @media (max-width: 900px) {
         overflow: hidden;
         background-color: #181A1B;
@@ -71,13 +56,6 @@ const StyledPaltay = styled.section`
             left: unset;
             z-index: 0;
             padding-top: 60px;
-        }
-        .picture{
-            width: 80%;
-            position: static;
-            z-index: 1;
-            padding: 12px;
-            margin: 10vw;
         }
         .video{
             width: 80%;

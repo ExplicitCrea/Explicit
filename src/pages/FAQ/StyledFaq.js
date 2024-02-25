@@ -8,8 +8,12 @@ const StyledFaq = styled.div`
     z-index: 0;
     overflow: hidden;
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     .wrapper{
-        width: 100%;
+        width: 80%;
+        max-width: 900px;
         margin: 0px 0px 0px 6px;
     }
         .background-filter {

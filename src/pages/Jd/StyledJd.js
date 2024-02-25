@@ -35,7 +35,7 @@ const StyledJd = styled.section`
             position: absolute;
             top: 0;
             left: 0;
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.6);
             z-index: 0;
         }
         .carpentry{
@@ -98,6 +98,7 @@ const StyledJd = styled.section`
             .poster1{
                 width: 50%;
                 height: auto;
+                box-shadow: 0px 0px 10px #000000;
             }
             .sub-deco{
                 width: 100%;
@@ -107,6 +108,7 @@ const StyledJd = styled.section`
                 img{
                     width: 50%;
                     height: auto;
+                    box-shadow: 0px 0px 10px #000000;
                 }
             }
         }

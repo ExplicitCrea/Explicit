@@ -11,8 +11,8 @@ const StyledGg = styled.section`
     position: relative;
 
     .container{
-        max-width: 1232px;
-        max-height: 895px;
+        max-width: 1100px;
+        max-height: 616px;
         width: 80vw;
         height: 40vw;
         display: flex;
