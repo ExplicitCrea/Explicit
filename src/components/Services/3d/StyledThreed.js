@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const StyledThreed = styled.section`
   width: 123%;
   height: 82vw;
-  background: url('/assets/services/3d/background.png') no-repeat center center;
+  background: url('/assets/services/3d/background.webp') no-repeat center center;
   background-size: 110% auto;
   padding: 10vw 0;
   display: flex;

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import StyledHeader from './StyledHeader'
-import logo from '../../../assets/logo-header.png'
-import logoMobil from '../../../assets/star-header.png'
+import logo from '../../../assets/logo-header.webp'
+import logoMobil from '../../../assets/star-header.webp'
 
 import gb from '../../../assets/gb.svg'
 import fr from '../../../assets/fr.svg'

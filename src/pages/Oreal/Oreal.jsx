@@ -1,14 +1,14 @@
 import ReactPlayer from 'react-player'
 import StyledOreal from './StyledOreal'
 import logoBlack from '../../assets/oreal/logo-black.png'
-import logoWhite from '../../assets/oreal/logo-white.png'
-import prompt1 from '../../assets/oreal/prompt-1.jpg'
-import prompt2 from '../../assets/oreal/prompt-2.jpg'
-import sketch from '../../assets/oreal/sketch.png'
-import timeline from '../../assets/oreal/timeline.jpg'
-import waterSaver3d from '../../assets/oreal/water-saver-3d.png'
-import waterSaverLight from '../../assets/oreal/water-saver-light.png'
-import waterSaverPlan from '../../assets/oreal/water-saver-plan.png'
+import logoWhite from '../../assets/oreal/logo-white.webp'
+import prompt1 from '../../assets/oreal/prompt-1.webp'
+import prompt2 from '../../assets/oreal/prompt-2.webp'
+import sketch from '../../assets/oreal/sketch.webp'
+import timeline from '../../assets/oreal/timeline.webp'
+import waterSaver3d from '../../assets/oreal/water-saver-3d.webp'
+import waterSaverLight from '../../assets/oreal/water-saver-light.webp'
+import waterSaverPlan from '../../assets/oreal/water-saver-plan.webp'
 
 export const Oreal = () => {
     return (

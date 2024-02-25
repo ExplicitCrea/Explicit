@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const StyledOlympics = styled.section`
-    background: url(/assets/olympics/background.png) no-repeat center;
+    background: url(/assets/olympics/background.webp) no-repeat center;
     background-size: cover;
     display: flex;
     align-items: center;

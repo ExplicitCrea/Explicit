@@ -1,9 +1,9 @@
 import StyledGg from './StyledGg'
 import ReactPlayer from 'react-player';
-import logoMiddle from '../../assets/gg/logo-middle.png'
-import logoTop from '../../assets/gg/logo-top.png'
-import gameplay from '../../assets/gg/gameplay.jpg'
-import scene from '../../assets/gg/scene.jpg'
+import logoMiddle from '../../assets/gg/logo-middle.webp'
+import logoTop from '../../assets/gg/logo-top.webp'
+import gameplay from '../../assets/gg/gameplay.webp'
+import scene from '../../assets/gg/scene.webp'
 import { useTranslation } from 'react-i18next';
 
 export const Gg = () => {
@@ -25,7 +25,7 @@ export const Gg = () => {
                     <img className='scene' src={scene} alt="gg-scene"/>
                 </div>
                 <img className='logo-top' src={logoTop} alt="logo gg"/>
-                <img className='background' src='/assets/gg/deco.png' alt="background-gg"/>
+                <img className='background' src='/assets/gg/deco.webp' alt="background-gg"/>
             </div>
         </StyledGg>
     )

@@ -21,7 +21,7 @@ const StyledStupeflip = styled.section`
   }
 
   width: 100%;
-  background: url('assets/services/stupeflip/background.png') center center no-repeat;
+  background: url('assets/services/stupeflip/background.webp') center center no-repeat;
   background-size: cover;
   position: relative;
   z-index: 1;

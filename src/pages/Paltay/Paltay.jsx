@@ -1,6 +1,6 @@
 import ReactPlayer from 'react-player'
 import StyledPaltay from './StyledPaltay'
-import background from '../../assets/paltay/background.png'
+import background from '../../assets/paltay/background.webp'
 import { useTranslation } from 'react-i18next'
 
 export const Paltay = () => {

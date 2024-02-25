@@ -1,10 +1,10 @@
 import ReactPlayer from 'react-player'
 import StyledOlympics from './StyledOlympics'
-import logo from '../../assets/olympics/logo.png'
-import explict from '../../assets/star-header.png'
-import deco from '../../assets/olympics/deco.png'
-import deco1 from '../../assets/olympics/deco1.png'
-import deco2 from '../../assets/olympics/deco2.png'
+import logo from '../../assets/olympics/logo.webp'
+import explict from '../../assets/star-header.webp'
+import deco from '../../assets/olympics/deco.webp'
+import deco1 from '../../assets/olympics/deco1.webp'
+import deco2 from '../../assets/olympics/deco2.webp'
 import { useTranslation } from 'react-i18next'
 
 export const Olympics = () => {

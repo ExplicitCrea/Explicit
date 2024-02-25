@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const StyledWrldmag = styled.section`
   min-height: 100vh;
-  background: url("assets/wrldmag/bg-top.png");
+  background: url("assets/wrldmag/bg-top.webp");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

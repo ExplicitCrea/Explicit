@@ -1,6 +1,6 @@
 import StyledFooter from './StyledFooter'
-import background from './../../../assets/footer.png'
-import logo from '../../../assets/logo-header.png'
+import background from './../../../assets/footer.webp'
+import logo from '../../../assets/logo-header.webp'
 import { Link } from 'react-router-dom'
 import { useTranslation } from "react-i18next";
 

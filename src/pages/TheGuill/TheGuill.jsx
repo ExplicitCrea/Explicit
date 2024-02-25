@@ -1,15 +1,15 @@
 import StyledTheGuill from './StyledTheGuill'
 import ReactPlayer from 'react-player'
-import Icon1 from '../../assets/theguill/icon1.png'
-import Icon2 from '../../assets/theguill/icon2.png'
-import Icon3 from '../../assets/theguill/icon3.png'
-import Icon4 from '../../assets/theguill/icon4.png'
-import Icon5 from '../../assets/theguill/icon5.png'
-import Icon6 from '../../assets/theguill/icon6.png'
-import Logo from '../../assets/theguill/logo.jpg'
-import background from '../../assets/theguill/background.png'
+import Icon1 from '../../assets/theguill/icon1.webp'
+import Icon2 from '../../assets/theguill/icon2.webp'
+import Icon3 from '../../assets/theguill/icon3.webp'
+import Icon4 from '../../assets/theguill/icon4.webp'
+import Icon5 from '../../assets/theguill/icon5.webp'
+import Icon6 from '../../assets/theguill/icon6.webp'
+import Logo from '../../assets/theguill/logo.webp'
+import background from '../../assets/theguill/background.webp'
 import { useTranslation } from "react-i18next";
-import banners from '../../assets/theguill/banners.png'
+import banners from '../../assets/theguill/banners.webp'
 
 export const TheGuill = () => {
 const { t } = useTranslation();

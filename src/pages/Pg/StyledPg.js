@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const StyledPg = styled.section`
     padding: 92px 0 0 0;
-    background-image: url('/assets/pg/background.jpg');
+    background-image: url('/assets/pg/background.webp');
     background-size: cover;
     min-height: 100vh;
     overflow: hidden;

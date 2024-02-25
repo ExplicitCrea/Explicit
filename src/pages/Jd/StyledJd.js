@@ -24,7 +24,7 @@ const StyledJd = styled.section`
     .global{
         width: 100%;
         position: relative;
-        background: url('/assets/jd/background.jpg') no-repeat center center;
+        background: url('/assets/jd/background.webp') no-repeat center center;
         background-size: cover;
         padding-bottom: 5vw;
         overflow: hidden;

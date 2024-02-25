@@ -1,7 +1,7 @@
 import ReactPlayer from 'react-player'
 import StyledPg from './StyledPg'
-import pp from '../../assets/pg/pp.png'
-import maf from '../../assets/pg/maf.png'
+import pp from '../../assets/pg/pp.webp'
+import maf from '../../assets/pg/maf.webp'
 import { useTranslation } from 'react-i18next'
 
 export const Pg = () => {

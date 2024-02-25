@@ -1,8 +1,8 @@
 import ReactPlayer from "react-player"
 import StyledGraphics from "./StyledGraphics"
-import icon from "../../../assets/services/graphics/icons.png"
-import banner from "../../../assets/services/graphics/banner.png"
-import frame from "../../../assets/services/graphics/frame.png"
+import icon from "../../../assets/services/graphics/icons.webp"
+import banner from "../../../assets/services/graphics/banner.webp"
+import frame from "../../../assets/services/graphics/frame.webp"
 import { useTranslation } from "react-i18next"
 
 export const Graphics = () => {
