@@ -77,7 +77,7 @@ export const Home = () => {
                         <img src={book} alt="book" />
                         <h3>Art Book</h3>
                     </Link>
-                    <Link to=""  className='link basket'>
+                    <Link to="http://shop.explicitcrea.com/" target='_blank'  className='link basket'>
                         <img src={basket} alt="basket" />
                         <h3>Shop</h3>
                     </Link>
