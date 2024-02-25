@@ -102,7 +102,6 @@ const StyledArtbook = styled.div`
     width: 70%;
     position: absolute;
     bottom: 4vw;
-    left: 3vw;
     background-color: #404040;
     font-family: Lexend;
     color: white;
@@ -128,7 +127,6 @@ const StyledArtbook = styled.div`
       font-size: 0.8em;
       width: 85%;
       bottom: 15vw;
-      left: 3vw;
     }
     @media (max-width: 500px) {
       font-size: 0.6em;

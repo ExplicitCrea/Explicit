@@ -35,70 +35,52 @@ p {
     z-index: 1;
 }
 .container{
-    position: relative;
     width: 100%;
     z-index: 1;
     margin-bottom: 8vw;
 
     .video{
-        width: 50%;
+        width: 64%;
         height: auto;
-        max-width: 1230px;
+        max-width: 1000px;
         aspect-ratio: 16/9;
-        overflow: hidden;
         margin: 180px 0 0 50px;
-    }
+        position: relative;
+        z-index: 1;
 
-    .icon-down{
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        right: 5vw;
-        margin: 0px 12px;
+        .icon-down{
+            position: absolute;
+            right: -35px;
+            margin: 0px 12px;
+                img{
+                    height: 100px;
+                    margin: 0px 12px;
+                    width: auto;
+                }
+        }
+    
+        .icon-right {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            right: -124px;
+            bottom: -20%;
             img{
-                height: auto;
-                margin: 0px 35px;
-                width: 6%;
+                width: auto;
+                height: 100px;
+                margin: 12px 0;
             }
-    }
-
-    .icon-right {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        width: 5%;
-        right: 40vw;
-        top: 7vw;
-        img{
-            height: auto;
-            margin: 12px 0;
+        }
+        .banners {
+            width: 50%;
+            position: absolute;
+            bottom: calc(0px - 38%);
+            left: 0px;
         }
     }
 
-    .pannels {
-        position: absolute;
-        left: 5vw;
-        width: 20%;
-        z-index: 1;
-        top: 27vw;
-        transform: skewX(15deg);
-        img{
-            width: 51%;
-            margin: 4px 0px;
-        }
-    }
-    .pannels2 {
-        position: absolute;
-        left: 17vw;
-        width: 20%;
-        z-index: 1;
-        top: 27vw;
-        transform: skewX(15deg);
-        img{
-            width: 51%;
-            margin: 4px 0px;
-        }
-    }
+
 }
 
 .logo {
@@ -119,6 +101,19 @@ p {
     p{
         left: 24%;
         width: 48%;
+    }
+}
+
+@media (max-width: 1230px) {
+    .container{
+        .video{
+            .banners{
+                display: none;
+            }
+            .icon-right{
+                bottom: -25%;
+            }
+        }
     }
 }
 
@@ -153,38 +148,23 @@ p {
         .video{
             width: 90%;
             height: auto;
-            margin: 24px 0;
-        }
-
-        .icon-down{
-            display: none;
-        }
-
-        .icon-right {
-            display: none;
-        }
-
-        .pannels {
-            position: unset;
-            width: 100%;
-            transform: unset;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            img{
-                width: 45%;
+            margin: 24px 0 40% 0;
+            .icon-down{
+                display: none;
             }
-        }
-
-        .pannels2 {
-            position: unset;
-            width: 100%;
-            transform: unset;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            img{
-                width: 45%;
+    
+            .icon-right {
+                display: none;
+            }
+    
+            .banners {
+                position: absolute;
+                bottom: calc(0px - 100%);
+                width: 100%;
+                transform: unset;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
         }
     }

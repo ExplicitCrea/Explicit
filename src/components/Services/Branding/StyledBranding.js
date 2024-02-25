@@ -13,7 +13,7 @@ const StyledBranding = styled.section`
     margin: 10vw 0 0 0;
     z-index: 4;
     border-radius: 80px;
-
+    box-shadow: 0px 6px 15px 13px #00000040;
     .text-container {
         position: absolute;
         top: -24px;
@@ -39,25 +39,34 @@ const StyledBranding = styled.section`
         justify-content: center;
         align-items: center;
         width: 100%;
-        margin: 48px 0 0 0;
+        margin: 12px 0 0 0;
+        position: relative;
         .big-poster{
-            width: 20%;
+            width: 25%;
             margin: 0 16px;
+            &.left{
+                margin: 0 5vw 0 0;
+            }
+            &.right{
+                margin: 0 0 0 5vw;
+            }
         }
         .little-poster{
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            width: 10%;
+            width: 13%;
             img{
                 width: 100%;
                 margin: 16px 0;
             }
         }
         .logo{
-            width: 20%;
+            position: absolute;
+            width: 25%;
             margin: 0 16px;
+            z-index: 1;
         }
     }
 
@@ -102,6 +111,7 @@ const StyledBranding = styled.section`
             }
 
             .logo{
+                position: unset;
                 margin: 16px 0px;
             }
         }

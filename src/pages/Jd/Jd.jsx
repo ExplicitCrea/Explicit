@@ -22,7 +22,7 @@ export const Jd = () => {
             <div className='global'>
                 <img className='carpentry' src={carpentry} alt="menuiserie" />
                 <div className='presentation'>
-                    <h1>RENCONTRE AVEC STUPEFLIP</h1>
+                    <h1>{t('jd.title')}</h1>
                     <div className='video'>
                         <ReactPlayer width='100%' height='100%' url='https://youtu.be/WbvqtvnWBZs' />
                     </div>

@@ -4,6 +4,7 @@ import potatoz from '../../assets/potatoz/potatoz.png'
 import ReactPlayer from 'react-player'
 import follow from '../../assets/potatoz/follow.png'
 import { useTranslation } from 'react-i18next'
+import background from '../../assets/potatoz/background.png'
 
 export const Potatoz = () => {
     const { t } = useTranslation()
@@ -24,6 +25,7 @@ export const Potatoz = () => {
                     <p>{t('potatoz.description')}</p>
                 </div>
             </div>
+            <img className='background' src={background} alt='background' />
         </StyledPotatoz>
     )
 }
