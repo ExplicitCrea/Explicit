@@ -1,6 +1,6 @@
 import ReactPlayer from 'react-player'
 import StyledStupeflip from './StyledStupeflip'
-import character from '../../../assets/services/stupeflip/character.png'
+import character from '../../../assets/services/stupeflip/character.webp'
 import { useTranslation } from 'react-i18next';
 import { useRef } from 'react';
 import { useIsVisible } from '../../../utils/useIsVisible';

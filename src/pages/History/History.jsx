@@ -1,6 +1,6 @@
 import React from 'react'
 import StyledHistory from './StyledHistory'
-import logohistoire from '../../assets/logohistoire.png'
+import logohistoire from '../../assets/logohistoire.webp'
 import { useTranslation } from "react-i18next";
 
 export const History = () => {

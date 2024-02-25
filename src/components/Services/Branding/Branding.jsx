@@ -1,14 +1,14 @@
 import StyledBranding from "./StyledBranding";
-import display1 from "../../../assets/services/branding/display1.jpg";
-import display2 from "../../../assets/services/branding/display2.jpg"
-import display3 from "../../../assets/services/branding/display3.png"
-import display4 from "../../../assets/services/branding/display4.png"
-import display5 from "../../../assets/services/branding/display5.png"
-import display6 from "../../../assets/services/branding/display6.png"
-import display7 from "../../../assets/services/branding/display7.png"
-import display8 from "../../../assets/services/branding/display8.png"
-import logo from "../../../assets/services/branding/logo.png"
-import logo2 from "../../../assets/services/branding/logo2.png"
+import display1 from "../../../assets/services/branding/display1.webp";
+import display2 from "../../../assets/services/branding/display2.webp"
+import display3 from "../../../assets/services/branding/display3.webp"
+import display4 from "../../../assets/services/branding/display4.webp"
+import display5 from "../../../assets/services/branding/display5.webp"
+import display6 from "../../../assets/services/branding/display6.webp"
+import display7 from "../../../assets/services/branding/display7.webp"
+import display8 from "../../../assets/services/branding/display8.webp"
+import logo from "../../../assets/services/branding/logo.webp"
+import logo2 from "../../../assets/services/branding/logo2.webp"
 import { useState, useCallback } from 'react';
 import { throttle } from '../../../utils/throttle';
 import { useTranslation } from 'react-i18next';

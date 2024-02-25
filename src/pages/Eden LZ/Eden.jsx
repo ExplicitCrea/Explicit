@@ -1,14 +1,14 @@
 import ReactPlayer from 'react-player'
 import StyledEden from './StyledEden'
-import background from '/assets/eden_lz/background.png'
-import photo from '../../assets/eden-lz/photo.png'
-import logo from '../../assets/eden-lz/logo-.png'
-import photos from '../../assets/eden-lz/photo2.png'
-import Logo from '../../assets/eden-lz/logo.png'
-import star from '../../assets/eden-lz/star.png'
-import com from '../../assets/eden-lz/com.png'
-import chapitre from '../../assets/eden-lz/chapitre.png'
-import chapitres from '../../assets/eden-lz/chapitre1.png'
+import background from '/assets/eden_lz/background.webp'
+import photo from '../../assets/eden-lz/photo.webp'
+import logo from '../../assets/eden-lz/logo-.webp'
+import photos from '../../assets/eden-lz/photo2.webp'
+import Logo from '../../assets/eden-lz/logo.webp'
+import star from '../../assets/eden-lz/star.webp'
+import com from '../../assets/eden-lz/com.webp'
+import chapitre from '../../assets/eden-lz/chapitre.webp'
+import chapitres from '../../assets/eden-lz/chapitre1.webp'
 import { useTranslation } from "react-i18next";
 
 export const Eden = () => {

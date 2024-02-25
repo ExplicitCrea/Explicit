@@ -7,7 +7,7 @@ const StyledBranding = styled.section`
     justify-content: center;
     width: 80%;
     height: 49vw;
-    background: url('/assets/services/branding/background.png') center center/cover no-repeat;
+    background: url('/assets/services/branding/background.webp') center center/cover no-repeat;
     background-size: auto 100%;
     position: relative;
     margin: 10vw 0 0 0;

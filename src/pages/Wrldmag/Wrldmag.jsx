@@ -1,9 +1,9 @@
-import logo from "../../assets/wrldmag/logo.png";
-import image1 from "../../assets/wrldmag/image1.png";
-import image2 from "../../assets/wrldmag/image2.png";
-import image3 from "../../assets/wrldmag/image3.png";
-import wrldmagLarge from "../../assets/wrldmag/wrldmag.png";
-import bgBottom from "../../assets/wrldmag/bg-bottom.png";
+import logo from "../../assets/wrldmag/logo.webp";
+import image1 from "../../assets/wrldmag/image1.webp";
+import image2 from "../../assets/wrldmag/image2.webp";
+import image3 from "../../assets/wrldmag/image3.webp";
+import wrldmagLarge from "../../assets/wrldmag/wrldmag.webp";
+import bgBottom from "../../assets/wrldmag/bg-bottom.webp";
 import { useTranslation } from "react-i18next";
 import { StyledWrldmag } from "./StyledWrldmag";
 

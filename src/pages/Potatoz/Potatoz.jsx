@@ -1,10 +1,10 @@
 import StyledPotatoz from './StyledPotatoz'
-import title from '../../assets/potatoz/title.png'
-import potatoz from '../../assets/potatoz/potatoz.png'
+import title from '../../assets/potatoz/title.webp'
+import potatoz from '../../assets/potatoz/potatoz.webp'
 import ReactPlayer from 'react-player'
-import follow from '../../assets/potatoz/follow.png'
+import follow from '../../assets/potatoz/follow.webp'
 import { useTranslation } from 'react-i18next'
-import background from '../../assets/potatoz/background.png'
+import background from '../../assets/potatoz/background.webp'
 
 export const Potatoz = () => {
     const { t } = useTranslation()

@@ -1,9 +1,9 @@
-import doc from "../../assets/services/video/doc.jpg";
-import potatoz from "../../assets/services/video/potatoz.png";
-import vzion from "../../assets/services/video/vzion.jpg";
-import mc from "../../assets/services/video/mc.jpg";
-import wrld from "../../assets/services/video/wrld.jpg";
-import eden from "../../assets/services/video/eden.jpg";
+import doc from "../../assets/services/video/doc.webp";
+import potatoz from "../../assets/services/video/potatoz.webp";
+import vzion from "../../assets/services/video/vzion.webp";
+import mc from "../../assets/services/video/mc.webp";
+import wrld from "../../assets/services/video/wrld.webp";
+import eden from "../../assets/services/video/eden.webp";
 
 export const ArrayVideos = [
   {

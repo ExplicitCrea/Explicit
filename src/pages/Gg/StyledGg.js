@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const StyledGg = styled.section`
     min-height: 100vh;
-    background: url('/assets/gg/background.png') no-repeat center center fixed;
+    background: url('/assets/gg/background.webp') no-repeat center center fixed;
     background-size: auto 120%;
     padding-top: 92px;
     display: flex;
