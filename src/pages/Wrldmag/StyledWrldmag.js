@@ -63,6 +63,10 @@ const StyledWrldmag = styled.section`
         @media (max-width: 1400px) {
           width: 130px;
         }
+        transition: 0.3s;
+      }
+      .logo:hover {
+        transform: scale(1.1);
       }
     }
     .second-wrapper {
@@ -90,6 +94,10 @@ const StyledWrldmag = styled.section`
           width: 100%;
           height: auto;
           object-fit: cover;
+          transition: 0.3s ease;
+        }
+        img:hover{
+          transform: translateY(-1vw);
         }
       }
         .wrldmag-container {
@@ -97,9 +105,13 @@ const StyledWrldmag = styled.section`
           z-index: 1;
           width: 100%;
           top: 4vw;
-          img {
+          .wrldmag-large {
             width: 100%;
             height: auto;
+            transition: 0.3s;
+          }
+          .wrldmag-large.js_hover {
+            transform: scale3d(1.1, 1.1, 2);
           }
         }
 

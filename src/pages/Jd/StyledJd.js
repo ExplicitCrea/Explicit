@@ -35,7 +35,7 @@ const StyledJd = styled.section`
             position: absolute;
             top: 0;
             left: 0;
-            background-color: rgba(0, 0, 0, 0.6);
+            background-color: rgba(0, 0, 0, 0.8);
             z-index: 0;
         }
         .carpentry{
@@ -77,8 +77,13 @@ const StyledJd = styled.section`
                 font-weight: 300;
                 color: #FFFFFF;
                 text-align: justify;
-                padding-bottom: 19vw;
                 text-shadow: 0px 0px 10px #000000;
+                background-color: rgba(0, 0, 0, 0.55);
+                height: 100%;
+                margin-bottom: 19vw;
+                padding: 0.5vw;
+                border-radius: 12px;
+                height: 100%;
             }
         }
         .deco{
@@ -96,11 +101,13 @@ const StyledJd = styled.section`
                 margin: 24px 24px;
             }
             .poster1{
-                width: 50%;
-                height: auto;
-                box-shadow: 0px 0px 10px #000000;
+                    display: block;
+                    width: 50%;
+                    height: auto;
+                    box-shadow: 0px 0px 10px #000000;
             }
             .sub-deco{
+                position: relative;
                 width: 100%;
                 display: flex;
                 align-items: center;
@@ -124,7 +131,7 @@ const StyledJd = styled.section`
             max-width: 1027px;
         }
         .wave{
-            rotate: -23deg;
+            rotate: -17deg;
             width: 44%;
             left: 9%;
             bottom: calc(0px - 15%);
