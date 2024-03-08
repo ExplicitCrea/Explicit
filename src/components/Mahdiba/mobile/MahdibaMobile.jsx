@@ -7,9 +7,9 @@ import virtualGlasses from "../../../assets/mahdiba/virtual-glasses.webp";
 import { useTranslation } from "react-i18next";
 import { StyledMahdibaMobile } from "./StyledMahdibaMobile";
 
+
 export const MahdibaMobile = () => {
   const { t } = useTranslation();
-
   return (
     <StyledMahdibaMobile>
       <div className="container">
@@ -20,7 +20,7 @@ export const MahdibaMobile = () => {
             url="https://youtu.be/gHm0yFf-RBE"
           />
         </div>
-        <img className="glasses" src={glasses} alt="Lunette de soleil" />
+        <img className="glasses" src={glasses} alt="Lunette de soleil"/>
         <img className="diamond" src={diamond} alt="Diamant" />
         <p>{t("mahdiba.paragraph")}</p>
         <div className="virtual-characte-and-tv">

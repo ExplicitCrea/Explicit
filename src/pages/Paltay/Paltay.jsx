@@ -9,7 +9,7 @@ export const Paltay = () => {
         <StyledPaltay>
             <img className='background' src={background} alt="paltay" />
             <div className='video'>
-                <ReactPlayer width="100%" height="100%" url='https://youtu.be/1S8I5IHbW-I' />
+                <ReactPlayer width="100%" height="100%" url='https://youtu.be/1S8I5IHbW-I' controls={true}/>
             </div>
             <p>{t('paltay.description')}</p>
         </StyledPaltay>

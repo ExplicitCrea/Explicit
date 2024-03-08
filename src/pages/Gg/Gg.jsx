@@ -16,7 +16,7 @@ export const Gg = () => {
                         <img src={gameplay} alt="gg-gameplay"/>
                     </div>
                     <div className='video'>
-                        <ReactPlayer width='100%' height='100%' url='https://youtu.be/swtF21GLr8A' />
+                        <ReactPlayer width='100%' height='100%' url='https://youtu.be/swtF21GLr8A' controls={true}/>
                     </div>
                 </div>
                 <img className='logo-middle' src={logoMiddle} alt="logo gg on top"/>

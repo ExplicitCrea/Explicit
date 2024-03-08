@@ -1,6 +1,5 @@
 import ReactPlayer from 'react-player'
 import StyledEden from './StyledEden'
-import background from '/assets/eden_lz/background.webp'
 import photo from '../../assets/eden-lz/photo.webp'
 import logo from '../../assets/eden-lz/logo-.webp'
 import photos from '../../assets/eden-lz/photo2.webp'
@@ -25,7 +24,7 @@ return (
           <img className="photos" src={photos} alt='photos' />
         </div>
         <div className='video'>
-          <ReactPlayer width='100%' height='100%' url='https://youtu.be/4vF-72KeuKw' />
+          <ReactPlayer width='100%' height='100%' url='https://youtu.be/4vF-72KeuKw' controls = {true} />
         </div>
         <div className='container-down'>
           <div className='down-left-container'>
@@ -47,7 +46,6 @@ return (
           </div>
         </div>
       </div>
-      <img className='background' src={background} alt="eden" />
     </StyledEden>
   )
 }
