@@ -8,7 +8,7 @@ export const Threed = () => {
     <StyledThreed>
       <p>{t('threed.description')}</p>
       <div className='video'>
-        <ReactPlayer width='100%' height='100%' url='https://youtu.be/KpNqp44Olk0' />
+        <ReactPlayer width='100%' height='100%' url='https://youtu.be/KpNqp44Olk0' controls={true}/>
       </div>
     </StyledThreed>
   )

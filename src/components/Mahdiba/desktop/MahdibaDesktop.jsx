@@ -19,6 +19,7 @@ export const MahdibaDesktop = () => {
               width="100%"
               height="100%"
               url="https://youtu.be/gHm0yFf-RBE"
+              controls = {true}
             />
             <img className="virtual-character" src={virtualCharacter} alt="Mahdi Ba virtuel" />
             <img className="glasses" src={glasses} alt="Lunette de soleil" />

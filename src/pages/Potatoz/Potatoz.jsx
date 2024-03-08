@@ -16,7 +16,7 @@ export const Potatoz = () => {
             <div className='container'>
                 <div className='video'>
                     <div className='wrapper'>
-                        <ReactPlayer width='100%' height='100%' url='https://youtu.be/oZscojGNz_I' />
+                        <ReactPlayer width='100%' height='100%' url='https://youtu.be/oZscojGNz_I' controls={true}/>
                         <img className='deco' src={potatoz} alt="potatoz"/>
                     </div>
                 </div>

@@ -16,7 +16,7 @@ const StyledPaltay = styled.section`
         left: 0px;
         width: 100%;
         height: auto;
-        z-index: -1;
+        z-index: 0;
     }
 
     .video{
@@ -42,6 +42,7 @@ const StyledPaltay = styled.section`
         border-radius: 12px;
         padding: 24px;
         margin-top: 17vw;
+        z-index: 1;
     }
 
     @media (max-width: 900px) {

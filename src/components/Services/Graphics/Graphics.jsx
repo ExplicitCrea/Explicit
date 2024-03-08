@@ -13,7 +13,7 @@ export const Graphics = () => {
       <p>{t('graphics.description')}</p>
       <div className="video-container">
         <div className='video'>
-            <ReactPlayer width='100%' height='100%' url='https://youtu.be/9f8zeE4-9mQ' />
+            <ReactPlayer width='100%' height='100%' url='https://youtu.be/9f8zeE4-9mQ' controls={true}/>
         </div>
         <img className="icon" src={icon} alt="icon" />
         <img className="banner" src={banner} alt="banner" />

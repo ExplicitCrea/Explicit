@@ -8,6 +8,8 @@ const StyledEden = styled.section`
     justify-content: center;
     position: relative;
     overflow: hidden;
+    background: url('../../assets/eden_lz/background.webp') no-repeat center;
+    background-size: cover;
     .global-container{
         width: 100%;
         display: flex;
@@ -100,6 +102,7 @@ const StyledEden = styled.section`
                 justify-content: center;
                 align-items: flex-end;
                 .com-container{
+                    z-index: 1;
                     width: 32%;
                     img{
                         width: 100%;
@@ -134,14 +137,6 @@ const StyledEden = styled.section`
                 }
             }
         }
-    }
-    .background{
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        width: 100vw;
-        height: auto;
-        z-index: -1;
     }
 
     @media (max-width: 1400px) {

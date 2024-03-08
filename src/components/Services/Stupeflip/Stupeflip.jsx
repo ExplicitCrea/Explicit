@@ -13,7 +13,7 @@ export const Stupeflip = () => {
     <StyledStupeflip isVisible={isVisible}>
       <h2>{t('stupeflip.title')}</h2>
       <div className='video'>
-          <ReactPlayer width='100%' height='100%' url='https://youtu.be/zsxnS21Wgm4' />
+          <ReactPlayer width='100%' height='100%' url='https://youtu.be/zsxnS21Wgm4' controls={true}/>
       </div>
       <img className='character' src={character} alt='character' />
       <div className='background-filter'/>
