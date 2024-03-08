@@ -10,8 +10,33 @@ import carpentry from '../../assets/jd/carpentry.webp'
 import pp from '../../assets/jd/pp.webp'
 import ReactPlayer from 'react-player'
 import { useTranslation } from 'react-i18next'
+import { useCallback } from 'react';
+import { throttle } from '../../utils/throttle';
 
 export const Jd = () => {
+    const BasePos = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    const onMouseMove = useCallback(throttle((e, name) => {
+            const card = e.currentTarget;
+            const box = card.getBoundingClientRect();
+            const x = e.clientX - box.left;
+            const y = e.clientY - box.top;
+            const centerX = box.width / 2;
+            const centerY = box.height / 2;
+            const rotateX = (y - centerY) / 4;
+            const rotateY = (centerX - x) / 4;
+            let s = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${ name.includes("L") ? rotateY : -rotateY}deg) scale3d(1, 1, 1)`;
+            card.style.transform = s;
+        }, 100),
+        []
+    )
+  
+    const onMouseLeave = (event) => {
+        event.currentTarget.style.transform = BasePos;
+    }
+  
+    const trans = "all 400ms cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s"
+
     const { t } = useTranslation()
     return (
         <StyledJd>
@@ -24,15 +49,15 @@ export const Jd = () => {
                 <div className='presentation'>
                     <h1>{t('jd.title')}</h1>
                     <div className='video'>
-                        <ReactPlayer width='100%' height='100%' url='https://youtu.be/WbvqtvnWBZs' />
+                        <ReactPlayer width='100%' height='100%' url='https://youtu.be/WbvqtvnWBZs' controls={true}/>
                     </div>
                     <p>{t('jd.description')}</p>
                 </div>
                 <div className='deco'>
-                    <img className='poster1' src={poster2} alt="poster" />
+                    <img className='poster1' src={poster2} alt="poster" style={{transition: trans}} onMouseMove={(e) => onMouseMove(e, 'posterL')} onMouseLeave={(e)=> onMouseLeave(e)} />
                     <div className='sub-deco'>
-                        <img src={poster3} alt="poster" />
-                        <img src={poster1} alt="poster" />
+                        <img src={poster3} alt="poster" style={{transition: trans}} onMouseMove={(e) => onMouseMove(e, 'posterL')} onMouseLeave={(e)=> onMouseLeave(e)} />
+                        <img src={poster1} alt="poster" style={{transition: trans}} onMouseMove={(e) => onMouseMove(e, 'posterR')} onMouseLeave={(e)=> onMouseLeave(e)} />
                     </div>
                 </div>
                 <img className='deco2 wave' src={waterWave} alt="vague" />

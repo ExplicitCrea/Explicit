@@ -22,18 +22,18 @@ export const Pg = () => {
                 <div className='examples'>
                     <div className='container'>
                         <div className='video'>
-                            <ReactPlayer width='100%' height='100%' url='https://youtu.be/JmCJ09jtXm4' />
+                            <ReactPlayer width='100%' height='100%' url='https://youtu.be/JmCJ09jtXm4' controls={true}/>
                         </div>
                         <div className='video'>
-                            <ReactPlayer width='100%' height='100%' url='https://youtu.be/FSmdu4edODE' />
+                            <ReactPlayer width='100%' height='100%' url='https://youtu.be/FSmdu4edODE' controls={true}/>
                         </div>
                     </div>
                     <div className='container'>
                         <div className='video'>
-                            <ReactPlayer width='100%' height='100%' url='https://youtu.be/2iA7idY8bds' />
+                            <ReactPlayer width='100%' height='100%' url='https://youtu.be/2iA7idY8bds' controls={true}/>
                         </div>
                         <div className='video'>
-                            <ReactPlayer width='100%' height='100%' url='https://youtu.be/EDgTQt3AmTM' />
+                            <ReactPlayer width='100%' height='100%' url='https://youtu.be/EDgTQt3AmTM' controls={true}/>
                         </div>
                     </div>
                 </div>

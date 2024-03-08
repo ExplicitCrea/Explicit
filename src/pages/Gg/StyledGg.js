@@ -94,10 +94,21 @@ const StyledGg = styled.section`
             height: auto;
             z-index: 2;
         }
+        :where(.logo-top, .logo-middle){
+            transition: 400ms cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s;
+        }
+        .logo-top:hover:hover{
+            transform: scale(1.1);
+        }
+        .logo-middle:hover{
+            transform: translate(-50%, -50%) scale(1.1);
+        }
         .background{
             position: absolute;
-            bottom: -5.2vw;
-            left: -3.3vw;
+            // bottom: -5.2vw;
+            // left: -3.3vw;
+            bottom: -4.2vw;
+            left: -2.3vw;
             width: auto;
             height: 100%;
             z-index: 0;
@@ -131,7 +142,7 @@ const StyledGg = styled.section`
             }
             .logo-middle{
                 width: 90%;
-                position: static;
+                position: absolute;
                 transform: none;
             }
             .background{
@@ -139,7 +150,7 @@ const StyledGg = styled.section`
             }
             .logo-top{
                 width: 50%;
-                position: static;
+                position: absolute;
                 margin: 24px;
             }
             .left-container{

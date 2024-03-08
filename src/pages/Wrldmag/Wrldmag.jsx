@@ -8,8 +8,31 @@ import { useTranslation } from "react-i18next";
 import { StyledWrldmag } from "./StyledWrldmag";
 
 export const Wrldmag = () => {
-
+  const canvas = document.createElement("canvas");
+  const context = canvas.getContext('2d');
   const {t} = useTranslation()
+  const mouseMove = (e) => {//little hover effect
+    const logo = e.currentTarget;
+    var rect = logo.getBoundingClientRect();
+    var relX = e.clientX - rect.left;
+    var relY = e.clientY - rect.top;
+    if (canvas.id != "adapted") {
+      canvas.id = "adapted";
+      canvas.width = logo.width;
+      canvas.height = logo.height;
+      context.drawImage(logo, 0, 0, logo.width, logo.height);
+    }
+    var data = context.getImageData(relX, relY, 1, 1);
+    if (data.data[3] > 30) {
+      logo.classList.add("js_hover");
+    } else {
+      logo.classList.remove("js_hover");
+    }
+  };
+  
+  const mouseLeave = (e) => {
+    e.currentTarget.classList.remove("js_hover");
+  }
 
   return (
     <StyledWrldmag>
@@ -25,7 +48,7 @@ export const Wrldmag = () => {
             <img src={image1} className="image-center" alt="" />
           </div>
             <div className="wrldmag-container">
-              <img className="wrldmag-large" src={wrldmagLarge} alt="" />
+              <img className="wrldmag-large" src={wrldmagLarge} alt="logo worldmag" onMouseMove = {(e) => mouseMove(e)} onMouseLeave={(e) => mouseLeave(e)}/>
             </div>
             <div className="bg-bottom">
               <img src={bgBottom} alt="" />
