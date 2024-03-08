@@ -109,7 +109,7 @@ return (
             Termes légaux
         </h3>
             <p>
-                Le présent site est la propriété d’ExplicitCrea, immatriculée au registre du commerce et des sociétés sous le numéro 904 280 005, dont le siège social est situé au 38 rue Waldeck-Rousseau, 94400, Vitry-Sur-Seine, assujettie à la taxe sur la valeur ajoutée sous le numéro FR 93 904 28 005 (mail : contact@explicitcrea.com ; téléphone : 07 83 82 05 02). 
+                Le présent site est la propriété d’Exp, immatriculée au registre du commerce et des sociétés, pour connaitre le numéro ainsi que le siege social assujettie à la taxe vous pouvez soumettre une requête par mail : contact@explicitcrea.com. 
                 Le Site est hébergé par OVH, Siège social : 2 rue Kellermann - 59100 Roubaix - France. OVH SAS est une filiale de la société OVH Groupe SA, société immatriculée au RCS de Lille sous le numéro 537 407 926 sise 2, rue Kellermann, 59100 Roubaix. 
                 L’Utilisateur reconnaît avoir pris connaissance les présentes mentions légales et s’engage à les respecter. L’Utilisateur reconnaît être parfaitement informé du fait que son accord concernant le contenu des présentes Conditions Générales ne nécessite pas la signature manuscrite de ce document, mais résulte de sa seule consultation du Site.
             </p>
