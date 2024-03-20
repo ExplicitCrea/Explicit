@@ -1,10 +1,10 @@
 import ReactPlayer from 'react-player'
 import StyledThreed from './StyledThreed'
-import logo_3d from '../../../assets/3d/3D.png'
-import top from '../../../assets/3d/top.png'
-import bottom from '../../../assets/3d/bottom.png'
-import background from '../../../assets/3d/background.png'
-import phone_background from '../../../assets/3d/phone_background.png'
+import logo_3d from '../../../assets/3d/3D.webp'
+import top from '../../../assets/3d/top.webp'
+import bottom from '../../../assets/3d/bottom.webp'
+import background from '../../../assets/3d/background.webp'
+import phone_background from '../../../assets/3d/phone_background.webp'
 import { useTranslation } from 'react-i18next'
 
 export const Threed = () => {

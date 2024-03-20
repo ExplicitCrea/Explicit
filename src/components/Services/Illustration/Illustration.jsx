@@ -1,5 +1,5 @@
 import StyledIllustration from './StyledIllustration'
-import background from '../../../assets/services/illustration/background.png'
+import background from '../../../assets/services/illustration/background.webp'
 import guill from '../../../assets/services/illustration/guill.webp'
 import enemi from '../../../assets/services/illustration/enemi.webp'
 import fight from '../../../assets/services/illustration/fight.webp'
