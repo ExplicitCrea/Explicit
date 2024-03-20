@@ -19,6 +19,29 @@ const StyledPaltay = styled.section`
         z-index: 0;
     }
 
+    .icon_list{
+        z-index: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10vh;
+        max-height: 25vh;
+        max-width:95%;
+        img{
+            width: 7%;
+            margin: 0 auto;
+            transition: 0.3s;
+        }
+        img:hover{
+            transform: scale(1.2);
+        }
+        img.person{
+            width: 12%;
+            margin: 0 auto;
+        }
+    }    
+
     .video{
         width: 70%;
         max-width: 1200px;
@@ -36,18 +59,19 @@ const StyledPaltay = styled.section`
         font-size: 1.5vw;
         font-family: lexend;
         font-weight: 400;
-        background-color: #181A1B;
+        background-color: #62399f;
         color: #fff;
         margin-top: 50vw;
         border-radius: 12px;
         padding: 24px;
-        margin-top: 17vw;
+        margin-top: 10vh;
         z-index: 1;
+        text-align:center;
     }
 
     @media (max-width: 900px) {
         overflow: hidden;
-        background-color: #181A1B;
+        background-color: #62399f;
         .background {
             width: auto;
             height: 100%;
@@ -62,9 +86,23 @@ const StyledPaltay = styled.section`
             width: 80%;
         }
         p{
+            margin-top: 10vh;
             width: 80%;
             z-index: 1;
             font-size: 13px;
+        }
+        .icon_list{
+            max-width: 100%;
+            max-height: usnet;
+            flex-wrap: wrap;
+            margin-top: 10vh;
+            gap: 2vw;
+            img{
+                width: 10%;
+            }
+            img.person{
+                display: none;
+            }
         }
     }
 `

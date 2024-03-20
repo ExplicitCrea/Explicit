@@ -10,6 +10,12 @@ const StyledEden = styled.section`
     overflow: hidden;
     background: url('../../assets/eden_lz/background.webp') no-repeat center;
     background-size: cover;
+    .logo{
+        transition: 0.3s;
+    }
+    .logo:hover{
+        transform: scale(1.1);
+    }
     .global-container{
         width: 100%;
         display: flex;
@@ -31,6 +37,7 @@ const StyledEden = styled.section`
             overflow: hidden;
             z-index: 2;
             max-width: 540px;
+            top: 37.5%;
         }
         .container-up{
             width: 100%;
@@ -54,6 +61,10 @@ const StyledEden = styled.section`
                     height: auto;
                     border-radius: 24px;
                     box-shadow: 0px 0px 20px -2px #000000;
+                    transition: 0.3s ease-out;
+                }
+                img:hover{
+                    transform: scale(1.05);
                 }
             }
             .logo{
@@ -66,6 +77,10 @@ const StyledEden = styled.section`
                 border-radius: 24px;
                 box-shadow: 0px 0px 20px -2px #000000;
                 margin: 11vw 0 0 0;
+                transition: 0.3s ease-out;
+            }
+            .photos:hover{
+                transform: scale(1.05);
             }
         }
         .container-down{
@@ -109,6 +124,10 @@ const StyledEden = styled.section`
                         height: auto;
                         border-radius: 12px;
                         overflow: hidden;
+                        transition: 0.3s ease-out;
+                    }
+                    img:hover{
+                        transform: scale(1.05);
                     }
                     h1{
                         font-size: 30px;
@@ -126,13 +145,21 @@ const StyledEden = styled.section`
                         width: 47%;
                         height: auto;
                         transform: translateY(-60px);
+                        transition: 0.3s ease-out;
+                    }
+                    .chapter-left:hover{
+                        transform: translateY(-60px) translateX(-12px) scale(1.05);
                     }
                     .chapter-right{
                         border-radius: 12px;
                         overflow: hidden;
                         width: 47%;
                         height: auto;
+                        transition: 0.3s ease-out;
                         transform: translate(-24px, -12px);
+                    }
+                    .chapter-right:hover{
+                        transform: translate(-24px, -12px) scale(1.05);
                     }
                 }
             }

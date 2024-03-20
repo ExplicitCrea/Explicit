@@ -20,7 +20,7 @@ return (
         </p>
         <div className='container'>
             <div className='video'>
-                <ReactPlayer width='100%' height='100%' url='https://youtu.be/JmCJ09jtXm4' controls={true}/>
+                <ReactPlayer width='100%' height='100%' url='https://youtu.be/wRCEoLxf6Y0' controls={true}/>
                 <div className='icon-right'>
                     <img src={Icon1} alt='icon'/>
                     <img src={Icon2} alt='icon'/>

@@ -66,6 +66,10 @@
     "newsletter": {
       "title": "Keep up to date with all the latest news!",
       "placeholder": "Enter your e-mail!"
+    },
+    "notification": {
+      "title": "billing service",
+      "description": "Discover our online billing service!"
     }
   },
   "wrldmag": {
@@ -127,7 +131,7 @@
   },
   "contact": {
     "title": "Contact Us",
-    "title2": "Contact Us",
+    "title2": "Our Informations",
     "label": "Your first name / last name",
     "input": "Forename",
     "input2": "Name",

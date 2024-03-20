@@ -66,6 +66,10 @@
     "newsletter": {
       "title": "Sois tenu au courant de toutes les actualités !",
       "placeholder": "Entre ton e-mail !"
+    },
+    "notification": {
+      "title": "Service de facture",
+      "description": "Découvrez notre service de facture en ligne!"
     }
   },
   "wrldmag": {
@@ -126,7 +130,7 @@
   },
   "contact": {
     "title": "Nous Contacter",
-    "title2": "Pour nous contacter",
+    "title2": "Nos informations",
     "label": "Votre Prénom / Nom ",
     "input": "Prénom",
     "input2": "Nom",

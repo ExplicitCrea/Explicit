@@ -5,19 +5,16 @@ import StyledFaq from './StyledFaq';
 
 export const Faq = () => {
   const {i18n} = useTranslation();
+  let l = i18n.language;
+  if(l == 'fr') {
+    l = 'fr-FR';
+  }
   return (
     <StyledFaq>
       <div className='wrapper'>
-        {i18n.language === 'en' ?
-          AccordionFaq.en.map((item, index) => <Accordion key={index} title={item.title} content={item.content} />)
-          :
-          AccordionFaq.fr.map((item, index) => <Accordion key={index} title={item.title} content={item.content} />)
-        }
+        {AccordionFaq[l].map((item, index) => <Accordion key={index} title={item.title} content={item.content} />)}
         <div className='background-filter'/>
       </div>
     </StyledFaq>
   )
 }
-
-
-

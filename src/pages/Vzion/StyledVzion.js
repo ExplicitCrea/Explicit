@@ -5,13 +5,13 @@ const StyledVzion = styled.section`
   font-family: lexend;
   width: 100%;
   color: white;
-  background: url("public/assets/vzion/background.webp") no-repeat center/cover;
+  background: url("assets/vzion/background.webp") no-repeat center/cover;
   @media (min-width: 2000px) {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
+  
   .main-wrapper {
     margin: 140px 75px 25px 75px;
     display: flex;
@@ -66,12 +66,37 @@ const StyledVzion = styled.section`
       width: 100%;
       align-items: center;
     }
+    .pseudo_elem_wrapper {
+      position: relative;
+    }
+    .pseudo_elem {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        #23FF61 0%,
+        #23FF61 2.5%,
+        #23FF6155 2.5%,
+        rgba(0, 0, 0, 0) 100%
+      );
+      opacity: 0;
+      z-index: 1;
+      transition: opacity 0.5s;
+      pointer-events: none;
+    }
+    .pseudo_elem.hover {
+      opacity: 1;
+    }
     img {
       width: 424px;
       height: auto;
       aspect-ratio: 424/238;
       object-fit: cover;
       cursor: pointer;
+      transition: transform 0.5s;
       @media (max-width: 1030px) {
         width: 300px;
         height: auto;

@@ -1,4 +1,5 @@
 import { Newsletter } from '../../components/Home/Newsletter/Newsletter'
+import { Notification } from '../../components/Home/Notification/Notification'
 import StyledHome from './StyledHome'
 import star from '../../assets/star.webp'
 import book from '../../assets/book.webp'
@@ -84,6 +85,7 @@ export const Home = () => {
                 </div>
             </div>
             <Newsletter />
+            <Notification />
             <img className='classic-star' src={starPurple} alt="background decoration" />
             <img className='reverse-star' src={starPurple} alt="" />
             <img className='background-star' src={starBackground} alt="" />

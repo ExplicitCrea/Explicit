@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
 const StyledPotatoz = styled.section`
-    background: url('/assets/potatoz/background.webp') no-repeat center center fixed;
+    background: url('/assets/potatoz/background.webp') no-repeat;
+    background-size: cover;
     position: relative;
     min-height: 100vh;
     display: flex;
@@ -11,11 +12,11 @@ const StyledPotatoz = styled.section`
     padding-top: 80px;
     overflow: hidden;
 
-    .background{
+    .lumiere{
         position: absolute;
-        width: 80%;
-        z-index: 0;
-        max-width: 1100px;
+        top: 0;
+        left: 0;
+        width:100%;
     }
 
     .wrapper-title{
@@ -24,12 +25,13 @@ const StyledPotatoz = styled.section`
         overflow: hidden;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: right;
         z-index: 1;
         .title {
             max-width: 950px;
             width: 60%;
             height: auto;
+            margin-right: 10%;
         }
     }
 
@@ -37,93 +39,115 @@ const StyledPotatoz = styled.section`
         display: flex;
         flex-direction: column;
         z-index: 1;
+        width: 100%;
+        align-items: flex-end;
         .video{
             width: 100%;
             display: flex;
+            flex-direction: row;
             align-items: center;
-            justify-content: center;
+            justify-content: space-evenly;
+            margin: 0 0 2vh 0;
             .wrapper{
                 position: relative;
-                width: 70%;
-                max-width: 900px;
+                width: 50%;
                 aspect-ratio: 16 / 9;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                .deco{
-                    max-width: 200px;
-                    position: absolute;
-                    top: 21%;
-                    left: -15%;
-                    width: 111vw;
-                    height: auto;
+                border-radius: 32px;
+                iframe{
+                    border-radius: 32px;
                 }
             }
+            .deco{
+                width: 19vw;
+                height: auto;
+                filter: drop-shadow(0px 0px 12px #000);
+                -webkit-filter: drop-shadow(0px 0px 12px #000);
+                -moz-filter: drop-shadow(0px 0px 12px #000);
+                -o-filter: drop-shadow(0px 0px 12px #000);
+                -ms-filter: drop-shadow(0px 0px 12px #000);
+                transition: 0.5s;
+            }
+            .deco:hover{
+                filter: drop-shadow(0px 0px 12px #000) drop-shadow(0px 0px 2px #000);
+                transform: scale(1.1);
+             }
+            .explo_jouet{
+                position: absolute;
+                top: 10%;
+                left: 0;
+                z-index: -1;
+                width: 40%;
+                filter: drop-shadow(2px 2px 10px #000);
+            }
         }
-        .description{
+        p.description{
+            align-items: center;
+            z-index: 1;
             display: flex;
             justify-content: center;
-            align-items: center;
-            padding: 36px 10%;
-            z-index: 1;
-            img{
-                height: 150px;
-                width: auto;
-                margin-right: 12px;
-            }
-            p{
-                display: flex;
-                justify-content: center;
-                width: auto;
-                max-width: 1100px;
-                font-size: 18px;
-                font-family: lexend;
-                font-weight: 400;
-                background-color: #181A1B;
-                color: #fff;
-                margin: 0 0 0 12px;
-                padding: 24px 24px;
-                overflow: auto;
-                text-align: center;
-            }
+            width: 35%;
+            border-radius: 12px;
+            font-size: 18px;
+            font-family: lexend;
+            font-weight: 400;
+            color: #fff;
+            margin: auto 17vw auto auto;
+            padding: 0.5vw 0.7vw;
+            overflow: auto;
+            text-align: center;
+            background-color: #3200FF;
         }
     }
 
     
     @media (max-width: 900px) {
         justify-content: flex-start;
+        .lumiere{
+            position: absolute;
+            top: 6.5vh;
+            left: -73vw;
+            width: 185%;
+            height: auto;
+        }
         .container{
             flex-direction: column-reverse;
-            .description{
-                .follow{
-                    display: none;
-                }
-                p{
-                    height: auto;
-                    border-radius: 12px;
-                    text-align: justify;
-                    margin: 24px 0;
-                }
+            p.description{
+                font-size: 0.7em;
+                margin: auto auto 5vh auto;
+                width: 90%;
+                padding: 1.5vw 1vw;
             }
             .video{
+                flex-direction: column-reverse;
                 .wrapper{
+                    width: 90%;
+                }
+                .wrapper_double{
+                    display: flex;
                     flex-direction: column;
                     .deco{
-                        position: static;
-                        width: 324px;
+                        width: 35%;
+                        margin: 4vh auto;
+                    }
+                    .explo_jouet{
+                        width: 150%;
+                        top: 21%;
+                        left: -20%;
                     }
                 }
             }
         }
-
         .wrapper-title{
-            width: 180%;
-        }
-
-        .background{
-            width: auto;
-            height: 80%;
-            z-index: 0;
+            justify-content: center;
+            width: 125%;
+            .title{
+                margin: 0;
+                width: 100%;
+                object-fit: cover;
+            }
         }
     }
 `

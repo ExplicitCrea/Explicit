@@ -25,8 +25,6 @@ import { MahdibaPage } from './pages/Mahdiba/MahdibaPage.jsx';
 import { Wrldmag } from './pages/Wrldmag/Wrldmag.jsx'
 import { Eden } from './pages/Eden LZ/Eden.jsx';
 
-
-
 const router = createBrowserRouter([
   {
     path: "/",

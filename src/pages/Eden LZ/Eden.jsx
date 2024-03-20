@@ -29,8 +29,8 @@ return (
         <div className='container-down'>
           <div className='down-left-container'>
             <div className='logo-container'>
-              <img src={Logo} alt='logo' />
-              <img src={star} alt='logo' />
+              <img className="logo" src={Logo} alt='logo' />
+              <img className="logo" src={star} alt='logo' />
             </div>
             <p>{t('eden.paragraphe')}</p>
           </div>

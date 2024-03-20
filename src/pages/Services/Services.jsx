@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import StyledServices from "./StyledServices";
 import { VideoEditing } from "../../components/Services/VideoEditing/VideoEditing";
 import { Branding } from "../../components/Services/Branding/Branding";
-import video from "../../assets/background1-services.webp";
+import video from "../../assets/background1-services.png";
 import { MotionDesign } from '../../components/Services/MotionDesign/MotionDesign';
 import { Stupeflip } from "../../components/Services/Stupeflip/Stupeflip";
 import { Production } from "../../components/Services/Production/Production";
