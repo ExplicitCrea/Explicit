@@ -1,16 +1,16 @@
 import doc from "../../assets/services/video/doc.webp";
-import potatoz from "../../assets/services/video/potatoz.webp";
 import vzion from "../../assets/services/video/vzion.webp";
 import mc from "../../assets/services/video/mc.webp";
 import wrld from "../../assets/services/video/wrld.webp";
 import eden from "../../assets/services/video/eden.webp";
+import pg from "../../assets/services/video/pg.webp";
 
 export const ArrayVideos = [
   {
-    title: "BEST OF QUIZZ CACABOX",
-    name: "Potatoz",
-    url: "https://www.youtube.com/watch?v=1M1uB1PYvXA&ab_channel=POTATOZ-LIVE%26BEST-OF",
-    img: potatoz
+    title: "Les Braqueurs au hold-up à 1 Milliard",
+    name: "PROFESSION GANGSTER",
+    url: "https://www.youtube.com/watch?v=PsH9EjseMlA&t",
+    img: pg
   },
   {
     title: "Ce joueur pro a ASSASSINÉ ses adversaires pendant un live",
@@ -37,9 +37,9 @@ export const ArrayVideos = [
     img: wrld
   },
   {
-    title: "Nc",
+    title: "CONCOURS D'ANECTODES RAP avec MEHDI MAIZI!",
     name: "EdenLz",
-    url: "https://www.youtube.com/results?search_query=eden+lz+maidi+maizi",
+    url: "https://www.youtube.com/watch?v=4WF_Ff9sMLs&t",
     img: eden
   },
 ]

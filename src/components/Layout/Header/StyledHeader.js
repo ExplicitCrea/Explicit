@@ -27,7 +27,7 @@ const StyledHeader = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 5;
+    z-index: 6;
     height: 80px;
     padding: 6px 12px;
     background: rgba(217, 217, 217, 0.07);

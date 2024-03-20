@@ -36,7 +36,7 @@ export const Newsletter = () => {
 
   return (
     <StyledNewsletter>
-        <h1>
+        <h1 className="newsletter-title">
           {t('home.newsletter.title')}
         </h1>
         <form onSubmit={handleSubmit}>

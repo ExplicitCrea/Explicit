@@ -8,11 +8,11 @@ const StyledBranding = styled.section`
     width: 80%;
     height: 49vw;
     background: url('/assets/services/branding/background.webp') center center/cover no-repeat;
-    background-size: auto 100%;
+    background-size: 101%;
     position: relative;
     margin: 10vw 0 0 0;
-    z-index: 4;
-    border-radius: 80px;
+    z-index: 5;
+    border-radius: 10%;
     box-shadow: 0px 6px 15px 13px #00000040;
     .text-container {
         position: absolute;
@@ -80,6 +80,7 @@ const StyledBranding = styled.section`
         width: 85%;
         height: auto;
         border-radius: 24px;
+        background-size: auto 101%;
         overflow: hidden;
         .text-container {
             position: unset;

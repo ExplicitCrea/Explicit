@@ -56,6 +56,10 @@ p {
                     height: 100px;
                     margin: 0px 12px;
                     width: auto;
+                    transition: 0.5s;
+                }
+                img:hover{
+                    transform: scale(1.1);
                 }
         }
     
@@ -70,6 +74,10 @@ p {
                 width: auto;
                 height: 100px;
                 margin: 12px 0;
+                transition: 0.5s;
+            }
+            img:hover{
+                transform: scale(1.1);
             }
         }
         .banners {

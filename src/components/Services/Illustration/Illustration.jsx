@@ -1,5 +1,5 @@
 import StyledIllustration from './StyledIllustration'
-import background from '../../../assets/services/illustration/background.webp'
+import background from '../../../assets/services/illustration/background.png'
 import guill from '../../../assets/services/illustration/guill.webp'
 import enemi from '../../../assets/services/illustration/enemi.webp'
 import fight from '../../../assets/services/illustration/fight.webp'
@@ -10,6 +10,7 @@ import paltay from '../../../assets/services/illustration/paltay.webp'
 import rickross from '../../../assets/services/illustration/rickross.webp'
 import sheffg from '../../../assets/services/illustration/sheffg.webp'
 import wrld from '../../../assets/services/illustration/wrld.webp'
+import footer_bottom from '../../../assets/services/illustration/footer_bottom.webp'
 import { useTranslation } from 'react-i18next'
 import { useRef } from 'react'
 import { useIsVisible } from '../../../utils/useIsVisible'
@@ -42,6 +43,7 @@ export const Illustration = () => {
       <div className='bottom-container' ref={ref}>
         <img className='paltay' src={paltay} alt="paltay"/>
         <img className='background' src={guill} alt="bottom background"/>
+        <img className='footer' src={footer_bottom} alt="footer"/>
       </div>
     </StyledIllustration>
   )

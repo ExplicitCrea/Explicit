@@ -139,19 +139,27 @@ const StyledGg = styled.section`
                 width: 100%;
                 max-height: none;
                 overflow: visible; 
+                font-size: 1em;
             }
             .logo-middle{
                 width: 90%;
                 position: absolute;
+                transform: none;
+                left: 5%;
+                top: 65vh;
+                margin: auto;
+            }
+            .logo-middle:hover{
                 transform: none;
             }
             .background{
                 display: none;
             }
             .logo-top{
-                width: 50%;
-                position: absolute;
-                margin: 24px;
+                // width: 50%;
+                // position: absolute;
+                // margin: 24px;
+                display:none;
             }
             .left-container{
                 width: 100%;

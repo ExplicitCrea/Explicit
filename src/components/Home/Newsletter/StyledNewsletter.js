@@ -5,9 +5,21 @@ const StyledNewsletter = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 25vw;
     z-index: 4;
     position: relative;
+    .newsletter-title{
+        button{
+            background: none;
+            border: none;
+            font-family: lexend;
+            font-weight: bold;
+            font-size: 2vw;
+            cursor: pointer;
+            color: #fff;
+            cursor: inherit;
+        }
+
+    }
     form{
         width: 40vw;
         position: relative;

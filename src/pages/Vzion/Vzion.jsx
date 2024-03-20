@@ -31,6 +31,15 @@ export const Vzion = () => {
     }
   };
 
+  const hover_pseudo = (e,action) => {
+    let target = e.target.parentNode.querySelector(".pseudo_elem");
+    if(action === "in"){
+      target.classList.add("hover");
+    }else{
+      target.classList.remove("hover");
+    }
+  }
+
   return (
     <StyledVzion>
       <div className="main-wrapper">
@@ -40,6 +49,7 @@ export const Vzion = () => {
         </div>
         <div className="second-wrapper">
           <div className="videos-vignettes">
+            <div className="pseudo_elem_wrapper">
             <img
               src={video1}
               className="video1"
@@ -47,8 +57,13 @@ export const Vzion = () => {
                 setVideoClick("video1");
                 OpenLink("video1");
               }}
+              onMouseOver={(e) => hover_pseudo(e,"in")} 
+              onMouseOut={(e) => hover_pseudo(e,"out")}
               alt="Miniature vidéo: Les tréfonds les plus SOMBRES d’Internet"
             />
+            <div className="pseudo_elem"></div>
+            </div>
+            <div className="pseudo_elem_wrapper">
             <img
               src={video2}
               className="video2"
@@ -56,8 +71,13 @@ export const Vzion = () => {
                 setVideoClick("video2");
                 OpenLink("video2");
               }}
+              onMouseOver={(e) => hover_pseudo(e,"in")} 
+              onMouseOut={(e) => hover_pseudo(e,"out")}
               alt="Miniature vidéo: 160 ans de prison pour avoir imité des scènes de GTA dans la vraie vie"
             />
+            <div className="pseudo_elem"></div>
+            </div>
+            <div className="pseudo_elem_wrapper">
             <img
               src={video3}
               className="video3"
@@ -65,8 +85,12 @@ export const Vzion = () => {
                 setVideoClick("video3");
                 OpenLink("video3");
               }}
+              onMouseOver={(e) => hover_pseudo(e,"in")} 
+              onMouseOut={(e) => hover_pseudo(e,"out")}
               alt="Miniature vidéo: La SECTE qui recrutait à travers un JEU VIDÉO : Kanye Quest 3030"
             />
+            <div className="pseudo_elem"></div>
+            </div>
           </div>
           <DisplayContent videoClick={videoClick} />
         </div>

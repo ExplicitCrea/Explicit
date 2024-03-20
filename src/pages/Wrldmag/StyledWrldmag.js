@@ -77,6 +77,7 @@ const StyledWrldmag = styled.section`
         align-items: center;
         justify-content: space-between;
         position: relative;
+        margin: 6vh auto 30vh auto;
         .image-left {
           width: 33%;
         }
@@ -102,16 +103,23 @@ const StyledWrldmag = styled.section`
       }
         .wrldmag-container {
           position: absolute;
-          z-index: 1;
+          z-index: 2;
           width: 100%;
-          top: 4vw;
-          .wrldmag-large {
-            width: 100%;
+          top: 41.5vh;
+          .wrldmag {
+            position: relative;
+            width: 65vw;
             height: auto;
             transition: 0.3s;
+            left: 16vw;
+            z-index: 2;
+            margin-top: -1.5vw;
           }
-          .wrldmag-large.js_hover {
-            transform: scale3d(1.1, 1.1, 2);
+          .wrldmag:hover {
+            transform: scale(1.1);
+          }
+          .ligne {
+            position: absolute;
           }
         }
 
@@ -135,18 +143,23 @@ const StyledWrldmag = styled.section`
 
     .container {
       .second-wrapper{
+        width: 100%;
+        position: relative;
+        height: 91.5vh;
+        display: flex;
+        flex-direction: column;
         .images-wrapper {
           width: 100%;
           flex-wrap: wrap;
           justify-content: center;
-          margin-bottom: 22vw;
+          margin: 5vh 0 auto 0;
           .image-right, .image-left {
             width: 50%;
           }
           .image-center {
-            width: 50%;
+            width: 75%;
             position: unset;
-            margin-top: -20px;
+            margin-top: -10px;
           }
         }
 
@@ -154,10 +167,16 @@ const StyledWrldmag = styled.section`
           display: flex;
           justify-content: center;
           align-items: center;
-          top: 33vw;
-          img {
-            width: 185%;
+          top: 40vh;
+          img.ligne {
+            width: 140%;
             height: auto;
+          }
+          img.wrldmag {
+            width: 90%;
+            height: auto;
+            left: 0;
+            top: 0;
           }
         }
 
@@ -165,6 +184,8 @@ const StyledWrldmag = styled.section`
           display: flex;
           justify-content: center;
           align-items: center;
+          width: 160%;
+          left: -25%;
           img {
             width: 180%;
             height: auto;
