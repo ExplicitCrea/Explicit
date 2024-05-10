@@ -193,6 +193,15 @@ const StyledVzion = styled.section`
       }
     }
   }
+  @media (max-width: 900px) {
+    .videos-vignettes {
+      .pseudo_elem_wrapper {
+        .pseudo_elem{
+          display:none;
+        }
+      }
+    }
+  }
 `;
 
 export { StyledVzion };

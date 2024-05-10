@@ -177,6 +177,17 @@ const StyledGg = styled.section`
             }
         }
     }
+
+    @media (max-width: 750px) {
+        .container{
+            p{
+                font-size: 0.9em;
+            }   
+            .logo-middle{
+                top: 60vh; 
+            }
+        }
+    }
 `
 
 export default StyledGg
