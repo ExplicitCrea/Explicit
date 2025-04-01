@@ -89,6 +89,28 @@ const StyledPotatoz = styled.section`
                     filter: drop-shadow(2px 2px 10px #000);
                 }
             }
+            .deco{
+                width: 19vw;
+                height: auto;
+                filter: drop-shadow(0px 0px 12px #000);
+                -webkit-filter: drop-shadow(0px 0px 12px #000);
+                -moz-filter: drop-shadow(0px 0px 12px #000);
+                -o-filter: drop-shadow(0px 0px 12px #000);
+                -ms-filter: drop-shadow(0px 0px 12px #000);
+                transition: 0.5s;
+            }
+            .deco:hover{
+                filter: drop-shadow(0px 0px 12px #000) drop-shadow(0px 0px 2px #000);
+                transform: scale(1.1);
+             }
+            .explo_jouet{
+                position: absolute;
+                top: 10%;
+                left: 0;
+                z-index: -1;
+                width: 40%;
+                filter: drop-shadow(2px 2px 10px #000);
+            }
         }
         p.description{
             align-items: center;

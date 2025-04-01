@@ -4,6 +4,7 @@ import logoTop from '../../assets/gg/logo-top.webp'
 import gameplay from '../../assets/gg/gameplay.webp'
 import scene from '../../assets/gg/scene.webp'
 import { useTranslation } from 'react-i18next';
+//import waiting_screen from '../../assets/gg/waiting_screen.webm';
 
 export const Gg = () => {
     const { t } = useTranslation();
@@ -14,7 +15,7 @@ export const Gg = () => {
                     <div className='image'>
                         <img src={gameplay} alt="gg-gameplay"/>
                     </div>
-                    {/* <Player video={video} /> */}
+                    {/* <Player video={waiting_screen} /> */}
                 </div>
                 <img className='logo-middle' src={logoMiddle} alt="logo gg on top"/>
                 <p>{t('gg.description')}</p>

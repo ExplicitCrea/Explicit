@@ -1,3 +1,4 @@
+
 import StyledPotatoz from './StyledPotatoz';
 import title from '../../assets/potatoz/title.webp';
 import potatoz from '../../assets/potatoz/potatoz.webp';

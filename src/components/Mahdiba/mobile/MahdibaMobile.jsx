@@ -9,6 +9,7 @@ import { StyledMahdibaMobile } from "./StyledMahdibaMobile";
 import video from "../../../assets/mahdiba/Extrait StreamPack Mahdi_ba.webm";
 
 
+
 export const MahdibaMobile = () => {
   const { t } = useTranslation();
   return (
