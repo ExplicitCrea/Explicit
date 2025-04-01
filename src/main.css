@@ -8,6 +8,21 @@
     font-weight: bold;
 }
 
+@font-face {
+    font-family: "Book-Antiqua";
+    src: url('/assets/font/Book-Antiqua.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "BricolageGrotesque";
+    src: url('/assets/font/BricolageGrotesque.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Maragsa";
+    src: url('/assets/font/Maragsa.otf') format('opentype');
+}
+
 html {
     background-color: #191C2E;
 }

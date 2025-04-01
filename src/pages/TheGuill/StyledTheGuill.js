@@ -40,11 +40,11 @@ p {
     margin-bottom: 8vw;
 
     .video{
-        width: 64%;
+        width: 100%;
         height: auto;
         max-width: 1000px;
         aspect-ratio: 16/9;
-        margin: 180px 0 0 50px;
+        margin: 8vh 0 0 50px;
         position: relative;
         z-index: 1;
 
@@ -52,10 +52,15 @@ p {
             position: absolute;
             right: -35px;
             margin: 0px 12px;
+            z-index: 2;
                 img{
                     height: 100px;
                     margin: 0px 12px;
                     width: auto;
+                    transition: 0.5s;
+                }
+                img:hover{
+                    transform: scale(1.1);
                 }
         }
     
@@ -65,18 +70,24 @@ p {
             align-items: center;
             position: absolute;
             right: -124px;
-            bottom: -20%;
+            bottom: -17.5%;
+            z-index: 2;
             img{
                 width: auto;
                 height: 100px;
                 margin: 12px 0;
+                transition: 0.5s;
+            }
+            img:hover{
+                transform: scale(1.1);
             }
         }
         .banners {
             width: 50%;
             position: absolute;
-            bottom: calc(0px - 38%);
+            bottom:-35%;
             left: 0px;
+            z-index: 2;
         }
     }
 

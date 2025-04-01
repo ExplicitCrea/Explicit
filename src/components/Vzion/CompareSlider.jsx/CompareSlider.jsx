@@ -2,12 +2,10 @@ import {
   ReactCompareSlider,
   ReactCompareSliderImage,
 } from "react-compare-slider";
+import PropTypes from 'prop-types';
 import { StyledContainer } from "./StyledCompareSlider";
 
-import before from "../../../assets/vzion/compare-slider/before.webp";
-import after from "../../../assets/vzion/compare-slider/after.webp";
-
-export const CompareSlider = () => {
+export const CompareSlider = ({ before, after }) => {
   return (
     <StyledContainer>
       <ReactCompareSlider
@@ -16,5 +14,10 @@ export const CompareSlider = () => {
         itemTwo={<ReactCompareSliderImage src={after} alt="after" />}
       />
     </StyledContainer>
-  );
+    );
+};
+
+CompareSlider.propTypes = {
+  before: PropTypes.string.isRequired,
+  after: PropTypes.string.isRequired,
 };

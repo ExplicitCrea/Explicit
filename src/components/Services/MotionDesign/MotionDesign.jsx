@@ -1,6 +1,8 @@
-import { useTranslation } from 'react-i18next'
-import StyledMotionDesign from './StyledMotionDesign'
-import ReactPlayer from 'react-player'
+import { useTranslation } from 'react-i18next';
+import StyledMotionDesign from './StyledMotionDesign';
+import { Player } from "../../../utils/Player.jsx";
+import etoile from '../../../assets/services/etoile.webp';
+import video from "../../../assets/services/motion_design.webm";
 
 export const MotionDesign = () => {
     const { t } = useTranslation()
@@ -8,9 +10,8 @@ export const MotionDesign = () => {
         <StyledMotionDesign>
             <h1>Motion Design</h1>
             <p>{t('services.motion')}</p>
-            <div className='video'>
-                <ReactPlayer width='100%' height='100%' url='https://youtu.be/6li-_LFye3w' />
-            </div>
+            <Player video={video}/>
+            <img className="etoile" src={etoile} alt='etoile' />
         </StyledMotionDesign>
     )
 }

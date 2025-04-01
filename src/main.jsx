@@ -13,7 +13,7 @@ import { Paltay } from './pages/Paltay/Paltay';
 import { Olympics } from './pages/Olympics/Olympics.jsx';
 import { Jd } from './pages/Jd/Jd.jsx';
 import { Oreal } from './pages/Oreal/Oreal.jsx';
-import {History} from './pages/History/History.jsx'
+import { History } from './pages/History/History.jsx'
 import { Contact } from './pages/Contact/Contact.jsx';
 import { Faq } from './pages/FAQ/Faq.jsx';
 import { LegalDisclaimer } from './pages/Legal Disclaimer/LegalDisclaimer.jsx';
@@ -24,106 +24,127 @@ import { TheGuill } from './pages/TheGuill/TheGuill.jsx';
 import { MahdibaPage } from './pages/Mahdiba/MahdibaPage.jsx';
 import { Wrldmag } from './pages/Wrldmag/Wrldmag.jsx'
 import { Eden } from './pages/Eden LZ/Eden.jsx';
-
-
+import { WrldmagDocu } from './pages/WrldmagDocu/WrldMagDocu.jsx';
+import { Slimka } from './pages/Slimka/Slimka.jsx';
+import { Mcskyz } from './pages/Mcskyz/Mcskyz.jsx';
+import { Grim } from './pages/Grim/Grim.jsx';
+import { Insta360 } from './pages/Insta360/Insta360.jsx';
 
 const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Layout />,
-    children: [
-      {
-        path: '/',
-        element: <Home />,
-      },
-      {
-        path: '/artbook',
-        element: <ArtbookPage />,
-      },
-      {
-        path: '/services',
-        element: <Services/>,
-      }, 
-      {
-        path: '/brucegrannec',
-        element: <Bruce_Grannec_Page/>
-      },
-      {
-        path: '/potatoz',
-        element: <Potatoz/>,
-      },
-      {
-        path: '/gg',
-        element: <Gg/>,
-      },
-      {
-        path: '/paltay',
-        element: <Paltay/>,
-      },
-      {
-        path: '/olympics',
-        element: <Olympics/>,
-      },
-      {
-        path: '/le-grand-jd',
-        element: <Jd/>,
-      },
-      {
-        path: '/loreal',
-        element: <Oreal/>,
-      },
-      {
-        path: '/history',
-        element: <History/>,
-      },
-      {
-        path: '/contact',
-        element: <Contact/>,
-      },
-      {
-        path: '/faq',
-        element: <Faq/>,
-      },
-      {
-        path: '/legal-disclaimer',
-        element: <LegalDisclaimer/>,
-      },
-      {
-        path: '/vzion',
-        element: <Vzion/>
-      },
-      {
-        path: '/pg',
-        element: <Pg/>,
-      },
-      {
-        path: '/theguill',
-        element: <TheGuill/>,
-      }, 
-      {
-        path: '/mahdiba',
-        element: <MahdibaPage/>
-      },
-      {
-        path: '/wrldmag',
-        element: <Wrldmag/>
-      },
-      {
-        path: '/eden-lz',
-        element: <Eden/>,
-      },
-      
-      
-      
-    ],
-  },
+    {
+        path: "/",
+        element: <Layout />,
+        children: [
+            {
+                path: '/',
+                element: <Home />,
+            },
+            {
+                path: '/artbook',
+                element: <ArtbookPage />,
+            },
+            {
+                path: '/services',
+                element: <Services />,
+            },
+            {
+                path: '/brucegrannec',
+                element: <Bruce_Grannec_Page />
+            },
+            {
+                path: '/potatoz',
+                element: <Potatoz />,
+            },
+            {
+                path: '/gg',
+                element: <Gg />,
+            },
+            {
+                path: '/paltay',
+                element: <Paltay />,
+            },
+            {
+                path: '/olympics',
+                element: <Olympics />,
+            },
+            {
+                path: '/le-grand-jd',
+                element: <Jd />,
+            },
+            {
+                path: '/loreal',
+                element: <Oreal />,
+            },
+            {
+                path: '/history',
+                element: <History />,
+            },
+            {
+                path: '/contact',
+                element: <Contact />,
+            },
+            {
+                path: '/faq',
+                element: <Faq />,
+            },
+            {
+                path: '/legal-disclaimer',
+                element: <LegalDisclaimer />,
+            },
+            {
+                path: '/vzion',
+                element: <Vzion />
+            },
+            {
+                path: '/pg',
+                element: <Pg />,
+            },
+            {
+                path: '/theguill',
+                element: <TheGuill />,
+            },
+            {
+                path: '/mahdiba',
+                element: <MahdibaPage />
+            },
+            {
+                path: '/wrldmag',
+                element: <Wrldmag />
+            },
+            {
+                path: '/eden-lz',
+                element: <Eden />,
+            },
+            {
+                path: '/wrldmag_documentaire',
+                element: <WrldmagDocu />
+            },
+            {
+                path: "/grim",
+                element: <Grim />
+            },
+            {
+                path: '/slimka',
+                element: <Slimka />
+            },
+            {
+                path: '/mcskyz',
+                element: <Mcskyz />
+            },
+            {
+                path: '/insta360',
+                element: <Insta360 />
+            }
+
+        ],
+    },
 ]);
 
 export const Main = () => {
-  return (
-    <RouterProvider router={router} />
-  )
+    return (
+        <RouterProvider router={router} />
+    )
 }
 
 
-ReactDOM.createRoot(document.getElementById('root')).render(<Main/>)
+ReactDOM.createRoot(document.getElementById('root')).render(<Main />)

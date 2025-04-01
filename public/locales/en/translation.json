@@ -12,6 +12,16 @@
     "branding": "Entrust your visual presence to our creative services. Whether you represent an innovative company or are self-employed, our expertise will shape your values with unique graphic directions.",
     "motion": "Want to tell a story? With our expertise in motion design, we can illustrate it and captivate your audience."
   },
+  "artbook":{
+    "description":"we focus on",
+    "categories":{
+        "Advertisement":"Advertisement",
+        "Documentary":"Documentary",
+        "LiveStreaming":"LiveStreaming",
+        "Editing":"Editing & Motion Design",
+        "Events":"Events"
+    }
+  },
   "bruce-grannec": {
     "paragraph": "We are proud to have collaborated with Bruce Grannec in providing exceptional visuals for his tournament in collaboration with FIFA 2023. Our team designed bespoke animated assets to enhance his event. Each visual element was carefully crafted to reflect the professionalism and excitement of the tournament, providing Bruce Grannec with a distinctive and immersive visual presence on his streaming platform."
   },
@@ -66,6 +76,10 @@
     "newsletter": {
       "title": "Keep up to date with all the latest news!",
       "placeholder": "Enter your e-mail!"
+    },
+    "notification": {
+      "title": "billing service",
+      "description": "Discover our online billing service!"
     }
   },
   "wrldmag": {
@@ -127,7 +141,7 @@
   },
   "contact": {
     "title": "Contact Us",
-    "title2": "Contact Us",
+    "title2": "Our Informations",
     "label": "Your first name / last name",
     "input": "Forename",
     "input2": "Name",

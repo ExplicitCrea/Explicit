@@ -29,6 +29,7 @@ export const Branding = () => {
   });
   const left = ['d3', 'd4', 'd6', 'd5']
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const onMouseMove = useCallback(throttle((e, name) => {
       const card = e.currentTarget;
       const box = card.getBoundingClientRect();

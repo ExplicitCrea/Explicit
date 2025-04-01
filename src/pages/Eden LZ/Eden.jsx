@@ -1,14 +1,14 @@
-import ReactPlayer from 'react-player'
-import StyledEden from './StyledEden'
-import background from '/assets/eden_lz/background.webp'
-import photo from '../../assets/eden-lz/photo.webp'
-import logo from '../../assets/eden-lz/logo-.webp'
-import photos from '../../assets/eden-lz/photo2.webp'
-import Logo from '../../assets/eden-lz/logo.webp'
-import star from '../../assets/eden-lz/star.webp'
-import com from '../../assets/eden-lz/com.webp'
-import chapitre from '../../assets/eden-lz/chapitre.webp'
-import chapitres from '../../assets/eden-lz/chapitre1.webp'
+import { Player } from '../../utils/Player';
+import StyledEden from './StyledEden';
+import photo from '../../assets/eden-lz/photo.webp';
+import logo from '../../assets/eden-lz/logo-.webp';
+import photos from '../../assets/eden-lz/photo2.webp';
+import Logo from '../../assets/eden-lz/logo.webp';
+import star from '../../assets/eden-lz/star.webp';
+import com from '../../assets/eden-lz/com.webp';
+import chapitre from '../../assets/eden-lz/chapitre.webp';
+import chapitres from '../../assets/eden-lz/chapitre1.webp';
+import video from '../../assets/eden-lz/Extrait-EdenLz.webm';
 import { useTranslation } from "react-i18next";
 
 export const Eden = () => {
@@ -24,14 +24,12 @@ return (
           <img className="logo" src={logo} alt='logo' />
           <img className="photos" src={photos} alt='photos' />
         </div>
-        <div className='video'>
-          <ReactPlayer width='100%' height='100%' url='https://youtu.be/4vF-72KeuKw' />
-        </div>
+          <Player video={video} />
         <div className='container-down'>
           <div className='down-left-container'>
             <div className='logo-container'>
-              <img src={Logo} alt='logo' />
-              <img src={star} alt='logo' />
+              <img className="logo" src={Logo} alt='logo' />
+              <img className="logo" src={star} alt='logo' />
             </div>
             <p>{t('eden.paragraphe')}</p>
           </div>
@@ -47,7 +45,10 @@ return (
           </div>
         </div>
       </div>
-      <img className='background' src={background} alt="eden" />
+    <div className="eclipse top"></div>
+    <div className="eclipse left"></div>
+    <div className="eclipse right"></div>
+    <div className="eclipse bottom"></div>
     </StyledEden>
   )
 }

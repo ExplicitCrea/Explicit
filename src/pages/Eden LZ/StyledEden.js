@@ -8,6 +8,43 @@ const StyledEden = styled.section`
     justify-content: center;
     position: relative;
     overflow: hidden;
+    background-size: cover;
+    .eclipse{
+        width: 75vw;
+        height: 75vw;
+        position: absolute;
+        border-radius: 50%;
+        z-index: -1;
+    }
+    .eclipse.top{
+        bottom: 24vw;
+        right:-8vw;
+        background: radial-gradient(50% 50% at 50% 50%, rgba(129,212,226, 0.55) 0.15%, rgba(255, 255, 255, 0) 99.99%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    .eclipse.left{
+        bottom: 5vw;
+        left: -42vw;
+        background: radial-gradient(50% 50% at 50% 50%, rgba(189, 78, 255, 0.53) 0.15%, rgba(255, 255, 255, 0) 99.99%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
+    }
+    .eclipse.right{
+        bottom: -12vw;
+        right: -27vw;
+        background: radial-gradient(50% 50% at 50% 50%, rgba(189, 78, 255, 0.33) 0.15%, rgba(255, 255, 255, 0) 99.99%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    .eclipse.bottom{
+        top:22vw;
+        left:4vw;
+        background: radial-gradient(50% 50% at 50% 50%, rgba(129,212,226, 0.33) 0.15%, rgba(255, 255, 255, 0) 99.99%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    .logo{
+        transition: 0.3s;
+    }
+    .logo:hover{
+        transform: scale(1.1);
+    }
     .global-container{
         width: 100%;
         display: flex;
@@ -29,6 +66,7 @@ const StyledEden = styled.section`
             overflow: hidden;
             z-index: 2;
             max-width: 540px;
+            top: 37.5%;
         }
         .container-up{
             width: 100%;
@@ -52,6 +90,10 @@ const StyledEden = styled.section`
                     height: auto;
                     border-radius: 24px;
                     box-shadow: 0px 0px 20px -2px #000000;
+                    transition: 0.3s ease-out;
+                }
+                img:hover{
+                    transform: scale(1.05);
                 }
             }
             .logo{
@@ -64,6 +106,10 @@ const StyledEden = styled.section`
                 border-radius: 24px;
                 box-shadow: 0px 0px 20px -2px #000000;
                 margin: 11vw 0 0 0;
+                transition: 0.3s ease-out;
+            }
+            .photos:hover{
+                transform: scale(1.05);
             }
         }
         .container-down{
@@ -100,12 +146,17 @@ const StyledEden = styled.section`
                 justify-content: center;
                 align-items: flex-end;
                 .com-container{
+                    z-index: 1;
                     width: 32%;
                     img{
                         width: 100%;
                         height: auto;
                         border-radius: 12px;
                         overflow: hidden;
+                        transition: 0.3s ease-out;
+                    }
+                    img:hover{
+                        transform: scale(1.05);
                     }
                     h1{
                         font-size: 30px;
@@ -123,25 +174,25 @@ const StyledEden = styled.section`
                         width: 47%;
                         height: auto;
                         transform: translateY(-60px);
+                        transition: 0.3s ease-out;
+                    }
+                    .chapter-left:hover{
+                        transform: translateY(-60px) translateX(-12px) scale(1.05);
                     }
                     .chapter-right{
                         border-radius: 12px;
                         overflow: hidden;
                         width: 47%;
                         height: auto;
+                        transition: 0.3s ease-out;
                         transform: translate(-24px, -12px);
+                    }
+                    .chapter-right:hover{
+                        transform: translate(-24px, -12px) scale(1.05);
                     }
                 }
             }
         }
-    }
-    .background{
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        width: 100vw;
-        height: auto;
-        z-index: -1;
     }
 
     @media (max-width: 1400px) {
@@ -152,6 +203,27 @@ const StyledEden = styled.section`
     }
 
     @media (max-width: 900px) {
+        .eclipse{
+            width: 100%;
+            height: 100%;    
+        }
+        .eclipse.left{
+            bottom:-30%;
+            left: -20vh;
+        }
+        .eclipse.right{
+            top: -30%;
+            right: -25vh;
+        }
+        .eclipse.top{
+            left:-20vw;
+            top: -50vh;
+        }
+        .eclipse.bottom{
+            position: absolute;
+            top: 30vh;
+            left: 10vh;
+        }
         .global-container{
             justify-content: unset;
             .video{

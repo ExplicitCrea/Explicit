@@ -2,7 +2,7 @@ import { useState } from 'react';
 import StyledCard from './StyledCard'
 import { FaPlay, FaPause } from "react-icons/fa";
 
-export const Card = ({name, file}) => {
+export const Card = ({name, file, onLoad}) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [audio] = useState(new Audio(file));
 
@@ -16,6 +16,12 @@ export const Card = ({name, file}) => {
     audio.currentTime = 0
     setIsPlaying(false);
   }
+
+  audio.onended = () => {
+    setIsPlaying(false);
+  }
+
+  onLoad(audio, setIsPlaying);//send the audio and the setIsPlaying function to the parent component
 
   return (
     <StyledCard>

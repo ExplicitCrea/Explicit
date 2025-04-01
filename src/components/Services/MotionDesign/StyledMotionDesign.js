@@ -27,6 +27,12 @@ const StyledMotionDesign = styled.section`
     overflow: hidden;
     margin: 12px 0 0 0;
   }
+  .etoile{
+        position: absolute;
+        left: -48%;
+        z-index: -1;
+        opacity: 0.5;
+  }
 
   @media (max-width: 900px) {
     h1{
@@ -39,6 +45,10 @@ const StyledMotionDesign = styled.section`
     }
     .video{
       width: 80%;
+    }
+    .etoile{
+      left: -40%;
+      width: 100vw;
     }
   }
 `

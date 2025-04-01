@@ -4,13 +4,14 @@ const StyledFaq = styled.div`
     width: 100%;
     padding: 100px; 
     background-color: #191C2E;
+    position: relative;
     z-index: 0;
     overflow: hidden;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    z-index: 1;
     .wrapper{
         width: 80%;
         max-width: 900px;
@@ -23,7 +24,7 @@ const StyledFaq = styled.div`
             width: 100%;
             height: 100%;
             background: linear-gradient(39deg, rgb(100 255 133 / 26%) 1.89%, rgb(40 32 143 / 45%) 81.57%);
-            z-index: -1;
+            z-index: -2;
     }
     @media (max-width: 900px) {
         width: 100%;

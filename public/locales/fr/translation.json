@@ -12,6 +12,16 @@
     "branding": "Confiez votre présence visuelle à notre service de création. Que vous représentiez une entreprise innovante ou que vous soyez indépendant, notre expertise façonnera vos valeurs avec des directions graphiques uniques.",
     "motion": "Vous avez une histoire à raconter ? Grâce à notre expertise en motion design, nous saurons la mettre en images et captiver votre audience."
   },
+  "artbook":{
+    "description":"On fait",
+    "categories":{
+        "Advertisement":"Publicités",
+        "Documentary":"Documentaire",
+        "LiveStreaming":"LiveStreaming",
+        "Editing":"Montage & Motion Design",
+        "Events":"Events"
+    }
+  },
   "bruce-grannec": {
     "paragraph": "Nous sommes fiers d'avoir pu collaborer avec Bruce Grannec en fournissant des visuels exceptionnels pour son tournoi en collaboration avec FIFA 2023. Notre équipe a conçu des assets animés sur mesure pour enrichir son événement. Chaque élément visuel a été soigneusement élaboré pour refléter le professionnalisme et l'enthousiasme du tournoi, offrant à Bruce Grannec une présence visuelle distinctive et immersive sur sa plateforme de streaming."
   },
@@ -54,18 +64,22 @@
     ]
   },
   "mahdiba": {
-    "paragraph": "Voici notre réalisation pour le streamer et Youtuber \"Mahdi Ba\": un streampack entièrement animé et illustré par nos équipes. Une réalisation en 3D qui a demandé beaucoup de technicité et de temps, pour un résultat très satisfaisant. Nous sommes extrêmement fiers de ce projet, et le client est pleinement satisfait de son expérience avec notre équipe.\n\nNous sommes reconnaissants de la confiance accordée par \"Mahdi Ba\" et espérons pouvoir collaborer à nouveau sur d'autre projets à l'avenir."
+    "paragraph": "Voici notre réalisation pour le streamer et Youtuber Mahdi Ba : un streampack entièrement animé et illustré en 3D et en animation. Une réalisation qui a demandé beaucoup de travaille et de temps, pour un résultat très satisfaisant. Nous sommes extrêmement fiers de ce projet, et nous somme pleinement satisfait de notre expérience avec notre Mahdi Ba.\n\nNous sommes reconnaissants de la confiance accordée par Mahdi Ba et espérons pouvoir collaborer à nouveau sur d'autre projets à l'avenir. "
   },
   "home": {
     "title": {
       "main": "Vous souhaitez concrétiser un projet ",
       "secondary": "créatif"
     },
-    "description": "Explicit est là pour répondre à tout type de demandes concernant le milieu de l’audiovisuel. Nous avons à nos côtés des artistes passionnés et professionnels qui seront prêts à travailler avec vous afin de mener à bien vos projets. Découvrez-nous !",
+    "description": "Explicit est là pour répondre à tout type de demandes concernant le milieu de l’audiovisuel. Nous avons à nos côtés des artistes passionnés et professionnels qui seront prêts à travailler avec vous afin de mener à bien vos projets.",
     "subtitle": "Découvrez nous !",
     "newsletter": {
       "title": "Sois tenu au courant de toutes les actualités !",
       "placeholder": "Entre ton e-mail !"
+    },
+    "notification": {
+      "title": "Service de facture",
+      "description": "Découvrez notre service de facture en ligne!"
     }
   },
   "wrldmag": {
@@ -96,20 +110,20 @@
     "description": "Explicit accompagne le créateur de contenu PROFESSION GANGSTER dans sa direction artistique."
   },
   "jo": {
-    "description": "Explorez l'essence du temps à travers les yeux de la créativité d'Explicit. Notre collaboration avec l'évènement Paris 2024 nous a permis de façonner une vidéo en 3D captivante, un voyage d'une minute à travers les époques et les mondes. De gladiateurs en lutte aux splendeurs de l'Empire romain, des années 1920 à notre époque contemporaine, chaque univers prend vie grâce à notre maîtrise de la 3D.Plongez dans une immersion visuelle unique qui transcende le temps et l'espace, apportant une dimension épique au projet de merch Paris 2024."
+    "description": "Explorez l'essence du temps à travers les yeux de la créativité d'Explicit. Notre collaboration avec l'évènement Paris 2024 nous a permis de façonner une vidéo en 3D captivante, un voyage d'une minute à travers les époques et les mondes. De gladiateurs en lutte aux splendeurs de l'Empire romain, des années 1920 à notre époque contemporaine, chaque univers prend vie grâce à notre maîtrise de la 3D."
   },
   "gg": {
     "description": "Nous sommes honorés d'avoir contribué à la réalisation d'un tournoi e-sportif Minecraft, organisé par The Guill et offrant un cash prize de 12 000 euros. Explicit a apporté sa créativité en développant une direction artistique et en concevant des scènes pour l'événement. Chaque détail a été soigneusement orchestré pour créer une expérience visuelle immersive, ajoutant une dimension unique à ce tournoi !"
   },
   "potatoz": {
-    "description": "Nous sommes ravis d'avoir collaboré avec le streamer Potatoz. Notre équipe a créé des visuels sur mesure pour sa chaîne Twitch, des transitions fluides et une vidéo d'introduction captivante. Chacun de ces éléments a été soigneusement conçu pour refléter le style de Potatoz."
+    "description": "Nous sommes fiere d'avoir collaboré avec le streamer Potatoz. Nous avons créé des visuels sur mesure pour sa chaîne Twitch, des transitions et une vidéo d'introduction. Chacun de ces éléments a été conçu pour refléter le style de Potatoz, en motion et en 3D !"
   },
   "paltay": {
     "description": "Nous sommes fiers d'avoir collaboré avec Paltay, un streamer et YouTuber. Notre équipe a donné vie à sa chaîne Twitch en créant des scènes sur mesure, agrémentées d'illustrations et d'assets créatifs. Chaque élément a été soigneusement conçu pour apporter une touche unique et immersive à son contenu, offrant à Paltay et à sa communauté une expérience visuelle vraiment unique."
   },
   "jd": {
     "title": "RENCONTRE AVEC STUPEFLIP",
-    "description": "Plongez dans un monde d'inspiration impériale chinoise, où les histoires prennent vie grâce à l'expertise en illustration et en animation d’Explicit. Dans cette vidéo captivante issue d'une rencontre entre LeGrandJD et l'un des membres du groupe de musique légendaire Stupeflip, Explicit a donné vie à une aventure tout droit sortie de l'imagination de Julien Barthélémy. Découvrez l'histoire étonnante d'un empereur et d'un peintre mis à l'épreuve par la création d'un tableau de crabe."
+    "description": "Dans cette vidéo issue d'une rencontre entre LeGrandJD et l'un des membres du groupe  Stupeflip, nous avons donné vie à une aventure tout droit sortie de l'imagination de Julien Barthélémy. Découvrez l'histoire d'un empereur et d'un peintre mis à l'épreuve par la création d'un tableau de crabe. Illustration, animation, décor et thème sonore réalisés par nos soins pour un résultat unique et captivant."
   },
   "history": {
     "paragraph": "De par le besoin d'évoluer sans cesse, des créatifs se sont réunis pour performer dans le domaine de la création et du partage sur internet Le nom \"Explicit\"",
@@ -126,7 +140,7 @@
   },
   "contact": {
     "title": "Nous Contacter",
-    "title2": "Pour nous contacter",
+    "title2": "Nos informations",
     "label": "Votre Prénom / Nom ",
     "input": "Prénom",
     "input2": "Nom",
@@ -141,6 +155,6 @@
   "footer": {
     "title": "Notre Histoire",
     "title2": "Aide",
-    "title3": "Mention légal"
+    "title3": "Mentions légales"
   }
 }

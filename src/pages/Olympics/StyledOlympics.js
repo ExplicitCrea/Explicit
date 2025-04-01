@@ -25,6 +25,10 @@ const StyledOlympics = styled.section`
         .deco{
             width: 100%;
             height: auto;
+            transition: transform 0.3s;
+        }
+        .deco:hover{
+            transform: scale(1.1);
         }
     }
     .video{
@@ -37,7 +41,11 @@ const StyledOlympics = styled.section`
     }
     .text-container{
         width: 23%;
+        display:flex;
+        flex-direction: column;
+        height: 100%;
         p{
+            margin: auto;
             font-size: 1vw;
             font-family: lexend;
             font-weight: 600;
@@ -50,7 +58,13 @@ const StyledOlympics = styled.section`
         img{
             width: 100%;
             height: auto;
+            margin: auto;
+            transition: transform 0.3s;
         }
+        img:hover{
+            transform: scale(1.1);
+        }
+
     }
 
     @media (max-width: 900px) {
