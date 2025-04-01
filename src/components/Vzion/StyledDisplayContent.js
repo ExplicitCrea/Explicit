@@ -59,7 +59,7 @@ const StyledDisplayContent = styled.div`
         padding: 7px;
         background-color: #d9d9d900;
         border: 1px solid #ffffff;
-
+        transition: 0.3s;
         @media (min-width: 2000px) {
           font-size: 20px;
         }
@@ -68,6 +68,10 @@ const StyledDisplayContent = styled.div`
           font-size: 14px;
           padding: 5px;
         }
+      }
+      button:hover {
+        transform: scale(1.1);
+        background-color: #d9d9d999;
       }
     }
   }

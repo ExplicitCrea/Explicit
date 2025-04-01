@@ -61,7 +61,7 @@ const StyledMahdibaDesktop = styled.div`
 
         p {
           font-size: 18px;
-          height: 150px;
+          height: auto;
           z-index: 2;
           text-align: center;
           color: white;

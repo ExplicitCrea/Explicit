@@ -31,7 +31,7 @@ const StyledServices = styled.main`
         }
     
         .title{
-            font-size: 6vw;
+            font-size: 8vw;
             color: #634EFF;
             margin: 24px 0 0 0;
             text-align: center;
@@ -50,7 +50,7 @@ const StyledServices = styled.main`
         top: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(76deg, rgba(99, 78, 255, 0.13) 8.2%, rgba(100, 255, 169, 0.13) 97.96%);
+        background: linear-gradient(76deg, rgba(99, 78, 255, 0.45) 8.2%, rgba(100, 255, 169, 0.17) 97.96%);
     }
     .video-container-background{
         position: absolute;

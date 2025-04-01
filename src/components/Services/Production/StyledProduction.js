@@ -56,14 +56,6 @@ const StyledProduction = styled.section`
     animation: closeDoor cubic-bezier(0.71, -0.01, 0.4, 0.97) 600ms forwards;
   `}
 
-  h1{
-    top: 13%;
-    left: 33%;
-    position: absolute;
-    font-size: 6vw;
-    text-align: center;
-    z-index: 0;
-  }
   .main-container{
     width: 100%;
     display: flex;
@@ -73,6 +65,7 @@ const StyledProduction = styled.section`
     .middle{
       width: 53%!important;
       height: auto!important;
+      transform: scale(1.2);
     }
     img{
       width: 45%;
@@ -85,14 +78,24 @@ const StyledProduction = styled.section`
     height: 50%;
     width: 100%;
     z-index: 1;
-    overflow: hidden;
     .door{
       height: 100%;
-      width: auto;
+      width: 100vw;
+      object-fit: cover;
+    }
+    h1{
+      top: 13%;
+      left: 33%;
+      position: absolute;
+      font-size: 6vw;
+      text-align: center;
+      margin: 15vh 0;
+      z-index: 2;
     }
   }
 
   .up{
+    z-index: 2;
     top: 0px;
     ${props => props.isVisible === true && props.isSmallScreen === false && css`
       animation: doorUpOpen cubic-bezier(0.71, -0.01, 0.4, 0.97) 600ms forwards;
@@ -103,6 +106,7 @@ const StyledProduction = styled.section`
   }
   
   .down{
+    z-index: 1;
     bottom: 0px;
     ${props => props.isVisible === true && props.isSmallScreen === false && css`
       animation: doorDownOpen cubic-bezier(0.71, -0.01, 0.4, 0.97) 600ms forwards;

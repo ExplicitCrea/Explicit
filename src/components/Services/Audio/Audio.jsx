@@ -16,6 +16,20 @@ import { useTranslation } from 'react-i18next';
 
 export const Audio = () => {
   const { t } = useTranslation()
+  const all_audios = [];
+  const Loaded_audio = (audio, setIsPlaying) => {
+    all_audios.push([audio, setIsPlaying]);
+  }//to get all audios as loaded elements with their setIsPlaying function
+
+  const pause_all_audio = () => {
+    all_audios.forEach((item) => {
+      let audio = item[0];
+      let setIsPlaying = item[1];
+      audio.pause();//we don't reset the time because we want to continue the audio where it was paused
+      setIsPlaying(false);
+    });
+  }//pause all audios
+
   return (
     <StyledAudio>
         <h1 className='title'>{t('audio.title')}</h1>
@@ -31,11 +45,12 @@ export const Audio = () => {
         navigation={true}
         modules={[Navigation, EffectCoverflow]}
         className="mySwiper"
+        onSlideChange={()=>{pause_all_audio();}}
       >
         {
           ArrayAudio.map((audio, index) => (
             <SwiperSlide key={index} className='slider'>
-              <Card name={audio.name} file={audio.file} />
+              <Card name={audio.name} file={audio.file} onLoad={(audio,setIsPlaying) => Loaded_audio(audio,setIsPlaying)} />
             </SwiperSlide>
           ))
         }

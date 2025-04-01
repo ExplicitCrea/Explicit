@@ -13,7 +13,7 @@ return (
                   <Link to='/history' className='link history'> 
                         {t("footer.title")}
                   </Link>
-                  <Link to='/' className='link Shop'> 
+                  <Link to='https://shop.explicitcrea.com' className='link Shop'> 
                         Shop
                   </Link>
             </div>

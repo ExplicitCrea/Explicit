@@ -1,4 +1,4 @@
-import ReactPlayer from "react-player";
+import { Player } from "../../../utils/Player";
 import diamond from "../../../assets/mahdiba/diamond.webp";
 import glasses from "../../../assets/mahdiba/glasses.webp";
 import virtualCharacter from "../../../assets/mahdiba/virtual-character.webp";
@@ -6,6 +6,7 @@ import tv from "../../../assets/mahdiba/tv.webp";
 import virtualGlasses from "../../../assets/mahdiba/virtual-glasses.webp";
 import { useTranslation } from "react-i18next";
 import { StyledMahdibaDesktop } from "./StyledMahdibaDesktop";
+import video from "../../../assets/mahdiba/Extrait StreamPack Mahdi_ba.webm";
 
 export const MahdibaDesktop = () => {
   const { t } = useTranslation();
@@ -15,11 +16,7 @@ export const MahdibaDesktop = () => {
       <div className="container">
         <div className="video">
           <div className="wrapper">
-            <ReactPlayer
-              width="100%"
-              height="100%"
-              url="https://youtu.be/gHm0yFf-RBE"
-            />
+            <Player video={video}/>
             <img className="virtual-character" src={virtualCharacter} alt="Mahdi Ba virtuel" />
             <img className="glasses" src={glasses} alt="Lunette de soleil" />
             <img className="diamond" src={diamond} alt="Diamant" />

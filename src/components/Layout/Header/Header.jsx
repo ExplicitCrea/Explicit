@@ -10,6 +10,8 @@ import { Link } from 'react-router-dom';
 import { IoMenu, IoClose } from "react-icons/io5";
 import useWindowSize from '../../../utils/useWindowSize'
 
+import logo_insta from '../../../assets/logo_insta.svg';
+
 export const Header = () => {
     const [isOpen, setIsOpen] = useState(null);
     const {t, i18n} = useTranslation();
@@ -56,6 +58,7 @@ export const Header = () => {
                     </ul>
                 </nav>
                 <div className='container-contact'>
+                    <button className='insta'><a href='https://www.instagram.com/explicit.crea/' target='_blank' rel='noreferrer'><img src={logo_insta} alt='logo instagram' /></a></button>
                     <Link onClick={handleClick} className='contact' to='/contact'>{t('header.contact')}</Link>
                     <button onClick={changeLanguage}><img src={i18n.language === 'en' ? gb : fr } alt='flag translation' /></button>
                 </div>

@@ -95,7 +95,7 @@ z-index: 4;
       position: absolute;
       bottom: 0%;
       left: 0%;
-      width: 32%;
+      width: 28%;
       z-index: 0;
     }
     .right-banner{
@@ -157,6 +157,14 @@ z-index: 4;
       ${props => props.isVisible === false && css`
         animation: moveDown cubic-bezier(0.71, -0.01, 0.4, 0.97) 600ms forwards;
       `}
+    }
+    .footer{
+      position: absolute;
+      bottom: 0%;
+      left: 0%;
+      width: 100%;
+      height: 68%;
+      z-index: 2;
     }
   }
 `

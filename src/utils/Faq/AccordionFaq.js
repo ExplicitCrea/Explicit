@@ -2,7 +2,7 @@
 
 export const AccordionFaq = {
     
-        fr: [
+    "fr-FR": [
             {
                 title: 'Quels sont vos services ?',
                 content: 'Nous nous sommes spécialisés dans la création et la réalisation visuelle ! Nous opérons donc dans un secteur large de l’audiovisuel que vous pouvez consulter dans la catégorie "Services".'

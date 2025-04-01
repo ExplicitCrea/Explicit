@@ -13,6 +13,12 @@ const StyledMahdibaPage = styled.section`
   @media (max-width: 1000px) {
     padding-top: calc(68px + 30px);
   }
+  :where(.glasses,.diamond){
+    transition:all 400ms cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s
+  }
+  :where(.glasses,.diamond):hover{
+    transform:scale(1.1)
+  }
 `;
 
 export { StyledMahdibaPage };
