@@ -8,8 +8,36 @@ const StyledEden = styled.section`
     justify-content: center;
     position: relative;
     overflow: hidden;
-    background: url('../../assets/eden_lz/background.webp') no-repeat center;
     background-size: cover;
+    .eclipse{
+        width: 75vw;
+        height: 75vw;
+        position: absolute;
+        border-radius: 50%;
+        z-index: -1;
+    }
+    .eclipse.top{
+        bottom: 24vw;
+        right:-8vw;
+        background: radial-gradient(50% 50% at 50% 50%, rgba(129,212,226, 0.55) 0.15%, rgba(255, 255, 255, 0) 99.99%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    .eclipse.left{
+        bottom: 5vw;
+        left: -42vw;
+        background: radial-gradient(50% 50% at 50% 50%, rgba(189, 78, 255, 0.53) 0.15%, rgba(255, 255, 255, 0) 99.99%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
+    }
+    .eclipse.right{
+        bottom: -12vw;
+        right: -27vw;
+        background: radial-gradient(50% 50% at 50% 50%, rgba(189, 78, 255, 0.33) 0.15%, rgba(255, 255, 255, 0) 99.99%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    .eclipse.bottom{
+        top:22vw;
+        left:4vw;
+        background: radial-gradient(50% 50% at 50% 50%, rgba(129,212,226, 0.33) 0.15%, rgba(255, 255, 255, 0) 99.99%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
+    }
     .logo{
         transition: 0.3s;
     }
@@ -174,6 +202,27 @@ const StyledEden = styled.section`
     }
 
     @media (max-width: 900px) {
+        .eclipse{
+            width: 100%;
+            height: 100%;    
+        }
+        .eclipse.left{
+            bottom:-30%;
+            left: -20vh;
+        }
+        .eclipse.right{
+            top: -30%;
+            right: -25vh;
+        }
+        .eclipse.top{
+            left:-20vw;
+            top: -50vh;
+        }
+        .eclipse.bottom{
+            position: absolute;
+            top: 30vh;
+            left: 10vh;
+        }
         .global-container{
             justify-content: unset;
             .video{

@@ -1,17 +1,18 @@
-import StyledJd from './StyledJd'
-import banner from '../../assets/jd/banner.webp'
-import boat from '../../assets/jd/boat.webp'
-import samourai from '../../assets/jd/samourai.webp'
-import waterWave from '../../assets/jd/water-wave.webp'
-import poster1 from '../../assets/jd/poster1.webp'
-import poster2 from '../../assets/jd/poster2.webp'
-import poster3 from '../../assets/jd/poster3.webp'
-import carpentry from '../../assets/jd/carpentry.webp'
-import pp from '../../assets/jd/pp.webp'
-import ReactPlayer from 'react-player'
-import { useTranslation } from 'react-i18next'
+import StyledJd from './StyledJd';
+import banner from '../../assets/jd/banner.webp';
+import boat from '../../assets/jd/boat.webp';
+import samourai from '../../assets/jd/samourai.webp';
+import waterWave from '../../assets/jd/water-wave.webp';
+import poster1 from '../../assets/jd/poster1.webp';
+import poster2 from '../../assets/jd/poster2.webp';
+import poster3 from '../../assets/jd/poster3.webp';
+import carpentry from '../../assets/jd/carpentry.webp';
+import pp from '../../assets/jd/pp.webp';
+import { useTranslation } from 'react-i18next';
 import { useCallback } from 'react';
 import { throttle } from '../../utils/throttle';
+import { Player } from '../../utils/Player';
+import video from '../../assets/jd/LE GRAND JD KingJu_3.webm';
 
 export const Jd = () => {
     const BasePos = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
@@ -48,9 +49,7 @@ export const Jd = () => {
                 <img className='carpentry' src={carpentry} alt="menuiserie" />
                 <div className='presentation'>
                     <h1>{t('jd.title')}</h1>
-                    <div className='video'>
-                        <ReactPlayer width='100%' height='100%' url='https://youtu.be/WbvqtvnWBZs' controls={true}/>
-                    </div>
+                    <Player video={video} />
                     <p>{t('jd.description')}</p>
                 </div>
                 <div className='deco'>

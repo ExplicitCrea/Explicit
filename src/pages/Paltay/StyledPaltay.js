@@ -51,6 +51,7 @@ const StyledPaltay = styled.section`
         align-items: center;
         z-index: 1;
         margin-top: 59vw;
+        border-radius: 12px;
     }
 
     p{
