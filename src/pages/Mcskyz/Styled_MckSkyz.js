@@ -47,7 +47,7 @@ const StyledOlympics = styled.section`
         box-shadow: 6px 6px  0 0 #c00;
         border-radius: 10px;
         font-size: 1.4em;
-        z-index: 2;
+        z-index: 3;
         @media (max-width: 759px) {
             position: relative;
             top: 0;
