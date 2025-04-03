@@ -15,11 +15,9 @@ import { CompareSlider } from "../../components/Vzion/CompareSlider.jsx/CompareS
 
 let before_after = {};
 for (let i = 65; i < 65+5; i++) {
-    // import(`../../assets/grim/before_after/${String.fromCharCode(i)}.png`);
-    // import(`../../assets/grim/before_after/${String.fromCharCode(i)}2.png`);
     before_after[String.fromCharCode(i)] = {
-        before: (await import(`../../assets/grim/before_after/${String.fromCharCode(i)}.png`)).default,
-        after: (await import(`../../assets/grim/before_after/${String.fromCharCode(i)}2.png`)).default
+        before: (import(`../../assets/grim/before_after/${String.fromCharCode(i)}.png`)).default,
+        after: (import(`../../assets/grim/before_after/${String.fromCharCode(i)}2.png`)).default
     };
 }
 
