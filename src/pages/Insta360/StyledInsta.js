@@ -7,7 +7,7 @@ const StyledInsta = styled.section`
     flex-direction: column;
     height: 100vh;
     overflow: hidden;
-    background-image: url("/src/assets/insta360/bg.webp");
+    background-image: url("assets/insta360/bg.webp");
     .information{
         margin: 13vh auto 0 27vw;
         display: flex;
