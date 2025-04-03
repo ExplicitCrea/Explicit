@@ -13,13 +13,26 @@ import transition from '../../assets/grim/TRANSITION_2.webm';
 import animation from '../../assets/grim/Extrait-Anime.webm';
 import { CompareSlider } from "../../components/Vzion/CompareSlider.jsx/CompareSlider";
 
-let before_after = {};
-for (let i = 65; i < 65+5; i++) {
-    before_after[String.fromCharCode(i)] = {
-        before: (import(`../../assets/grim/before_after/${String.fromCharCode(i)}.png`)).default,
-        after: (import(`../../assets/grim/before_after/${String.fromCharCode(i)}2.png`)).default
-    };
-}
+// Import all images statically
+import A from '../../assets/grim/before_after/A.png';
+import A2 from '../../assets/grim/before_after/A2.png';
+import B from '../../assets/grim/before_after/B.png';
+import B2 from '../../assets/grim/before_after/B2.png';
+import C from '../../assets/grim/before_after/C.png';
+import C2 from '../../assets/grim/before_after/C2.png';
+import D from '../../assets/grim/before_after/D.png';
+import D2 from '../../assets/grim/before_after/D2.png';
+import E from '../../assets/grim/before_after/E.png';
+import E2 from '../../assets/grim/before_after/E2.png';
+
+// Create the before_after object with static imports
+const before_after = {
+    'A': { before: A, after: A2 },
+    'B': { before: B, after: B2 },
+    'C': { before: C, after: C2 },
+    'D': { before: D, after: D2 },
+    'E': { before: E, after: E2 },
+};
 
 import * as Images from '../../assets/grim/AVANCEMENT/index.js';
 const imageArray = Object.values(Images);
