@@ -90,6 +90,60 @@ const StyledInsta = styled.section`
             }
         }
     }
+        @media (max-height: 428px){//landscape phones
+            //everything position relative
+            //everything margin auto
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            .flotant{
+                position: relative;
+                left: 0;
+                top: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                width: 50%;
+                gap: 1vh;
+                [alt="camera"]{
+                    width: 30%;
+                    margin: 0 auto;
+                }
+                [alt="fleche"]{
+                    display: none;
+                }
+                span{
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    width: fit-content;
+                    font-size: 2em;
+                    margin: 0 auto 2vh auto;
+                }
+            }
+            .information{
+                position: relative;
+                margin: auto auto 6vh auto;
+                width: 50%;
+                height: fit-content;
+                display: flex;
+                justify-content: center;
+                gap: 1vh;
+                .video{
+                    width: 75%;
+                    border-radius: 25px;
+                }
+                span{
+                    width: 75%;
+                    font-size: .8em;
+                    padding: 1.5vh 1.5vw;
+                }
+            }
+
+        }
 `;
 
 export { StyledInsta };
