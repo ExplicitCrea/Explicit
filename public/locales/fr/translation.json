@@ -12,6 +12,16 @@
     "branding": "Confiez votre présence visuelle à notre service de création. Que vous représentiez une entreprise innovante ou que vous soyez indépendant, notre expertise façonnera vos valeurs avec des directions graphiques uniques.",
     "motion": "Vous avez une histoire à raconter ? Grâce à notre expertise en motion design, nous saurons la mettre en images et captiver votre audience."
   },
+  "artbook":{
+    "description":"On fait",
+    "categories":{
+        "Advertisement":"Publicités",
+        "Documentary":"Documentaire",
+        "LiveStreaming":"LiveStreaming",
+        "Editing":"Montage & Motion Design",
+        "Events":"Events"
+    }
+  },
   "bruce-grannec": {
     "paragraph": "Nous sommes fiers d'avoir pu collaborer avec Bruce Grannec en fournissant des visuels exceptionnels pour son tournoi en collaboration avec FIFA 2023. Notre équipe a conçu des assets animés sur mesure pour enrichir son événement. Chaque élément visuel a été soigneusement élaboré pour refléter le professionnalisme et l'enthousiasme du tournoi, offrant à Bruce Grannec une présence visuelle distinctive et immersive sur sa plateforme de streaming."
   },

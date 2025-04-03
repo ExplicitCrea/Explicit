@@ -41,14 +41,15 @@ const StyledPotatoz = styled.section`
         z-index: 1;
         width: 100%;
         align-items: flex-end;
-        .video{
+        .videowrapper{
             width: 100%;
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: space-evenly;
             margin: 0 0 2vh 0;
-            .wrapper{
+            video{
+                margin:0 14vw 0 19vw;
                 position: relative;
                 width: 50%;
                 aspect-ratio: 16 / 9;
@@ -56,8 +57,36 @@ const StyledPotatoz = styled.section`
                 justify-content: center;
                 align-items: center;
                 border-radius: 32px;
-                iframe{
-                    border-radius: 32px;
+            }
+            .wrapper_double{
+                position:relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin: auto auto auto 10vw;
+                .deco{
+                    width: 19vw;
+                    height: auto;
+                    filter: drop-shadow(0px 0px 12px #000);
+                    -webkit-filter: drop-shadow(0px 0px 12px #000);
+                    -moz-filter: drop-shadow(0px 0px 12px #000);
+                    -o-filter: drop-shadow(0px 0px 12px #000);
+                    -ms-filter: drop-shadow(0px 0px 12px #000);
+                    transition: 0.5s;
+                }
+                .deco:hover{
+                    filter: drop-shadow(0px 0px 12px #000) drop-shadow(0px 0px 2px #000);
+                    transform: scale(1.1);
+                }
+                .explo_jouet{
+                    position: absolute;
+                    top:0;
+                    left: 0;
+                    transform: translate(-20%, -20%);
+                    z-index: -1;
+                    width: 200%;
+                    filter: drop-shadow(2px 2px 10px #000);
                 }
             }
             .deco{
@@ -120,8 +149,12 @@ const StyledPotatoz = styled.section`
                 width: 90%;
                 padding: 1.5vw 1vw;
             }
-            .video{
+            .videowrapper{
                 flex-direction: column-reverse;
+                video{
+                    margin: 0 auto 5vh auto;
+                    width: 90%;
+                }
                 .wrapper{
                     width: 90%;
                 }
@@ -133,9 +166,9 @@ const StyledPotatoz = styled.section`
                         margin: 4vh auto;
                     }
                     .explo_jouet{
-                        width: 150%;
-                        top: 21%;
-                        left: -20%;
+                        width: 75%;
+                        top: 13%;
+                        left: 25%;
                     }
                 }
             }

@@ -3,10 +3,16 @@ import styled from "styled-components";
 
 const StyledWrldmag = styled.section`
   min-height: 100vh;
-  background: url("assets/wrldmag/bg-top.webp");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  //#5d5d5d #858585 damier
+  background: conic-gradient(
+    #5d5d5d 90deg,
+    #858585 90deg 180deg,
+    #5d5d5d 180deg 270deg,
+    #858585 270deg
+  );
+  background-size: 60px 60px;
+  background-position: top left;
+  background-repeat: repeat;
   overflow: hidden;
   padding-top: 80px;
   position: relative;

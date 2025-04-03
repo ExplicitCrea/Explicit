@@ -5,6 +5,8 @@ import { Grid } from "../../components/Vzion/grid/Grid";
 import video1 from "../../assets/vzion/video1.webp";
 import video2 from "../../assets/vzion/video2.webp";
 import video3 from "../../assets/vzion/video3.webp";
+import before from "../../assets/vzion/compare-slider/before.webp";
+import after from "../../assets/vzion/compare-slider/after.webp";
 import { useTranslation } from "react-i18next";
 import useWindowSize from "../../utils/useWindowSize";
 import { StyledVzion } from "./StyledVzion";
@@ -96,7 +98,7 @@ export const Vzion = () => {
         </div>
       </div>
       <div className="tertiary-wrapper">
-        <CompareSlider />
+        <CompareSlider before={before} after={after} />
         <p>{t("vzion.tertiary-wrapper.paragraph")}</p>
       </div>
       <div className="quaternary-wrapper">

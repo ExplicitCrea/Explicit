@@ -100,12 +100,29 @@ const StyledHeader = styled.header`
                 border-radius: 24px;
                 border: 2px solid #64FFA9;
                 cursor: pointer;
-        
                 img{
                     width: 30px;
                     height: 30px;
                     margin: 0px;
                 }
+            }
+            .insta{
+                background-color: transparent;
+                border:0;
+                width: 45px;
+                height: 45px;
+                a{
+                    margin:0;
+                    img{
+                    border: 0;
+                    width: 45px;
+                    height: 45px;
+                    }
+                }
+                transition: filter 0.3s;
+            }
+            .insta:hover{
+                filter: brightness(0.8);
             }
         }
     
@@ -177,7 +194,6 @@ const StyledHeader = styled.header`
             }
         }
     }
-
 `
 
 export default StyledHeader

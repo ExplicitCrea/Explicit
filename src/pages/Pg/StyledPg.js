@@ -48,26 +48,19 @@ const StyledPg = styled.section`
             }
         }
 
-        .examples{
+        .example{
             width: 100%;
             margin: 1vw 0 0 0;
             z-index: 0;
-            .container{
-                width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+            .video{
+                width:93%;
+                height: auto;
+                max-width: 1200px;
+                aspect-ratio: 16 / 9;
+                border-radius: 24px;
+                overflow: hidden;
+                margin: 12px;
                 z-index: 0;
-                .video{
-                    width: 50%;
-                    height: auto;
-                    max-width: 1200px;
-                    aspect-ratio: 16 / 9;
-                    border-radius: 24px;
-                    overflow: hidden;
-                    margin: 12px;
-                    z-index: 0;
-                }
             }
         }
     }
