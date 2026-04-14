@@ -16,6 +16,13 @@
   gap: 32px;
 }
 
+@media (max-width: 768px) {
+  .services-section {
+    padding: 60px 20px;
+    gap: 24px;
+  }
+}
+
 .services-label {
   font-family: 'Rajdhani', sans-serif;
   font-size: 13px;
@@ -25,6 +32,12 @@
   text-transform: uppercase;
   align-self: flex-start;
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  .services-label {
+    align-self: center;
+  }
 }
 
 /* ── Grid ────────────────────────────────────────────────────────────────── */
@@ -50,6 +63,12 @@
   background: transparent;
   z-index: 1;
   border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .service-card-item {
+    padding: 25px 20px;
+  }
 }
 
 /* Solid background layer with noise texture & Glassmorphism */
@@ -151,6 +170,13 @@
   color: rgb(var(--sr), var(--sg), var(--sb));
 }
 
+@media (max-width: 768px) {
+  .icon-wrapper {
+    width: 40px;
+    height: 40px;
+  }
+}
+
 .service-card-item--hovered .icon-wrapper {
   box-shadow: 0 0 20px rgba(var(--sr), var(--sg), var(--sb), 0.5);
   transform: scale(1.1);
@@ -159,6 +185,13 @@
 .service-icon-svg {
   width: 24px;
   height: 24px;
+}
+
+@media (max-width: 768px) {
+  .service-icon-svg {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 /* ── Typography ──────────────────────────────────────────────────────────── */
@@ -179,6 +212,12 @@
   text-shadow: 0 0 10px rgba(255,255,255,0.2);
 }
 
+@media (max-width: 768px) {
+  .card-title {
+    font-size: 17px;
+  }
+}
+
 .card-description {
   position: relative;
   z-index: 3;
@@ -189,6 +228,12 @@
   line-height: 1.6;
   margin: 0;
   flex-grow: 1;
+}
+
+@media (max-width: 768px) {
+  .card-description {
+    font-size: 13.5px;
+  }
 }
 
 /* ── Button ──────────────────────────────────────────────────────────────── */
@@ -208,6 +253,13 @@
   transition: all 0.3s ease;
   overflow: hidden;
   margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .learn-more-btn {
+    padding: 12px 32px;
+    font-size: 12px;
+  }
 }
 
 .learn-more-btn::before {
@@ -232,10 +284,13 @@
 
 /* ── Responsive ──────────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
-  .cards-wrapper { grid-template-columns: 1fr; }
-  .services-section { padding: 48px 20px; }
+  .cards-wrapper { 
+    grid-template-columns: 1fr; 
+    gap: 16px;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .cards-wrapper { grid-template-columns: repeat(2, 1fr); }
 }
+
