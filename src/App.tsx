@@ -75,8 +75,9 @@ const App: React.FC = () => {
         </ScrollReveal>
         <ScrollReveal delay={200}>
           <p className="hero-subtitle">
-            Vous avez un projet créatif ? On le transforme en rendu concret, du concept à la production finale.
+            Vous avez un projet créatif ? 
           </p>
+          <p className="hero-sub-subtitle">On le transforme en rendu concret, du concept à la production finale.</p>
         </ScrollReveal>
         
         <div className="hero-visual-wrapper">
@@ -93,7 +94,7 @@ const App: React.FC = () => {
             </div>
           </ScrollReveal>
           <ScrollReveal delay={450} className="hero-cta-reveal">
-            <button className="cta-button interactive">Démarrer un projet</button>
+            <a href="#contact" className="cta-button interactive">Démarrer un projet</a>
           </ScrollReveal>
         </div>
       </section>
@@ -193,9 +194,7 @@ const App: React.FC = () => {
       </section>
 
       {/* Custom Services Section */}
-      <ScrollReveal>
-        <ServiceCards />
-      </ScrollReveal>
+      <ServiceCards />
 
       {/* Contact Section */}
       <section className="section" id="contact">

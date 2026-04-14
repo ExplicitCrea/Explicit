@@ -1,5 +1,6 @@
 import { useState, useMemo } from "react";
 import "./ServiceCards.css";
+import ScrollReveal from "./ScrollReveal";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Icons
@@ -138,6 +139,7 @@ function GlowBlobs({ startRgb, endRgb, hovered }: { startRgb: string; endRgb: st
           background: `rgb(${colors[i]})`,
           filter: "blur(40px)",
           opacity: hovered ? blob.opacity * 2.5 : blob.opacity,
+          mixBlendMode: "screen",
           transition: "opacity 0.8s ease",
           pointerEvents: "none",
           zIndex: 0,
@@ -149,13 +151,17 @@ function GlowBlobs({ startRgb, endRgb, hovered }: { startRgb: string; endRgb: st
 
 export default function ServiceCards() {
   const [hovered, setHovered] = useState<number | null>(null);
+  const [showAll, setShowAll] = useState(false);
+
+  // Determine which services to display
+  const visibleServices = showAll ? services : services.slice(0, 3);
 
   return (
     <section className="services-section" id="services">
       <p className="services-label">NOS SERVICES</p>
 
       <div className="cards-wrapper">
-        {services.map((service, index) => {
+        {visibleServices.map((service, index) => {
           const { tStart, tEnd } = cardGradientTs(index, services.length);
           const cStart    = lerpColor(tStart);
           const cEnd      = lerpColor(tEnd);
@@ -168,36 +174,45 @@ export default function ServiceCards() {
             "--sr": cStart.r, "--sg": cStart.g, "--sb": cStart.b,
             "--er": cEnd.r,   "--eg": cEnd.g,   "--eb": cEnd.b,
             "--mr": cMid.r,   "--mg": cMid.g,   "--mb": cMid.b,
+            "--base-angle": `${index * 40}deg`, // For asymmetric border randomness
+            "--rotate-speed": `${15 + (index % 3) * 5}s`
           } as React.CSSProperties;
 
           return (
-            <div
-              key={service.id}
-              className={`service-card-item${isHovered ? " service-card-item--hovered" : ""}`}
-              style={cardStyle}
-              onMouseEnter={() => setHovered(service.id)}
-              onMouseLeave={() => setHovered(null)}
+            <ScrollReveal 
+              key={service.id} 
+              delay={(index % 3) * 100}
             >
-              <GlowBlobs startRgb={startRgb} endRgb={endRgb} hovered={isHovered} />
+              <div
+                className={`service-card-item${isHovered ? " service-card-item--hovered" : ""}`}
+                style={cardStyle}
+                onMouseEnter={() => setHovered(service.id)}
+                onMouseLeave={() => setHovered(null)}
+              >
+                <GlowBlobs startRgb={startRgb} endRgb={endRgb} hovered={isHovered} />
 
-              <div className="card-header">
-                <div className="icon-wrapper">
-                  {service.icon}
+                <div className="card-header">
+                  <div className="icon-wrapper">
+                    {service.icon}
+                  </div>
+                  <div className="card-title-block">
+                    <h3 className="card-title">{service.title}</h3>
+                    {service.subtitle && <h3 className="card-title">{service.subtitle}</h3>}
+                  </div>
                 </div>
-                <div className="card-title-block">
-                  <h3 className="card-title">{service.title}</h3>
-                  {service.subtitle && <h3 className="card-title">{service.subtitle}</h3>}
-                </div>
+
+                <p className="card-description">{service.description}</p>
               </div>
-
-              <p className="card-description">{service.description}</p>
-            </div>
+            </ScrollReveal>
           );
         })}
       </div>
 
-      <button className="learn-more-btn interactive">
-        <span>EN SAVOIR PLUS</span>
+      <button 
+        className="learn-more-btn interactive" 
+        onClick={() => setShowAll(!showAll)}
+      >
+        <span>{showAll ? "VOIR MOINS" : "EN SAVOIR PLUS"}</span>
       </button>
     </section>
   );

@@ -49,6 +49,7 @@
   transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   background: transparent;
   z-index: 1;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Solid background layer with noise texture & Glassmorphism */
@@ -59,34 +60,33 @@
   background-color: rgba(17, 20, 22, 0.4); 
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  /* Finer noise pattern */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
   background-blend-mode: overlay;
-  opacity: 0.3;
+  opacity: 0.1; /* Drastically reduced from 0.3 */
   z-index: -1;
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.05); /* Base subtle border */
 }
 
-/* 
-   Asymmetric Smoky Neon Border Layer
-*/
+/* Asymmetric Smoky Neon Border Layer */
 .service-card-item::after {
   content: '';
   position: absolute;
-  inset: 0;
+  inset: -1px;
   border-radius: 12px;
   padding: 2.5px;
   
-  /* Multichromatic Asymmetric Gradient with individualized starting point */
   background: conic-gradient(
     from calc(var(--base-angle, 0deg) + var(--border-angle, 0deg)),
     rgba(var(--mr), var(--mg), var(--mb), 1) 0%,
-    #fff 5%, /* White hot point */
-    rgba(var(--mr), var(--mg), var(--mb), 0.8) 15%,
-    transparent 35%,
-    rgba(var(--sr), var(--sg), var(--sb), 0.4) 50%,
-    rgba(var(--er), var(--eg), var(--eb), 0.6) 70%,
-    transparent 85%,
+    #fff 2%,
+    rgba(var(--mr), var(--mg), var(--mb), 0.8) 10%,
+    transparent 30%,
+    rgba(var(--sr), var(--sg), var(--sb), 0.4) 45%,
+    rgba(var(--er), var(--eg), var(--eb), 0.6) 60%,
+    #fff 65%,
+    rgba(var(--er), var(--eg), var(--eb), 0.4) 75%,
+    transparent 90%,
     rgba(var(--mr), var(--mg), var(--mb), 1) 100%
   );
   
@@ -99,22 +99,10 @@
   mix-blend-mode: screen; 
   animation: borderRotate var(--rotate-speed, 12s) linear infinite;
   
-  /* SMOKE EFFECT: Blur and drop shadow aura */
   filter: blur(1.5px) drop-shadow(0 0 8px rgba(var(--mr), var(--mg), var(--mb), 0.6));
   opacity: 0.8;
   transition: all 0.4s ease;
 }
-
-/* Individual Card Variations for randomness */
-.cards-wrapper div:nth-child(1) .service-card-item { --base-angle: 45deg;  --rotate-speed: 18s; }
-.cards-wrapper div:nth-child(2) .service-card-item { --base-angle: 190deg; --rotate-speed: 22s; }
-.cards-wrapper div:nth-child(3) .service-card-item { --base-angle: 10deg;  --rotate-speed: 15s; }
-.cards-wrapper div:nth-child(4) .service-card-item { --base-angle: 280deg; --rotate-speed: 25s; }
-.cards-wrapper div:nth-child(5) .service-card-item { --base-angle: 120deg; --rotate-speed: 20s; }
-.cards-wrapper div:nth-child(6) .service-card-item { --base-angle: 340deg; --rotate-speed: 17s; }
-.cards-wrapper div:nth-child(7) .service-card-item { --base-angle: 60deg;  --rotate-speed: 21s; }
-.cards-wrapper div:nth-child(8) .service-card-item { --base-angle: 210deg; --rotate-speed: 19s; }
-.cards-wrapper div:nth-child(9) .service-card-item { --base-angle: 150deg; --rotate-speed: 23s; }
 
 @property --border-angle {
   syntax: '<angle>';
@@ -129,12 +117,13 @@
 
 .service-card-item--hovered {
   transform: translateY(-10px) scale(1.02);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .service-card-item--hovered::after {
   opacity: 1;
   filter: blur(2px) drop-shadow(0 0 15px rgba(var(--mr), var(--mg), var(--mb), 0.9));
-  padding: 3.5px;
+  padding: 4px;
 }
 
 /* ── Card header ─────────────────────────────────────────────────────────── */
