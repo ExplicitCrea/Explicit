@@ -356,6 +356,33 @@
   gap: 30px;
   flex: 1;
   max-width: 900px;
+  transition: opacity 0.3s ease;
+}
+
+/* Slide Animations */
+.slide-in {
+  animation: colabFadeIn 0.5s ease forwards;
+}
+
+.slide-next {
+  animation: colabSlideNext 0.3s ease forwards;
+}
+
+.slide-prev {
+  animation: colabSlidePrev 0.3s ease forwards;
+}
+
+@keyframes colabFadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes colabSlideNext {
+  to { opacity: 0; transform: translateX(-50px); }
+}
+
+@keyframes colabSlidePrev {
+  to { opacity: 0; transform: translateX(50px); }
 }
 
 .colab-image-wrapper {
@@ -363,8 +390,9 @@
   aspect-ratio: 1/1;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
   flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s ease;
 }
 
 .colab-img {
