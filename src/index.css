@@ -54,10 +54,6 @@ a {
   transition: opacity 0.3s ease;
 }
 
-a:hover {
-  opacity: 0.8;
-}
-
 ul {
   list-style: none;
 }
