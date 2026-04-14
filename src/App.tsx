@@ -74,7 +74,6 @@ const App: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [currentColab, setCurrentColab] = useState(0);
   const [direction, setDirection] = useState<'next' | 'prev' | null>(null);
-  const [hoveredContact, setHoveredContact] = useState<string | null>(null);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -275,8 +274,6 @@ const App: React.FC = () => {
                 "--er": "176", "--eg": "96", "--eb": "255",
                 "--base-angle": "45deg" 
               } as React.CSSProperties}
-              onMouseEnter={() => setHoveredContact('info')}
-              onMouseLeave={() => setHoveredContact(null)}
             >
               <ContactGlowBlobs rgb={PURPLE_RGB} />
               <h3>Chaque projet est différent.</h3>
@@ -305,8 +302,6 @@ const App: React.FC = () => {
                 "--base-angle": "180deg"
               } as React.CSSProperties} 
               onSubmit={(e) => e.preventDefault()}
-              onMouseEnter={() => setHoveredContact('form')}
-              onMouseLeave={() => setHoveredContact(null)}
             >
               <ContactGlowBlobs rgb={GREEN_RGB}/>
               <div className="form-group">
@@ -353,8 +348,6 @@ const App: React.FC = () => {
             "--er": "176", "--eg": "96", "--eb": "255",
             "--base-angle": "320deg"
           } as React.CSSProperties}
-          onMouseEnter={() => setHoveredContact('direct')}
-          onMouseLeave={() => setHoveredContact(null)}
         >
           <ContactGlowBlobs rgb={PURPLE_RGB} />
           <div className="direct-contact-content">
