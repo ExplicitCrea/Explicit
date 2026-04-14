@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import ScrollReveal from './components/ScrollReveal';
+import ServiceCards from './components/ServiceCards';
 
 // Asset imports
 import logo from '../assets/logo.png';
@@ -191,122 +192,10 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="section" id="services">
-        <ScrollReveal>
-          <div className="section-header">
-            <span className="section-subtitle">NOS SERVICES</span>
-          </div>
-        </ScrollReveal>
-        <div className="grid-container">
-          <ScrollReveal delay={100}>
-            <div className="card glass service-card">
-              <div className="service-header">
-                <div className="service-icon icon-violet">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="m10 8 6 4-6 4V8z"/></svg>
-                </div>
-                <h3>MONTAGE<br/>YOUTUBE</h3>
-              </div>
-              <p>Un montage à fort impact pour une rétention d'audience maximale.</p>
-            </div>
-          </ScrollReveal>
-          <ScrollReveal delay={200}>
-            <div className="card glass service-card">
-              <div className="service-header">
-                <div className="service-icon icon-green">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="m21 8-9-4-9 4 9 4 9-4z"/><path d="M21 12l-9 4-9-4"/><path d="M21 16l-9 4-9-4"/></svg>
-                </div>
-                <h3>SCÈNES<br/>CINÉMATIQUES 3D</h3>
-              </div>
-              <p>Des visuels 3D époustouflants pour rendre vos vidéos virales.</p>
-            </div>
-          </ScrollReveal>
-          <ScrollReveal delay={300}>
-            <div className="card glass service-card">
-              <div className="service-header">
-                <div className="service-icon icon-accent">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M7 4v16M17 4v16M2 9h20M2 15h20"/></svg>
-                </div>
-                <h3>PRODUCTION<br/>VIDÉO COMPLÈTE</h3>
-              </div>
-              <p>Du concept au rendu final. Une prise en charge de A à Z.</p>
-            </div>
-          </ScrollReveal>
-
-          {/* Additional Services */}
-          <ScrollReveal delay={350}>
-            <div className="card glass service-card">
-              <div className="service-header">
-                <div className="service-icon icon-violet">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 1v22M17 5v14M7 5v14M22 9v6M2 9v6"/></svg>
-                </div>
-                <h3>SOUND<br/>DESIGN</h3>
-              </div>
-              <p>Ajoutez de la profondeur et de l'impact à vos contenus.</p>
-            </div>
-          </ScrollReveal>
-          <ScrollReveal delay={400}>
-            <div className="card glass service-card">
-              <div className="service-header">
-                <div className="service-icon icon-green">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="m12 19 9-7-9-7-9 7 9 7z"/><path d="m3 12 9 7 9-7"/><path d="M3 16l9 7 9-7"/></svg>
-                </div>
-                <h3>MOTION<br/>DESIGN</h3>
-              </div>
-              <p>Donnez vie à vos idées avec des animations impactantes.</p>
-            </div>
-          </ScrollReveal>
-          <ScrollReveal delay={450}>
-            <div className="card glass service-card">
-              <div className="service-header">
-                <div className="service-icon icon-accent">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
-                </div>
-                <h3>VIGNETTE<br/>YOUTUBE</h3>
-              </div>
-              <p>Miniatures optimisées pour maximiser le clic.</p>
-            </div>
-          </ScrollReveal>
-          <ScrollReveal delay={500}>
-            <div className="card glass service-card">
-              <div className="service-header">
-                <div className="service-icon icon-violet">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
-                </div>
-                <h3>MODÉLISATION<br/>3D</h3>
-              </div>
-              <p>Des assets propres, exploitables et adaptés à vos besoins.</p>
-            </div>
-          </ScrollReveal>
-          <ScrollReveal delay={550}>
-            <div className="card glass service-card">
-              <div className="service-header">
-                <div className="service-icon icon-green">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l5 5"/><path d="m9.5 9.5 5 5"/></svg>
-                </div>
-                <h3>ILLUSTRATION<br/>SUR-MESURE</h3>
-              </div>
-              <p>Un style visuel unique pour renforcer votre identité.</p>
-            </div>
-          </ScrollReveal>
-          <ScrollReveal delay={600}>
-            <div className="card glass service-card">
-              <div className="service-header">
-                <div className="service-icon icon-accent">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-                </div>
-                <h3>DESIGN<br/>GRAPHIQUE</h3>
-              </div>
-              <p>Création d'identités visuelles et supports graphiques.</p>
-            </div>
-          </ScrollReveal>
-        </div>
-        <ScrollReveal delay={400}>
-          <div style={{ textAlign: 'center', marginTop: '40px' }}>
-            <button className="secondary-button interactive">EN SAVOIR PLUS</button>
-          </div>
-        </ScrollReveal>
-      </section>
+      {/* Custom Services Section */}
+      <ScrollReveal>
+        <ServiceCards />
+      </ScrollReveal>
 
       {/* Contact Section */}
       <section className="section" id="contact">
@@ -382,7 +271,7 @@ const App: React.FC = () => {
             <img src={logo} alt="EXPLICIT CREA" className="footer-logo-img" />
           </div>
           <div className="footer-copyright">
-            <p>&copy; Explicit. Tous droits réservés.</p>
+            <p>&copy; 2026 WHITE STAR. Tous droits réservés.</p>
           </div>
           <div className="footer-links">
             <a href="#services" className="footer-link">Services</a>

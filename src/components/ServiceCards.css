@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Exo+2:wght@300;400&display=swap');
+
+:root {
+  --bg-card: #111416;
+}
+
+.services-section {
+  position: relative;
+  background-color: transparent;
+  padding: 80px 40px;
+  font-family: 'Exo 2', sans-serif;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.services-label {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #b060ff;
+  text-transform: uppercase;
+  align-self: flex-start;
+  margin: 0;
+}
+
+/* ── Grid ────────────────────────────────────────────────────────────────── */
+.cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* ── Card ────────────────────────────────────────────────────────────────── */
+.service-card-item {
+  position: relative;
+  border-radius: 12px;
+  padding: 30px 25px;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background: transparent;
+  z-index: 1;
+}
+
+/* Solid background layer with noise texture & Glassmorphism */
+.service-card-item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(17, 20, 22, 0.4); 
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  background-blend-mode: overlay;
+  opacity: 0.3;
+  z-index: -1;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05); /* Base subtle border */
+}
+
+/* 
+   Asymmetric Smoky Neon Border Layer
+*/
+.service-card-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 2.5px;
+  
+  /* Multichromatic Asymmetric Gradient with individualized starting point */
+  background: conic-gradient(
+    from calc(var(--base-angle, 0deg) + var(--border-angle, 0deg)),
+    rgba(var(--mr), var(--mg), var(--mb), 1) 0%,
+    #fff 5%, /* White hot point */
+    rgba(var(--mr), var(--mg), var(--mb), 0.8) 15%,
+    transparent 35%,
+    rgba(var(--sr), var(--sg), var(--sb), 0.4) 50%,
+    rgba(var(--er), var(--eg), var(--eb), 0.6) 70%,
+    transparent 85%,
+    rgba(var(--mr), var(--mg), var(--mb), 1) 100%
+  );
+  
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+  
+  pointer-events: none;
+  z-index: 2;
+  mix-blend-mode: screen; 
+  animation: borderRotate var(--rotate-speed, 12s) linear infinite;
+  
+  /* SMOKE EFFECT: Blur and drop shadow aura */
+  filter: blur(1.5px) drop-shadow(0 0 8px rgba(var(--mr), var(--mg), var(--mb), 0.6));
+  opacity: 0.8;
+  transition: all 0.4s ease;
+}
+
+/* Individual Card Variations for randomness */
+.cards-wrapper div:nth-child(1) .service-card-item { --base-angle: 45deg;  --rotate-speed: 18s; }
+.cards-wrapper div:nth-child(2) .service-card-item { --base-angle: 190deg; --rotate-speed: 22s; }
+.cards-wrapper div:nth-child(3) .service-card-item { --base-angle: 10deg;  --rotate-speed: 15s; }
+.cards-wrapper div:nth-child(4) .service-card-item { --base-angle: 280deg; --rotate-speed: 25s; }
+.cards-wrapper div:nth-child(5) .service-card-item { --base-angle: 120deg; --rotate-speed: 20s; }
+.cards-wrapper div:nth-child(6) .service-card-item { --base-angle: 340deg; --rotate-speed: 17s; }
+.cards-wrapper div:nth-child(7) .service-card-item { --base-angle: 60deg;  --rotate-speed: 21s; }
+.cards-wrapper div:nth-child(8) .service-card-item { --base-angle: 210deg; --rotate-speed: 19s; }
+.cards-wrapper div:nth-child(9) .service-card-item { --base-angle: 150deg; --rotate-speed: 23s; }
+
+@property --border-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes borderRotate {
+  from { --border-angle: 0deg; }
+  to { --border-angle: 360deg; }
+}
+
+.service-card-item--hovered {
+  transform: translateY(-10px) scale(1.02);
+}
+
+.service-card-item--hovered::after {
+  opacity: 1;
+  filter: blur(2px) drop-shadow(0 0 15px rgba(var(--mr), var(--mg), var(--mb), 0.9));
+  padding: 3.5px;
+}
+
+/* ── Card header ─────────────────────────────────────────────────────────── */
+.card-header {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.icon-wrapper {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  
+  background: rgba(var(--sr), var(--sg), var(--sb), 0.1);
+  border: 1px solid rgba(var(--sr), var(--sg), var(--sb), 0.3);
+  color: rgb(var(--sr), var(--sg), var(--sb));
+}
+
+.service-card-item--hovered .icon-wrapper {
+  box-shadow: 0 0 20px rgba(var(--sr), var(--sg), var(--sb), 0.5);
+  transform: scale(1.1);
+}
+
+.service-icon-svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* ── Typography ──────────────────────────────────────────────────────────── */
+.card-title-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #fff;
+  margin: 0;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(255,255,255,0.2);
+}
+
+.card-description {
+  position: relative;
+  z-index: 3;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 14.5px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin: 0;
+  flex-grow: 1;
+}
+
+/* ── Button ──────────────────────────────────────────────────────────────── */
+.learn-more-btn {
+  position: relative;
+  background: transparent;
+  border: 1px solid #3a3f45;
+  color: #fff;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  padding: 14px 48px;
+  border-radius: 6px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.learn-more-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(176, 96, 255, 0.15), rgba(76, 255, 143, 0.15));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  border-color: #4cff8f;
+  color: #4cff8f;
+  box-shadow: 0 0 25px rgba(76, 255, 143, 0.25);
+  transform: translateY(-2px);
+}
+
+.learn-more-btn:hover::before {
+  opacity: 1;
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .cards-wrapper { grid-template-columns: 1fr; }
+  .services-section { padding: 48px 20px; }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .cards-wrapper { grid-template-columns: repeat(2, 1fr); }
+}
