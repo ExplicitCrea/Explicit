@@ -109,19 +109,22 @@ const services: Service[] = [
 interface GlowBlob { top: string; left: string; width: string; height: string; opacity: number; borderRadius: string; transform: string; }
 
 function useRandomBlobs(count: number): GlowBlob[] {
-  return useMemo(() => Array.from({ length: count }, () => {
-    const w = 180 + Math.random() * 120;
-    const h = 120 + Math.random() * 100;
-    return {
-      top:     `${-10 + Math.random() * 90}%`,
-      left:    `${-10 + Math.random() * 90}%`,
-      width:   `${w}px`,
-      height:  `${h}px`,
-      opacity: 0.08 + Math.random() * 0.12,
-      borderRadius: `${30 + Math.random() * 40}% ${60 + Math.random() * 30}% ${30 + Math.random() * 50}% ${40 + Math.random() * 40}% / ${40 + Math.random() * 40}% ${30 + Math.random() * 40}% ${60 + Math.random() * 30}% ${30 + Math.random() * 50}%`,
-      transform: `rotate(${Math.random() * 360}deg)`,
-    };
-  }), [count]);
+  const [blobs] = useState(() => 
+    Array.from({ length: count }, () => {
+      const w = 180 + Math.random() * 120;
+      const h = 120 + Math.random() * 100;
+      return {
+        top:     `${-10 + Math.random() * 90}%`,
+        left:    `${-10 + Math.random() * 90}%`,
+        width:   `${w}px`,
+        height:  `${h}px`,
+        opacity: 0.08 + Math.random() * 0.12,
+        borderRadius: `${30 + Math.random() * 40}% ${60 + Math.random() * 30}% ${30 + Math.random() * 50}% ${40 + Math.random() * 40}% / ${40 + Math.random() * 40}% ${30 + Math.random() * 40}% ${60 + Math.random() * 30}% ${30 + Math.random() * 50}%`,
+        transform: `rotate(${Math.random() * 360}deg)`,
+      };
+    })
+  );
+  return blobs;
 }
 
 function GlowBlobs({ startRgb, endRgb, hovered }: { startRgb: string; endRgb: string; hovered: boolean }) {

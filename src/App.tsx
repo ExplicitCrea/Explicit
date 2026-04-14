@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import ScrollReveal from './components/ScrollReveal';
 import ServiceCards from './components/ServiceCards';
@@ -22,28 +22,31 @@ const collaborators = [
   { id: 2, img: colab2, name: "Collaborateur 2", desc: "Expertise en montage et effets visuels cinématiques", color: "76, 255, 143" },
   { id: 3, img: colab3, name: "Collaborateur 3", desc: "Design sonore et immersion acoustique haut de gamme", color: "99, 78, 255" },
   { id: 4, img: colab4, name: "Collaborateur 4", desc: "Direction artistique et stratégie de contenu viral", color: "48, 221, 105" },
-  { id: 5, accent: "green",  icon: null, title: "Collaborateur 5", desc: "Illustration unique et identité visuelle forte", color: "163, 95, 255" }
+  { id: 5, img: colab5, name: "Collaborateur 5", desc: "Illustration unique et identité visuelle forte", color: "163, 95, 255" }
 ];
 
 // Reusable GlowBlobs for Contact section
 interface GlowBlob { top: string; left: string; width: string; height: string; opacity: number; borderRadius: string; transform: string; }
 function useRandomBlobs(count: number): GlowBlob[] {
-  return useMemo(() => Array.from({ length: count }, () => {
-    const w = 180 + Math.random() * 120;
-    const h = 120 + Math.random() * 100;
-    return {
-      top:     `${-10 + Math.random() * 90}%`,
-      left:    `${-10 + Math.random() * 90}%`,
-      width:   `${w}px`,
-      height:  `${h}px`,
-      opacity: 0.08 + Math.random() * 0.12,
-      borderRadius: `${30 + Math.random() * 40}% ${60 + Math.random() * 30}% ${30 + Math.random() * 50}% ${40 + Math.random() * 40}% / ${40 + Math.random() * 40}% ${30 + Math.random() * 40}% ${60 + Math.random() * 30}% ${30 + Math.random() * 50}%`,
-      transform: `rotate(${Math.random() * 360}deg)`,
-    };
-  }), [count]);
+  const [blobs] = useState(() => 
+    Array.from({ length: count }, () => {
+      const w = 180 + Math.random() * 120;
+      const h = 120 + Math.random() * 100;
+      return {
+        top:     `${-10 + Math.random() * 90}%`,
+        left:    `${-10 + Math.random() * 90}%`,
+        width:   `${w}px`,
+        height:  `${h}px`,
+        opacity: 0.08 + Math.random() * 0.12,
+        borderRadius: `${30 + Math.random() * 40}% ${60 + Math.random() * 30}% ${30 + Math.random() * 50}% ${40 + Math.random() * 40}% / ${40 + Math.random() * 40}% ${30 + Math.random() * 40}% ${60 + Math.random() * 30}% ${30 + Math.random() * 50}%`,
+        transform: `rotate(${Math.random() * 360}deg)`,
+      };
+    })
+  );
+  return blobs;
 }
 
-function ContactGlowBlobs({ rgb, hovered }: { rgb: string; hovered: boolean }) {
+function ContactGlowBlobs({ rgb }: { rgb: string}) {
   const blobs = useRandomBlobs(3);
   return (
     <>
@@ -275,7 +278,7 @@ const App: React.FC = () => {
               onMouseEnter={() => setHoveredContact('info')}
               onMouseLeave={() => setHoveredContact(null)}
             >
-              <ContactGlowBlobs rgb={PURPLE_RGB} hovered={hoveredContact === 'info'} />
+              <ContactGlowBlobs rgb={PURPLE_RGB} />
               <h3>Chaque projet est différent.</h3>
               <p className="contact-subtitle">Notre rôle : comprendre, structurer et produire un rendu à la hauteur.</p>
               <ul className="contact-checklist">
@@ -305,7 +308,7 @@ const App: React.FC = () => {
               onMouseEnter={() => setHoveredContact('form')}
               onMouseLeave={() => setHoveredContact(null)}
             >
-              <ContactGlowBlobs rgb={GREEN_RGB} hovered={hoveredContact === 'form'} />
+              <ContactGlowBlobs rgb={GREEN_RGB}/>
               <div className="form-group">
                 <label>Nom</label>
                 <input type="text" placeholder="Votre Nom" required />
@@ -320,8 +323,8 @@ const App: React.FC = () => {
               </div>
               <div className="form-group">
                 <label>Type de projet</label>
-                <select className="form-select" required>
-                  <option value="" disabled selected>Choisir un type</option>
+                <select className="form-select" defaultValue="" required>
+                  <option value="" disabled>Choisir un type</option>
                   <option>Montage vidéo</option>
                   <option>3D</option>
                   <option>Production de vidéo</option>
@@ -353,7 +356,7 @@ const App: React.FC = () => {
           onMouseEnter={() => setHoveredContact('direct')}
           onMouseLeave={() => setHoveredContact(null)}
         >
-          <ContactGlowBlobs rgb={PURPLE_RGB} hovered={hoveredContact === 'direct'} />
+          <ContactGlowBlobs rgb={PURPLE_RGB} />
           <div className="direct-contact-content">
             <p className="direct-label">Contactez nous directement :</p>
             <p className="direct-email">contact@explicitcrea.com</p>

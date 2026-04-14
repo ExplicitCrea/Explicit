@@ -200,6 +200,7 @@
   line-height: 1.1;
   margin-bottom: 20px;
   background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.4) 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: -2px;
@@ -269,10 +270,10 @@
   color: #000;
   background: linear-gradient(135deg, #2a004d 0%, #b060ff 40%, #e0ccff 100%);
   border-radius: 100px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 10px 30px rgba(48, 221, 105, 0.2);
   border: 1.5px solid rgba(255, 255, 255, 0.8);
-  will-change: transform;
+  will-change: transform, box-shadow;
   display: inline-block;
 }
 
