@@ -56,7 +56,7 @@ function ContactGlowBlobs({ rgb, hovered }: { rgb: string; hovered: boolean }) {
           transform: blob.transform,
           background: `rgb(${rgb})`,
           filter: "blur(40px)",
-          opacity: hovered ? blob.opacity * 2.5 : blob.opacity,
+          opacity: blob.opacity, /* Constant opacity, no hover boost */
           mixBlendMode: "screen",
           transition: "opacity 0.8s ease",
           pointerEvents: "none",
@@ -342,23 +342,32 @@ const App: React.FC = () => {
           </ScrollReveal>
         </div>
 
-        <ScrollReveal delay={300}>
-          <div 
-            className="card glass direct-contact-card interactive reactive-card"
-            style={{ 
-              "--mr": "176", "--mg": "96", "--mb": "255",
-              "--sr": "176", "--sg": "96", "--sb": "255",
-              "--er": "176", "--eg": "96", "--eb": "255",
-              "--base-angle": "320deg"
-            } as React.CSSProperties}
-            onMouseEnter={() => setHoveredContact('direct')}
-            onMouseLeave={() => setHoveredContact(null)}
-          >
-            <ContactGlowBlobs rgb={PURPLE_RGB} hovered={hoveredContact === 'direct'} />
-            <p>Contactez nous directement : <strong>contact@explicitcrea.com</strong></p>
+        <div 
+          className="card glass direct-contact-card reactive-card"
+          style={{ 
+            "--mr": "176", "--mg": "96", "--mb": "255",
+            "--sr": "176", "--sg": "96", "--sb": "255",
+            "--er": "176", "--eg": "96", "--eb": "255",
+            "--base-angle": "320deg"
+          } as React.CSSProperties}
+          onMouseEnter={() => setHoveredContact('direct')}
+          onMouseLeave={() => setHoveredContact(null)}
+        >
+          <ContactGlowBlobs rgb={PURPLE_RGB} hovered={hoveredContact === 'direct'} />
+          <div className="direct-contact-content">
+            <p className="direct-label">Contactez nous directement :</p>
+            <p className="direct-email">contact@explicitcrea.com</p>
+            <a href="https://instagram.com/explicitcrea" target="_blank" rel="noopener noreferrer" className="insta-link interactive">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="insta-icon">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
           </div>
-        </ScrollReveal>
-      </section>
+        </div>
+        </section>
+
 
       {/* Footer */}
       <footer className="footer">
@@ -367,7 +376,7 @@ const App: React.FC = () => {
             <img src={logo} alt="EXPLICIT CREA" className="footer-logo-img" />
           </div>
           <div className="footer-copyright">
-            <p>&copy; 2026 WHITE STAR. Tous droits réservés.</p>
+            <p>&copy; Explicit Créa. Tous droits réservés.</p>
           </div>
           <div className="footer-links">
             <a href="#services" className="footer-link">Services</a>
