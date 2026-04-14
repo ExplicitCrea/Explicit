@@ -242,7 +242,12 @@
   margin-top: 10px;
 }
 
-/* Project Cards */
+.project-link {
+  text-decoration: none;
+  display: block;
+  height: 100%;
+  color: inherit;
+}
 .project-card {
   padding: 0 !important;
   background: #121212 !important;
@@ -314,9 +319,9 @@
   gap: 12px;
   background: #0d0d0d;
   padding: 15px 25px;
-  width: 100%;
-  border-top: 1px solid rgba(var(--project-glow-rgb), 0.3);
-  border-radius: 0;
+  margin: 10px auto; /* Centered with margin */
+  width: calc(100% - 20px); /* Account for margins */
+  border-radius: 20px; /* All 4 corners rounded */
 }
 
 .dot {

@@ -109,46 +109,52 @@ const App: React.FC = () => {
         </ScrollReveal>
         <div className="grid-container">
           <ScrollReveal delay={100}>
-            <div className="card glass project-card interactive">
-              <div className="project-image-container">
-                <img src={legrandjd} alt="Le Grand JD" />
-              </div>
-              <div className="project-info">
-                <h3>MICHAEL JACKSON EST TOUJOURS EN VIE</h3>
-                <div className="project-author">
-                  <span className="dot red-dot"></span>
-                  <span className="author-name">LE GRAND JD</span>
+            <a href="https://www.youtube.com/watch?v=erT9IivBlKA" target="_blank" rel="noopener noreferrer" className="project-link">
+              <div className="card glass project-card interactive">
+                <div className="project-image-container">
+                  <img src={legrandjd} alt="Le Grand JD" />
+                </div>
+                <div className="project-info">
+                  <h3>MICHAEL JACKSON EST TOUJOURS EN VIE</h3>
+                  <div className="project-author">
+                    <span className="dot red-dot"></span>
+                    <span className="author-name">LE GRAND JD</span>
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
           </ScrollReveal>
           <ScrollReveal delay={200}>
-            <div className="card glass project-card interactive">
-              <div className="project-image-container">
-                <img src={maskey} alt="Maskey" />
-              </div>
-              <div className="project-info">
-                <h3>J'ai passé deux ans sans papiers.</h3>
-                <div className="project-author">
-                  <span className="dot blue-dot"></span>
-                  <span className="author-name">MASKEY</span>
+            <a href="https://www.youtube.com/watch?v=J7fi9ja87vo" target="_blank" rel="noopener noreferrer" className="project-link">
+              <div className="card glass project-card interactive">
+                <div className="project-image-container">
+                  <img src={maskey} alt="Maskey" />
+                </div>
+                <div className="project-info">
+                  <h3>J'ai passé deux ans sans papiers.</h3>
+                  <div className="project-author">
+                    <span className="dot blue-dot"></span>
+                    <span className="author-name">MASKEY</span>
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
           </ScrollReveal>
           <ScrollReveal delay={300}>
-            <div className="card glass project-card interactive">
-              <div className="project-image-container">
-                <img src={vzion} alt="Vzion" />
-              </div>
-              <div className="project-info">
-                <h3>Comment la Justice peut Condamner un Innocent.</h3>
-                <div className="project-author">
-                  <span className="dot purple-dot"></span>
-                  <span className="author-name">VZION</span>
+            <a href="https://www.youtube.com/watch?v=BFhN_HLCOzM" target="_blank" rel="noopener noreferrer" className="project-link">
+              <div className="card glass project-card interactive">
+                <div className="project-image-container">
+                  <img src={vzion} alt="Vzion" />
+                </div>
+                <div className="project-info">
+                  <h3>Comment la Justice peut Condamner un Innocent.</h3>
+                  <div className="project-author">
+                    <span className="dot purple-dot"></span>
+                    <span className="author-name">VZION</span>
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
           </ScrollReveal>
         </div>
       </section>
