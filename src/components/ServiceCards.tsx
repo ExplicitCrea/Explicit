@@ -138,7 +138,7 @@ function GlowBlobs({ startRgb, endRgb, hovered }: { startRgb: string; endRgb: st
           transform: blob.transform,
           background: `rgb(${colors[i]})`,
           filter: "blur(40px)",
-          opacity: hovered ? blob.opacity * 2.5 : blob.opacity,
+          opacity: blob.opacity, /* Constant opacity, no hover boost */
           mixBlendMode: "screen",
           transition: "opacity 0.8s ease",
           pointerEvents: "none",

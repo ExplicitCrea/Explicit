@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import './App.css';
 import ScrollReveal from './components/ScrollReveal';
 import ServiceCards from './components/ServiceCards';
@@ -22,16 +22,58 @@ const collaborators = [
   { id: 2, img: colab2, name: "Collaborateur 2", desc: "Expertise en montage et effets visuels cinématiques", color: "76, 255, 143" },
   { id: 3, img: colab3, name: "Collaborateur 3", desc: "Design sonore et immersion acoustique haut de gamme", color: "99, 78, 255" },
   { id: 4, img: colab4, name: "Collaborateur 4", desc: "Direction artistique et stratégie de contenu viral", color: "48, 221, 105" },
-  { id: 5, img: colab5, name: "Collaborateur 5", desc: "Illustration unique et identité visuelle forte", color: "163, 95, 255" }
+  { id: 5, accent: "green",  icon: null, title: "Collaborateur 5", desc: "Illustration unique et identité visuelle forte", color: "163, 95, 255" }
 ];
+
+// Reusable GlowBlobs for Contact section
+interface GlowBlob { top: string; left: string; width: string; height: string; opacity: number; borderRadius: string; transform: string; }
+function useRandomBlobs(count: number): GlowBlob[] {
+  return useMemo(() => Array.from({ length: count }, () => {
+    const w = 180 + Math.random() * 120;
+    const h = 120 + Math.random() * 100;
+    return {
+      top:     `${-10 + Math.random() * 90}%`,
+      left:    `${-10 + Math.random() * 90}%`,
+      width:   `${w}px`,
+      height:  `${h}px`,
+      opacity: 0.08 + Math.random() * 0.12,
+      borderRadius: `${30 + Math.random() * 40}% ${60 + Math.random() * 30}% ${30 + Math.random() * 50}% ${40 + Math.random() * 40}% / ${40 + Math.random() * 40}% ${30 + Math.random() * 40}% ${60 + Math.random() * 30}% ${30 + Math.random() * 50}%`,
+      transform: `rotate(${Math.random() * 360}deg)`,
+    };
+  }), [count]);
+}
+
+function ContactGlowBlobs({ rgb, hovered }: { rgb: string; hovered: boolean }) {
+  const blobs = useRandomBlobs(3);
+  return (
+    <>
+      {blobs.map((blob, i) => (
+        <div key={i} style={{
+          position: "absolute",
+          top: blob.top, left: blob.left,
+          width: blob.width, height: blob.height,
+          borderRadius: blob.borderRadius,
+          transform: blob.transform,
+          background: `rgb(${rgb})`,
+          filter: "blur(40px)",
+          opacity: hovered ? blob.opacity * 2.5 : blob.opacity,
+          mixBlendMode: "screen",
+          transition: "opacity 0.8s ease",
+          pointerEvents: "none",
+          zIndex: 0,
+        }} />
+      ))}
+    </>
+  );
+}
 
 const App: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [currentColab, setCurrentColab] = useState(0);
   const [direction, setDirection] = useState<'next' | 'prev' | null>(null);
+  const [hoveredContact, setHoveredContact] = useState<string | null>(null);
 
   useEffect(() => {
-    // Simulate loading
     const timer = setTimeout(() => {
       setLoading(false);
     }, 1500);
@@ -61,6 +103,9 @@ const App: React.FC = () => {
       </div>
     );
   }
+
+  const PURPLE_RGB = "176, 96, 255";
+  const GREEN_RGB = "76, 255, 143";
 
   return (
     <div className="app-container">
@@ -214,11 +259,23 @@ const App: React.FC = () => {
       {/* Contact Section */}
       <section className="section" id="contact">
         <ScrollReveal>
-          <h2 className="section-title">Contactez-nous</h2>
+          <h2 className="section-title">Parlons de votre Projet</h2>
+          <p className="contact-main-subtitle">Une idée, un concept ou une production a lancer ? <br/>On transforme ca en résultat concret</p>
         </ScrollReveal>
         <div className="contact-layout">
           <ScrollReveal delay={100} className="contact-info-reveal">
-            <div className="card glass contact-info-card">
+            <div 
+              className="card glass contact-info-card reactive-card"
+              style={{ 
+                "--mr": "176", "--mg": "96", "--mb": "255", 
+                "--sr": "176", "--sg": "96", "--sb": "255",
+                "--er": "176", "--eg": "96", "--eb": "255",
+                "--base-angle": "45deg" 
+              } as React.CSSProperties}
+              onMouseEnter={() => setHoveredContact('info')}
+              onMouseLeave={() => setHoveredContact(null)}
+            >
+              <ContactGlowBlobs rgb={PURPLE_RGB} hovered={hoveredContact === 'info'} />
               <h3>Chaque projet est différent.</h3>
               <p className="contact-subtitle">Notre rôle : comprendre, structurer et produire un rendu à la hauteur.</p>
               <ul className="contact-checklist">
@@ -235,7 +292,20 @@ const App: React.FC = () => {
           </ScrollReveal>
 
           <ScrollReveal delay={200} className="contact-form-reveal">
-            <form className="contact-form glass" style={{ padding: '40px' }} onSubmit={(e) => e.preventDefault()}>
+            <form 
+              className="contact-form glass reactive-card" 
+              style={{ 
+                padding: '40px',
+                "--mr": "76", "--mg": "255", "--mb": "143",
+                "--sr": "76", "--sg": "255", "--sb": "143",
+                "--er": "76", "--eg": "255", "--eb": "143",
+                "--base-angle": "180deg"
+              } as React.CSSProperties} 
+              onSubmit={(e) => e.preventDefault()}
+              onMouseEnter={() => setHoveredContact('form')}
+              onMouseLeave={() => setHoveredContact(null)}
+            >
+              <ContactGlowBlobs rgb={GREEN_RGB} hovered={hoveredContact === 'form'} />
               <div className="form-group">
                 <label>Nom</label>
                 <input type="text" placeholder="Votre Nom" required />
@@ -266,13 +336,25 @@ const App: React.FC = () => {
                 <label>Message</label>
                 <textarea rows={4} placeholder="Parlez-nous de votre projet"></textarea>
               </div>
-              <button className="cta-button interactive" style={{ marginTop: '10px', width: '100%' }}>Envoyer le message</button>
+              <button className="contact-submit-btn interactive" style={{ marginTop: '10px', width: '100%' }}>Envoyer le message</button>
+              <p className="form-note">Réponse sous 24 à 48h</p>
             </form>
           </ScrollReveal>
         </div>
 
         <ScrollReveal delay={300}>
-          <div className="card glass direct-contact-card interactive">
+          <div 
+            className="card glass direct-contact-card interactive reactive-card"
+            style={{ 
+              "--mr": "176", "--mg": "96", "--mb": "255",
+              "--sr": "176", "--sg": "96", "--sb": "255",
+              "--er": "176", "--eg": "96", "--eb": "255",
+              "--base-angle": "320deg"
+            } as React.CSSProperties}
+            onMouseEnter={() => setHoveredContact('direct')}
+            onMouseLeave={() => setHoveredContact(null)}
+          >
+            <ContactGlowBlobs rgb={PURPLE_RGB} hovered={hoveredContact === 'direct'} />
             <p>Contactez nous directement : <strong>contact@explicitcrea.com</strong></p>
           </div>
         </ScrollReveal>
