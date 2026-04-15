@@ -1078,66 +1078,79 @@
 
 .direct-contact-content {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 25px;
+  gap: 12px;
   position: relative;
   z-index: 3;
 }
 
 @media (max-width: 768px) {
   .direct-contact-content {
-    flex-direction: column;
-    gap: 15px;
+    gap: 10px;
     text-align: center;
   }
 }
 
+.direct-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.contact-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+}
+
 .direct-label {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: var(--text-secondary);
   font-weight: 400;
+  margin-bottom: 5px;
 }
 
 .direct-email {
-  font-size: 1.4rem; /* Reduced from 1.8rem */
+  font-size: 1.2rem;
   font-weight: 700;
   color: #fff !important;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.insta-handle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  transition: all 0.3s ease;
 }
 
 @media (max-width: 480px) {
-  .direct-email {
-    font-size: 1.1rem;
+  .direct-email, .insta-handle {
+    font-size: 1.05rem;
   }
 }
 
 .insta-link {
   color: var(--text-secondary);
   transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.insta-icon {
-  width: 40px;
-  height: 40px;
-  transition: all 0.3s ease;
+.insta-link:hover .contact-icon {
+  color: #b060ff;
+  transform: scale(1.1);
 }
 
-@media (max-width: 768px) {
-  .insta-icon {
-    width: 32px;
-    height: 32px;
-  }
+.insta-link:hover .insta-handle {
+  color: #b060ff;
 }
 
 .insta-link:hover {
-  color: #b060ff;
-  transform: scale(1.1);
-  filter: drop-shadow(0 0 10px rgba(176, 96, 255, 0.5));
+  filter: drop-shadow(0 0 8px rgba(176, 96, 255, 0.4));
 }
 
 @media (max-width: 900px) {
@@ -1150,9 +1163,12 @@
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 8px;
 }
 
+.form-group label {
+  padding: 6px;
+}
+ 
 .form-group input, .form-group textarea {
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);

@@ -400,7 +400,7 @@ const App: React.FC = () => {
                 <li><span className="check-icon">✓</span> Production optimisée</li>
               </ul>
               <div className="contact-stats-box glass">
-                <span className="stats-number">+50 projets réalisés</span>
+                <span className="stats-number">+150 projets réalisés</span>
                 <p>Créateurs & marques accompagnés</p>
                 <p className="stats-details">Production 3D, vidéo et design</p>
               </div>
@@ -468,13 +468,22 @@ const App: React.FC = () => {
           <ContactGlowBlobs rgb={PURPLE_RGB} />
           <div className="direct-contact-content">
             <p className="direct-label">Contactez nous directement :</p>
-            <p className="direct-email">contact@explicitcrea.com</p>
-            <a href="https://instagram.com/explicitcrea" target="_blank" rel="noopener noreferrer" className="insta-link interactive">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="insta-icon">
+            
+            <div className="direct-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="contact-icon">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <p className="direct-email">contact@explicitcrea.com</p>
+            </div>
+
+            <a href="https://instagram.com/explicit.crea" target="_blank" rel="noopener noreferrer" className="insta-link direct-item interactive">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="contact-icon">
                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
               </svg>
+              <span className="insta-handle">@explicit.crea</span>
             </a>
           </div>
         </div>
