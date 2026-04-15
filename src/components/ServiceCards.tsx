@@ -192,19 +192,21 @@ export default function ServiceCards() {
                 onMouseEnter={() => setHovered(service.id)}
                 onMouseLeave={() => setHovered(null)}
               >
-                <GlowBlobs startRgb={startRgb} endRgb={endRgb} hovered={isHovered} />
+                <div className="card-internal-content">
+                  <GlowBlobs startRgb={startRgb} endRgb={endRgb} hovered={isHovered} />
 
-                <div className="card-header">
-                  <div className="icon-wrapper">
-                    {service.icon}
+                  <div className="card-header">
+                    <div className="icon-wrapper">
+                      {service.icon}
+                    </div>
+                    <div className="card-title-block">
+                      <h3 className="card-title">{service.title}</h3>
+                      {service.subtitle && <h3 className="card-title">{service.subtitle}</h3>}
+                    </div>
                   </div>
-                  <div className="card-title-block">
-                    <h3 className="card-title">{service.title}</h3>
-                    {service.subtitle && <h3 className="card-title">{service.subtitle}</h3>}
-                  </div>
+
+                  <p className="card-description">{service.description}</p>
                 </div>
-
-                <p className="card-description">{service.description}</p>
               </div>
             </ScrollReveal>
           );

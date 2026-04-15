@@ -7,18 +7,17 @@
 .services-section {
   position: relative;
   background-color: transparent;
-  padding: 80px 40px;
   font-family: 'Exo 2', sans-serif;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 32px;
+  width: 100%;
 }
 
 @media (max-width: 768px) {
   .services-section {
-    padding: 60px 20px;
+    padding: 80px 0;
     gap: 24px;
   }
 }
@@ -28,7 +27,7 @@
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.2em;
-  color: #b060ff;
+  color: #30DD69;
   text-transform: uppercase;
   align-self: flex-start;
   margin: 0;
@@ -53,8 +52,6 @@
 .service-card-item {
   position: relative;
   border-radius: 12px;
-  padding: 30px 25px;
-  overflow: hidden;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -65,14 +62,26 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.card-internal-content {
+  position: relative;
+  padding: 30px 25px;
+  overflow: hidden;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
 @media (max-width: 768px) {
-  .service-card-item {
+  .card-internal-content {
     padding: 25px 20px;
   }
 }
 
 /* Solid background layer with noise texture & Glassmorphism */
-.service-card-item::before {
+.card-internal-content::before {
   content: '';
   position: absolute;
   inset: 0;

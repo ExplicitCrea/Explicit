@@ -169,7 +169,6 @@ const App: React.FC = () => {
         
         {/* Hero Section */}
         <section className="hero-section">
-          <div className="accent-glow glow-violet"></div>
           <ScrollReveal>
             <div className="hero-logo-container">
               <img src={logo} alt="EXPLICIT CREA" className="hero-logo-img" />
