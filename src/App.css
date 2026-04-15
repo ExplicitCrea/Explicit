@@ -180,19 +180,6 @@
   text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
 }
 
-/* Underline hover refined */
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #fff, transparent);
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  transform: translateX(-50%);
-  opacity: 0;
-}
 
 .nav-link:hover::after {
   width: 100%;

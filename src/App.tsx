@@ -532,7 +532,7 @@ const App: React.FC = () => {
             }, 100); }}>Services</a>
             <a href="#aide" className="footer-link" onClick={(e) => { e.preventDefault(); navigateTo('aide'); }}>Aide</a>
             <a href="#mentions" className="footer-link" onClick={(e) => { e.preventDefault(); navigateTo('mentions'); }}>Mentions légales</a>
-            <a href="#" className="footer-link">CGU / CGV</a>
+            <a href="https://facture.explicitcrea.com/" className="footer-link">Factures</a>
           </div>
         </div>
       </footer>
