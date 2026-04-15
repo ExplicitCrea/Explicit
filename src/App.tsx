@@ -74,6 +74,41 @@ const App: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [currentColab, setCurrentColab] = useState(0);
   const [direction, setDirection] = useState<'next' | 'prev' | null>(null);
+  const [navStyle, setNavStyle] = useState<{
+    opacity: number;
+    transform: string;
+    pointerEvents: 'auto' | 'none';
+  }>({ 
+    opacity: 1, 
+    transform: 'translateX(-50%) scale(1)', 
+    pointerEvents: 'auto' 
+  });
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const stashThreshold = 1000;
+      
+      if (scrollY <= 0) {
+        setNavStyle({ opacity: 1, transform: 'translateX(-50%) translateY(0) scale(1)', pointerEvents: 'auto' });
+      } else {
+        const progress = Math.min(scrollY / stashThreshold, 1);
+        const opacity = 1 - (progress * progress);
+        const translateY = progress * -120;
+        const scaleX = 1 - (progress * 0.2);
+        const scaleY = 1 - (progress * 0.8);
+        
+        setNavStyle({
+          opacity: opacity,
+          transform: `translateX(-50%) translateY(${translateY}px) scaleX(${scaleX}) scaleY(${scaleY})`,
+          pointerEvents: opacity < 0.1 ? 'none' : 'auto'
+        });
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -112,7 +147,7 @@ const App: React.FC = () => {
   return (
     <div className="app-container">
       {/* Navigation Header */}
-      <nav className="nav-header">
+      <nav className="nav-header" style={navStyle}>
         <div className="nav-links">
           <a href="#services" className="nav-link">Service</a>
           <a href="#contact" className="nav-link">Contact</a>
