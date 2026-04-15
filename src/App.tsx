@@ -311,7 +311,7 @@ const App: React.FC = () => {
       <section className="section" id="collaborators" style={{ position: "relative", overflow: "visible" }}>
         <ScrollReveal>
           <div className="section-header">
-            <span className="section-subtitle">Collaborateur</span>
+            <span className="section-subtitle">Collaborateurs</span>
           </div>
         </ScrollReveal>
 
