@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap');
+
 :root {
   --bg-color: #161618;
   --accent-green: #30DD69;
@@ -8,7 +10,7 @@
   --glass-border: rgba(255, 255, 255, 0.12);
   --glass-blur: 12px;
   
-  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-main: 'Lexend', system-ui, -apple-system, sans-serif;
   
   font-family: var(--font-main);
   line-height: 1.5;
