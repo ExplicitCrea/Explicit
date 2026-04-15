@@ -505,27 +505,50 @@
 }
 
 .slide-in {
+  /* Default fade in, but usually overridden by specific entry animations if needed */
   animation: colabFadeIn 0.5s ease forwards;
 }
 
+.slide-in-next {
+  animation: colabEnterNext 0.5s ease forwards;
+}
+
+.slide-in-prev {
+  animation: colabEnterPrev 0.5s ease forwards;
+}
+
 .slide-next {
-  animation: colabSlideNext 0.3s ease forwards;
+  animation: colabExitNext 0.4s ease forwards;
 }
 
 .slide-prev {
-  animation: colabSlidePrev 0.3s ease forwards;
+  animation: colabExitPrev 0.4s ease forwards;
 }
 
 @keyframes colabFadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-@keyframes colabSlideNext {
+/* Coming from the right (next) */
+@keyframes colabEnterNext {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Coming from the left (prev) */
+@keyframes colabEnterPrev {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Exiting to the left */
+@keyframes colabExitNext {
   to { opacity: 0; transform: translateX(-50px); }
 }
 
-@keyframes colabSlidePrev {
+/* Exiting to the right */
+@keyframes colabExitPrev {
   to { opacity: 0; transform: translateX(50px); }
 }
 
