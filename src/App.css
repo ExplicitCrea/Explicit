@@ -268,10 +268,10 @@
   font-weight: 700;
   letter-spacing: 1px;
   color: #000;
-  background: linear-gradient(135deg, #2a004d 0%, #b060ff 40%, #e0ccff 100%);
-  border-radius: 100px;
+  background: linear-gradient(160deg, #634EFF 0%, #639ADA 40%, #5DE09F 100%);
+  border-radius: 15px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 10px 30px rgba(48, 221, 105, 0.2);
+  box-shadow: 0 10px 30px rgba(51, 48, 221, 0.2);
   border: 1.5px solid rgba(255, 255, 255, 0.8);
   will-change: transform, box-shadow;
   display: inline-block;
@@ -287,8 +287,8 @@
 .cta-button:hover {
   transform: translateY(5px) scale(1.05);
   background: #ffffff;
-  box-shadow: 0 15px 40px rgba(176, 96, 255, 0.5), 0 0 0 6px rgba(255, 255, 255, 0.1);
-  border-color: #b060ff;
+  box-shadow: 0 15px 40px rgba(61, 36, 202, 0.5), 0 0 0 6px rgba(255, 255, 255, 0.1);
+  border-color: #60ffc2;
 }
 
 .section {
