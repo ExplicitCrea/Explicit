@@ -19,10 +19,10 @@ import colab5 from '../assets/collaborateur_5.png';
 
 const collaborators = [
   { id: 1, img: colab1, name: "Collaborateur 1", desc: "Réalisation graphique et accompagnement en motion design", color: "176, 96, 255" },
-  { id: 2, img: colab2, name: "Collaborateur 2", desc: "Expertise en montage et effets visuels cinématiques", color: "76, 255, 143" },
-  { id: 3, img: colab3, name: "Collaborateur 3", desc: "Design sonore et immersion acoustique haut de gamme", color: "99, 78, 255" },
-  { id: 4, img: colab4, name: "Collaborateur 4", desc: "Direction artistique et stratégie de contenu viral", color: "48, 221, 105" },
-  { id: 5, img: colab5, name: "Collaborateur 5", desc: "Illustration unique et identité visuelle forte", color: "163, 95, 255" }
+  { id: 2, img: colab2, name: "Collaborateur 2", desc: "Production 3D et montage vidéo", color: "76, 255, 143" },
+  { id: 3, img: colab3, name: "Collaborateur 3", desc: "Production visuelle 3D, FX et simulations de présentation", color: "99, 78, 255" },
+  { id: 4, img: colab4, name: "Collaborateur 4", desc: "Réalisation complète : montage, 3D, motion design et sound design", color: "48, 221, 105" },
+  { id: 5, img: colab5, name: "Collaborateur 5", desc: "Accompagnement VFX, création graphique et simulations", color: "163, 95, 255" }
 ];
 
 // Reusable GlowBlobs for Contact section
