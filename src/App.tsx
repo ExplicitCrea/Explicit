@@ -84,6 +84,16 @@ const App: React.FC = () => {
     pointerEvents: 'auto' 
   });
 
+  const [gridOffset, setGridOffset] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setGridOffset(window.scrollY * 0.15);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
@@ -106,7 +116,7 @@ const App: React.FC = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -146,24 +156,25 @@ const App: React.FC = () => {
 
   return (
     <div className="app-container">
-      {/* Navigation Header */}
-      <nav className="nav-header" style={navStyle}>
-        <div className="nav-links">
-          <a href="#services" className="nav-link">Service</a>
-          <a href="#contact" className="nav-link">Contact</a>
-          <a href="#projects" className="nav-link">Création</a>
-        </div>
-      </nav>
-      
-      {/* Hero Section */}
-      <section className="hero-section">
-        <div className="accent-glow glow-green"></div>
-        <div className="accent-glow glow-violet"></div>
-        <ScrollReveal>
-          <div className="hero-logo-container">
-            <img src={logo} alt="EXPLICIT CREA" className="hero-logo-img" />
+      <div className="parallax-grid" style={{ transform: `translateY(${-gridOffset % 80}px)` }} />
+      <div className="main-content">
+        {/* Navigation Header */}
+        <nav className="nav-header" style={navStyle}>
+          <div className="nav-links">
+            <a href="#services" className="nav-link">Service</a>
+            <a href="#contact" className="nav-link">Contact</a>
+            <a href="#projects" className="nav-link">Création</a>
           </div>
-        </ScrollReveal>
+        </nav>
+        
+        {/* Hero Section */}
+        <section className="hero-section">
+          <div className="accent-glow glow-violet"></div>
+          <ScrollReveal>
+            <div className="hero-logo-container">
+              <img src={logo} alt="EXPLICIT CREA" className="hero-logo-img" />
+            </div>
+          </ScrollReveal>
         <ScrollReveal delay={200}>
           <p className="hero-subtitle">
             Vous avez un projet créatif ? 
@@ -417,6 +428,7 @@ const App: React.FC = () => {
           </div>
         </div>
       </footer>
+      </div>
     </div>
   );
 };

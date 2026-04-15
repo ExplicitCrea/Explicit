@@ -1223,3 +1223,25 @@
   transform: translateY(-2px);
 }
 
+
+.parallax-grid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh + 80px);
+  z-index: 1; /* Move to positive z-index */
+  pointer-events: none;
+  background-color: var(--bg-color);
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 80px 80px;
+  will-change: transform;
+}
+
+.main-content {
+  position: relative;
+  z-index: 2; /* Ensure content is above the grid */
+}
+
