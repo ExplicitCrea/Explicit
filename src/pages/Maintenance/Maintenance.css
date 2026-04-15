@@ -163,4 +163,14 @@
     .maintenance-footer {
         bottom: 0.7rem;
     }
+
+    .maintenance-glow-right {
+        right: -8rem;
+        bottom: -8rem;
+    }
+
+    .maintenance-glow-left {
+        left: -5rem;
+        top: -7rem;
+    }
 }
