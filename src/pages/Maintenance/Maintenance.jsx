@@ -23,12 +23,12 @@ export const Maintenance = () => {
                     <p>Retour prevu : tres bientot</p>
                     <p>
                         Besoin de nous joindre en urgence ?{' '}
-                        <a href="mailto:contact@explicit.fr">contact@explicit.fr</a>
+                        <a href="mailto:contact@explicitcrea.com">contact@explicitcrea.com</a>
                     </p>
                 </div>
             </section>
 
-            <footer className="maintenance-footer">© {currentYear} Explicit</footer>
+            <footer className="maintenance-footer">© {currentYear} ExplicitCrea</footer>
         </main>
     );
 };
