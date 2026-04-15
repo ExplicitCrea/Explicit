@@ -164,7 +164,7 @@ export default function ServiceCards() {
       <p className="services-label">NOS SERVICES</p>
 
       <div className="cards-wrapper">
-        {visibleServices.map((service, index) => {
+        {services.map((service, index) => {
           const { tStart, tEnd } = cardGradientTs(index, services.length);
           const cStart    = lerpColor(tStart);
           const cEnd      = lerpColor(tEnd);
@@ -172,6 +172,9 @@ export default function ServiceCards() {
           const endRgb    = `${cEnd.r}, ${cEnd.g}, ${cEnd.b}`;
           const cMid      = lerpColor((tStart + tEnd) / 2);
           const isHovered = hovered === service.id;
+          
+          const isExtra = index >= 3;
+          const isHidden = isExtra && !showAll;
 
           const cardStyle = {
             "--sr": cStart.r, "--sg": cStart.g, "--sb": cStart.b,
@@ -182,33 +185,34 @@ export default function ServiceCards() {
           } as React.CSSProperties;
 
           return (
-            <ScrollReveal 
-              key={service.id} 
-              delay={(index % 3) * 100}
-            >
-              <div
-                className={`service-card-item${isHovered ? " service-card-item--hovered" : ""}`}
-                style={cardStyle}
-                onMouseEnter={() => setHovered(service.id)}
-                onMouseLeave={() => setHovered(null)}
+            <div key={service.id} className={`card-anim-wrapper ${isHidden ? "extra-card--hidden" : ""}`}>
+              <ScrollReveal 
+                delay={(index % 3) * 100}
               >
-                <div className="card-internal-content">
-                  <GlowBlobs startRgb={startRgb} endRgb={endRgb} hovered={isHovered} />
+                <div
+                  className={`service-card-item${isHovered ? " service-card-item--hovered" : ""}`}
+                  style={cardStyle}
+                  onMouseEnter={() => setHovered(service.id)}
+                  onMouseLeave={() => setHovered(null)}
+                >
+                  <div className="card-internal-content">
+                    <GlowBlobs startRgb={startRgb} endRgb={endRgb} hovered={isHovered} />
 
-                  <div className="card-header">
-                    <div className="icon-wrapper">
-                      {service.icon}
+                    <div className="card-header">
+                      <div className="icon-wrapper">
+                        {service.icon}
+                      </div>
+                      <div className="card-title-block">
+                        <h3 className="card-title">{service.title}</h3>
+                        {service.subtitle && <h3 className="card-title">{service.subtitle}</h3>}
+                      </div>
                     </div>
-                    <div className="card-title-block">
-                      <h3 className="card-title">{service.title}</h3>
-                      {service.subtitle && <h3 className="card-title">{service.subtitle}</h3>}
-                    </div>
+
+                    <p className="card-description">{service.description}</p>
                   </div>
-
-                  <p className="card-description">{service.description}</p>
                 </div>
-              </div>
-            </ScrollReveal>
+              </ScrollReveal>
+            </div>
           );
         })}
       </div>
