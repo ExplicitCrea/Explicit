@@ -200,7 +200,7 @@ const App: React.FC = () => {
         </ScrollReveal>
         <div className="grid-container">
           <ScrollReveal delay={100}>
-            <a href="https://www.youtube.com/@LeGrandJD" target="_blank" rel="noopener noreferrer" className="project-link">
+            <a href="https://www.youtube.com/watch?v=erT9IivBlKA" target="_blank" rel="noopener noreferrer" className="project-link">
               <div className="card glass project-card interactive">
                 <div className="project-image-container">
                   <img src={legrandjd} alt="Le Grand JD" />
@@ -216,7 +216,7 @@ const App: React.FC = () => {
             </a>
           </ScrollReveal>
           <ScrollReveal delay={200}>
-            <a href="https://www.youtube.com/@Maskey" target="_blank" rel="noopener noreferrer" className="project-link">
+            <a href="https://www.youtube.com/watch?v=J7fi9ja87vo" target="_blank" rel="noopener noreferrer" className="project-link">
               <div className="card glass project-card interactive">
                 <div className="project-image-container">
                   <img src={maskey} alt="Maskey" />
@@ -232,7 +232,7 @@ const App: React.FC = () => {
             </a>
           </ScrollReveal>
           <ScrollReveal delay={300}>
-            <a href="https://www.youtube.com/@VZION" target="_blank" rel="noopener noreferrer" className="project-link">
+            <a href="https://www.youtube.com/watch?v=BFhN_HLCOzM" target="_blank" rel="noopener noreferrer" className="project-link">
               <div className="card glass project-card interactive">
                 <div className="project-image-container">
                   <img src={vzion} alt="Vzion" />
