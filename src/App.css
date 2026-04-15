@@ -465,7 +465,7 @@
 .dot {
   width: 12px;
   height: 12px;
-  border-radius: 50%;
+  border-radius: 25%;
 }
 
 .red-dot { background: #FF5F5F; }

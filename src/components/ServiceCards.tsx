@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import "./ServiceCards.css";
 import ScrollReveal from "./ScrollReveal";
 
@@ -89,7 +89,7 @@ function cardGradientTs(index: number, total: number) {
 // ─────────────────────────────────────────────────────────────────────────────
 // Data
 // ─────────────────────────────────────────────────────────────────────────────
-interface Service { id: number; icon: JSX.Element; title: string; subtitle?: string; description: string; }
+interface Service { id: number; icon: React.ReactNode; title: string; subtitle?: string; description: string; }
 
 const services: Service[] = [
   { id: 1, icon: <YoutubeIcon />,      title: "MONTAGE",      subtitle: "YOUTUBE",         description: "Un montage à fort impact pour une rétention d'audience maximale." },
@@ -127,7 +127,7 @@ function useRandomBlobs(count: number): GlowBlob[] {
   return blobs;
 }
 
-function GlowBlobs({ startRgb, endRgb, hovered }: { startRgb: string; endRgb: string; hovered: boolean }) {
+function GlowBlobs({ startRgb, endRgb }: { startRgb: string; endRgb: string }) {
   const blobs = useRandomBlobs(3);
   const colors = [startRgb, endRgb, startRgb];
   return (
@@ -155,9 +155,6 @@ function GlowBlobs({ startRgb, endRgb, hovered }: { startRgb: string; endRgb: st
 export default function ServiceCards() {
   const [hovered, setHovered] = useState<number | null>(null);
   const [showAll, setShowAll] = useState(false);
-
-  // Determine which services to display
-  const visibleServices = showAll ? services : services.slice(0, 3);
 
   return (
     <section className="services-section" id="services">
@@ -196,7 +193,7 @@ export default function ServiceCards() {
                   onMouseLeave={() => setHovered(null)}
                 >
                   <div className="card-internal-content">
-                    <GlowBlobs startRgb={startRgb} endRgb={endRgb} hovered={isHovered} />
+                    <GlowBlobs startRgb={startRgb} endRgb={endRgb} />
 
                     <div className="card-header">
                       <div className="icon-wrapper">

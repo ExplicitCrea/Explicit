@@ -84,6 +84,53 @@ const App: React.FC = () => {
     pointerEvents: 'auto' 
   });
 
+  const [activeColor, setActiveColor] = useState(collaborators[0].color);
+
+  // Analyze image to extract dominant color
+  useEffect(() => {
+    let isMounted = true;
+    const img = new Image();
+    
+    // Set fallback immediately
+    setActiveColor(collaborators[currentColab].color);
+
+    img.crossOrigin = "anonymous";
+    img.src = collaborators[currentColab].img;
+    
+    img.onload = () => {
+      if (!isMounted) return;
+      try {
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d', { willReadFrequently: true });
+        if (!ctx) return;
+
+        canvas.width = 40;
+        canvas.height = 40;
+        ctx.drawImage(img, 0, 0, 40, 40);
+        
+        const imageData = ctx.getImageData(0, 0, 40, 40).data;
+        let r = 0, g = 0, b = 0, count = 0;
+
+        for (let i = 0; i < imageData.length; i += 4) {
+          const alpha = imageData[i+3];
+          if (alpha > 150) {
+            r += imageData[i];
+            g += imageData[i+1];
+            b += imageData[i+2];
+            count++;
+          }
+        }
+
+        if (count > 0 && isMounted) {
+          setActiveColor(`${Math.round(r / count)}, ${Math.round(g / count)}, ${Math.round(b / count)}`);
+        }
+      } catch (e) {
+        console.warn("Analysis failed", e);
+      }
+    };
+    return () => { isMounted = false; };
+  }, [currentColab]);
+
   const [gridOffset, setGridOffset] = useState(0);
 
   useEffect(() => {
@@ -261,24 +308,49 @@ const App: React.FC = () => {
       </section>
 
       {/* Collaborator Section */}
-      <section className="section" id="collaborators">
+      <section className="section" id="collaborators" style={{ position: "relative", overflow: "visible" }}>
         <ScrollReveal>
           <div className="section-header">
             <span className="section-subtitle">Collaborateur</span>
           </div>
         </ScrollReveal>
+
+        {/* Dynamic Background Glow for the current collaborator */}
+        <div 
+          className="colab-section-glow"
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            width: "600px",
+            height: "400px",
+            background: `rgba(${activeColor}, 0.15)`,
+            filter: "blur(120px)",
+            borderRadius: "50%",
+            zIndex: 0,
+            pointerEvents: "none",
+            transition: "background 0.8s ease"
+          }}
+        />
         
-        <div className="colab-slider-container">
+        <div className="colab-slider-container" style={{ position: "relative", zIndex: 1 }}>
           <button className="slider-arrow prev interactive" onClick={prevColab}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="m15 18-6-6 6-6"/></svg>
           </button>
           
           <div className={`colab-content ${direction ? `slide-${direction}` : 'slide-in'}`}>
-            <div className="colab-image-wrapper" style={{ boxShadow: `0 0 40px rgba(${collaborators[currentColab].color}, 0.3)` }}>
+            <div className="colab-image-wrapper" style={{ 
+              boxShadow: `0 0 60px rgba(${activeColor}, 0.4), 0 0 20px rgba(${activeColor}, 0.2)`,
+              borderColor: `rgba(${activeColor}, 0.3)`
+            }}>
               <img src={collaborators[currentColab].img} alt={collaborators[currentColab].name} className="colab-img" />
             </div>
             
-            <div className="colab-video-box" style={{ borderColor: `rgba(${collaborators[currentColab].color}, 0.3)`, boxShadow: `0 0 50px rgba(${collaborators[currentColab].color}, 0.15)` }}>
+            <div className="colab-video-box" style={{ 
+              borderColor: `rgba(${activeColor}, 0.3)`, 
+              boxShadow: `0 0 80px rgba(${activeColor}, 0.2)` 
+            }}>
               <video 
                 key={currentColab}
                 src={portfolioVideo} 
