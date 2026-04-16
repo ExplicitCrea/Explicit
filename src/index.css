@@ -32,17 +32,23 @@
   padding: 0;
 }
 
-body {
+html, body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
   overflow-x: hidden;
   background-color: var(--bg-color);
+  cursor: none !important;
 }
 
 #root {
   width: 100%;
   min-height: 100vh;
+  cursor: none !important;
+}
+
+a, button, input, textarea, select, .interactive, label, img, footer-logo {
+  cursor: none !important;
 }
 
 a {

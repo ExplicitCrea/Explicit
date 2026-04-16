@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import cursorImg from '../../assets/cursor.png';
 
 const CustomCursor: React.FC = () => {
   const [position, setPosition] = useState({ x: -100, y: -100 });
@@ -60,8 +61,23 @@ const CustomCursor: React.FC = () => {
         left: `${position.x}px`,
         top: `${position.y}px`,
         opacity: isVisible ? 1 : 0,
+        position: 'fixed',
+        pointerEvents: 'none',
+        zIndex: 9999,
+        transform: `translate(0, 0) ${isHovering ? 'scale(1.2)' : 'scale(1)'}`,
+        transition: 'transform 0.2s ease, opacity 0.3s ease',
       }}
-    />
+    >
+      <img 
+        src={cursorImg} 
+        alt="cursor" 
+        style={{ 
+          width: '24px', 
+          height: 'auto',
+          display: 'block'
+        }} 
+      />
+    </div>
   );
 };
 

@@ -1,7 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import './App.css';
 import ScrollReveal from './components/ScrollReveal';
 import ServiceCards from './components/ServiceCards';
+import CustomCursor from './components/CustomCursor';
+import { EMAILJS_CONFIG } from './config/emailjs';
 
 // Asset imports
 import logo from '../assets/logo.png';
@@ -85,6 +88,35 @@ const App: React.FC = () => {
   const [isNavStashed, setIsNavStashed] = useState(false);
 
   const [gridOffset, setGridOffset] = useState(0);
+  const formRef = useRef<HTMLFormElement>(null);
+  const [isSending, setIsSending] = useState(false);
+  const [sendResult, setSendResult] = useState<'success' | 'error' | null>(null);
+
+  const sendEmail = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!formRef.current) return;
+
+    setIsSending(true);
+    setSendResult(null);
+
+    emailjs.sendForm(
+      EMAILJS_CONFIG.SERVICE_ID,
+      EMAILJS_CONFIG.TEMPLATE_ID,
+      formRef.current,
+      EMAILJS_CONFIG.PUBLIC_KEY
+    )
+      .then((result) => {
+          console.log(result.text);
+          setSendResult('success');
+          formRef.current?.reset();
+      }, (error) => {
+          console.log(error.text);
+          setSendResult('error');
+      })
+      .finally(() => {
+        setIsSending(false);
+      });
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -226,6 +258,7 @@ const App: React.FC = () => {
 
   return (
     <div className="app-container">
+      <CustomCursor />
       <div className="parallax-grid" style={{ transform: `translateY(${-gridOffset % 80}px)` }} />
       
       {/* Consolidated Navigation Header - Only shown on home page */}
@@ -436,6 +469,7 @@ const App: React.FC = () => {
 
             <ScrollReveal delay={200} className="contact-form-reveal">
               <form 
+                ref={formRef}
                 className="contact-form glass reactive-card" 
                 style={{ 
                   padding: '40px',
@@ -444,24 +478,24 @@ const App: React.FC = () => {
                   "--er": "76", "--eg": "255", "--eb": "143",
                   "--base-angle": "180deg"
                 } as React.CSSProperties} 
-                onSubmit={(e) => e.preventDefault()}
+                onSubmit={sendEmail}
               >
                 <ContactGlowBlobs rgb={GREEN_RGB}/>
                 <div className="form-group">
                   <label>Nom</label>
-                  <input type="text" placeholder="Votre Nom" required />
+                  <input type="text" name="user_name" placeholder="Votre Nom" required />
                 </div>
                 <div className="form-group">
                   <label>Email</label>
-                  <input type="email" placeholder="Votre Email" required />
+                  <input type="email" name="user_email" placeholder="Votre Email" required />
                 </div>
                 <div className="form-group">
                   <label>Téléphone (Optionnel)</label>
-                  <input type="tel" placeholder="Votre numéro" />
+                  <input type="tel" name="user_phone" placeholder="Votre numéro" />
                 </div>
                 <div className="form-group">
                   <label>Type de projet</label>
-                  <select className="form-select" defaultValue="" required>
+                  <select className="form-select" name="project_type" defaultValue="" required>
                     <option value="" disabled>Choisir un type</option>
                     <option>Montage vidéo</option>
                     <option>3D</option>
@@ -475,9 +509,32 @@ const App: React.FC = () => {
                 </div>
                 <div className="form-group">
                   <label>Message</label>
-                  <textarea rows={4} placeholder="Parlez-nous de votre projet"></textarea>
+                  <textarea name="message" rows={4} placeholder="Parlez-nous de votre projet" required></textarea>
                 </div>
-                <button className="contact-submit-btn interactive" style={{ marginTop: '10px', width: '100%' }}>Envoyer le message</button>
+                <button 
+                  className="contact-submit-btn interactive" 
+                  style={{ 
+                    marginTop: '10px', 
+                    width: '100%',
+                    opacity: isSending ? 0.7 : 1,
+                    cursor: isSending ? 'not-allowed' : 'pointer'
+                  }}
+                  disabled={isSending}
+                >
+                  {isSending ? 'Envoi en cours...' : 'Envoyer le message'}
+                </button>
+                
+                {sendResult === 'success' && (
+                  <p style={{ color: '#30DD69', marginTop: '15px', textAlign: 'center', fontWeight: 'bold' }}>
+                    Message envoyé avec succès !
+                  </p>
+                )}
+                {sendResult === 'error' && (
+                  <p style={{ color: '#ff4e4e', marginTop: '15px', textAlign: 'center', fontWeight: 'bold' }}>
+                    Erreur lors de l'envoi. Veuillez réessayer.
+                  </p>
+                )}
+                
                 <p className="form-note">Réponse sous 24 à 48h</p>
               </form>
             </ScrollReveal>
@@ -525,7 +582,7 @@ const App: React.FC = () => {
       {/* Footer is now persistent and correctly linked */}
       <footer className="footer" style={{ position: 'relative', zIndex: 3 }}>
         <div className="footer-content">
-          <div className="footer-logo" onClick={() => navigateTo('home')} style={{ cursor: 'pointer' }}>
+          <div className="footer-logo" onClick={() => navigateTo('home')}>
             <img src={logo} alt="EXPLICIT CREA" className="footer-logo-img" />
           </div>
           <div className="footer-copyright">
@@ -547,6 +604,12 @@ const App: React.FC = () => {
 };
 
 const AidePage = ({ navigateTo }: { navigateTo: (page: 'home' | 'aide' | 'mentions') => void }) => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleFAQ = (idx: number) => {
+    setOpenIndex(openIndex === idx ? null : idx);
+  };
+
   const faqItems = [
     {
       q: "Quels sont vos services ?",
@@ -608,17 +671,63 @@ const AidePage = ({ navigateTo }: { navigateTo: (page: 'home' | 'aide' | 'mentio
           </div>
         </ScrollReveal>
         
-        <div className="faq-container" style={{ maxWidth: '800px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '20px' }}>
-          {faqItems.map((item, idx) => (
-            <ScrollReveal key={idx} delay={idx * 50}>
-              <div className="faq-item card glass" style={{ padding: '30px', textAlign: 'left' }}>
-                <h3 style={{ color: '#fff', marginBottom: '15px' }}>{item.q}</h3>
-                <div className="faq-answer" style={{ color: 'var(--text-secondary)', lineHeight: '1.6' }}>
-                  {typeof item.a === 'string' ? <p>{item.a}</p> : item.a}
+        <div className="faq-container" style={{ maxWidth: '800px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '15px' }}>
+          {faqItems.map((item, idx) => {
+            const isOpen = openIndex === idx;
+            return (
+              <ScrollReveal key={idx} delay={idx * 50}>
+                <div 
+                  className={`faq-item card glass ${isOpen ? 'faq-item--open' : ''}`} 
+                  style={{ padding: '0', textAlign: 'left', overflow: 'hidden' }}
+                >
+                  <button 
+                    className="faq-question-btn interactive" 
+                    onClick={() => toggleFAQ(idx)}
+                    style={{ 
+                      width: '100%', 
+                      padding: '25px 30px', 
+                      display: 'flex', 
+                      justifyContent: 'space-between', 
+                      alignItems: 'center',
+                      textAlign: 'left',
+                      background: 'none',
+                      border: 'none',
+                      color: '#fff'
+                    }}
+                  >
+                    <h3 style={{ margin: 0, fontSize: '1.2rem', fontWeight: 600 }}>{item.q}</h3>
+                    <svg 
+                      viewBox="0 0 24 24" 
+                      width="24" height="24" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      strokeWidth="2" 
+                      style={{ 
+                        transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)', 
+                        transition: 'transform 0.3s ease',
+                        opacity: 0.7
+                      }}
+                    >
+                      <path d="m6 9 6 6 6-6"/>
+                    </svg>
+                  </button>
+                  <div 
+                    className="faq-answer-wrapper"
+                    style={{ 
+                      maxHeight: isOpen ? '1000px' : '0', 
+                      overflow: 'hidden', 
+                      transition: 'max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease',
+                      opacity: isOpen ? 1 : 0
+                    }}
+                  >
+                    <div className="faq-answer" style={{ padding: '0 30px 30px', color: 'var(--text-secondary)', lineHeight: '1.6' }}>
+                      {typeof item.a === 'string' ? <p>{item.a}</p> : item.a}
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </ScrollReveal>
-          ))}
+              </ScrollReveal>
+            );
+          })}
         </div>
       </section>
     </div>
