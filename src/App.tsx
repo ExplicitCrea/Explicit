@@ -228,23 +228,16 @@ const App: React.FC = () => {
     <div className="app-container">
       <div className="parallax-grid" style={{ transform: `translateY(${-gridOffset % 80}px)` }} />
       
-      {/* Consolidated Navigation Header */}
-      <nav className={`nav-header ${currentPage !== 'home' ? 'sub-nav' : (isNavStashed ? 'stashed' : '')}`}>
-        <div className="nav-links">
-          {currentPage === 'home' ? (
-            <>
-              <a href="#services" className="nav-link" onClick={(e) => scrollToSection(e, 'services')}>Service</a>
-              <a href="#contact"  className="nav-link" onClick={(e) => scrollToSection(e, 'contact')}>Contact</a>
-              <a href="#projects" className="nav-link" onClick={(e) => scrollToSection(e, 'projects')}>Création</a>
-            </>
-          ) : (
-            <button onClick={() => navigateTo('home')} className="nav-link back-btn interactive" style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <svg viewBox="24 24 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2"><path d="m15 18-6-6 6-6"/></svg>
-              Retour
-            </button>
-          )}
-        </div>
-      </nav>
+      {/* Consolidated Navigation Header - Only shown on home page */}
+      {currentPage === 'home' && (
+        <nav className={`nav-header ${isNavStashed ? 'stashed' : ''}`}>
+          <div className="nav-links">
+            <a href="#services" className="nav-link" onClick={(e) => scrollToSection(e, 'services')}>Service</a>
+            <a href="#contact"  className="nav-link" onClick={(e) => scrollToSection(e, 'contact')}>Contact</a>
+            <a href="#projects" className="nav-link" onClick={(e) => scrollToSection(e, 'projects')}>Création</a>
+          </div>
+        </nav>
+      )}
 
       {currentPage === 'home' ? (
         <div className="main-content">
@@ -601,6 +594,14 @@ const AidePage = ({ navigateTo }: { navigateTo: (page: 'home' | 'aide' | 'mentio
     <div className="sub-page main-content">
       <section className="section sub-page-content" style={{ paddingTop: '120px' }}>
         <ScrollReveal>
+          <button 
+            className="secondary-button interactive" 
+            onClick={() => navigateTo('home')}
+            style={{ marginBottom: '40px', display: 'flex', alignItems: 'center', gap: '10px' }}
+          >
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2"><path d="m15 18-6-6 6-6"/></svg>
+            Retour à l'accueil
+          </button>
           <div className="section-header">
             <span className="section-subtitle">Aide & FAQ</span>
             <h2 className="section-main-title">Questions Fréquentes</h2>
@@ -629,6 +630,14 @@ const MentionsPage = ({ navigateTo }: { navigateTo: (page: 'home' | 'aide' | 'me
     <div className="sub-page main-content">
       <section className="section sub-page-content" style={{ paddingTop: '120px' }}>
         <ScrollReveal>
+          <button 
+            className="secondary-button interactive" 
+            onClick={() => navigateTo('home')}
+            style={{ marginBottom: '40px', display: 'flex', alignItems: 'center', gap: '10px' }}
+          >
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2"><path d="m15 18-6-6 6-6"/></svg>
+            Retour à l'accueil
+          </button>
           <div className="section-header">
             <span className="section-subtitle">Mentions Légales</span>
             <h2 className="section-main-title">Informations Légales</h2>
