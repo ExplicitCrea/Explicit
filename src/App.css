@@ -37,14 +37,12 @@
   }
 }
 
-/* Navigation Header */
-/* Navigation Header */
+/* Navigation Header Fancy */
 .nav-header {
   position: fixed;
   top: 0;
   left: 50%;
-  transform: translate(-50%, -80px) scaleX(0.9);
-  opacity: 0;
+  transform: translate(-50%, 0);
   width: auto;
   min-width: 600px;
   padding: 18px 70px;
@@ -59,94 +57,31 @@
   -webkit-backdrop-filter: blur(25px) saturate(180%);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-top: none;
-  border-radius: 0 0 45px 45px;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 
-  /* Refined Shadow & Glow */
-  box-shadow: 
-    0 10px 40px rgba(0, 0, 0, 0.3),
-    inset 0 0 20px rgba(255, 255, 255, 0.02);
-
-  animation: navSlideIn 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
   transition: 
-    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1),
     opacity 0.6s ease,
-    background 0.4s ease,
-    box-shadow 0.4s ease;
+    filter 0.6s ease;
 }
 
-.nav-header::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 0 0 45px 45px;
-  padding: 1px;
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    rgba(255, 255, 255, 0.05) 40%,
-    rgba(255, 255, 255, 0.15)
-  );
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-}
+/* On retire l'ancienne animation d'entrée car elle forçait le transform */
 
-.nav-header:hover {
-  background: rgba(15, 15, 15, 0.55);
-  box-shadow: 
-    0 15px 50px rgba(0, 0, 0, 0.4),
-    0 0 30px rgba(176, 96, 255, 0.08),
-    inset 0 0 25px rgba(255, 255, 255, 0.03);
-}
-
-/* Stashed : glisse vers le haut avec un léger scale */
+/* Stashed Fancy Animation */
 .nav-header.stashed {
-  animation: none;
-  opacity: 0;
-  transform: translate(-50%, -100%) scale(0.95);
-  pointer-events: none;
-  transition:
-    transform 0.6s cubic-bezier(0.55, 0, 1, 0.45),
-    opacity 0.4s ease;
+  transform: translate(-50%, -200%) scale(0.8) rotateX(20deg) !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transition: transform 0.8s cubic-bezier(0.7, 0, 0.3, 1), opacity 0.5s ease !important;
 }
 
-@keyframes navSlideIn {
-  0% {
-    opacity: 0;
-    transform: translate(-50%, -80px) scaleX(0.85);
-  }
-  60% {
-    opacity: 1;
-    transform: translate(-50%, 5px) scaleX(1.02);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(-50%, 0) scaleX(1);
-  }
-}
-
-@media (max-width: 1024px) {
-  .nav-header { min-width: auto; width: 85%; padding: 15px 40px; }
-}
-@media (max-width: 768px) {
-  .nav-header { width: 92%; padding: 12px 25px; border-radius: 0 0 28px 28px; }
-  .nav-header::after { border-radius: 0 0 28px 28px; }
-  .nav-link { font-size: 0.95rem !important; }
-}
-
-/* Links */
 .nav-links {
   display: flex;
   gap: 60px;
   align-items: center;
 }
-@media (max-width: 768px) { .nav-links { gap: 30px; } }
-@media (max-width: 480px) { .nav-links { gap: 15px; } }
 
-/* Stagger d'entrée sur chaque lien */
 .nav-link {
   color: #ffffff;
   text-decoration: none;
@@ -154,30 +89,24 @@
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 2px;
-  position: relative;
-  opacity: 0;
-  transform: translateY(-12px);
-  animation: linkFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  transition: 
-    opacity 0.3s ease, 
-    color 0.3s ease, 
-    text-shadow 0.3s ease,
-    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 0.75;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   padding: 6px 0;
 }
 
-.nav-links > *:nth-child(1) { animation-delay: 0.6s; }
-.nav-links > *:nth-child(2) { animation-delay: 0.75s; }
-.nav-links > *:nth-child(3) { animation-delay: 0.9s; }
-
-@keyframes linkFadeIn {
-  to { opacity: 0.75; transform: translateY(0); }
-}
-
 .nav-link:hover {
-  opacity: 1 !important;
+  opacity: 1;
   transform: translateY(-2px);
   text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+@media (max-width: 768px) {
+  .nav-header {
+    min-width: 90%;
+    padding: 12px 25px;
+    border-radius: 0 0 25px 25px;
+  }
+  .nav-links { gap: 30px; }
 }
 
 
