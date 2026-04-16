@@ -17,12 +17,18 @@ import colab3 from '../assets/collaborateur_3.jpg';
 import colab4 from '../assets/collaborateur_4.jpg';
 import colab5 from '../assets/collaborateur_5.png';
 
+import videoCollab1 from '../assets/video_portfolio.webm'
+import videoCollab2 from '../assets/video_portfolio.webm'
+import videoCollab3 from '../assets/video_portfolio.webm'
+import videoCollab4 from '../assets/video_portfolio.webm'
+import videoCollab5 from '../assets/video_portfolio.webm'
+
 const collaborators = [
-  { id: 1, img: colab1, name: "Collaborateur 1", desc: "Réalisation graphique et accompagnement en motion design" },
-  { id: 2, img: colab2, name: "Collaborateur 2", desc: "Production 3D et montage vidéo" },
-  { id: 3, img: colab3, name: "Collaborateur 3", desc: "Production visuelle 3D, FX et simulations de présentation" },
-  { id: 4, img: colab4, name: "Collaborateur 4", desc: "Réalisation complète : montage, 3D, motion design et sound design" },
-  { id: 5, img: colab5, name: "Collaborateur 5", desc: "Accompagnement VFX, création graphique et simulations" }
+  { id: 1, img: colab1, video: videoCollab1, name: "Collaborateur 1", desc: "Réalisation graphique et accompagnement en motion design" },
+  { id: 2, img: colab2, video: videoCollab2, name: "Collaborateur 2", desc: "Production 3D et montage vidéo" },
+  { id: 3, img: colab3, video: videoCollab3, name: "Collaborateur 3", desc: "Production visuelle 3D, FX et simulations de présentation" },
+  { id: 4, img: colab4, video: videoCollab4, name: "Collaborateur 4", desc: "Réalisation complète : montage, 3D, motion design et sound design" },
+  { id: 5, img: colab5, video: videoCollab5, name: "Collaborateur 5", desc: "Accompagnement VFX, création graphique et simulations" }
 ];
 
 // Reusable GlowBlobs for Contact section
@@ -139,11 +145,25 @@ const App: React.FC = () => {
     return () => { isMounted = false; };
   }, [currentColab]);
 
+  const [startExit, setStartExit] = useState(false);
+
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1500);
-    return () => clearTimeout(timer);
+    const handleLoad = () => {
+      setStartExit(true);
+      // On attend la fin de l'animation de la barre avant de cacher le loader
+      setTimeout(() => setLoading(false), 800);
+    };
+
+    if (document.readyState === 'complete') {
+      setTimeout(handleLoad, 100);
+    } else {
+      window.addEventListener('load', handleLoad);
+      const safetyTimer = setTimeout(handleLoad, 5000);
+      return () => {
+        window.removeEventListener('load', handleLoad);
+        clearTimeout(safetyTimer);
+      };
+    }
   }, []);
 
   const nextColab = () => {
@@ -166,8 +186,13 @@ const App: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="loader-container">
-        <div className="loader"></div>
+      <div className={`loader-container ${startExit ? 'loader--exit' : ''}`}>
+        <div className="loader-content">
+          <img src={logo} alt="EXPLICIT CREA" className="loader-logo-pre" />
+          <div className="loader-bar-container">
+            <div className={`loader-bar-fill ${startExit ? 'loader-bar-fill--full' : ''}`}></div>
+          </div>
+        </div>
       </div>
     );
   }
@@ -266,16 +291,16 @@ const App: React.FC = () => {
           </ScrollReveal>
           <div className="grid-container">
             <ScrollReveal delay={100}>
-              <a href="https://www.youtube.com/watch?v=erT9IivBlKA" target="_blank" rel="noopener noreferrer" className="project-link">
+              <a href="https://www.youtube.com/watch?v=erT9IivBlKA" target="_blank" rel="noopener noreferrer" className="project-link"> {/* Lien de la vidéo */}
                 <div className="card glass project-card interactive">
                   <div className="project-image-container">
-                    <img src={legrandjd} alt="Le Grand JD" />
+                    <img src={legrandjd} alt="Le Grand JD" /> {/* Origine de l'image cf début du code */}
                   </div>
                   <div className="project-info">
-                    <h3>MICHAEL JACKSON EST TOUJOURS EN VIE</h3>
+                    <h3>MICHAEL JACKSON EST TOUJOURS EN VIE</h3> {/* Titre de la vidéo */}
                     <div className="project-author">
                       <span className="dot red-dot"></span>
-                      <span className="author-name">LE GRAND JD</span>
+                      <span className="author-name">LE GRAND JD</span> {/* Auteur */}
                     </div>
                   </div>
                 </div>
@@ -356,24 +381,23 @@ const App: React.FC = () => {
                 <img src={collaborators[currentColab].img} alt={collaborators[currentColab].name} className="colab-img" />
               </div>
               
-              <div className="colab-video-box" style={{ 
-                borderColor: `rgba(${activeColor}, 0.3)`, 
-                boxShadow: `0 0 80px rgba(${activeColor}, 0.2)` 
+              <div className="colab-video-box" style={{
+                borderColor: `rgba(${activeColor}, 0.3)`,
+                boxShadow: `0 0 80px rgba(${activeColor}, 0.2)`
               }}>
-                <video 
+                <video
                   key={currentColab}
-                  src={portfolioVideo} 
-                  autoPlay 
-                  loop 
-                  muted 
-                  playsInline 
+                  src={collaborators[currentColab].video}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
                   className="colab-bg-video"
                 />
                 <div className="colab-text-overlay">
                   <p>{collaborators[currentColab].desc}</p>
                 </div>
-              </div>
-            </div>
+              </div>            </div>
             
             <button className="slider-arrow next interactive" onClick={nextColab}>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="m9 18 6-6-6-6"/></svg>
