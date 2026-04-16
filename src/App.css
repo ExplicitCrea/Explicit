@@ -1165,10 +1165,6 @@
   }
 }
 
-.direct-contact-card:hover {
-  border-color: rgba(255, 255, 255, 0.2) !important;
-}
-
 .direct-contact-content {
   display: flex;
   flex-direction: column;
