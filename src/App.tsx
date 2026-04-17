@@ -86,6 +86,7 @@ const App: React.FC = () => {
   const [direction, setDirection] = useState<'next' | 'prev' | 'in-next' | 'in-prev' | null>(null);
   const [activeColor, setActiveColor] = useState("176, 96, 255");
   const [isNavStashed, setIsNavStashed] = useState(false);
+  const [isFairyEnabled, setIsFairyEnabled] = useState(false);
 
   const [gridOffset, setGridOffset] = useState(0);
   const formRef = useRef<HTMLFormElement>(null);
@@ -256,9 +257,13 @@ const App: React.FC = () => {
     }
   };
 
+  const triggerFairyDust = () => {
+    setIsFairyEnabled(!isFairyEnabled);
+  };
+
   return (
     <div className="app-container">
-      <CustomCursor />
+      <CustomCursor isFairyEnabled={isFairyEnabled} />
       <div className="parallax-grid" style={{ transform: `translateY(${-gridOffset % 80}px)` }} />
       
       {/* Consolidated Navigation Header - Only shown on home page */}
@@ -598,18 +603,28 @@ const App: React.FC = () => {
             <a href="https://facture.explicitcrea.com/" className="footer-link">Factures</a>
           </div>
         </div>
+        <div 
+          onClick={triggerFairyDust} 
+          className="interactive"
+          style={{ 
+            position: 'absolute', 
+            bottom: '0', 
+            right: '0', 
+            width: '20px', 
+            height: '20px', 
+            cursor: 'pointer',
+            opacity: 0.01,
+            background: '#fff',
+            zIndex: 9999
+          }} 
+          title="..."
+        />
       </footer>
     </div>
   );
 };
 
 const AidePage = ({ navigateTo }: { navigateTo: (page: 'home' | 'aide' | 'mentions') => void }) => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  const toggleFAQ = (idx: number) => {
-    setOpenIndex(openIndex === idx ? null : idx);
-  };
-
   const faqItems = [
     {
       q: "Quels sont vos services ?",
@@ -671,63 +686,17 @@ const AidePage = ({ navigateTo }: { navigateTo: (page: 'home' | 'aide' | 'mentio
           </div>
         </ScrollReveal>
         
-        <div className="faq-container" style={{ maxWidth: '800px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '15px' }}>
-          {faqItems.map((item, idx) => {
-            const isOpen = openIndex === idx;
-            return (
-              <ScrollReveal key={idx} delay={idx * 50}>
-                <div 
-                  className={`faq-item card glass ${isOpen ? 'faq-item--open' : ''}`} 
-                  style={{ padding: '0', textAlign: 'left', overflow: 'hidden' }}
-                >
-                  <button 
-                    className="faq-question-btn interactive" 
-                    onClick={() => toggleFAQ(idx)}
-                    style={{ 
-                      width: '100%', 
-                      padding: '25px 30px', 
-                      display: 'flex', 
-                      justifyContent: 'space-between', 
-                      alignItems: 'center',
-                      textAlign: 'left',
-                      background: 'none',
-                      border: 'none',
-                      color: '#fff'
-                    }}
-                  >
-                    <h3 style={{ margin: 0, fontSize: '1.2rem', fontWeight: 600 }}>{item.q}</h3>
-                    <svg 
-                      viewBox="0 0 24 24" 
-                      width="24" height="24" 
-                      fill="none" 
-                      stroke="currentColor" 
-                      strokeWidth="2" 
-                      style={{ 
-                        transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)', 
-                        transition: 'transform 0.3s ease',
-                        opacity: 0.7
-                      }}
-                    >
-                      <path d="m6 9 6 6 6-6"/>
-                    </svg>
-                  </button>
-                  <div 
-                    className="faq-answer-wrapper"
-                    style={{ 
-                      maxHeight: isOpen ? '1000px' : '0', 
-                      overflow: 'hidden', 
-                      transition: 'max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease',
-                      opacity: isOpen ? 1 : 0
-                    }}
-                  >
-                    <div className="faq-answer" style={{ padding: '0 30px 30px', color: 'var(--text-secondary)', lineHeight: '1.6' }}>
-                      {typeof item.a === 'string' ? <p>{item.a}</p> : item.a}
-                    </div>
-                  </div>
+        <div className="faq-container" style={{ maxWidth: '800px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '20px' }}>
+          {faqItems.map((item, idx) => (
+            <ScrollReveal key={idx} delay={idx * 50}>
+              <div className="faq-item card glass" style={{ padding: '30px', textAlign: 'left' }}>
+                <h3 style={{ color: '#fff', marginBottom: '15px' }}>{item.q}</h3>
+                <div className="faq-answer" style={{ color: 'var(--text-secondary)', lineHeight: '1.6' }}>
+                  {typeof item.a === 'string' ? <p>{item.a}</p> : item.a}
                 </div>
-              </ScrollReveal>
-            );
-          })}
+              </div>
+            </ScrollReveal>
+          ))}
         </div>
       </section>
     </div>
