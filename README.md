@@ -26,6 +26,7 @@ Version utilisées :
 
    ```bash
    npm install
+   npm i @vercel/analytics
    npm run build
    npm run dev
    ```
