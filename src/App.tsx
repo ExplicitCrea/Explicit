@@ -9,7 +9,6 @@ import { EMAILJS_CONFIG } from './config/emailjs';
 // Asset imports
 import logo from '../assets/logo.png';
 import portfolioVideoWebm from '../assets/ShowReel 2.0_Webm_1.webm';
-import portfolioVideoMp4 from '../assets/ShowReel 2.0_1.mp4';
 import legrandjd from '../assets/legrandjd.png';
 import maskey from '../assets/maskey.jpg';
 import vzion from '../assets/Miniature_Paul_Denham_V4.1.jpg';
@@ -310,7 +309,6 @@ const App: React.FC = () => {
                   className="hero-video glass"
                 >
                   <source src={portfolioVideoWebm} type="video/webm" />
-                  <source src={portfolioVideoMp4} type="video/mp4" />
                 </video>
               </div>
             </ScrollReveal>            <ScrollReveal delay={450} className="hero-cta-reveal">
@@ -811,7 +809,7 @@ const MentionsPage = ({ navigateTo }: { navigateTo: (page: 'home' | 'aide' | 'me
             <div className="legal-section card glass" style={{ padding: '30px', textAlign: 'left' }}>
               <h3 style={{ color: '#fff', marginBottom: '15px' }}>1. Éditeur du site</h3>
               <p style={{ color: 'var(--text-secondary)', marginBottom: '5px' }}>Le site <strong>explicitcrea.com</strong> est édité par Explicit Créa.</p>
-              <p style={{ color: 'var(--text-secondary)', marginBottom: '5px' }}>Contact : <a href="mailto:contact@explicitcrea.com" style={{ color: '#fff' }}>contact@explicitcrea.com</a></p>
+              <p style={{ color: 'var(--text-secondary)', marginBottom: '5px' }}>Contact : <a href="mailto:contact@explicitcrea.com" style={{ color: '#fff' }}>contact@explicitcrea.com</a> / NotTrueFalse ou Tarkorr sur Github</p>
               <p style={{ color: 'var(--text-secondary)', marginBottom: '5px' }}>Instagram : <a href="https://instagram.com/explicit.crea" target="_blank" rel="noreferrer" style={{ color: '#fff' }}>@explicit.crea</a></p>
             </div>
           </ScrollReveal>
