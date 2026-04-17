@@ -8,7 +8,8 @@ import { EMAILJS_CONFIG } from './config/emailjs';
 
 // Asset imports
 import logo from '../assets/logo.png';
-import portfolioVideo from '../assets/ShowReel 2.0_Webm_1.webm';
+import portfolioVideoWebm from '../assets/ShowReel 2.0_Webm_1.webm';
+import portfolioVideoMp4 from '../assets/ShowReel 2.0_1.mp4';
 import legrandjd from '../assets/legrandjd.png';
 import maskey from '../assets/maskey.jpg';
 import vzion from '../assets/Miniature_Paul_Denham_V4.1.jpg';
@@ -301,17 +302,18 @@ const App: React.FC = () => {
           <div className="hero-visual-wrapper">
             <ScrollReveal delay={300} className="hero-video-reveal">
               <div className="hero-video-container">
-                <video 
-                  src={portfolioVideo} 
-                  autoPlay 
-                  loop 
-                  muted 
-                  playsInline 
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
                   className="hero-video glass"
-                />
+                >
+                  <source src={portfolioVideoWebm} type="video/webm" />
+                  <source src={portfolioVideoMp4} type="video/mp4" />
+                </video>
               </div>
-            </ScrollReveal>
-            <ScrollReveal delay={450} className="hero-cta-reveal">
+            </ScrollReveal>            <ScrollReveal delay={450} className="hero-cta-reveal">
               <a href="#contact" className="cta-button interactive">Démarrer un projet</a>
             </ScrollReveal>
           </div>

@@ -42,7 +42,13 @@ server: {
 
 ## Gestion Emails
 
-Le formulaire de contact utilise EmailJS. Pour configurer l'envoi, vous devez créer un fichier `.env` à la racine du projet avec les variables suivantes :
+Le formulaire de contact utilise EmailJS. Pour installer la librairie :
+
+```bash
+npm install @emailjs/browser
+```
+
+Pour configurer l'envoi, vous devez créer un fichier `.env` à la racine du projet avec les variables suivantes :
 
 ```env
 VITE_EMAILJS_SERVICE_ID=votre_service_id
