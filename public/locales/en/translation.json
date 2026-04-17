@@ -1,0 +1,161 @@
+{
+  "header": {
+    "services": "Services",
+    "artbook": "Art Book",
+    "history": "Our History",
+    "contact": "Contact"
+  },
+  "services": {
+    "subtitle": "Our team meticulously handles every phase of video editing. From de-rushing to the application of visual effects, right through to sound mixing. We're committed to delivering a quality final product.",
+    "editing": "Video Editing",
+    "video": "Our team meticulously handles every phase of video editing. From de-rushing to the application of visual effects, right through to sound mixing. We're committed to delivering a quality final product.",
+    "branding": "Entrust your visual presence to our creative services. Whether you represent an innovative company or are self-employed, our expertise will shape your values with unique graphic directions.",
+    "motion": "Want to tell a story? With our expertise in motion design, we can illustrate it and captivate your audience."
+  },
+  "artbook":{
+    "description":"we focus on",
+    "categories":{
+        "Advertisement":"Advertisement",
+        "Documentary":"Documentary",
+        "LiveStreaming":"LiveStreaming",
+        "Editing":"Editing & Motion Design",
+        "Events":"Events"
+    }
+  },
+  "bruce-grannec": {
+    "paragraph": "We are proud to have collaborated with Bruce Grannec in providing exceptional visuals for his tournament in collaboration with FIFA 2023. Our team designed bespoke animated assets to enhance his event. Each visual element was carefully crafted to reflect the professionalism and excitement of the tournament, providing Bruce Grannec with a distinctive and immersive visual presence on his streaming platform."
+  },
+  "vzion": {
+    "title": {
+      "paragraph": "Creator of mystery content in the form of mini-documentaries."
+    },
+    "tertiary-wrapper": {
+      "paragraph": "At Explicit, every image is a blank canvas on which we apply our colorimetry expertise."
+    },
+    "quaternary-wrapper": {
+      "paragraph": "Explicit is more than just artistic creativity. It's the assurance of shooting with professional equipment, to give you an exceptional visual and auditory experience."
+    },
+    "displayContent": {
+      "button": "see the video"
+    },
+    "video1": [
+      {
+        "id": "video1",
+        "title": "The darkest depths of the Internet [VOL.2]",
+        "paragraph": "In the series \"The Darkest Depths of the Internet\", each episode plunges you into the mysterious and often terrifying world of the Internet. Through captivating and carefully researched stories, each episode explores different topics related to the dark side of the web. With an average running time of 30 to 40 minutes, each episode is designed to keep viewers on the edge of their seats and take them on a dark and disturbing journey.\n\nWhether it's stories of mysterious disappearances linked to obscure forums, investigations into enigmatic websites with shady activities, or explorations of modern myths propagated by social media, \"The Darkest Depths of the Internet\" offers viewers an immersive and thrilling experience.\n\nThe oppressive atmosphere and gripping surges of horror find their essence in Explicit's expertise. Every scene is meticulously crafted to evoke a sense of dread, every sound orchestrated to send shivers down your spine. With an unrivaled mastery of horrific content creation, Explicit is the driving force behind the visual and aural intensity that thrills every episode.",
+        "link": "https://youtu.be/xy3yvweMHsM?si=SvUd7wsxILHwv3rM"
+      }
+    ],
+    "video2": [
+      {
+        "id": "video2",
+        "title": "160 years in prison for imitating real-life GTA scenes",
+        "paragraph": "Immerse yourself in the extraordinary story of Ryan Stone, a character worthy of a video game.\n\nIn this incredibly dynamic adventure, discover how Ryan Stone, an American citizen, became the unwitting protagonist of a story worthy of Grand Theft Auto. With electrifying editing and vivid colors, the video takes you down the virtual streets of real life.\n\nThis visual brilliance, this electrifying energy that drives the video, is all made possible by the creative talent of audiovisual agency \"Explicit\". Our expertise in dynamic editing and original visual creation is what brings this extraordinary visual experience to life. Explicit doesn't just tell a story, they transform it into an explosion of color and movement that captivates and intrigues.",
+        "link": "https://youtu.be/Bjmrmb3DeQo?si=GANX2WZylkNMCkHV"
+      }
+    ],
+    "video3": [
+      {
+        "id": "video3",
+        "title": "The cult that recruited through a video game: Kanye Quest 3030",
+        "paragraph": "Immerse yourself in the spellbinding mystery of 'Kanye Quest 3030', a video game that goes far beyond appearances. Discover the mysterious terminals scattered throughout the game, revealing new horizons if the right word is entered.\n\nAs an audiovisual agency, Explicit deploys its creative talents to bring captivating visual experiences to life. With expertise in staging and editing, we offer you much more than just videos. If you want to capture the mysterious essence of a complex story like 'Kanye Quest 3030', Explicit has the know-how to create unique visual experiences that captivate and intrigue viewers.",
+        "link": "https://youtu.be/ZbfrIe1j928?si=-ePsTV5TXilyrdUs"
+      }
+    ]
+  },
+  "mahdiba": {
+    "paragraph": "Here's what we've done for the streamer and Youtuber \"Mahdi Ba\": a fully animated streampack illustrated by our teams. A 3D project that required a great deal of technical skill and time, for a very satisfactory result. We're extremely proud of this project, and the customer is fully satisfied with his experience with our team.\n\nWe're grateful for the trust placed in us by \"Mahdi Ba\", and look forward to collaborating again on other projects in the future."
+  },
+  "home": {
+    "title": {
+      "main": "Would you like to bring a creative project to ",
+      "secondary": "fruition"
+    },
+    "description": "Explicit is here to help you with all your audiovisual needs. We have a team of passionate and professional artists who are ready to work with you to bring your projects to fruition.",
+    "subtitle": "Find out more about us!",
+    "newsletter": {
+      "title": "Keep up to date with all the latest news!",
+      "placeholder": "Enter your e-mail!"
+    },
+    "notification": {
+      "title": "billing service",
+      "description": "Discover our online billing service!"
+    }
+  },
+  "wrldmag": {
+    "paragraph": "We're proud to have collaborated with WRLD Mag, a media outlet specializing in music culture across the Atlantic and in France. Our team was fortunate to have the opportunity to shoot videos together, develop a visual identity and produce content. Together, we brought WRLD Mag's artistic vision to life, creating a memorable and immersive visual experience for their music-loving audience."
+  },
+  "branding": {
+    "description": "Entrust your visual presence to our creative service. Whether you represent an innovative company or are self-employed, our expertise will shape your values with unique graphic directions."
+  },
+  "illustration": {
+    "description": "Would you like to take personalisation a step further? Our artists are ready to respond to your requests for all types of illustrations, with customised styles."
+  },
+  "stupeflip": {
+    "title": "We can give them life too!"
+  },
+  "graphics": {
+    "title": "Graphic asset",
+    "description": "For our live content creators, we have a whole range of graphics tools adapted to streaming, to help you dress up your content, from the simple waiting screen to the smallest formatting details."
+  },
+  "threed": {
+    "description": "Made-to-measure 3-dimensional creations, whether it's character design, scenery or the environment, all your ideas are within reach, thanks to our services."
+  },
+  "audio": {
+    "title": "Sound business",
+    "description": "As a complement to all our visual production services, we also had a sensitive alternative with auditory proposals such as dubbing, voice-overs or the production of personalised audio tracks.",
+    "conclusion": "You can also contact us by e-mail"
+  },
+  "pg": {
+    "description": "Explicit supports content creator PROFESSION GANGSTER in its artistic direction."
+  },
+  "jo": {
+    "description": "Explore the essence of time through the creative eyes of Explicit. Our collaboration with the Paris 2024 event has enabled us to create a captivating 3D video, a one-minute journey through time and worlds. From wrestling gladiators to the splendours of the Roman Empire, from the 1920s to the present day, each world is brought to life through our mastery of 3D. Immerse yourself in a unique visual immersion that transcends time and space, bringing an epic dimension to the Paris 2024 merchandising project."
+  },
+  "gg": {
+    "description": "We are honoured to have contributed to the realisation of a Minecraft e-sports tournament, organised by The Guill and offering a cash prize of 12,000 euros. Explicit brought its creativity to bear by developing the art direction and designing the stages for the event. Every detail was carefully orchestrated to create an immersive visual experience, adding a unique dimension to the tournament!"
+  },
+  "potatoz": {
+    "description": "We're delighted to have worked with streamer Potatoz. Our team created bespoke visuals for his Twitch channel, smooth transitions and a captivating introductory video. Each of these elements has been carefully designed to reflect Potatoz's style."
+  },
+  "paltay": {
+    "description": "We're proud to have worked with streamer and YouTuber Paltay. Our team brought his Twitch channel to life by creating bespoke scenes, complete with illustrations and creative assets. Each element has been carefully designed to add a unique and immersive touch to his content, giving Paltay and his community a truly unique visual experience."
+  },
+  "jd": {
+    "title": "MEET STUPEFLIP",
+    "description": "Immerse yourself in a world of Chinese imperial inspiration, where stories come to life thanks to Explicit's expertise in illustration and animation. In this captivating video, the result of a meeting between LeGrandJD and one of the members of the legendary music group Stupeflip, Explicit has brought to life an adventure straight from Julien Barthélémy's imagination. Discover the astonishing story of an emperor and a painter put to the test by the creation of a crab painting."
+  },
+  "history": {
+    "paragraph": "Due to the need to constantly evolve, a group of creatives have come together to perform in the field of entertainment and sharing on the internet. The name Explicit instantly entered the collective's mind as the value to be added.",
+    "paragraphe": "Trained and recruited on prestigious expectations, Explicit members are different from their backgrounds They manage to associate the professional with their vision of art and share in each of them their projects a part of themselves for a unique result.",
+    "paragraphes": "  The fusion of different styles of practice such as drawing, editing or modeling allows a complementarity in the work that justifies a qualitative result that meets your expectations.",
+    "conclusion": "The Explicit team wants above all to share and conviviality, it has taken care of growing within a nest of curiosity that has allowed it and will continue to share creativity in each of its works provided."
+  },
+  "eden": {
+    "title": "VIDEO MONTAGE",
+    "paragraphe": "We are proud to have collaborated with YouTuber Eden LZ in producing video edits and ",
+    "paragraphes": "motion effects.Our work for Eden LZ reflects our commitment to visual quality and our ability to bring concepts to life through video montages. "
+  },
+  "guill": {
+    "paragraph": "We are delighted to have collaborated with streamer The Guill.Our team designed and created its stream pack for its Twitch channel.Graphics, captivating animations and a unique visual identity have been integrated to offer its viewers an immersive experience.Together, we have shaped a visual universe that reflects Guill's distinctive style and reinforces the visual impact of his channel!"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "title2": "Our Informations",
+    "label": "Your first name / last name",
+    "input": "Forename",
+    "input2": "Name",
+    "label2": "E-mail address*",
+    "label3": "Telephone Number",
+    "label4": "E.g. Company Name/Alias*",
+    "input3": "E.g. Company Name/Nickname",
+    "label5": "Message*",
+    "textarea": "Add a message",
+    "button": "Send"
+  },
+  "footer": {
+    "title": "Our Story",
+    "title2": "Help",
+    "title3": "Legal Disclaimer"
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "header": {
+    "services": "Services",
+    "artbook": "Art Book",
+    "history": "Notre Histoire",
+    "contact": "Contact"
+  },
+  "services": {
+    "subtitle": "Notre équipe se charge de toutes les phases du montage vidéo, de manière méticuleuse. Du dérushage à l'application d'effets visuels, jusqu’au mixage sonore. Nous sommes déterminés à vous offrir un produit final de qualité.",
+    "editing": "Montage vidéo",
+    "video": "Notre équipe se charge de toutes les phases du montage vidéo, de manière méticuleuse. Du dérushage à l'application d'effets visuels, jusqu’au mixage sonore. Nous sommes déterminés à vous offrir un produit final de qualité.",
+    "branding": "Confiez votre présence visuelle à notre service de création. Que vous représentiez une entreprise innovante ou que vous soyez indépendant, notre expertise façonnera vos valeurs avec des directions graphiques uniques.",
+    "motion": "Vous avez une histoire à raconter ? Grâce à notre expertise en motion design, nous saurons la mettre en images et captiver votre audience."
+  },
+  "artbook":{
+    "description":"On fait",
+    "categories":{
+        "Advertisement":"Publicités",
+        "Documentary":"Documentaire",
+        "LiveStreaming":"LiveStreaming",
+        "Editing":"Montage & Motion Design",
+        "Events":"Events"
+    }
+  },
+  "bruce-grannec": {
+    "paragraph": "Nous sommes fiers d'avoir pu collaborer avec Bruce Grannec en fournissant des visuels exceptionnels pour son tournoi en collaboration avec FIFA 2023. Notre équipe a conçu des assets animés sur mesure pour enrichir son événement. Chaque élément visuel a été soigneusement élaboré pour refléter le professionnalisme et l'enthousiasme du tournoi, offrant à Bruce Grannec une présence visuelle distinctive et immersive sur sa plateforme de streaming."
+  },
+  "vzion": {
+    "title": {
+      "paragraph": "Créateur de contenu traitant du domaine du mystère sous forme de mini-documentaires."
+    },
+    "tertiary-wrapper": {
+      "paragraph": "Chez Explicit, chaque image est une toile vierge sur laquelle nous appliquons notre expertise en colorimétrie."
+    },
+    "quaternary-wrapper": {
+      "paragraph": "Explicit, c'est bien plus qu'une simple créativité artistique. C'est l'assurance de tournages exécutés avec un matériel professionnel pour vous offrir une expérience visuelle et auditive exceptionnelle."
+    },
+    "displayContent": {
+      "button": "consulter la vidéo"
+    },
+    "video1": [
+      {
+        "id": "video1",
+        "title": "Les tréfonds les plus sombres d’Internet [VOL.2]",
+        "paragraph": "Dans la série \"Les Tréfonds les Plus Sombres d’Internet\", chaque épisode vous plonge dans l'univers mystérieux et souvent terrifiant d'Internet. À travers des récits captivants et soigneusement recherchés, chaque épisode explore différents sujets liés à la face cachée de la toile. Avec une durée moyenne de 30 à 40 minutes, chaque épisode est conçu pour tenir en haleine les spectateurs et les entraîner dans un voyage sombre et inquiétant.\n\nQue ce soit des histoires de disparitions mystérieuses liées à des forums obscurs, des enquêtes sur des sites web énigmatiques aux activités louches, ou encore des explorations de mythes modernes propagés par les médias sociaux,\n\"Les Tréfonds les Plus Sombres d’Internet\" offre aux spectateurs une expérience immersive et palpitante.\n\nL'ambiance oppressante et les montées d'horreur saisissantes trouvent leur essence dans l'expertise d’Explicit. Chaque scène est méticuleusement conçue pour évoquer un sentiment d'effroi, chaque son est orchestré pour envoyer des frissons dans l'échine. Avec une maîtrise inégalée dans la création de contenu horrifique,\n\"Explicit\" est le moteur derrière l'intensité visuelle et auditive qui fait vibrer chaque épisode.",
+        "link": "https://youtu.be/xy3yvweMHsM?si=SvUd7wsxILHwv3rM"
+      }
+    ],
+    "video2": [
+      {
+        "id": "video2",
+        "title": "160 ans de prison pour avoir imité des scènes de GTA dans la vraie vie",
+        "paragraph": "Plongez-vous dans l'histoire extraordinaire de Ryan Stone, un personnage digne d'un jeu vidéo.\n\nDans cette aventure incroyablement dynamique, découvrez comment Ryan Stone, un citoyen américain, est devenu le protagoniste involontaire d'une histoire digne de Grand Theft Auto. Avec un montage électrisant et des couleurs vives, la vidéo vous emmène dans les rues virtuelles de la vie réelle.\n\nCet éclat visuel, cette énergie électrisante qui anime la vidéo, tout cela est rendu possible grâce au talent créatif de l'agence d'audiovisuel \"Explicit\". Notre expertise en montage dynamique et en création visuelle originale est ce qui donne vie à cette expérience visuelle hors du commun. Explicit ne se contente pas de raconter une histoire, ils la transforment en une explosion de couleurs et de mouvements qui captivent et intriguent.",
+        "link": "https://youtu.be/Bjmrmb3DeQo?si=GANX2WZylkNMCkHV"
+      }
+    ],
+    "video3": [
+      {
+        "id": "video3",
+        "title": "La secte qui recrutait à travers un jeu vidéo : Kanye Quest 3030",
+        "paragraph": "Plongez dans le mystère envoûtant de \"Kanye Quest 3030\", un jeu vidéo qui va bien au-delà des apparences. Découvrez les mystérieux terminaux disséminés dans le jeu, révélant de nouveaux horizons si le bon mot est entré.\n\nEn tant qu'agence d'audiovisuel, Explicit déploie ses talents créatifs pour donner vie à des expériences visuelles captivantes. Avec une expertise dans la mise en scène et le montage, nous vous offrons bien plus que de simples vidéos. Si vous souhaitez capturer l'essence mystérieuse d'une histoire complexe comme \"Kanye Quest 3030\", Explicit possède le savoir-faire pour créer des expériences visuelles uniques qui captivent et intriguent les spectateurs.",
+        "link": "https://youtu.be/ZbfrIe1j928?si=-ePsTV5TXilyrdUs"
+      }
+    ]
+  },
+  "mahdiba": {
+    "paragraph": "Voici notre réalisation pour le streamer et Youtuber Mahdi Ba : un streampack entièrement animé et illustré en 3D et en animation. Une réalisation qui a demandé beaucoup de travaille et de temps, pour un résultat très satisfaisant. Nous sommes extrêmement fiers de ce projet, et nous somme pleinement satisfait de notre expérience avec notre Mahdi Ba.\n\nNous sommes reconnaissants de la confiance accordée par Mahdi Ba et espérons pouvoir collaborer à nouveau sur d'autre projets à l'avenir. "
+  },
+  "home": {
+    "title": {
+      "main": "Vous souhaitez concrétiser un projet ",
+      "secondary": "créatif"
+    },
+    "description": "Explicit est là pour répondre à tout type de demandes concernant le milieu de l’audiovisuel. Nous avons à nos côtés des artistes passionnés et professionnels qui seront prêts à travailler avec vous afin de mener à bien vos projets.",
+    "subtitle": "Découvrez nous !",
+    "newsletter": {
+      "title": "Sois tenu au courant de toutes les actualités !",
+      "placeholder": "Entre ton e-mail !"
+    },
+    "notification": {
+      "title": "Service de facture",
+      "description": "Découvrez notre service de facture en ligne!"
+    }
+  },
+  "wrldmag": {
+    "paragraph": "Nous sommes fiers d'avoir collaboré avec WRLD Mag, un média spécialisé dans la culture musicale d’outre-Atlantique et française. Notre équipe a eu la chance de pouvoir réaliser des vidéos ensemble, d’élaborer une identité visuelle et de produire du contenu. Ensemble, nous avons donné vie à la vision artistique de WRLD Mag, créant une expérience visuelle mémorable et immersive pour leur public passionné de musique."
+  },
+  "branding": {
+    "description": "Confiez votre présence visuelle a notre service de création. Que vous représentiez une entreprise innovante ou que vous soyez indépendant, notre expertise façonnera vos valeur avec des directions graphiques uniques."
+  },
+  "illustration": {
+    "description": "Vous souhaitez pousser la personnalisation encore plus loin ? Nos artistes seront prêt à répondre à vos demandes pour tout type d’illustrations, avec des styles sur mesures."
+  },
+  "stupeflip": {
+    "title": "Nous pouvons aussi leur donner vie !"
+  },
+  "graphics": {
+    "title": "Asset graphique",
+    "description": "Pour nos streamers, nous proposons toute une gamme d'outils graphiques adaptés au domaine, pour vous permettre de mieux habiller vos contenus."
+  },
+  "threed": {
+    "description": "Des créations en 3D sur mesure, que ce soit pour la conception de personnages, de décors ou d'environnements, toutes vos idées sont à portée de main grâce à nos services."
+  },
+  "audio": {
+    "title": "Metier du sons",
+    "description": "En plus de tous nos services de production visuelle, nous proposons également une approche sonore telles que le doublage, la voix off ou la création de pistes audio personnalisées.",
+    "conclusion": "Vous pouvez aussi nous contacter par mail"
+  },
+  "pg": {
+    "description": "Explicit accompagne le créateur de contenu PROFESSION GANGSTER dans sa direction artistique."
+  },
+  "jo": {
+    "description": "Explorez l'essence du temps à travers les yeux de la créativité d'Explicit. Notre collaboration avec l'évènement Paris 2024 nous a permis de façonner une vidéo en 3D captivante, un voyage d'une minute à travers les époques et les mondes. De gladiateurs en lutte aux splendeurs de l'Empire romain, des années 1920 à notre époque contemporaine, chaque univers prend vie grâce à notre maîtrise de la 3D."
+  },
+  "gg": {
+    "description": "Nous sommes honorés d'avoir contribué à la réalisation d'un tournoi e-sportif Minecraft, organisé par The Guill et offrant un cash prize de 12 000 euros. Explicit a apporté sa créativité en développant une direction artistique et en concevant des scènes pour l'événement. Chaque détail a été soigneusement orchestré pour créer une expérience visuelle immersive, ajoutant une dimension unique à ce tournoi !"
+  },
+  "potatoz": {
+    "description": "Nous sommes fiere d'avoir collaboré avec le streamer Potatoz. Nous avons créé des visuels sur mesure pour sa chaîne Twitch, des transitions et une vidéo d'introduction. Chacun de ces éléments a été conçu pour refléter le style de Potatoz, en motion et en 3D !"
+  },
+  "paltay": {
+    "description": "Nous sommes fiers d'avoir collaboré avec Paltay, un streamer et YouTuber. Notre équipe a donné vie à sa chaîne Twitch en créant des scènes sur mesure, agrémentées d'illustrations et d'assets créatifs. Chaque élément a été soigneusement conçu pour apporter une touche unique et immersive à son contenu, offrant à Paltay et à sa communauté une expérience visuelle vraiment unique."
+  },
+  "jd": {
+    "title": "RENCONTRE AVEC STUPEFLIP",
+    "description": "Dans cette vidéo issue d'une rencontre entre LeGrandJD et l'un des membres du groupe  Stupeflip, nous avons donné vie à une aventure tout droit sortie de l'imagination de Julien Barthélémy. Découvrez l'histoire d'un empereur et d'un peintre mis à l'épreuve par la création d'un tableau de crabe. Illustration, animation, décor et thème sonore réalisés par nos soins pour un résultat unique et captivant."
+  },
+  "history": {
+    "paragraph": "De par le besoin d'évoluer sans cesse, des créatifs se sont réunis pour performer dans le domaine de la création et du partage sur internet Le nom \"Explicit\"",
+    "paragraphe": "Formés et recrutés sur des attentes prestigieuses, les membres d'Explicit sous leurs différences artistiques parviennent à associer le professionnel avec leur vision de l'art et partagent dans chacun de leurs projets une part d'eux même pour un résultat unique.",
+    "paragraphes": " La fusion de différents styles de pratique comme le dessin, le montage ou encore la modélisation permet une complémentarité dans le travail qui justifie un résultat qualitatif et à la hauteur de vos attentes. ",
+    "conclusion": "L'équipe Explicit se veut avant tout dans le partage et la convivialité, elle s'est chargée de grandir au sein d'un nid de curiosité qui lui a permis et qui continuera de partager de la créativité dans chacun de ses travaux fournis."
+  },
+  "eden": {
+    "title": "MONTAGE VIDEO",
+    "paragraphe": "Nous sommes fiers d'avoir collaboré avec le YouTuber Eden LZ dans la réalisation de montages vidéo et d'effets de motion. Notre travail pour Eden LZ reflète notre engagement envers la qualité visuelle et notre capacité à donner vie à des concepts à travers des montages vidéo."
+  },
+  "guill": {
+    "paragraph": "Nous sommes ravis d’avoir collaboré avec le streamer The Guill. Notre équipe a conçu et créé son pack de stream pour sa chaîne Twitch. Des graphismes, des animations captivantes et une identité visuelle unique ont été intégrés pour offrir à ses spectateurs une expérience immersive. Ensemble, nous avons façonné un univers visuel qui reflète le style distinctif de Guill et renforce l'impact visuel de sa chaîne !"
+  },
+  "contact": {
+    "title": "Nous Contacter",
+    "title2": "Nos informations",
+    "label": "Votre Prénom / Nom ",
+    "input": "Prénom",
+    "input2": "Nom",
+    "label2": "Adresse E-Mail*",
+    "label3": "Numéro de Téléphone",
+    "label4": "Ex. nom de l'entreprise/Pseudonyme*",
+    "input3": "Ex.nom de l entreprise/Pseudo",
+    "label5": "Message*",
+    "textarea": "Ajouter un message",
+    "button": "Envoyer"
+  },
+  "footer": {
+    "title": "Notre Histoire",
+    "title2": "Aide",
+    "title3": "Mentions légales"
+  }
+}
