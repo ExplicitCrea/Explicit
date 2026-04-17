@@ -8,10 +8,10 @@ import { EMAILJS_CONFIG } from './config/emailjs';
 
 // Asset imports
 import logo from '../assets/logo.png';
-import portfolioVideo from '../assets/video_portfolio.webm';
+import portfolioVideo from '../assets/ShowReel 2.0_Webm_1.webm';
 import legrandjd from '../assets/legrandjd.png';
 import maskey from '../assets/maskey.jpg';
-import vzion from '../assets/vzion.jpg';
+import vzion from '../assets/Miniature_Paul_Denham_V4.1.jpg';
 
 // Collaborators
 import colab1 from '../assets/collaborateur_1.jpg';
@@ -20,18 +20,23 @@ import colab3 from '../assets/collaborateur_3.jpg';
 import colab4 from '../assets/collaborateur_4.jpg';
 import colab5 from '../assets/collaborateur_5.png';
 
-import videoCollab1 from '../assets/video_portfolio.webm'
-import videoCollab2 from '../assets/video_portfolio.webm'
-import videoCollab3 from '../assets/video_portfolio.webm'
-import videoCollab4 from '../assets/video_portfolio.webm'
-import videoCollab5 from '../assets/video_portfolio.webm'
+import videoCollab1Webm from '../assets/CollabJD_720.webm'
+import videoCollab1Mp4 from '../assets/CollabJD_720_mP4.mp4'
+import videoCollab2Webm from '../assets/CollabMcSkyz_720.webm'
+import videoCollab2Mp4 from '../assets/CollabMcSkyz_720_mP4.mp4'
+import videoCollab3Webm from '../assets/CollabInsta360_720.webm'
+import videoCollab3Mp4 from '../assets/CollabInsta360_720_mP4.mp4'
+import videoCollab4Webm from '../assets/CollabVzion_720.webm'
+import videoCollab4Mp4 from '../assets/CollabVzion_720_mP4.mp4'
+import videoCollab5Webm from '../assets/CollabACT_720.webm'
+import videoCollab5Mp4 from '../assets/CollabACT_720_mP4.mp4'
 
 const collaborators = [
-  { id: 1, img: colab1, video: videoCollab1, name: "Collaborateur 1", desc: "Réalisation graphique et accompagnement en motion design" },
-  { id: 2, img: colab2, video: videoCollab2, name: "Collaborateur 2", desc: "Production 3D et montage vidéo" },
-  { id: 3, img: colab3, video: videoCollab3, name: "Collaborateur 3", desc: "Production visuelle 3D, FX et simulations de présentation" },
-  { id: 4, img: colab4, video: videoCollab4, name: "Collaborateur 4", desc: "Réalisation complète : montage, 3D, motion design et sound design" },
-  { id: 5, img: colab5, video: videoCollab5, name: "Collaborateur 5", desc: "Accompagnement VFX, création graphique et simulations" }
+  { id: 1, img: colab1, webm: videoCollab1Webm, mp4: videoCollab1Mp4, name: "Collaborateur 1", desc: "Réalisation graphique et accompagnement en motion design" },
+  { id: 2, img: colab2, webm: videoCollab2Webm, mp4: videoCollab2Mp4, name: "Collaborateur 2", desc: "Production 3D et montage vidéo" },
+  { id: 3, img: colab3, webm: videoCollab3Webm, mp4: videoCollab3Mp4, name: "Collaborateur 3", desc: "Production visuelle 3D, FX et simulations de présentation" },
+  { id: 4, img: colab4, webm: videoCollab4Webm, mp4: videoCollab4Mp4, name: "Collaborateur 4", desc: "Réalisation complète : montage, 3D, motion design et sound design" },
+  { id: 5, img: colab5, webm: videoCollab5Webm, mp4: videoCollab5Mp4, name: "Collaborateur 5", desc: "Accompagnement VFX, création graphique et simulations" }
 ];
 
 // Reusable GlowBlobs for Contact section
@@ -81,7 +86,7 @@ function ContactGlowBlobs({ rgb }: { rgb: string}) {
 
 const App: React.FC = () => {
   const [loading, setLoading] = useState(true);
-  const [currentPage, setCurrentPage] = useState<'home' | 'aide' | 'mentions'>('home');
+  const [currentPage, setCurrentPage] = useState<'home' | 'aide' | 'mentions' | 'quisommesnous'>('home');
   const [currentColab, setCurrentColab] = useState(0);
   const [direction, setDirection] = useState<'next' | 'prev' | 'in-next' | 'in-prev' | null>(null);
   const [activeColor, setActiveColor] = useState("176, 96, 255");
@@ -233,7 +238,7 @@ const App: React.FC = () => {
   const PURPLE_RGB = "176, 96, 255";
   const GREEN_RGB = "76, 255, 143";
 
-  const navigateTo = (page: 'home' | 'aide' | 'mentions') => {
+  const navigateTo = (page: 'home' | 'aide' | 'mentions' | 'quisommesnous') => {
     setCurrentPage(page);
     window.scrollTo(0, 0);
     setIsNavStashed(false);
@@ -418,13 +423,15 @@ const App: React.FC = () => {
               }}>
                 <video
                   key={currentColab}
-                  src={collaborators[currentColab].video}
                   autoPlay
                   loop
                   muted
                   playsInline
                   className="colab-bg-video"
-                />
+                >
+                  <source src={collaborators[currentColab].webm} type="video/webm" />
+                  <source src={collaborators[currentColab].mp4} type="video/mp4" />
+                </video>
                 <div className="colab-text-overlay">
                   <p>{collaborators[currentColab].desc}</p>
                 </div>
@@ -443,7 +450,7 @@ const App: React.FC = () => {
         <section className="section" id="contact">
           <ScrollReveal>
             <h2 className="section-title">Parlons de votre Projet</h2>
-            <p className="contact-main-subtitle">Une idée, un concept ou une production a lancer ? <br/>On transforme ca en résultat concret</p>
+            <p className="contact-main-subtitle">Une idée, un concept ou une production à lancer ? <br/>On transforme ça en résultat concret</p>
           </ScrollReveal>
           <div className="contact-layout">
             <ScrollReveal delay={100} className="contact-info-reveal">
@@ -580,6 +587,8 @@ const App: React.FC = () => {
         </div>
       ) : currentPage === 'aide' ? (
         <AidePage navigateTo={navigateTo} />
+      ) : currentPage === 'quisommesnous' ? (
+        <WhoUsPage navigateTo={navigateTo} />
       ) : (
         <MentionsPage navigateTo={navigateTo} />
       )}
@@ -598,33 +607,106 @@ const App: React.FC = () => {
               const el = document.getElementById('services');
               if (el) el.scrollIntoView({ behavior: 'smooth' });
             }, 100); }}>Services</a>
+            <a href="#quisommesnous" className="footer-link" onClick={(e) => { e.preventDefault(); navigateTo('quisommesnous'); }}>Qui sommes nous ?</a>
             <a href="#aide" className="footer-link" onClick={(e) => { e.preventDefault(); navigateTo('aide'); }}>Aide</a>
             <a href="#mentions" className="footer-link" onClick={(e) => { e.preventDefault(); navigateTo('mentions'); }}>Mentions légales</a>
             <a href="https://facture.explicitcrea.com/" className="footer-link">Factures</a>
           </div>
         </div>
-        <div 
+        <button 
           onClick={triggerFairyDust} 
-          className="interactive"
-          style={{ 
-            position: 'absolute', 
-            bottom: '0', 
-            right: '0', 
-            width: '20px', 
-            height: '20px', 
-            cursor: 'pointer',
-            opacity: 0.01,
-            background: '#fff',
-            zIndex: 9999
-          }} 
-          title="..."
-        />
+          className="footer-stars-btn interactive"
+          title="Fairy Dust"
+        >
+          ✨
+        </button>
       </footer>
     </div>
   );
 };
 
-const AidePage = ({ navigateTo }: { navigateTo: (page: 'home' | 'aide' | 'mentions') => void }) => {
+const WhoUsPage = ({ navigateTo }: { navigateTo: (page: 'home' | 'aide' | 'mentions' | 'quisommesnous') => void }) => {
+  return (
+    <div className="sub-page main-content">
+      <section className="section sub-page-content" style={{ paddingTop: '120px' }}>
+        <ScrollReveal>
+          <button 
+            className="secondary-button interactive" 
+            onClick={() => navigateTo('home')}
+            style={{ marginBottom: '40px', display: 'flex', alignItems: 'center', gap: '10px' }}
+          >
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2"><path d="m15 18-6-6 6-6"/></svg>
+            Retour à l'accueil
+          </button>
+          <div className="section-header">
+            <span className="section-subtitle">À propos</span>
+            <h2 className="section-main-title">Qui sommes-nous ?</h2>
+          </div>
+        </ScrollReveal>
+        
+        <div className="about-container" style={{ maxWidth: '800px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '40px' }}>
+          <ScrollReveal delay={100}>
+            <div className="about-card card glass" style={{ padding: '40px', textAlign: 'left' }}>
+              <p style={{ color: '#fff', fontSize: '1.2rem', lineHeight: '1.6', marginBottom: '20px', fontWeight: '500' }}>
+                Explicit Crea est une agence créative spécialisée en production vidéo, création 3D et motion design !
+              </p>
+              <p style={{ color: 'var(--text-secondary)', lineHeight: '1.6', fontSize: '1.1rem' }}>
+                Nous accompagnons des créateurs de contenu, des marques et des agences dans la réalisation de leurs projets, de l’idée initiale jusqu’au rendu final.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal delay={200}>
+            <div className="about-card card glass" style={{ padding: '40px', textAlign: 'left' }}>
+              <p style={{ color: 'var(--text-secondary)', lineHeight: '1.6', fontSize: '1.1rem', marginBottom: '0' }}>
+                Aujourd’hui, Explicit Crea, c’est une équipe de 7 artistes qui collaborent à plein temps sur les projets. Selon les besoins, nous nous entourons également d’un réseau de plus de 30 talents (monteurs vidéo, motion designers, artistes 3D, graphistes, illustrateurs…) pour aller plus loin et adapter chaque production :)
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }} className="about-grid">
+            <ScrollReveal delay={300}>
+              <div className="about-card card glass" style={{ padding: '30px', textAlign: 'left', height: '100%' }}>
+                <h3 style={{ color: '#fff', marginBottom: '20px', fontSize: '1.3rem' }}>Nous intervenons sur :</h3>
+                <ul style={{ color: 'var(--text-secondary)', lineHeight: '2', fontSize: '1.05rem', listStyle: 'none', padding: 0 }}>
+                  <li>• Le montage vidéo</li>
+                  <li>• La création de scènes 3D</li>
+                  <li>• La production vidéo complète</li>
+                  <li>• Le motion design et l’animation</li>
+                  <li>• La création visuelle et le branding</li>
+                </ul>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={400}>
+              <div className="about-card card glass" style={{ padding: '30px', textAlign: 'left', height: '100%' }}>
+                <h3 style={{ color: '#fff', marginBottom: '20px', fontSize: '1.3rem' }}>Notre approche :</h3>
+                <p style={{ color: 'var(--text-secondary)', lineHeight: '1.6', marginBottom: '20px' }}>
+                  Chaque projet est pensé avec une approche structurée, mais flexible. Nous accordons une attention particulière à :
+                </p>
+                <ul style={{ color: 'var(--text-secondary)', lineHeight: '2', fontSize: '1.05rem', listStyle: 'none', padding: 0 }}>
+                  <li>• La compréhension des besoins</li>
+                  <li>• La qualité visuelle</li>
+                  <li>• L’efficacité des contenus</li>
+                </ul>
+              </div>
+            </ScrollReveal>
+          </div>
+
+          <ScrollReveal delay={500}>
+            <div className="about-card card glass" style={{ padding: '40px', textAlign: 'center' }}>
+              <p style={{ color: '#fff', fontSize: '1.1rem', lineHeight: '1.6', fontWeight: '500', margin: 0 }}>
+                Notre objectif est simple : proposer des solutions créatives pertinentes, adaptées aux enjeux de visibilité et de performance de chaque projet.
+              </p>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+const AidePage = ({ navigateTo }: { navigateTo: (page: 'home' | 'aide' | 'mentions' | 'quisommesnous') => void }) => {
   const faqItems = [
     {
       q: "Quels sont vos services ?",
@@ -632,7 +714,7 @@ const AidePage = ({ navigateTo }: { navigateTo: (page: 'home' | 'aide' | 'mentio
     },
     {
       q: "Comment ça marche ?",
-      a: "Vous avez besoin d’un service en particulier ? Prenez contact avec nous via l'onglet \"Contact\" et nous nous ferons un plaisir de vous guider en vous conseillant sur les bonnes démarches et sur la faisabilité de votre projet."
+      a: "Vous avez besoin d'un service en particulier ? Prenez contact avec nous via l'onglet \"Contact\" et nous nous ferons un plaisir de vous guider en vous conseillant sur les bonnes démarches et sur la faisabilité de votre projet."
     },
     {
       q: "Quels sont les Délais ?",
@@ -651,7 +733,7 @@ const AidePage = ({ navigateTo }: { navigateTo: (page: 'home' | 'aide' | 'mentio
       a: "Nous sommes ouverts aux profils créatifs ! Si vous êtes un professionnel dans un domaine que nous couvrons et que vous souhaitez collaborer avec nous, vous pouvez nous contacter par e-mail, en joignant des exemples de vos créations."
     },
     {
-      q: "Pourquoi choisir notre agence créative plutôt qu’un prestataire unique ?",
+      q: "Pourquoi choisir notre agence créative plutôt qu'un prestataire unique ?",
       a: (
         <>
           <p style={{ marginBottom: '10px' }}>En faisant appel à notre agence créative, vous bénéficiez de l'expertise pluridisciplinaire de notre équipe. Nous regroupons des talents variés dans les domaines de la production audiovisuelle, ce qui vous assure une approche complète et des solutions intégrées.</p>
@@ -664,7 +746,7 @@ const AidePage = ({ navigateTo }: { navigateTo: (page: 'home' | 'aide' | 'mentio
     },
     {
       q: "Comment fonctionne le processus de tarification pour vos services ?",
-      a: "Afin d’établir un tarif, il est nécessaire que nous obtenions un maximum d'informations concernant votre projet. Prenez contact avec nous afin que nous établissions un devis ensemble."
+      a: "Afin d'établir un tarif, il est nécessaire que nous obtenions un maximum d'informations concernant votre projet. Prenez contact avec nous afin que nous établissions un devis ensemble."
     }
   ];
 
@@ -703,7 +785,7 @@ const AidePage = ({ navigateTo }: { navigateTo: (page: 'home' | 'aide' | 'mentio
   );
 };
 
-const MentionsPage = ({ navigateTo }: { navigateTo: (page: 'home' | 'aide' | 'mentions') => void }) => {
+const MentionsPage = ({ navigateTo }: { navigateTo: (page: 'home' | 'aide' | 'mentions' | 'quisommesnous') => void }) => {
   return (
     <div className="sub-page main-content">
       <section className="section sub-page-content" style={{ paddingTop: '120px' }}>

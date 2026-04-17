@@ -47,7 +47,7 @@ html, body {
   cursor: none !important;
 }
 
-a, button, input, textarea, select, .interactive, label, img, footer-logo {
+a, button, input, textarea, select, .interactive, label, img, .footer-logo, .service-card-item {
   cursor: none !important;
 }
 
