@@ -23,3 +23,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Snake Scoreboard / Leaderboard data
+*scoreboard*
+*leaderboard*
+scoreboard.json
+leaderboard.json

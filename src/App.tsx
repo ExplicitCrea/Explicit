@@ -10,6 +10,7 @@ import HomePage from './pages/Home/HomePage';
 import WhoUsPage from './pages/WhoUs/WhoUsPage';
 import AidePage from './pages/Help/AidePage';
 import MentionsPage from './pages/Legal/MentionsPage';
+import SnakePage from './pages/Snake/SnakePage';
 
 import { ACTIVE_THEME, ACTIVE_LOGO, applyThemeToDom } from './config/themes';
 import portfolioVideoWebm from '../assets/Showreel2.webm';
@@ -103,6 +104,7 @@ const App: React.FC = () => {
           <Route path="/qui-sommes-nous" element={<WhoUsPage />} />
           <Route path="/aide" element={<AidePage />} />
           <Route path="/mentions-legales" element={<MentionsPage />} />
+          <Route path="/snake" element={<SnakePage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
 
