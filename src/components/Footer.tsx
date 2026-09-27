@@ -1,0 +1,40 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import logo from '../../assets/logo.png';
+
+interface FooterProps {
+  triggerFairyDust: () => void;
+}
+
+export const Footer: React.FC<FooterProps> = ({ triggerFairyDust }) => {
+  return (
+    <footer className="footer" style={{ position: 'relative', zIndex: 3 }}>
+      <div className="footer-content">
+        <div className="footer-logo">
+          <Link to="/">
+            <img src={logo} alt="EXPLICIT CREA" className="footer-logo-img" />
+          </Link>
+        </div>
+        <div className="footer-copyright">
+          <p>&copy; Explicit Créa. Tous droits réservés.</p>
+        </div>
+        <div className="footer-links">
+          <Link to="/" className="footer-link">Services</Link>
+          <Link to="/qui-sommes-nous" className="footer-link">Qui sommes nous ?</Link>
+          <Link to="/aide" className="footer-link">Aide</Link>
+          <Link to="/mentions-legales" className="footer-link">Mentions légales</Link>
+          <a href="https://facture.explicitcrea.com/" className="footer-link" target="_blank" rel="noopener noreferrer">Factures</a>
+        </div>
+      </div>
+      <button 
+        onClick={triggerFairyDust} 
+        className="footer-stars-btn interactive"
+        title="Fairy Dust"
+      >
+        ✨
+      </button>
+    </footer>
+  );
+};
+
+export default Footer;
