@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./ServiceCards.css";
 import ScrollReveal from "./ScrollReveal";
+import { ACTIVE_THEME } from "../config/themes";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Icons
@@ -67,10 +68,12 @@ function lerp(a: number, b: number, t: number) {
 
 function lerpColor(t: number) {
   const adjustedT = Math.pow(t, 1.5);
+  const start = ACTIVE_THEME.primary.rgb;
+  const end = ACTIVE_THEME.secondary.rgb;
   return {
-    r: lerp(176, 76,  adjustedT),
-    g: lerp(96,  255, adjustedT),
-    b: lerp(255, 143, adjustedT),
+    r: lerp(start.r, end.r, adjustedT),
+    g: lerp(start.g, end.g, adjustedT),
+    b: lerp(start.b, end.b, adjustedT),
   };
 }
 

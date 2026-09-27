@@ -11,7 +11,7 @@ import WhoUsPage from './pages/WhoUs/WhoUsPage';
 import AidePage from './pages/Help/AidePage';
 import MentionsPage from './pages/Legal/MentionsPage';
 
-import logo from '../assets/logo.png';
+import { ACTIVE_THEME, ACTIVE_LOGO, applyThemeToDom } from './config/themes';
 import portfolioVideoWebm from '../assets/Showreel2.webm';
 
 const App: React.FC = () => {
@@ -19,6 +19,11 @@ const App: React.FC = () => {
   const [startExit, setStartExit] = useState(false);
   const [isFairyEnabled, setIsFairyEnabled] = useState(false);
   const [gridOffset, setGridOffset] = useState(0);
+
+  // Initialisation du thème actif
+  useEffect(() => {
+    applyThemeToDom(ACTIVE_THEME);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -77,7 +82,7 @@ const App: React.FC = () => {
     return (
       <div className={`loader-container ${startExit ? 'loader--exit' : ''}`}>
         <div className="loader-content">
-          <img src={logo} alt="EXPLICIT CREA" className="loader-logo-pre" />
+          <img src={ACTIVE_LOGO} alt="EXPLICIT CREA" className="loader-logo-pre" />
           <div className="loader-bar-container">
             <div className={`loader-bar-fill ${startExit ? 'loader-bar-fill--full' : ''}`}></div>
           </div>

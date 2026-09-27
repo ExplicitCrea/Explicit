@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/logo.png';
+import { ACTIVE_LOGO } from '../config/themes';
 
 interface FooterProps {
   triggerFairyDust: () => void;
@@ -12,7 +12,7 @@ export const Footer: React.FC<FooterProps> = ({ triggerFairyDust }) => {
       <div className="footer-content">
         <div className="footer-logo">
           <Link to="/">
-            <img src={logo} alt="EXPLICIT CREA" className="footer-logo-img" />
+            <img src={ACTIVE_LOGO} alt="EXPLICIT CREA" className="footer-logo-img" />
           </Link>
         </div>
         <div className="footer-copyright">

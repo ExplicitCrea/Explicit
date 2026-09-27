@@ -3,9 +3,9 @@ import emailjs from '@emailjs/browser';
 import ScrollReveal from '../../components/ScrollReveal';
 import ServiceCards from '../../components/ServiceCards';
 import { EMAILJS_CONFIG } from '../../config/emailjs';
+import { ACTIVE_THEME, ACTIVE_LOGO } from '../../config/themes';
 
 // Assets
-import logo from '../../../assets/logo.png';
 import portfolioVideoWebm from '../../../assets/Showreel2.webm';
 import legrandjd from '../../../assets/legrandjd.png';
 import maskey from '../../../assets/maskey.jpg';
@@ -229,8 +229,8 @@ export const HomePage: React.FC = () => {
     }
   };
 
-  const PURPLE_RGB = "176, 96, 255";
-  const GREEN_RGB = "76, 255, 143";
+  const PRIMARY_RGB = ACTIVE_THEME.primary.rgbString;
+  const SECONDARY_RGB = ACTIVE_THEME.secondary.rgbString;
 
   return (
     <>
@@ -248,7 +248,7 @@ export const HomePage: React.FC = () => {
         <section className="hero-section">
           <ScrollReveal>
             <div className="hero-logo-container">
-              <img src={logo} alt="EXPLICIT CREA" className="hero-logo-img" />
+              <img src={ACTIVE_LOGO} alt="EXPLICIT CREA" className="hero-logo-img" />
             </div>
           </ScrollReveal>
           <ScrollReveal delay={200}>
@@ -452,13 +452,13 @@ export const HomePage: React.FC = () => {
               <div 
                 className="card glass contact-info-card reactive-card"
                 style={{ 
-                  "--mr": "176", "--mg": "96", "--mb": "255", 
-                  "--sr": "176", "--sg": "96", "--sb": "255",
-                  "--er": "176", "--eg": "96", "--eb": "255",
+                  "--mr": String(ACTIVE_THEME.primary.rgb.r), "--mg": String(ACTIVE_THEME.primary.rgb.g), "--mb": String(ACTIVE_THEME.primary.rgb.b), 
+                  "--sr": String(ACTIVE_THEME.primary.rgb.r), "--sg": String(ACTIVE_THEME.primary.rgb.g), "--sb": String(ACTIVE_THEME.primary.rgb.b), 
+                  "--er": String(ACTIVE_THEME.primary.rgb.r), "--eg": String(ACTIVE_THEME.primary.rgb.g), "--eb": String(ACTIVE_THEME.primary.rgb.b), 
                   "--base-angle": "45deg" 
                 } as React.CSSProperties}
               >
-                <ContactGlowBlobs rgb={PURPLE_RGB} />
+                <ContactGlowBlobs rgb={PRIMARY_RGB} />
                 <h3>Chaque projet est différent.</h3>
                 <p className="contact-subtitle">Notre rôle : comprendre, structurer et produire un rendu à la hauteur.</p>
                 <ul className="contact-checklist">
@@ -480,14 +480,14 @@ export const HomePage: React.FC = () => {
                 className="contact-form glass reactive-card" 
                 style={{ 
                   padding: '40px',
-                  "--mr": "76", "--mg": "255", "--mb": "143",
-                  "--sr": "76", "--sg": "255", "--sb": "143",
-                  "--er": "76", "--eg": "255", "--eb": "143",
+                  "--mr": String(ACTIVE_THEME.secondary.rgb.r), "--mg": String(ACTIVE_THEME.secondary.rgb.g), "--mb": String(ACTIVE_THEME.secondary.rgb.b), 
+                  "--sr": String(ACTIVE_THEME.secondary.rgb.r), "--sg": String(ACTIVE_THEME.secondary.rgb.g), "--sb": String(ACTIVE_THEME.secondary.rgb.b), 
+                  "--er": String(ACTIVE_THEME.secondary.rgb.r), "--eg": String(ACTIVE_THEME.secondary.rgb.g), "--eb": String(ACTIVE_THEME.secondary.rgb.b), 
                   "--base-angle": "180deg"
                 } as React.CSSProperties} 
                 onSubmit={sendEmail}
               >
-                <ContactGlowBlobs rgb={GREEN_RGB}/>
+                <ContactGlowBlobs rgb={SECONDARY_RGB}/>
                 <div className="form-group">
                   <label>Nom</label>
                   <input type="text" name="user_name" placeholder="Votre Nom" required />
@@ -532,7 +532,7 @@ export const HomePage: React.FC = () => {
                 </button>
                 
                 {sendResult === 'success' && (
-                  <p style={{ color: '#30DD69', marginTop: '15px', textAlign: 'center', fontWeight: 'bold' }}>
+                  <p style={{ color: 'var(--accent-secondary, #30DD69)', marginTop: '15px', textAlign: 'center', fontWeight: 'bold' }}>
                     Message envoyé avec succès !
                   </p>
                 )}
@@ -550,13 +550,13 @@ export const HomePage: React.FC = () => {
           <div 
             className="card glass direct-contact-card reactive-card"
             style={{ 
-              "--mr": "176", "--mg": "96", "--mb": "255",
-              "--sr": "176", "--sg": "96", "--sb": "255",
-              "--er": "176", "--eg": "255", "--eb": "255",
+              "--mr": String(ACTIVE_THEME.primary.rgb.r), "--mg": String(ACTIVE_THEME.primary.rgb.g), "--mb": String(ACTIVE_THEME.primary.rgb.b),
+              "--sr": String(ACTIVE_THEME.primary.rgb.r), "--sg": String(ACTIVE_THEME.primary.rgb.g), "--sb": String(ACTIVE_THEME.primary.rgb.b),
+              "--er": String(ACTIVE_THEME.primary.rgb.r), "--eg": String(ACTIVE_THEME.primary.rgb.g), "--eb": String(ACTIVE_THEME.primary.rgb.b),
               "--base-angle": "320deg"
             } as React.CSSProperties}
           >
-            <ContactGlowBlobs rgb={PURPLE_RGB} />
+            <ContactGlowBlobs rgb={PRIMARY_RGB} />
             <div className="direct-contact-content">
               <p className="direct-label">Contactez nous directement :</p>
               
