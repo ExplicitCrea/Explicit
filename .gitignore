@@ -24,8 +24,9 @@ dist-ssr
 *.sln
 *.sw?
 
-# Snake Scoreboard / Leaderboard data
-*scoreboard*
-*leaderboard*
+# Snake Scoreboard / Leaderboard data files
 scoreboard.json
 leaderboard.json
+*.scoreboard.json
+*.leaderboard.json
+!api/leaderboard.ts

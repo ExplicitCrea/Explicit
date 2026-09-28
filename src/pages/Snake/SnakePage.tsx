@@ -53,12 +53,13 @@ export const SnakePage: React.FC = () => {
   const [pseudoInput, setPseudoInput] = useState<string>('');
   const [leaderboard, setLeaderboard] = useState<LeaderboardEntry[]>([]);
   const [scoreSaved, setScoreSaved] = useState<boolean>(false);
+  const [isSaving, setIsSaving] = useState<boolean>(false);
 
   // File d'attente des entrées clavier & dernière direction physique (évite le suicide lors de l'appui simultané/rapide de 2 touches)
   const lastMovedDirRef = useRef<Direction>('RIGHT');
   const inputQueueRef = useRef<Direction[]>([]);
 
-  // 1. Récupération de l'IP publique de l'utilisateur
+  // 1. Récupération des données et du classement en ligne depuis le serveur
   useEffect(() => {
     fetch('https://api.ipify.org?format=json')
       .then((res) => res.json())
@@ -66,23 +67,44 @@ export const SnakePage: React.FC = () => {
         if (data.ip) setUserIp(data.ip);
       })
       .catch(() => {
-        // Fallback si hors ligne
         setUserIp('127.0.0.1');
       });
 
-    // Charger le leaderboard depuis le localStorage
-    const saved = localStorage.getItem('explicit_snake_leaderboard');
-    if (saved) {
+    // Chargement du leaderboard depuis l'API serveur avec fallback local
+    const fetchLeaderboard = async () => {
       try {
-        const parsed: LeaderboardEntry[] = JSON.parse(saved);
-        setLeaderboard(parsed);
-        if (parsed.length > 0) {
-          setBestScore(Math.max(...parsed.map((e) => e.score)));
+        const res = await fetch('/api/leaderboard');
+        if (res.ok) {
+          const data = await res.json();
+          if (Array.isArray(data.leaderboard)) {
+            setLeaderboard(data.leaderboard);
+            if (data.leaderboard.length > 0) {
+              setBestScore(Math.max(...data.leaderboard.map((e: LeaderboardEntry) => e.score)));
+            }
+            localStorage.setItem('explicit_snake_leaderboard', JSON.stringify(data.leaderboard));
+            return;
+          }
         }
       } catch (e) {
-        console.error('Erreur lecture leaderboard', e);
+        console.warn('API serveur indisponible, utilisation du cache local :', e);
       }
-    }
+
+      // Fallback sur le cache localStorage
+      const saved = localStorage.getItem('explicit_snake_leaderboard');
+      if (saved) {
+        try {
+          const parsed: LeaderboardEntry[] = JSON.parse(saved);
+          setLeaderboard(parsed);
+          if (parsed.length > 0) {
+            setBestScore(Math.max(...parsed.map((e) => e.score)));
+          }
+        } catch (e) {
+          console.error('Erreur lecture fallback leaderboard', e);
+        }
+      }
+    };
+
+    fetchLeaderboard();
   }, []);
 
   // Génération de nourriture aléatoire hors du serpent
@@ -315,11 +337,34 @@ export const SnakePage: React.FC = () => {
     });
   }, [snake, food, direction]);
 
-  // Sauvegarde du score dans le Leaderboard
-  const handleSaveScore = (e: React.FormEvent) => {
+  // Sauvegarde du score dans le Leaderboard serveur
+  const handleSaveScore = async (e: React.FormEvent) => {
     e.preventDefault();
     const cleanPseudo = pseudoInput.trim().toUpperCase().slice(0, 3) || 'EXP';
+    setIsSaving(true);
 
+    try {
+      const res = await fetch('/api/leaderboard', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ pseudo: cleanPseudo, score }),
+      });
+
+      if (res.ok) {
+        const data = await res.json();
+        if (Array.isArray(data.leaderboard)) {
+          setLeaderboard(data.leaderboard);
+          localStorage.setItem('explicit_snake_leaderboard', JSON.stringify(data.leaderboard));
+          setScoreSaved(true);
+          setIsSaving(false);
+          return;
+        }
+      }
+    } catch (err) {
+      console.warn('Erreur envoi au serveur, sauvegarde locale de secours :', err);
+    }
+
+    // Fallback local en cas de problème réseau
     const newEntry: LeaderboardEntry = {
       id: Date.now().toString(),
       pseudo: cleanPseudo,
@@ -328,14 +373,14 @@ export const SnakePage: React.FC = () => {
       date: new Date().toLocaleDateString('fr-FR', { day: '2-digit', month: '2-digit' }),
     };
 
-    // Mettre à jour le leaderboard :
-    // On conserve toutes les entrées, on trie par score descendant, puis on extrait le top 5
     const updated = [...leaderboard, newEntry]
-      .sort((a, b) => b.score - a.score);
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 5);
 
     setLeaderboard(updated);
     localStorage.setItem('explicit_snake_leaderboard', JSON.stringify(updated));
     setScoreSaved(true);
+    setIsSaving(false);
   };
 
   // Top 5 affiché
@@ -420,8 +465,13 @@ export const SnakePage: React.FC = () => {
                       autoFocus
                       required
                     />
-                    <button type="submit" className="overlay-btn overlay-btn-sm interactive">
-                      Enregistrer
+                    <button 
+                      type="submit" 
+                      className="overlay-btn overlay-btn-sm interactive" 
+                      disabled={isSaving}
+                      style={{ opacity: isSaving ? 0.7 : 1 }}
+                    >
+                      {isSaving ? 'Envoi...' : 'Enregistrer'}
                     </button>
                   </form>
                 ) : (
@@ -484,7 +534,7 @@ export const SnakePage: React.FC = () => {
             <strong>Commandes :</strong>
             <br />• Flèches ou ZQSD / WASD pour diriger
             <br />• Espace pour mettre en pause
-            <br />• Sauvegarde locale du Top 5
+            <br />• Classement en ligne sur serveur
           </div>
         </div>
       </div>

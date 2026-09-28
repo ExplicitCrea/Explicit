@@ -70,3 +70,28 @@ Pour recevoir correctement les données, votre template EmailJS peut utiliser le
 - **{{message}}** : Contenu du message
 
 ---
+
+## Classement Snake en Ligne (Vercel KV / Upstash Redis)
+
+Le classement du jeu Snake (`/snake`) est synchronisé sur le serveur via la fonction Serverless `/api/leaderboard`.
+
+### Configuration sur Vercel (Recommandé)
+
+1. Dans votre tableau de bord **Vercel**, ouvrez votre projet **Explicit**.
+2. Allez dans l'onglet **Storage** et cliquez sur **Create Database** -> **KV**.
+3. Liez la base KV à votre projet : Vercel configure automatiquement les variables :
+   - `KV_REST_API_URL`
+   - `KV_REST_API_TOKEN`
+4. Redéployez le projet : le leaderboard sera partagé en temps réel entre tous les visiteurs !
+
+### Configuration en local (Optionnel)
+
+Pour tester la persistance serveur en local, créez un fichier `.env` ou `.env.local` :
+
+```env
+KV_REST_API_URL="https://votre-base.upstash.io"
+KV_REST_API_TOKEN="votre_token_secret"
+```
+
+*(Si les clés ne sont pas définies, le jeu bascule automatiquement et de manière transparente sur le cache local pour éviter toute interruption).*
+
