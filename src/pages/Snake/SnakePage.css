@@ -160,11 +160,26 @@
   overflow: hidden;
   box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.8), 0 0 30px rgba(var(--accent-primary-rgb, 99, 78, 255), 0.15);
   border: 2px solid rgba(255, 255, 255, 0.08);
+  max-width: 100%;
 }
 
 .snake-canvas {
   display: block;
   background: #11141a;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 480px) {
+  .snake-page {
+    padding: 80px 14px 40px;
+  }
+  .snake-game-card {
+    padding: 14px 12px;
+    width: 100%;
+    max-width: 360px;
+    border-radius: 20px;
+  }
 }
 
 /* ── OVERLAY (GAME OVER / PAUSE / START) ──────────────────────────────────── */

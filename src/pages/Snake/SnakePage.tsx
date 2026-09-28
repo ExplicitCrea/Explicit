@@ -53,11 +53,12 @@ export const SnakePage: React.FC = () => {
   const [scoreSaved, setScoreSaved] = useState<boolean>(false);
   const [isSaving, setIsSaving] = useState<boolean>(false);
 
-  // File d'attente des entrées clavier & dernière direction physique (évite le suicide lors de l'appui simultané/rapide de 2 touches)
+  // File d'attente des entrées clavier / swipe & dernière direction physique (évite le suicide lors d'enchaînement rapide)
   const lastMovedDirRef = useRef<Direction>('RIGHT');
   const inputQueueRef = useRef<Direction[]>([]);
+  const canvasContainerRef = useRef<HTMLDivElement>(null);
+  const touchStartRef = useRef<{ x: number; y: number } | null>(null);
 
-  // 1. Récupération des données et du classement en ligne depuis le serveur
   // 1. Chargement du leaderboard depuis l'API serveur avec fallback local
   useEffect(() => {
     const fetchLeaderboard = async () => {
@@ -96,7 +97,6 @@ export const SnakePage: React.FC = () => {
     fetchLeaderboard();
   }, []);
 
-
   // Génération de nourriture aléatoire hors du serpent
   const spawnFood = useCallback((currentSnake: Point[]): Point => {
     let newFood: Point;
@@ -131,7 +131,23 @@ export const SnakePage: React.FC = () => {
     setPseudoInput('');
   };
 
-  // Gestion des contrôles clavier avec file d'attente (résout les appuis rapides/simultanés)
+  const isGameActive = gameStarted && !gameOver && !isPaused;
+
+  // Gestion centralisée de la demande de changement de direction (clavier ou swipe)
+  const handleRequestDirection = useCallback((requestedDir: Direction) => {
+    if (!gameStarted || gameOver || isPaused) return;
+
+    const queue = inputQueueRef.current;
+    // Direction de référence : la dernière enregistrée dans la file ou la dernière direction appliquée
+    const lastRefDir = queue.length > 0 ? queue[queue.length - 1] : lastMovedDirRef.current;
+
+    // Empêche le demi-tour (180°) et les doublons, et autorise au maximum 2 commandes d'avance
+    if (requestedDir !== lastRefDir && requestedDir !== OPPOSITES[lastRefDir] && queue.length < 2) {
+      queue.push(requestedDir);
+    }
+  }, [gameStarted, gameOver, isPaused]);
+
+  // Gestion des contrôles clavier
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', ' '].includes(e.key)) {
@@ -145,32 +161,66 @@ export const SnakePage: React.FC = () => {
 
       if (!gameStarted || gameOver || isPaused) return;
 
-      let requestedDir: Direction | null = null;
       if (e.key === 'ArrowUp' || e.key === 'w' || e.key === 'z') {
-        requestedDir = 'UP';
+        handleRequestDirection('UP');
       } else if (e.key === 'ArrowDown' || e.key === 's') {
-        requestedDir = 'DOWN';
+        handleRequestDirection('DOWN');
       } else if (e.key === 'ArrowLeft' || e.key === 'a' || e.key === 'q') {
-        requestedDir = 'LEFT';
+        handleRequestDirection('LEFT');
       } else if (e.key === 'ArrowRight' || e.key === 'd') {
-        requestedDir = 'RIGHT';
-      }
-
-      if (requestedDir) {
-        const queue = inputQueueRef.current;
-        // Direction de référence : la dernière enregistrée dans la file ou la dernière direction appliquée
-        const lastRefDir = queue.length > 0 ? queue[queue.length - 1] : lastMovedDirRef.current;
-
-        // Empêche le demi-tour (180°) et les doublons, et autorise au maximum 2 commandes d'avance
-        if (requestedDir !== lastRefDir && requestedDir !== OPPOSITES[lastRefDir] && queue.length < 2) {
-          queue.push(requestedDir);
-        }
+        handleRequestDirection('RIGHT');
       }
     };
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [gameStarted, gameOver, isPaused]);
+  }, [gameStarted, gameOver, isPaused, handleRequestDirection]);
+
+  // Gestion des gestes tactiles (Swipe fluide)
+  const handleTouchStart = (e: React.TouchEvent) => {
+    if (!isGameActive) return;
+    const touch = e.touches[0];
+    touchStartRef.current = { x: touch.clientX, y: touch.clientY };
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!isGameActive || !touchStartRef.current) return;
+    const touch = e.touches[0];
+    const dx = touch.clientX - touchStartRef.current.x;
+    const dy = touch.clientY - touchStartRef.current.y;
+    const minDistance = 22; // Seuil de déclenchement d'un swipe en pixels
+
+    if (Math.abs(dx) >= minDistance || Math.abs(dy) >= minDistance) {
+      if (Math.abs(dx) > Math.abs(dy)) {
+        handleRequestDirection(dx > 0 ? 'RIGHT' : 'LEFT');
+      } else {
+        handleRequestDirection(dy > 0 ? 'DOWN' : 'UP');
+      }
+      // Réinitialise le point d'ancrage pour permettre d'enchaîner plusieurs virages sans lever le doigt
+      touchStartRef.current = { x: touch.clientX, y: touch.clientY };
+    }
+  };
+
+  const handleTouchEnd = () => {
+    touchStartRef.current = null;
+  };
+
+  // Bloque le scroll de la page UNIQUEMENT lorsque la partie est en cours
+  useEffect(() => {
+    const container = canvasContainerRef.current;
+    if (!container || !isGameActive) return;
+
+    const preventScroll = (e: TouchEvent) => {
+      if (e.cancelable) {
+        e.preventDefault();
+      }
+    };
+
+    container.addEventListener('touchmove', preventScroll, { passive: false });
+    return () => {
+      container.removeEventListener('touchmove', preventScroll);
+    };
+  }, [isGameActive]);
 
   // Boucle de jeu (Tick) - Vitesse ralentie à 145ms pour une meilleure jouabilité
   useEffect(() => {
@@ -412,7 +462,15 @@ export const SnakePage: React.FC = () => {
             </div>
           </div>
 
-          <div className="snake-canvas-container">
+          <div 
+            ref={canvasContainerRef}
+            className="snake-canvas-container"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+            onTouchCancel={handleTouchEnd}
+            style={{ touchAction: isGameActive ? 'none' : 'auto' }}
+          >
             <canvas 
               ref={canvasRef} 
               width={BOARD_SIZE} 
@@ -425,7 +483,7 @@ export const SnakePage: React.FC = () => {
               <div className="snake-overlay">
                 <h2 className="overlay-title">SNAKE</h2>
                 <p style={{ color: 'var(--text-secondary)', maxWidth: '280px', fontSize: '0.9rem' }}>
-                  Contrôlez le serpent avec les flèches ou ZQSD. Mangez les cibles pour grimper dans le classement !
+                  Dirigez avec les flèches, ZQSD ou en glissant le doigt (swipe) sur mobile. Mangez les cibles pour grimper dans le classement !
                 </p>
                 <button className="overlay-btn interactive" onClick={restartGame}>
                   JOUER
@@ -521,7 +579,8 @@ export const SnakePage: React.FC = () => {
 
           <div className="snake-instructions">
             <strong>Commandes :</strong>
-            <br />• Flèches ou ZQSD / WASD pour diriger
+            <br />• Flèches ou ZQSD / WASD sur clavier
+            <br />• Glissement du doigt (Swipe) sur mobile
             <br />• Espace pour mettre en pause
             <br />• Classement en ligne sur serveur
           </div>
