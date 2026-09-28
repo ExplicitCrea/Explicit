@@ -1,10 +1,14 @@
-import { defineConfig, type Plugin } from 'vite';
+import { defineConfig, loadEnv, type Plugin } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// Plugin Vite pour simuler l'API serverless en développement local
+// Plugin Vite pour simuler l'API serverless en développement local avec les variables .env.local
 function apiDevPlugin(): Plugin {
   return {
     name: 'api-dev-server',
+    config(_config, { mode }) {
+      const env = loadEnv(mode, process.cwd(), '');
+      Object.assign(process.env, env);
+    },
     configureServer(server) {
       server.middlewares.use(async (req, res, next) => {
         if (req.url && req.url.startsWith('/api/leaderboard')) {
