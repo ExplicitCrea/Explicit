@@ -532,7 +532,7 @@ export const HomePage: React.FC = () => {
                 </button>
                 
                 {sendResult === 'success' && (
-                  <p style={{ color: 'var(--accent-secondary, #30DD69)', marginTop: '15px', textAlign: 'center', fontWeight: 'bold' }}>
+                  <p style={{ color: 'var(--accent-secondary)', marginTop: '15px', textAlign: 'center', fontWeight: 'bold' }}>
                     Message envoyé avec succès !
                   </p>
                 )}

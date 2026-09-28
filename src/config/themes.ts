@@ -196,3 +196,9 @@ export function applyThemeToDom(theme: ThemePreset = ACTIVE_THEME) {
   root.style.setProperty('--accent-btn-text', btnColor);
   root.style.setProperty('--accent-btn-shadow', btnShadow);
 }
+
+// Application synchrone immédiate dès l'évaluation du module pour éviter tout flash ou conflit de cache CSS
+if (typeof document !== 'undefined') {
+  applyThemeToDom(ACTIVE_THEME);
+}
+
