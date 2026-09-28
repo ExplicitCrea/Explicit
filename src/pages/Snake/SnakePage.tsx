@@ -26,7 +26,6 @@ export interface LeaderboardEntry {
   id: string;
   pseudo: string;
   score: number;
-  ip: string;
   date: string;
 }
 
@@ -48,8 +47,7 @@ export const SnakePage: React.FC = () => {
   const [isPaused, setIsPaused] = useState<boolean>(false);
   const [gameStarted, setGameStarted] = useState<boolean>(false);
 
-  // Leaderboard & IP (stockée en coulisse sans affichage)
-  const [userIp, setUserIp] = useState<string>('Local-IP');
+  // Leaderboard (stockage serveur)
   const [pseudoInput, setPseudoInput] = useState<string>('');
   const [leaderboard, setLeaderboard] = useState<LeaderboardEntry[]>([]);
   const [scoreSaved, setScoreSaved] = useState<boolean>(false);
@@ -60,17 +58,8 @@ export const SnakePage: React.FC = () => {
   const inputQueueRef = useRef<Direction[]>([]);
 
   // 1. Récupération des données et du classement en ligne depuis le serveur
+  // 1. Chargement du leaderboard depuis l'API serveur avec fallback local
   useEffect(() => {
-    fetch('https://api.ipify.org?format=json')
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.ip) setUserIp(data.ip);
-      })
-      .catch(() => {
-        setUserIp('127.0.0.1');
-      });
-
-    // Chargement du leaderboard depuis l'API serveur avec fallback local
     const fetchLeaderboard = async () => {
       try {
         const res = await fetch('/api/leaderboard');
@@ -106,6 +95,7 @@ export const SnakePage: React.FC = () => {
 
     fetchLeaderboard();
   }, []);
+
 
   // Génération de nourriture aléatoire hors du serpent
   const spawnFood = useCallback((currentSnake: Point[]): Point => {
@@ -364,12 +354,11 @@ export const SnakePage: React.FC = () => {
       console.warn('Erreur envoi au serveur, sauvegarde locale de secours :', err);
     }
 
-    // Fallback local en cas de problème réseau
+    // Fallback local en cas de problème réseau (IP gérée côté serveur)
     const newEntry: LeaderboardEntry = {
       id: Date.now().toString(),
       pseudo: cleanPseudo,
       score,
-      ip: userIp,
       date: new Date().toLocaleDateString('fr-FR', { day: '2-digit', month: '2-digit' }),
     };
 

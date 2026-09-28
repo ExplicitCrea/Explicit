@@ -1,37 +1,85 @@
 import { Redis } from '@upstash/redis';
+import { createHash } from 'crypto';
+
+// ─── Types ───────────────────────────────────────────────────────────────────
 
 export interface LeaderboardEntry {
   id: string;
   pseudo: string;
   score: number;
-  ip: string;
   date: string;
+  // ip est délibérément absent : jamais exposé au client (RGPD)
 }
 
-// Support des variables d'environnement Vercel KV, Upstash Redis et STORAGE_*
+/** Structure interne stockée dans Redis — l'IP hashée n'est jamais retournée */
+interface InternalEntry extends LeaderboardEntry {
+  ipHash: string;
+}
+
+// ─── Config ──────────────────────────────────────────────────────────────────
+
+/** Score maximum théorique : grille 16×16 = 256 cases, serpent démarre à 3 */
+const MAX_SCORE = 256;
+const MIN_SCORE = 1;
+const LEADERBOARD_KEY = 'explicit_snake_leaderboard';
+const RATE_LIMIT_PREFIX = 'ratelimit:leaderboard:';
+const RATE_LIMIT_MAX = 5;       // soumissions max par heure par IP
+const RATE_LIMIT_WINDOW = 3600; // secondes (1 heure)
+
+/** Origines autorisées pour CORS */
+const ALLOWED_ORIGINS = [
+  'https://www.explicitcrea.com',
+  'https://explicitcrea.com',
+];
+
+// ─── Helpers ─────────────────────────────────────────────────────────────────
+
 function getRedisClient(): Redis | null {
-  const url = 
-    process.env.KV_REST_API_URL || 
-    process.env.STORAGE_REST_API_URL || 
+  const url =
+    process.env.KV_REST_API_URL ||
+    process.env.STORAGE_REST_API_URL ||
     process.env.UPSTASH_REDIS_REST_URL;
 
-  const token = 
-    process.env.KV_REST_API_TOKEN || 
-    process.env.STORAGE_REST_API_TOKEN || 
+  const token =
+    process.env.KV_REST_API_TOKEN ||
+    process.env.STORAGE_REST_API_TOKEN ||
     process.env.UPSTASH_REDIS_REST_TOKEN;
 
-  if (!url || !token) {
-    return null;
-  }
-
+  if (!url || !token) return null;
   return new Redis({ url, token });
 }
 
-const REDIS_KEY = 'explicit_snake_leaderboard';
+/** Hash l'IP avec un sel secret pour le rate-limiting — jamais stocké en clair */
+function hashIp(ip: string): string {
+  const salt = process.env.IP_HASH_SALT || 'explicit-default-salt-change-me';
+  return createHash('sha256').update(ip + salt).digest('hex').slice(0, 16);
+}
+
+/** Extrait l'IP réelle depuis les headers Vercel */
+function extractClientIp(req: any): string {
+  const raw =
+    req.headers['x-forwarded-for'] ||
+    req.headers['x-real-ip'] ||
+    req.socket?.remoteAddress ||
+    '127.0.0.1';
+  return typeof raw === 'string' ? raw.split(',')[0].trim() : '127.0.0.1';
+}
+
+/** Retire l'ipHash avant d'envoyer au client */
+function toPublicEntry(entry: InternalEntry): LeaderboardEntry {
+  const { ipHash: _removed, ...publicEntry } = entry;
+  return publicEntry;
+}
+
+// ─── Handler principal ────────────────────────────────────────────────────────
 
 export default async function handler(req: any, res: any) {
-  // En-têtes CORS
-  res.setHeader('Access-Control-Allow-Origin', '*');
+  // ── CORS restreint aux domaines autorisés ──
+  const origin = req.headers.origin as string | undefined;
+  if (origin && ALLOWED_ORIGINS.includes(origin)) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+    res.setHeader('Vary', 'Origin');
+  }
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
@@ -41,54 +89,76 @@ export default async function handler(req: any, res: any) {
 
   const redis = getRedisClient();
 
-  // 1. Récupération des meilleurs scores
+  // ──────────────────────────────────────────────────────────────────────────
+  // GET — Récupération du classement public (sans IP)
+  // ──────────────────────────────────────────────────────────────────────────
   if (req.method === 'GET') {
     if (!redis) {
       return res.status(200).json({
         leaderboard: [],
         configured: false,
-        message: 'Base de données non configurée sur le serveur. Définissez KV_REST_API_URL / KV_REST_API_TOKEN dans Vercel.',
+        message: 'Base de données non configurée. Définissez KV_REST_API_URL / KV_REST_API_TOKEN dans Vercel.',
       });
     }
 
     try {
-      const data = await redis.get<LeaderboardEntry[]>(REDIS_KEY);
+      const data = await redis.get<InternalEntry[]>(LEADERBOARD_KEY);
       const list = Array.isArray(data) ? data : [];
       return res.status(200).json({
-        leaderboard: list.slice(0, 5),
+        leaderboard: list.slice(0, 5).map(toPublicEntry),
         configured: true,
       });
     } catch (error) {
-      console.error('Erreur lecture leaderboard serveur:', error);
+      console.error('Erreur lecture leaderboard:', error);
       return res.status(500).json({ error: 'Erreur serveur lors de la récupération des scores' });
     }
   }
 
-  // 2. Enregistrement d'un nouveau score
+  // ──────────────────────────────────────────────────────────────────────────
+  // POST — Enregistrement d'un score avec validation stricte + rate limiting
+  // ──────────────────────────────────────────────────────────────────────────
   if (req.method === 'POST') {
+    const clientIp = extractClientIp(req);
+    const clientIpHash = hashIp(clientIp);
+
     try {
       const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
       const { pseudo, score } = body || {};
 
-      if (!pseudo || typeof score !== 'number' || score < 0) {
-        return res.status(400).json({ error: 'Données invalides : pseudo et score requis' });
+      // ── Validation stricte du score ──
+      if (
+        !pseudo ||
+        typeof score !== 'number' ||
+        !Number.isInteger(score) ||
+        score < MIN_SCORE ||
+        score > MAX_SCORE
+      ) {
+        return res.status(400).json({
+          error: `Données invalides : pseudo requis et score entier entre ${MIN_SCORE} et ${MAX_SCORE}`,
+        });
       }
 
-      const cleanPseudo = String(pseudo).trim().toUpperCase().slice(0, 3) || 'EXP';
+      const cleanPseudo = String(pseudo).trim().toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 3) || 'EXP';
 
-      // Récupération de l'adresse IP client
-      const rawIp = 
-        req.headers['x-forwarded-for'] || 
-        req.headers['x-real-ip'] || 
-        req.socket?.remoteAddress || 
-        '127.0.0.1';
-      const clientIp = typeof rawIp === 'string' ? rawIp.split(',')[0].trim() : '127.0.0.1';
+      // ── Rate limiting par IP hashée ──
+      if (redis) {
+        const rateLimitKey = `${RATE_LIMIT_PREFIX}${clientIpHash}`;
+        const submissions = await redis.incr(rateLimitKey);
+        if (submissions === 1) {
+          await redis.expire(rateLimitKey, RATE_LIMIT_WINDOW);
+        }
+        if (submissions > RATE_LIMIT_MAX) {
+          return res.status(429).json({
+            error: `Trop de soumissions. Réessayez dans 1 heure. (max ${RATE_LIMIT_MAX}/heure)`,
+          });
+        }
+      }
 
-      const newEntry: LeaderboardEntry = {
+      const newEntry: InternalEntry = {
         id: Date.now().toString(),
         pseudo: cleanPseudo,
         score: Math.floor(score),
-        ip: clientIp,
+        ipHash: clientIpHash, // stocké uniquement en interne, jamais exposé
         date: new Date().toLocaleDateString('fr-FR', { day: '2-digit', month: '2-digit' }),
       };
 
@@ -97,32 +167,32 @@ export default async function handler(req: any, res: any) {
           success: true,
           configured: false,
           saved: false,
-          message: 'Base non configurée. Score non persisté sur le serveur.',
-          entry: newEntry,
-          leaderboard: [newEntry],
+          message: 'Base non configurée. Score non persisté.',
+          entry: toPublicEntry(newEntry),
+          leaderboard: [toPublicEntry(newEntry)],
         });
       }
 
       // Lecture, insertion, tri descendant et conservation du top 100
-      const current = await redis.get<LeaderboardEntry[]>(REDIS_KEY);
+      const current = await redis.get<InternalEntry[]>(LEADERBOARD_KEY);
       const list = Array.isArray(current) ? current : [];
 
       const updated = [...list, newEntry]
         .sort((a, b) => b.score - a.score)
         .slice(0, 100);
 
-      await redis.set(REDIS_KEY, updated);
+      await redis.set(LEADERBOARD_KEY, updated);
 
       return res.status(200).json({
         success: true,
         configured: true,
         saved: true,
-        entry: newEntry,
-        leaderboard: updated.slice(0, 5),
+        entry: toPublicEntry(newEntry),
+        leaderboard: updated.slice(0, 5).map(toPublicEntry),
       });
     } catch (error) {
-      console.error('Erreur enregistrement score serveur:', error);
-      return res.status(500).json({ error: 'Erreur serveur lors de l\'enregistrement du score' });
+      console.error('Erreur enregistrement score:', error);
+      return res.status(500).json({ error: "Erreur serveur lors de l'enregistrement du score" });
     }
   }
 

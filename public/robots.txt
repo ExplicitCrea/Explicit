@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Bloquer les crawlers des dossiers d'assets non pertinents
+Disallow: /assets/
+
+Sitemap: https://www.explicitcrea.com/sitemap.xml
