@@ -26,13 +26,22 @@ export const Footer: React.FC<FooterProps> = ({ triggerFairyDust }) => {
           <a href="https://facture.explicitcrea.com/" className="footer-link" target="_blank" rel="noopener noreferrer">Factures</a>
         </div>
       </div>
-      <button 
-        onClick={triggerFairyDust} 
-        className="footer-stars-btn interactive"
-        title="Fairy Dust"
-      >
-        ✨
-      </button>
+      <div className="footer-actions-corner">
+        <Link 
+          to="/snake" 
+          className="footer-corner-btn footer-snake-btn interactive"
+          title="Jouer à Snake"
+        >
+          🐍
+        </Link>
+        <button 
+          onClick={triggerFairyDust} 
+          className="footer-corner-btn footer-stars-btn interactive"
+          title="Fairy Dust"
+        >
+          ✨
+        </button>
+      </div>
     </footer>
   );
 };
