@@ -1,0 +1,22 @@
+[
+  "CREATE TABLE IF NOT EXISTS \"atelier_accounts\" (\n\t\"user_id\" text PRIMARY KEY NOT NULL,\n\t\"email\" text NOT NULL,\n\t\"name\" text NOT NULL,\n\t\"function\" text DEFAULT '' NOT NULL,\n\t\"active_agency\" text NOT NULL,\n\t\"created_at\" text NOT NULL\n)",
+  "CREATE TABLE IF NOT EXISTS \"atelier_agencies\" (\n\t\"id\" text PRIMARY KEY NOT NULL,\n\t\"name\" text NOT NULL,\n\t\"workspace_key\" text NOT NULL,\n\t\"owner_id\" text NOT NULL,\n\t\"created_at\" text NOT NULL\n)",
+  "CREATE TABLE IF NOT EXISTS \"atelier_invitations\" (\n\t\"token_hash\" text PRIMARY KEY NOT NULL,\n\t\"agency_id\" text NOT NULL,\n\t\"email\" text DEFAULT '' NOT NULL,\n\t\"role\" text NOT NULL,\n\t\"expires_at\" text NOT NULL,\n\t\"created_by\" text NOT NULL,\n\t\"created_at\" text NOT NULL,\n\t\"used_by\" text,\n\t\"revoked\" integer DEFAULT 0 NOT NULL\n, \"profile_id\" text)",
+  "CREATE TABLE IF NOT EXISTS \"atelier_invoice_sequences\" (\n\t\"id\" text PRIMARY KEY NOT NULL,\n\t\"agency_id\" text NOT NULL,\n\t\"year\" integer NOT NULL,\n\t\"issuer_siret\" text NOT NULL,\n\t\"prefix\" text NOT NULL,\n\t\"next_number\" integer NOT NULL\n)",
+  "CREATE TABLE IF NOT EXISTS \"atelier_issued_invoices\" (\n\t\"id\" text PRIMARY KEY NOT NULL,\n\t\"agency_id\" text NOT NULL,\n\t\"draft_id\" text NOT NULL,\n\t\"number\" text NOT NULL,\n\t\"content\" text NOT NULL,\n\t\"issued_at\" text NOT NULL,\n\t\"paid_cents\" integer DEFAULT 0 NOT NULL\n, \"issuer_siret\" text DEFAULT '' NOT NULL)",
+  "CREATE TABLE IF NOT EXISTS \"atelier_issuer_sequences\" (\n\t\"id\" text PRIMARY KEY NOT NULL,\n\t\"agency_id\" text NOT NULL,\n\t\"year\" integer NOT NULL,\n\t\"issuer_siret\" text NOT NULL,\n\t\"prefix\" text NOT NULL,\n\t\"next_number\" integer NOT NULL\n)",
+  "CREATE TABLE IF NOT EXISTS \"atelier_memberships\" (\n\t\"id\" text PRIMARY KEY NOT NULL,\n\t\"agency_id\" text NOT NULL,\n\t\"user_id\" text NOT NULL,\n\t\"role\" text NOT NULL,\n\t\"joined_at\" text NOT NULL\n, \"profile_id\" text)",
+  "CREATE TABLE IF NOT EXISTS \"atelier_project_files\" (\n\t\"id\" text PRIMARY KEY NOT NULL,\n\t\"agency_id\" text NOT NULL,\n\t\"project_id\" text NOT NULL,\n\t\"object_key\" text NOT NULL,\n\t\"name\" text NOT NULL,\n\t\"mime\" text NOT NULL,\n\t\"kind\" text NOT NULL,\n\t\"size_bytes\" integer NOT NULL,\n\t\"width\" integer DEFAULT 0 NOT NULL,\n\t\"height\" integer DEFAULT 0 NOT NULL,\n\t\"page_number\" integer DEFAULT 0 NOT NULL,\n\t\"created_at\" text NOT NULL\n)",
+  "CREATE TABLE IF NOT EXISTS \"studio_deadline_index\" (\n\t\"id\" text PRIMARY KEY NOT NULL,\n\t\"user_id\" text NOT NULL,\n\t\"project_id\" text NOT NULL,\n\t\"title\" text NOT NULL,\n\t\"project_title\" text NOT NULL,\n\t\"due_date\" text NOT NULL,\n\t\"reminder_days\" integer NOT NULL,\n\t\"demo\" integer DEFAULT 0 NOT NULL\n)",
+  "CREATE TABLE IF NOT EXISTS \"studio_workspaces\" (\n\t\"user_id\" text PRIMARY KEY NOT NULL,\n\t\"content\" text NOT NULL,\n\t\"revision\" integer DEFAULT 0 NOT NULL,\n\t\"updated_at\" text NOT NULL\n, \"write_token\" text DEFAULT '' NOT NULL)",
+  "CREATE UNIQUE INDEX IF NOT EXISTS \"atelier_agencies_workspace_key_unique\" ON \"atelier_agencies\" (\"workspace_key\")",
+  "CREATE UNIQUE INDEX IF NOT EXISTS \"atelier_project_files_object_key_unique\" ON \"atelier_project_files\" (\"object_key\")",
+  "CREATE UNIQUE INDEX IF NOT EXISTS \"invoice_agency_year\" ON \"atelier_invoice_sequences\" (\"agency_id\",\"year\")",
+  "CREATE UNIQUE INDEX IF NOT EXISTS \"invoice_draft\" ON \"atelier_issued_invoices\" (\"agency_id\",\"draft_id\")",
+  "CREATE UNIQUE INDEX IF NOT EXISTS \"invoice_number\" ON \"atelier_issued_invoices\" (\"agency_id\",\"issuer_siret\",\"number\")",
+  "CREATE UNIQUE INDEX IF NOT EXISTS \"issuer_agency_year\" ON \"atelier_issuer_sequences\" (\"agency_id\",\"issuer_siret\",\"year\")",
+  "CREATE UNIQUE INDEX IF NOT EXISTS \"membership_agency_profile\" ON \"atelier_memberships\" (\"agency_id\",\"profile_id\")",
+  "CREATE UNIQUE INDEX IF NOT EXISTS \"membership_agency_user\" ON \"atelier_memberships\" (\"agency_id\",\"user_id\")",
+  "CREATE TABLE IF NOT EXISTS atelier_auth_identities (subject text PRIMARY KEY,user_id text NOT NULL UNIQUE,email text NOT NULL,created_at text NOT NULL)",
+  "CREATE TABLE IF NOT EXISTS atelier_hosting_transfer (id text PRIMARY KEY,manifest text NOT NULL,state text NOT NULL,updated_at text NOT NULL)"
+]

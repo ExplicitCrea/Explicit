@@ -1,0 +1,79 @@
+/* A fixed document palette keeps every issuer's invoice consistent in day/night. */
+.invoice-paper{--doc-paper:#f7f4ea;--doc-ink:#232b52;--doc-blue:#314dcc;--doc-pistachio:#e0e7bf;--doc-muted:#686d7b;--doc-rule:#b8bfb5;box-sizing:border-box;width:794px;min-width:794px;max-width:none;min-height:1123px;padding:42px 44px 32px;margin:0 auto;background:var(--doc-paper);color:var(--doc-ink);font:11px/1.6 'Space Grotesk',Arial,sans-serif;font-synthesis:none;box-shadow:0 5px 35px #11182712;border-radius:0;font-variant-numeric:tabular-nums}
+.invoice-paper .paper-masthead{display:flex;justify-content:space-between;align-items:center;gap:24px;break-inside:avoid;padding-bottom:18px;border-bottom:1px solid var(--doc-blue)}
+.invoice-paper .paper-heading{max-width:none;min-width:0;flex:1}
+.invoice-paper .paper-kicker{font:9px/1.5 'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:1.4px;color:var(--doc-blue);display:block}
+.invoice-paper .paper-type{font:600 64px/.97 Archivo,Arial,sans-serif;font-stretch:normal;text-transform:lowercase;letter-spacing:-5px;margin:8px 0 10px;color:var(--doc-blue);overflow-wrap:anywhere}
+.invoice-paper header .paper-number{font:12px/1.5 'IBM Plex Mono',monospace;letter-spacing:.2px;margin:0;color:var(--doc-ink);overflow-wrap:anywhere}
+.invoice-paper .paper-signal{max-width:none;flex:0 0 191px;width:191px;height:100px;display:flex;align-items:center;justify-content:center;background:var(--doc-pistachio);padding:12px;color:var(--doc-blue);overflow:hidden}
+.invoice-paper .paper-signal-art{display:block;width:100%;height:auto;color:var(--doc-blue)}
+.invoice-paper .paper-dates{margin:0;display:flex;justify-content:space-between;gap:24px;padding:12px 0 13px;border-bottom:1px solid var(--doc-rule);break-inside:avoid}
+.invoice-paper .paper-dates>div{flex:1;min-width:0}
+.invoice-paper .paper-dates>div:last-child{text-align:right}
+.invoice-paper .paper-dates dt{font:8px/1.5 'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.7px;color:var(--doc-muted);margin-bottom:4px}
+.invoice-paper .paper-dates dd{margin:0;font:12px/1.5 'IBM Plex Mono',monospace;color:var(--doc-ink)}
+.invoice-paper .paper-parties{display:flex;gap:28px;margin:20px 0 0;break-inside:avoid}
+.invoice-paper .paper-parties>div{flex:1;min-width:0}
+.invoice-paper .paper-label{font:8px/1.6 'IBM Plex Mono',monospace;letter-spacing:1px;text-transform:uppercase;color:var(--doc-blue);display:block;margin:0 0 9px}
+.invoice-paper .paper-issuer{padding:10px 0}
+.invoice-paper .paper-client{margin:0;min-height:0;padding:12px 16px;background:var(--doc-pistachio);border:0;border-top:2px solid var(--doc-blue)}
+.invoice-paper .invoice-brand,.invoice-paper .paper-client>b{display:block;font:600 17px/1.35 Archivo,Arial,sans-serif;letter-spacing:-.25px;color:var(--doc-ink);margin:0 0 6px;overflow-wrap:anywhere}
+.invoice-paper .paper-parties p{font:10px/1.5 'Space Grotesk',Arial,sans-serif;margin:2px 0 0;overflow-wrap:anywhere}
+.invoice-paper .paper-issuer>p:first-of-type{margin-bottom:5px;color:var(--doc-muted)}
+.invoice-paper .paper-project{margin:19px 0 12px;break-after:avoid}
+.invoice-paper .paper-project>.paper-label{margin-bottom:5px}
+.invoice-paper .paper-project h2{margin:0;font:600 19px/1.3 Archivo,Arial,sans-serif;letter-spacing:-.5px;color:var(--doc-ink);overflow-wrap:anywhere}
+.invoice-paper .paper-lines{table-layout:fixed;width:100%;border-collapse:collapse;font:10px/1.6 'Space Grotesk',Arial,sans-serif;color:var(--doc-ink)}
+.invoice-paper .paper-lines .line-index{width:5%}
+.invoice-paper .paper-lines .line-description{width:41%}
+.invoice-paper .paper-lines .line-quantity{width:7%}
+.invoice-paper .paper-lines .line-unit{width:18%}
+.invoice-paper .paper-lines .line-vat{width:10%}
+.invoice-paper .paper-lines .line-total{width:19%}
+.invoice-paper .paper-lines th{padding:8px 7px;font:8px/1.5 'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.25px;white-space:normal;background:var(--doc-blue);color:#fff;border:0;text-align:right;overflow-wrap:anywhere}
+.invoice-paper .paper-lines th:first-child{width:auto;text-align:left;padding-left:9px}
+.invoice-paper .paper-lines th:nth-child(2){text-align:left}
+.invoice-paper .paper-lines td{font-size:10px;line-height:1.65;padding:10px 7px;text-align:right;border:0;border-bottom:1px solid var(--doc-rule);white-space:normal;overflow-wrap:anywhere;vertical-align:top}
+.invoice-paper .paper-lines td:first-child{padding-left:9px;text-align:left;white-space:normal;color:var(--doc-muted);font:9px/1.8 'IBM Plex Mono',monospace}
+.invoice-paper .paper-lines .paper-line-description{white-space:pre-wrap;text-align:left;overflow-wrap:anywhere}
+.invoice-paper .paper-lines td:last-child{font-weight:600}
+.invoice-paper .paper-lines tr{break-inside:avoid}
+.invoice-paper .paper-lines thead{display:table-header-group}
+.invoice-paper .paper-summary{display:flex;gap:28px;align-items:flex-start;margin-top:18px}
+.invoice-paper .paper-annotations{flex:1;min-width:0}
+.invoice-paper .paper-exemption{font:9px/1.65 'Space Grotesk',Arial,sans-serif;margin:0 0 14px;color:var(--doc-muted)}
+.invoice-paper .paper-notes{margin:0;padding:0;border:0;font-size:10px;line-height:1.7;color:var(--doc-ink)}
+.invoice-paper .paper-notes p{margin:0;overflow-wrap:anywhere}
+.invoice-paper .paper-totals{flex:1;min-width:0;width:auto;margin:0;break-inside:avoid}
+.invoice-paper .paper-totals p{display:flex;justify-content:space-between;gap:18px;margin:0;padding:3px 0;font-size:10px;line-height:1.6}
+.invoice-paper .paper-totals p>span{min-width:0}
+.invoice-paper .paper-totals b{font-weight:500;text-align:right;overflow-wrap:anywhere}
+.invoice-paper .paper-totals .total{margin-top:7px;padding-top:11px;border-top:1px solid var(--doc-rule);color:var(--doc-ink);font-size:12px}
+.invoice-paper .paper-totals .total b{font-weight:600}
+.invoice-paper .paper-totals .paper-due{display:block;background:var(--doc-pistachio);color:var(--doc-ink);margin:10px 0 0;padding:12px 15px}
+.invoice-paper .paper-due>span{display:block;font:8px/1.5 'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:1px;color:var(--doc-ink)}
+.invoice-paper .paper-due>b{display:block;text-align:left;margin-top:7px;font:600 29px/1.25 Archivo,Arial,sans-serif;letter-spacing:-.7px;color:var(--doc-blue);overflow-wrap:anywhere}
+.invoice-paper .paper-footer{display:flex;gap:34px;margin:24px 0 0;padding:14px 0 0;border-top:1px solid var(--doc-blue);font:9px/1.65 'Space Grotesk',Arial,sans-serif;color:var(--doc-muted);break-inside:avoid}
+.invoice-paper .paper-footer>div{flex:1;min-width:0}
+.invoice-paper .paper-footer p{margin:0 0 5px;overflow-wrap:anywhere}
+.invoice-paper .paper-footer .paper-bank{margin-top:11px;color:var(--doc-ink);font-size:9px;line-height:1.8}
+.invoice-paper .paper-footer .paper-label{margin-bottom:9px}
+.invoice-paper .paper-colophon{display:flex;align-items:center;gap:15px;border-top:1px solid var(--doc-rule);padding-top:10px;margin-top:15px;color:var(--doc-muted);font:8px/1.5 'IBM Plex Mono',monospace;break-inside:avoid}
+.invoice-paper .paper-colophon>span:first-child{flex:1;min-width:0;overflow-wrap:anywhere}
+.invoice-paper .paper-colophon>span:nth-child(2){max-width:45%;text-align:right;overflow-wrap:anywhere}
+.invoice-paper .paper-colophon>i{display:block;flex:0 0 24px;width:24px;height:8px;border-radius:50%;background:var(--doc-blue)}
+.invoice-paper .paper-draft{margin:15px 0 0;text-align:center;font:8px/1.5 'IBM Plex Mono',monospace;letter-spacing:1px;color:var(--doc-muted)}
+@media print{
+ @page{size:A4;margin:12mm;background:#f7f4ea}
+ body.printing-invoice{background:var(--doc-paper,#f7f4ea)!important}
+ body.printing-invoice .workspace-main{margin:0!important}
+ body.printing-invoice .page-content{max-width:none!important;margin:0!important;padding:0!important}
+ body.printing-invoice .app-shell{min-height:0!important}
+ body.printing-invoice #main-content>:not(#invoice-print-area){display:none!important}
+ body.printing-invoice #invoice-print-area{position:static!important;inset:auto!important;display:block!important;width:100%!important;background:#f7f4ea!important}
+ body.printing-invoice .invoice-paper{width:100%;min-width:0;max-width:none;min-height:0;margin:0;padding:0;box-shadow:none;background:#f7f4ea;color:#232b52;font-size:11px;print-color-adjust:exact;-webkit-print-color-adjust:exact}
+ body.printing-invoice .invoice-paper *{print-color-adjust:exact;-webkit-print-color-adjust:exact}
+ body.printing-invoice .invoice-paper .paper-masthead{break-inside:avoid}
+ body.printing-invoice .paper-summary{break-inside:auto}
+ body.printing-invoice .paper-footer,body.printing-invoice .paper-colophon{break-inside:avoid}
+}

@@ -1,0 +1,1157 @@
+[
+  {
+    "path": "favicon.svg",
+    "size": 518,
+    "sha": "5fa25308ef2858267af753df38ce530faaabbfe5"
+  },
+  {
+    "path": "file.svg",
+    "size": 392,
+    "sha": "16fe3d3a3ab9bd42e1616ec00066faba7e4aabe0"
+  },
+  {
+    "path": "window.svg",
+    "size": 386,
+    "sha": "d05e7a1bc066341298657dcc304dbadc4ddcab9d"
+  },
+  {
+    "path": "globe.svg",
+    "size": 1036,
+    "sha": "c7215fe0f2634ae9f51d15dacc09184f5343941a"
+  },
+  {
+    "path": "fonts/spacegrotesk-medium.ttf",
+    "size": 31932,
+    "sha": "1306d31b882c3f75594810dc7e71430f0b666593"
+  },
+  {
+    "path": "fonts/spacegrotesk-regular.ttf",
+    "size": 31896,
+    "sha": "5f341d5b6b2abee20c9c9d52af96a0132e65c0f8"
+  },
+  {
+    "path": "fonts/SpaceGrotesk-OFL.txt",
+    "size": 4401,
+    "sha": "d5666d70873cb905b4421d2c0d2e60747aae8573"
+  },
+  {
+    "path": "fonts/Archivo-OFL.txt",
+    "size": 4503,
+    "sha": "78b74533d01ee841477c9d16b57db6da78ca8065"
+  },
+  {
+    "path": "fonts/space-grotesk-variable.woff2",
+    "size": 22288,
+    "sha": "0f3474ee8af2f8253225f3b41bf79be986a1ae13"
+  },
+  {
+    "path": "fonts/archivo-italic-variable.woff2",
+    "size": 101676,
+    "sha": "61556524b786842cc50a43356d5487f2c188330c"
+  },
+  {
+    "path": "fonts/IBMPlexMono-OFL.txt",
+    "size": 5299,
+    "sha": "83eac8278b2e427a72ce3622a53cdb7a56e55b05"
+  },
+  {
+    "path": "fonts/archivo-semibold.ttf",
+    "size": 40760,
+    "sha": "47a5466f35cbd26f202c4104bb3064d1d1383f18"
+  },
+  {
+    "path": "fonts/ibmplexmono-regular.ttf",
+    "size": 40928,
+    "sha": "512c9e389319d09db3ac50d2da6604cc375d2b0f"
+  },
+  {
+    "path": "fonts/ibm-plex-mono.woff2",
+    "size": 14708,
+    "sha": "0804aaff92260b5359330f63e05b9ac25ccabeee"
+  },
+  {
+    "path": "fonts/archivo-variable.woff2",
+    "size": 90104,
+    "sha": "e2448d0561ffdb0b0974d063a7cdbb712f41ad49"
+  },
+  {
+    "path": "brand/retro-ambient.webp",
+    "size": 33738,
+    "sha": "eea1be97314d4e58922314dc034403dfcb0c2fab"
+  },
+  {
+    "path": "brand/atelier-wordmark.svg",
+    "size": 8619,
+    "sha": "a164a427056c36cb616145b2a5fd967270c41b7d"
+  },
+  {
+    "path": "brand/atelier-symbol.svg",
+    "size": 518,
+    "sha": "5fa25308ef2858267af753df38ce530faaabbfe5"
+  },
+  {
+    "path": "vendor/pdf.worker.min.mjs",
+    "size": 1078612,
+    "sha": "b2645af08989d62153d01e079fc4ad82a6cba681"
+  },
+  {
+    "path": "vendor/pdfjs-LICENSE.txt",
+    "size": 10174,
+    "sha": "f433b1a53f5b830a205fd2df78e2b34974656c7b"
+  },
+  {
+    "path": "budget/atelier-budget-template.pptx",
+    "size": 729900,
+    "sha": "bfe19b6596648e07e5a383cc233d7d419827c501"
+  },
+  {
+    "path": "budget/atelier-budget-template.json",
+    "size": 17475,
+    "sha": "93be5d2dafe0abf8021200e4a452df8d37b20a8f"
+  },
+  {
+    "path": "vendor/ocr/tesseract-core.wasm.js",
+    "size": 4750805,
+    "sha": "0e4fb94931e99de77efe4a6310f1b358ff2a7426"
+  },
+  {
+    "path": "vendor/ocr/LICENSE-tesseract.txt",
+    "size": 11357,
+    "sha": "8dada3edaf50dbc082c9a125058f25def75e625a"
+  },
+  {
+    "path": "vendor/ocr/tesseract-core-simd.wasm.js",
+    "size": 4751193,
+    "sha": "80a86995ad7a83e5504356e36abca743f374e27d"
+  },
+  {
+    "path": "vendor/ocr/tesseract-core-simd-lstm.wasm.js",
+    "size": 3954569,
+    "sha": "9dae06195e3bf8803cf369e449fb80612053aee0"
+  },
+  {
+    "path": "vendor/ocr/tesseract-core.wasm",
+    "size": 3468788,
+    "sha": "1296a59c8ab8aedf5a4c0ec4d5fd7b1ef2d509e2"
+  },
+  {
+    "path": "vendor/ocr/LICENSE-core.txt",
+    "size": 11358,
+    "sha": "8f71f43fee3f78649d238238cbde51e6d7055c82"
+  },
+  {
+    "path": "vendor/ocr/worker.LICENSE.txt",
+    "size": 466,
+    "sha": "42641c150958869d91bdc485c44b2736e0ad794b"
+  },
+  {
+    "path": "vendor/ocr/tesseract-core-simd.wasm",
+    "size": 3469078,
+    "sha": "ffe4e980f6533a5ffb8250ef8a1ef921818e2f5d"
+  },
+  {
+    "path": "vendor/ocr/tesseract-core-simd-lstm.wasm",
+    "size": 2871377,
+    "sha": "e3e16610b1d7e00fb98c36717c1f727570bc9a28"
+  },
+  {
+    "path": "vendor/ocr/tesseract-core-lstm.wasm.js",
+    "size": 3954181,
+    "sha": "98e27db70996a18d3101710d04496eddb96e1799"
+  },
+  {
+    "path": "vendor/ocr/tesseract-core-lstm.wasm",
+    "size": 2871085,
+    "sha": "e5f7e2a4fd53a4a277069dd46951aecefd0492aa"
+  },
+  {
+    "path": "vendor/ocr/worker.min.js",
+    "size": 111162,
+    "sha": "feb48279e8cc12e00a35e350235a5127819b3512"
+  },
+  {
+    "path": "vendor/pdf-fonts/FoxitFixed.pfb",
+    "size": 17597,
+    "sha": "f12dcbce52babb40fb61765aa46ddf47e3846511"
+  },
+  {
+    "path": "vendor/pdf-fonts/LICENSE_LIBERATION",
+    "size": 4414,
+    "sha": "aba73e8a403084a93a245ca00e4a0db007886e0a"
+  },
+  {
+    "path": "vendor/pdf-fonts/LiberationSans-BoldItalic.ttf",
+    "size": 135124,
+    "sha": "42b5717ddb92dc6e85edc72fb5c3a798b380902e"
+  },
+  {
+    "path": "vendor/pdf-fonts/FoxitSerif.pfb",
+    "size": 19469,
+    "sha": "3fa682efbb4b1d1941194a5dd8b78f39b33b72b0"
+  },
+  {
+    "path": "vendor/pdf-fonts/LiberationSans-Bold.ttf",
+    "size": 137052,
+    "sha": "ee2371540417ffbc652745b059effa260430179f"
+  },
+  {
+    "path": "vendor/pdf-fonts/LICENSE_FOXIT",
+    "size": 1553,
+    "sha": "8b4ed6dddf22b2fcc9f7f520cd23613b49307fa0"
+  },
+  {
+    "path": "vendor/pdf-fonts/FoxitFixedBoldItalic.pfb",
+    "size": 19151,
+    "sha": "d2880017c25716417f837a1c26044a0342fa3f9a"
+  },
+  {
+    "path": "vendor/pdf-fonts/FoxitSerifBold.pfb",
+    "size": 19395,
+    "sha": "ff7c6ddecf6b689d93823c4c2a8c41e6e058de46"
+  },
+  {
+    "path": "vendor/pdf-fonts/FoxitSerifItalic.pfb",
+    "size": 21227,
+    "sha": "d03a7c781e1a2b91481103dc3227a6bdca4a461c"
+  },
+  {
+    "path": "vendor/pdf-fonts/FoxitDingbats.pfb",
+    "size": 29513,
+    "sha": "30d52963e281dcd7e6dd70555340fc987d3568ef"
+  },
+  {
+    "path": "vendor/pdf-fonts/FoxitSerifBoldItalic.pfb",
+    "size": 20733,
+    "sha": "460231fb88a0083e577ed534760307d7779fd82f"
+  },
+  {
+    "path": "vendor/pdf-fonts/LiberationSans-Regular.ttf",
+    "size": 139512,
+    "sha": "366d1489cdde3523e488ed1ee85583618fb0c120"
+  },
+  {
+    "path": "vendor/pdf-fonts/FoxitFixedItalic.pfb",
+    "size": 18746,
+    "sha": "d71697d4b638737a5545dd0cb28cba8f613e4eec"
+  },
+  {
+    "path": "vendor/pdf-fonts/LiberationSans-Italic.ttf",
+    "size": 162036,
+    "sha": "0cf61263494608cbf1fccecce606bc01a247d1e4"
+  },
+  {
+    "path": "vendor/pdf-fonts/FoxitSymbol.pfb",
+    "size": 16729,
+    "sha": "c8f9bca78c2f89ce40dff0afe6cdd7068061b3e6"
+  },
+  {
+    "path": "vendor/pdf-fonts/FoxitFixedBold.pfb",
+    "size": 18055,
+    "sha": "cf8e24aee5962ebcf7e4d58d932cc3321f3cdd38"
+  },
+  {
+    "path": "vendor/pdf-cmaps/GBT-H.bcmap",
+    "size": 7269,
+    "sha": "8437ac33771536813228e3f9c1cb6c35af3acc72"
+  },
+  {
+    "path": "vendor/pdf-cmaps/90pv-RKSJ-H.bcmap",
+    "size": 982,
+    "sha": "02f713bb838a8cd46f5b262c934d0edc8c6e8fe9"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniJIS-UCS2-V.bcmap",
+    "size": 664,
+    "sha": "c50b9ddfde9da7ebb2f67eba68d58fa2cdee902a"
+  },
+  {
+    "path": "vendor/pdf-cmaps/GBKp-EUC-H.bcmap",
+    "size": 14686,
+    "sha": "5cb0af687ee20a10ecc367892ae49d7b1e74acd1"
+  },
+  {
+    "path": "vendor/pdf-cmaps/Hiragana.bcmap",
+    "size": 124,
+    "sha": "17e983e77264c62ee149d1c8ec576a23e8f90eda"
+  },
+  {
+    "path": "vendor/pdf-cmaps/HKscs-B5-H.bcmap",
+    "size": 4437,
+    "sha": "6ef7857ad17cefc4ab714d209716002317c23baa"
+  },
+  {
+    "path": "vendor/pdf-cmaps/NWP-H.bcmap",
+    "size": 2765,
+    "sha": "afc5e4b05ee6f4be4f17eb616742b59aee4c5ac1"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniCNS-UTF32-H.bcmap",
+    "size": 52679,
+    "sha": "1ab18a14367cf31113eddf5ae15d9fb3549f39ab"
+  },
+  {
+    "path": "vendor/pdf-cmaps/ETenms-B5-H.bcmap",
+    "size": 101,
+    "sha": "a7d69db5e32646c3fecf51bd03dc1a61c8189fae"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniGB-UTF32-V.bcmap",
+    "size": 182,
+    "sha": "ce9c30a98541e23244876fef9dc67c2639fdd746"
+  },
+  {
+    "path": "vendor/pdf-cmaps/GBK2K-V.bcmap",
+    "size": 219,
+    "sha": "d9a9479843eda25fb0a8fd69fb302740813d925f"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniCNS-UTF8-V.bcmap",
+    "size": 157,
+    "sha": "22a27e4ddbe26664c57f778a864b6872f6c2ba03"
+  },
+  {
+    "path": "vendor/pdf-cmaps/Adobe-CNS1-1.bcmap",
+    "size": 371,
+    "sha": "03a501477c91d8156723f0c274a37d397ed65bad"
+  },
+  {
+    "path": "vendor/pdf-cmaps/Adobe-Korea1-0.bcmap",
+    "size": 241,
+    "sha": "cef1a9985191f53c4a8a35811d1caeecdd1a1820"
+  },
+  {
+    "path": "vendor/pdf-cmaps/Adobe-Japan1-5.bcmap",
+    "size": 430,
+    "sha": "5b4b65cc6292a5ba7d89e976565bf08814bb88b6"
+  },
+  {
+    "path": "vendor/pdf-cmaps/Add-RKSJ-H.bcmap",
+    "size": 2413,
+    "sha": "a3065e441a0e1f1a65e9109ec9bc4f826fccac24"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniJIS2004-UTF8-V.bcmap",
+    "size": 682,
+    "sha": "994aa9ef9f50495a3ac558630b0234680be23c2f"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniJIS-UCS2-HW-V.bcmap",
+    "size": 680,
+    "sha": "3da0a1c62f19f720590b54fc1de7b027af100945"
+  },
+  {
+    "path": "vendor/pdf-cmaps/Adobe-CNS1-6.bcmap",
+    "size": 406,
+    "sha": "b77fb0705c28d647d0bf7b25246af566a791b2ec"
+  },
+  {
+    "path": "vendor/pdf-cmaps/EUC-V.bcmap",
+    "size": 170,
+    "sha": "7a7c183228dfdc5c236b7914ca68298520ac60a1"
+  },
+  {
+    "path": "vendor/pdf-cmaps/KSCpc-EUC-V.bcmap",
+    "size": 166,
+    "sha": "f3c9113fcf0b02e1deea8246bfd27408becc8401"
+  },
+  {
+    "path": "vendor/pdf-cmaps/KSCpc-EUC-H.bcmap",
+    "size": 2024,
+    "sha": "e06f361eb6d429290806b9f9cd7a0aebce22be4d"
+  },
+  {
+    "path": "vendor/pdf-cmaps/KSCms-UHC-HW-V.bcmap",
+    "size": 169,
+    "sha": "b655dbcfb123ed06c7eeb87dfc96ecf6759363dd"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniCNS-UTF8-H.bcmap",
+    "size": 53629,
+    "sha": "83c6bd7c4ff0abf4634765312b8a3026942d2b35"
+  },
+  {
+    "path": "vendor/pdf-cmaps/83pv-RKSJ-H.bcmap",
+    "size": 905,
+    "sha": "2359bc529d160857cce4c1d1bfca1322290205c1"
+  },
+  {
+    "path": "vendor/pdf-cmaps/HKscs-B5-V.bcmap",
+    "size": 159,
+    "sha": "1fb2fa2a2ecdf5abd6b7cbf2cb5f2ee4f0b11fe2"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniJIS2004-UTF16-H.bcmap",
+    "size": 39534,
+    "sha": "d768bf811ffeb0d794b732a82940fa1442af499f"
+  },
+  {
+    "path": "vendor/pdf-cmaps/Adobe-Japan1-3.bcmap",
+    "size": 242,
+    "sha": "087dfc155860e65d2dc828dd432ffe88239fde23"
+  },
+  {
+    "path": "vendor/pdf-cmaps/Adobe-GB1-2.bcmap",
+    "size": 465,
+    "sha": "f7648cc3ff02c44e9594ccbd71deec742e253c2f"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniJIS2004-UTF32-H.bcmap",
+    "size": 40630,
+    "sha": "09eee10d4fb4b9fe1e70a1ee56825a207ae8034a"
+  },
+  {
+    "path": "vendor/pdf-cmaps/Adobe-GB1-3.bcmap",
+    "size": 470,
+    "sha": "852145890ede3dc04339de284993da270d62311d"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniCNS-UCS2-H.bcmap",
+    "size": 48280,
+    "sha": "d5db27c5cf1f5b0e66e16f6314d042a4ef707222"
+  },
+  {
+    "path": "vendor/pdf-cmaps/GBT-V.bcmap",
+    "size": 176,
+    "sha": "697ab4a8e756204de9d089c8c136579973c9c0c6"
+  },
+  {
+    "path": "vendor/pdf-cmaps/GBT-EUC-V.bcmap",
+    "size": 180,
+    "sha": "38f706699f395dcdad5c6ad93d1a9b6fe9f66c78"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniGB-UTF8-V.bcmap",
+    "size": 181,
+    "sha": "f78020dd4028d56497c44b7afa94985f0d18f8ce"
+  },
+  {
+    "path": "vendor/pdf-cmaps/Adobe-GB1-0.bcmap",
+    "size": 217,
+    "sha": "36101083fa8fd22399728ccf533c48e830781de0"
+  },
+  {
+    "path": "vendor/pdf-cmaps/GBK-EUC-H.bcmap",
+    "size": 14692,
+    "sha": "05fff7e8254c995031783fb3b4892d58a6b176ac"
+  },
+  {
+    "path": "vendor/pdf-cmaps/KSCms-UHC-V.bcmap",
+    "size": 166,
+    "sha": "21f97f65b4a61adfa13f55d5a096ceab45eb485b"
+  },
+  {
+    "path": "vendor/pdf-cmaps/ETHK-B5-H.bcmap",
+    "size": 4426,
+    "sha": "cb29415de4f5a669c1b47e34ab889b5fdee6e428"
+  },
+  {
+    "path": "vendor/pdf-cmaps/Ext-RKSJ-V.bcmap",
+    "size": 218,
+    "sha": "3457c2770913963731993654c838df133deabbb3"
+  },
+  {
+    "path": "vendor/pdf-cmaps/78-EUC-H.bcmap",
+    "size": 2404,
+    "sha": "2655fc70ae706c7ba52a5d647cbfdfad6072c697"
+  },
+  {
+    "path": "vendor/pdf-cmaps/Ext-RKSJ-H.bcmap",
+    "size": 2542,
+    "sha": "ea4d2d97b8bc1df2abebce0d4f8c58789f723eb1"
+  },
+  {
+    "path": "vendor/pdf-cmaps/KSC-Johab-V.bcmap",
+    "size": 166,
+    "sha": "367ceb226ab1e33624b30512716a3b65feb5a100"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniJIS-UTF16-V.bcmap",
+    "size": 643,
+    "sha": "70bf90c0efb66da2a7aa19a820d766cfe3ef3183"
+  },
+  {
+    "path": "vendor/pdf-cmaps/Adobe-CNS1-5.bcmap",
+    "size": 406,
+    "sha": "6caf4a83146a60a2db652647b9cfed5fb71bd97c"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniJIS-UCS2-HW-H.bcmap",
+    "size": 119,
+    "sha": "ac9975c585ede6958758980ade161f687d40d58b"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniGB-UCS2-V.bcmap",
+    "size": 193,
+    "sha": "53c534b7fecfd84e465c8943fe3adf500a4444f4"
+  },
+  {
+    "path": "vendor/pdf-cmaps/ETHK-B5-V.bcmap",
+    "size": 158,
+    "sha": "f09aec6318dbec88491e3e488526882eaa930f37"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniJIS2004-UTF16-V.bcmap",
+    "size": 647,
+    "sha": "3d5bf6fb4ef94b452ed1ef0df926fc2bee55e973"
+  },
+  {
+    "path": "vendor/pdf-cmaps/Adobe-GB1-4.bcmap",
+    "size": 601,
+    "sha": "e40c63ab1e5c240841f3b465ade920d60be6328f"
+  },
+  {
+    "path": "vendor/pdf-cmaps/Adobe-Japan1-0.bcmap",
+    "size": 225,
+    "sha": "f0e94ec196757e8660b567d8ece7f99869927913"
+  },
+  {
+    "path": "vendor/pdf-cmaps/78-RKSJ-V.bcmap",
+    "size": 173,
+    "sha": "50b1646e94bba61b3242a680fe3023337e191123"
+  },
+  {
+    "path": "vendor/pdf-cmaps/KSCms-UHC-H.bcmap",
+    "size": 2787,
+    "sha": "a8d4240e6adb3ac1db859085b769a0715be03c72"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniKS-UTF8-V.bcmap",
+    "size": 169,
+    "sha": "8dfa76a58eb720dd1992c2cc9abf1dd4b39c5a66"
+  },
+  {
+    "path": "vendor/pdf-cmaps/GB-V.bcmap",
+    "size": 175,
+    "sha": "310834512ffe49cbb7ca903abc2dc1aaa934e6f4"
+  },
+  {
+    "path": "vendor/pdf-cmaps/78-H.bcmap",
+    "size": 2379,
+    "sha": "39e89d3339c74cbe06e7e4f76d60bf3556b0d4b6"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniJIS-UTF32-H.bcmap",
+    "size": 40539,
+    "sha": "7a83d53ae70ca3d81cda827cc224ec8c5efa4f17"
+  },
+  {
+    "path": "vendor/pdf-cmaps/CNS-EUC-V.bcmap",
+    "size": 1920,
+    "sha": "1a393a51e079d1b5e7898423463fac5e87170da2"
+  },
+  {
+    "path": "vendor/pdf-cmaps/Adobe-CNS1-UCS2.bcmap",
+    "size": 41193,
+    "sha": "69d79a2c2c2b00207ab27b68ebf4404aa17c6f2c"
+  },
+  {
+    "path": "vendor/pdf-cmaps/HKgccs-B5-V.bcmap",
+    "size": 149,
+    "sha": "d353ca256b54236a4acefafdbc08e5b719892014"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniKS-UTF16-H.bcmap",
+    "size": 26327,
+    "sha": "fd4e66e81f3507b190fb2986a26a45c1c380e302"
+  },
+  {
+    "path": "vendor/pdf-cmaps/CNS1-H.bcmap",
+    "size": 706,
+    "sha": "f738e218ae2b4e9c33a1833a49fe20027e869aa1"
+  },
+  {
+    "path": "vendor/pdf-cmaps/RKSJ-H.bcmap",
+    "size": 534,
+    "sha": "fb8d298e9bb8e090139bbc5e958f11a237672825"
+  },
+  {
+    "path": "vendor/pdf-cmaps/KSC-EUC-V.bcmap",
+    "size": 164,
+    "sha": "0e7b21f0a612b1acc41c1b23ad0060da539eaf2b"
+  },
+  {
+    "path": "vendor/pdf-cmaps/78-EUC-V.bcmap",
+    "size": 173,
+    "sha": "f1ed8538287499647d923d7d8f517a00cdac4e3a"
+  },
+  {
+    "path": "vendor/pdf-cmaps/GBpc-EUC-H.bcmap",
+    "size": 557,
+    "sha": "c9edf67cf6d640607080ad2775c14760df77dd96"
+  },
+  {
+    "path": "vendor/pdf-cmaps/B5-V.bcmap",
+    "size": 142,
+    "sha": "2d4f87d5035f03485616d4986b6373fa0820d0af"
+  },
+  {
+    "path": "vendor/pdf-cmaps/NWP-V.bcmap",
+    "size": 252,
+    "sha": "bb5785e3278ab7a24b3080cf22ea0f609aab4595"
+  },
+  {
+    "path": "vendor/pdf-cmaps/GBT-EUC-H.bcmap",
+    "size": 7290,
+    "sha": "4b4e2d32294538b5093ed3870bb9de37abf21599"
+  },
+  {
+    "path": "vendor/pdf-cmaps/HKdlb-B5-V.bcmap",
+    "size": 148,
+    "sha": "2b572b50a47f09a51c777efabcaf6a9e3faa26c2"
+  },
+  {
+    "path": "vendor/pdf-cmaps/90pv-RKSJ-V.bcmap",
+    "size": 260,
+    "sha": "d08e0cc5d98b2d933ab848c69dd6c504fbf1787d"
+  },
+  {
+    "path": "vendor/pdf-cmaps/CNS1-V.bcmap",
+    "size": 143,
+    "sha": "9c3169f0d9a083b462427bf4e46a25296ebbd862"
+  },
+  {
+    "path": "vendor/pdf-cmaps/Roman.bcmap",
+    "size": 96,
+    "sha": "f896dcf1c7fb118fc491094edd6244e16856d586"
+  },
+  {
+    "path": "vendor/pdf-cmaps/KSCms-UHC-HW-H.bcmap",
+    "size": 2789,
+    "sha": "8b4ae18fd3efdbe020e4e1407d2f65125085a71a"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniJISX0213-UTF32-H.bcmap",
+    "size": 40517,
+    "sha": "a83a677c56df6f1ac395d2ba71e60a08b0985e97"
+  },
+  {
+    "path": "vendor/pdf-cmaps/90msp-RKSJ-V.bcmap",
+    "size": 291,
+    "sha": "25ef14ab4af42f4b70ccac76cddac8f3b22d8813"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniCNS-UTF16-H.bcmap",
+    "size": 50419,
+    "sha": "961afefb66cb70ea2f10784029572e5f68ae4740"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniJIS-UCS2-H.bcmap",
+    "size": 25439,
+    "sha": "7daf56afabf65a4707d7bb06d829f56b247c9e80"
+  },
+  {
+    "path": "vendor/pdf-cmaps/V.bcmap",
+    "size": 166,
+    "sha": "fdec9906621904180f42bd5c91f377397fd6cf95"
+  },
+  {
+    "path": "vendor/pdf-cmaps/GBTpc-EUC-V.bcmap",
+    "size": 182,
+    "sha": "6c0d71a2d04473870c60dc59342400fe1b4ccc48"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniKS-UTF32-V.bcmap",
+    "size": 168,
+    "sha": "bdab208b69d287128195eccbd084c8cf4ca658c3"
+  },
+  {
+    "path": "vendor/pdf-cmaps/KSC-EUC-H.bcmap",
+    "size": 1848,
+    "sha": "a45c65f008e7d6ff34edaf53af15ea471d4f6d90"
+  },
+  {
+    "path": "vendor/pdf-cmaps/Add-V.bcmap",
+    "size": 282,
+    "sha": "2f816d320f08b8671498299c4d00e4564d2ece6c"
+  },
+  {
+    "path": "vendor/pdf-cmaps/H.bcmap",
+    "size": 553,
+    "sha": "7b24ea4629d0d4cc9f0cd5852edde324156ef0b1"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniKS-UCS2-V.bcmap",
+    "size": 178,
+    "sha": "026adcaad4c56cb1989bd31cbcf3ad21f3965a17"
+  },
+  {
+    "path": "vendor/pdf-cmaps/GB-EUC-H.bcmap",
+    "size": 549,
+    "sha": "e39908b9844939a3c6d6baccced5771b8c1b1b2d"
+  },
+  {
+    "path": "vendor/pdf-cmaps/Adobe-Japan1-UCS2.bcmap",
+    "size": 40951,
+    "sha": "128a14107750da2939d920c3e0802798c36f2e18"
+  },
+  {
+    "path": "vendor/pdf-cmaps/Adobe-Japan1-1.bcmap",
+    "size": 226,
+    "sha": "dad42c5ad7dad57954fc9a051ee7e222e83bee45"
+  },
+  {
+    "path": "vendor/pdf-cmaps/Adobe-CNS1-4.bcmap",
+    "size": 405,
+    "sha": "f50fc6c14e67a228c4ba9a61b1357c16410e8228"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniJIS2004-UTF32-V.bcmap",
+    "size": 681,
+    "sha": "6c546001331cf4f2f68563229f994b55730dfdb1"
+  },
+  {
+    "path": "vendor/pdf-cmaps/Katakana.bcmap",
+    "size": 100,
+    "sha": "524303c4f0c20e6cd19aa1d35805e98c2c05cb7c"
+  },
+  {
+    "path": "vendor/pdf-cmaps/GB-EUC-V.bcmap",
+    "size": 179,
+    "sha": "d5be5446aa40898742183202ce0624b8acee5234"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniCNS-UTF16-V.bcmap",
+    "size": 156,
+    "sha": "df0cffe86b5e9f154c5ef6207120d6bd43706631"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniKS-UCS2-H.bcmap",
+    "size": 25783,
+    "sha": "b5b94852a57b19bcb357a6cae2cae2e7910e05a1"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniGB-UTF8-H.bcmap",
+    "size": 46837,
+    "sha": "982ca462b1b047c945d3b7b0123eb42dfd8d48cd"
+  },
+  {
+    "path": "vendor/pdf-cmaps/GBpc-EUC-V.bcmap",
+    "size": 181,
+    "sha": "31450c97f640ff40bd79677cd3e97f4485453d9b"
+  },
+  {
+    "path": "vendor/pdf-cmaps/Ext-V.bcmap",
+    "size": 215,
+    "sha": "4999ca40412b66e87c56870c80cff32212483ee8"
+  },
+  {
+    "path": "vendor/pdf-cmaps/Adobe-GB1-5.bcmap",
+    "size": 625,
+    "sha": "d7623b500232b6e62f29c2c232e6c2469a527314"
+  },
+  {
+    "path": "vendor/pdf-cmaps/LICENSE",
+    "size": 2080,
+    "sha": "b1ad168ad0dd09b578cafec31d2666049b4d8718"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniGB-UTF16-H.bcmap",
+    "size": 44086,
+    "sha": "b95045b400a77419292cab245f9f66f6298dbb5d"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniKS-UTF32-H.bcmap",
+    "size": 26451,
+    "sha": "769d2142c03b10680800b3b6ae883e27fe04c5a2"
+  },
+  {
+    "path": "vendor/pdf-cmaps/Adobe-GB1-UCS2.bcmap",
+    "size": 33974,
+    "sha": "7586525936cc5398b86d3752a4eb45b15825b25c"
+  },
+  {
+    "path": "vendor/pdf-cmaps/HKdlb-B5-H.bcmap",
+    "size": 2414,
+    "sha": "d829a231015161e107123e211d4a78110daab6bf"
+  },
+  {
+    "path": "vendor/pdf-cmaps/Ext-H.bcmap",
+    "size": 2536,
+    "sha": "3b5cde44dbaf7f78c716c3705590ae28e9bed265"
+  },
+  {
+    "path": "vendor/pdf-cmaps/ETen-B5-V.bcmap",
+    "size": 158,
+    "sha": "89bff159ec62cc86b7c4a3258ee0455cab10b76a"
+  },
+  {
+    "path": "vendor/pdf-cmaps/Hankaku.bcmap",
+    "size": 132,
+    "sha": "4b8ec7fcef466bc4090dc13c8edb354cb94d0b67"
+  },
+  {
+    "path": "vendor/pdf-cmaps/GBK2K-H.bcmap",
+    "size": 19662,
+    "sha": "46f6ba5967cdfb381f001eb1193f17b43d943962"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniGB-UTF16-V.bcmap",
+    "size": 178,
+    "sha": "51f023e0d609798e72d46bf41309e092d72ccb07"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniJIS-UTF8-V.bcmap",
+    "size": 678,
+    "sha": "808a94f0fd9c3b3cb0267e5cfe4dced2e65ecb1c"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniJISPro-UTF8-V.bcmap",
+    "size": 726,
+    "sha": "1849d809a679e56414f4e18dce8ca3c41109e84e"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniJISX0213-UTF32-V.bcmap",
+    "size": 684,
+    "sha": "f527248ad547015ad8af1181e646da3b235de08f"
+  },
+  {
+    "path": "vendor/pdf-cmaps/HKdla-B5-H.bcmap",
+    "size": 2654,
+    "sha": "7d30c0500520d563d0e5891c8f4781c61ddcca5e"
+  },
+  {
+    "path": "vendor/pdf-cmaps/KSC-H.bcmap",
+    "size": 1831,
+    "sha": "b9b22b67879d4043c75b617a24f96b0bd47cf4ca"
+  },
+  {
+    "path": "vendor/pdf-cmaps/GBTpc-EUC-H.bcmap",
+    "size": 7298,
+    "sha": "f6e50e89363483070b25106b94f729ae38587d28"
+  },
+  {
+    "path": "vendor/pdf-cmaps/Adobe-Korea1-UCS2.bcmap",
+    "size": 23293,
+    "sha": "f3371c0cbd14c89a7d2b5a72e4e4f9cdc6d6017e"
+  },
+  {
+    "path": "vendor/pdf-cmaps/HKm314-B5-V.bcmap",
+    "size": 149,
+    "sha": "0e96d0e228e0608f77f035655140c6a235d4ea56"
+  },
+  {
+    "path": "vendor/pdf-cmaps/GB-H.bcmap",
+    "size": 528,
+    "sha": "39189c54e363ebe2ea542addd6b629bdacd0e8e9"
+  },
+  {
+    "path": "vendor/pdf-cmaps/B5pc-V.bcmap",
+    "size": 144,
+    "sha": "73b99ff2fbca40e7ca5501f61e3f2f29c1fc1af6"
+  },
+  {
+    "path": "vendor/pdf-cmaps/78ms-RKSJ-V.bcmap",
+    "size": 290,
+    "sha": "acf23231aea22e1a95761f7eafd35f1d42ea6b84"
+  },
+  {
+    "path": "vendor/pdf-cmaps/HKm471-B5-H.bcmap",
+    "size": 2171,
+    "sha": "11d170c75ed8696f0705f9fb9f5afcf3b0aff4c9"
+  },
+  {
+    "path": "vendor/pdf-cmaps/HKgccs-B5-H.bcmap",
+    "size": 2292,
+    "sha": "971a4f23f791f75d4e604ad717735ee55529eda5"
+  },
+  {
+    "path": "vendor/pdf-cmaps/Adobe-CNS1-2.bcmap",
+    "size": 376,
+    "sha": "2aa95141f9f5802818e34b0aa626e34e7cfee805"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniKS-UTF8-H.bcmap",
+    "size": 27790,
+    "sha": "6ff8674af772af896d7d33c7addc37c57822f8a2"
+  },
+  {
+    "path": "vendor/pdf-cmaps/HKm314-B5-H.bcmap",
+    "size": 1772,
+    "sha": "576dc01112bd7f28c30804661f546ece203c53d8"
+  },
+  {
+    "path": "vendor/pdf-cmaps/78-V.bcmap",
+    "size": 169,
+    "sha": "d7af99b5e2ae9a21d534f1965c35a2b572143322"
+  },
+  {
+    "path": "vendor/pdf-cmaps/Add-RKSJ-V.bcmap",
+    "size": 287,
+    "sha": "040014cfc0880371c20a89212942727c5dc30a78"
+  },
+  {
+    "path": "vendor/pdf-cmaps/90ms-RKSJ-H.bcmap",
+    "size": 721,
+    "sha": "af8293829c90ce63cc4c5eda0318003785ffcba1"
+  },
+  {
+    "path": "vendor/pdf-cmaps/KSC-Johab-H.bcmap",
+    "size": 16791,
+    "sha": "2531ffcf41acc01338f781c845c7f50f62fcc84a"
+  },
+  {
+    "path": "vendor/pdf-cmaps/GBK-EUC-V.bcmap",
+    "size": 180,
+    "sha": "0cdf6bed6d450473f92e691e9015e4028113607e"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniJISX02132004-UTF32-H.bcmap",
+    "size": 40608,
+    "sha": "e1a988dc9e80be9a0803e22d021b1e81fdcc5b94"
+  },
+  {
+    "path": "vendor/pdf-cmaps/ETen-B5-H.bcmap",
+    "size": 1125,
+    "sha": "c2d77462d298cdb261f5e2eed5218fcba35cbe4e"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniJISPro-UCS2-V.bcmap",
+    "size": 689,
+    "sha": "c148f67f5e9fe4a108519eeaace89e708a51f8f5"
+  },
+  {
+    "path": "vendor/pdf-cmaps/CNS2-V.bcmap",
+    "size": 93,
+    "sha": "7588cec83e271feb04e3c7f3a6ee3a4c153f2052"
+  },
+  {
+    "path": "vendor/pdf-cmaps/GBKp-EUC-V.bcmap",
+    "size": 181,
+    "sha": "bca93b8efbb18a13e15025ad41d23db8267d2577"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniJIS-UTF32-V.bcmap",
+    "size": 677,
+    "sha": "7a8713539491f51c52ba3a1525d181efd32c1f0f"
+  },
+  {
+    "path": "vendor/pdf-cmaps/Adobe-Japan1-2.bcmap",
+    "size": 233,
+    "sha": "090819a064533f20aa68f562275556397683ae81"
+  },
+  {
+    "path": "vendor/pdf-cmaps/HKdla-B5-V.bcmap",
+    "size": 148,
+    "sha": "78946940d68cdd2ea1bec1230b1eb0b19b8d5deb"
+  },
+  {
+    "path": "vendor/pdf-cmaps/78ms-RKSJ-H.bcmap",
+    "size": 2651,
+    "sha": "37077d01e26f9ee2427592f6deebb145d628e731"
+  },
+  {
+    "path": "vendor/pdf-cmaps/Adobe-Korea1-1.bcmap",
+    "size": 386,
+    "sha": "11ffa36df8404ab970df2a24b2d80b1dc6348436"
+  },
+  {
+    "path": "vendor/pdf-cmaps/HKm471-B5-V.bcmap",
+    "size": 149,
+    "sha": "54959bf9e776c990460f2582adee80d317062d20"
+  },
+  {
+    "path": "vendor/pdf-cmaps/Adobe-Korea1-2.bcmap",
+    "size": 391,
+    "sha": "3172308c79d57147cdbe05930228043faa48ca54"
+  },
+  {
+    "path": "vendor/pdf-cmaps/RKSJ-V.bcmap",
+    "size": 170,
+    "sha": "a2555a6c048de98d68f534fbba18baf4b4311e50"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniGB-UTF32-H.bcmap",
+    "size": 45738,
+    "sha": "f0dbd14f3795a40b23cbe5b826f776f4ea7cba4c"
+  },
+  {
+    "path": "vendor/pdf-cmaps/KSC-V.bcmap",
+    "size": 160,
+    "sha": "6ae2f0b6b7238adc67bd9231668d9853ea3c8e1e"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniJIS2004-UTF8-H.bcmap",
+    "size": 41779,
+    "sha": "1b1a64f50d204b03ef0c5575233687830a1b053a"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniKS-UTF16-V.bcmap",
+    "size": 164,
+    "sha": "075efb7054901b1022af68e723647769cbe1d556"
+  },
+  {
+    "path": "vendor/pdf-cmaps/Adobe-GB1-1.bcmap",
+    "size": 250,
+    "sha": "707bb1065c76d69551c287141cb258519132ef8e"
+  },
+  {
+    "path": "vendor/pdf-cmaps/Adobe-Japan1-6.bcmap",
+    "size": 485,
+    "sha": "e77d699ab6a1bfd1e3eab6db428222e108342aec"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniGB-UCS2-H.bcmap",
+    "size": 43366,
+    "sha": "5bd6228ce62ec10f00316b136663ed6b60ebf9e5"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniCNS-UCS2-V.bcmap",
+    "size": 156,
+    "sha": "1dc9b7a21bc59b6540d55b3d8933e5a6ba9f8947"
+  },
+  {
+    "path": "vendor/pdf-cmaps/Adobe-Japan1-4.bcmap",
+    "size": 337,
+    "sha": "46aa9bffe576e9a8b714646aed7f9e1a4e99dfe2"
+  },
+  {
+    "path": "vendor/pdf-cmaps/WP-Symbol.bcmap",
+    "size": 179,
+    "sha": "46729bbf30f3b2f176492d907fb8ca3f6a1e3026"
+  },
+  {
+    "path": "vendor/pdf-cmaps/90msp-RKSJ-H.bcmap",
+    "size": 715,
+    "sha": "bfd3119c62d9976dde9b1e59c572c678cf5811a0"
+  },
+  {
+    "path": "vendor/pdf-cmaps/CNS-EUC-H.bcmap",
+    "size": 1780,
+    "sha": "61d1d0cb001dd484630e52eb7e47eaabbdee62cd"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniJISX02132004-UTF32-V.bcmap",
+    "size": 688,
+    "sha": "47e054a961adb3d97caaa31c854d9b8ef4555bf9"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniJIS-UTF16-H.bcmap",
+    "size": 39443,
+    "sha": "6761344639bcde069cf7133d52e127536dcdd037"
+  },
+  {
+    "path": "vendor/pdf-cmaps/78-RKSJ-H.bcmap",
+    "size": 2398,
+    "sha": "e4167cb51f66c60ef7d9500b450303b5da175574"
+  },
+  {
+    "path": "vendor/pdf-cmaps/CNS2-H.bcmap",
+    "size": 504,
+    "sha": "c89b3527fe57ad3b32061f36b73c756ead3fb071"
+  },
+  {
+    "path": "vendor/pdf-cmaps/Adobe-CNS1-3.bcmap",
+    "size": 401,
+    "sha": "86d8b8c79cfa3907281aa3f25a46f178b87aedfa"
+  },
+  {
+    "path": "vendor/pdf-cmaps/ETenms-B5-V.bcmap",
+    "size": 172,
+    "sha": "adc5d618d6912cb3a67e4745b63764120f93d17f"
+  },
+  {
+    "path": "vendor/pdf-cmaps/90ms-RKSJ-V.bcmap",
+    "size": 290,
+    "sha": "780549de19de05b6cbea4ccd4737351bc9ff6104"
+  },
+  {
+    "path": "vendor/pdf-cmaps/EUC-H.bcmap",
+    "size": 578,
+    "sha": "e92ea5b3b99b1f20d31c9760481de0472e72685b"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniJISPro-UCS2-HW-V.bcmap",
+    "size": 705,
+    "sha": "643f921b65819c9e8c80a97c51fc68a89053bd51"
+  },
+  {
+    "path": "vendor/pdf-cmaps/Adobe-CNS1-0.bcmap",
+    "size": 317,
+    "sha": "88ec04af49d1e8ab6038e3b36dd28daf4dcf0119"
+  },
+  {
+    "path": "vendor/pdf-cmaps/B5pc-H.bcmap",
+    "size": 1099,
+    "sha": "ce0013167f852a873b639e301088c094d468a750"
+  },
+  {
+    "path": "vendor/pdf-cmaps/B5-H.bcmap",
+    "size": 1086,
+    "sha": "beb4d228104cd985130e6eed7ccabdb63e94ce27"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniJIS-UTF8-H.bcmap",
+    "size": 41695,
+    "sha": "9f0334cac7f3852b4d06dc9e5cf0f9646ba21a5e"
+  },
+  {
+    "path": "vendor/pdf-cmaps/UniCNS-UTF32-V.bcmap",
+    "size": 160,
+    "sha": "ad14662e25e7a4e3bd7f543c126ac24417bc3665"
+  },
+  {
+    "path": "vendor/pdf-cmaps/Add-H.bcmap",
+    "size": 2419,
+    "sha": "59442acafb613b0c090314379f9f4c2fa134a1a1"
+  },
+  {
+    "path": "vendor/pdf-wasm/openjpeg_nowasm_fallback.js",
+    "size": 451777,
+    "sha": "9df64ca514648b659a9c87db465e9a4213888975"
+  },
+  {
+    "path": "vendor/pdf-wasm/LICENSE_PDFJS_OPENJPEG",
+    "size": 1285,
+    "sha": "623929b849547b81e8d1f025f66ac0e347e27b88"
+  },
+  {
+    "path": "vendor/pdf-wasm/jbig2.wasm",
+    "size": 105557,
+    "sha": "04a4a374f9196c7525a2ab359d2283ddf0d6f88f"
+  },
+  {
+    "path": "vendor/pdf-wasm/LICENSE_JBIG2",
+    "size": 12862,
+    "sha": "37a329c636c65ab5fde4e471dc0bdf9b61d313cd"
+  },
+  {
+    "path": "vendor/pdf-wasm/LICENSE_QCMS",
+    "size": 1121,
+    "sha": "eec8246dfa81e83f19dae23f6c1fbf51720908c0"
+  },
+  {
+    "path": "vendor/pdf-wasm/qcms_bg.wasm",
+    "size": 94519,
+    "sha": "6ed10d7108259d0c47c58b8158b4653efc03555c"
+  },
+  {
+    "path": "vendor/pdf-wasm/LICENSE_PDFJS_JBIG2",
+    "size": 555,
+    "sha": "f1845baf6613d744626e975ec933de7cdde1f915"
+  },
+  {
+    "path": "vendor/pdf-wasm/LICENSE_PDFJS_QCMS",
+    "size": 1285,
+    "sha": "7e1aeb34f9178d69df1d49f996012b22070d9870"
+  },
+  {
+    "path": "vendor/pdf-wasm/LICENSE_OPENJPEG",
+    "size": 2112,
+    "sha": "e8fa41040dfbe8be524cac5b1bb19d60c6eb0320"
+  },
+  {
+    "path": "vendor/pdf-wasm/openjpeg.wasm",
+    "size": 250009,
+    "sha": "378df79b58557910c291d1e2bca0707bfa003dd5"
+  },
+  {
+    "path": "vendor/ocr/lang/eng.traineddata.gz",
+    "size": 2952873,
+    "sha": "730a6a59010b9440e38dd85f9fe6b6bf0637e6eb"
+  },
+  {
+    "path": "vendor/ocr/lang/fra.traineddata.gz",
+    "size": 707406,
+    "sha": "3b7a9757af295daa0335fce7721d6b8582f56400"
+  }
+]
