@@ -1,22 +1,24 @@
 import type {BriefDocument,BriefImage,BriefModule} from './brief-types.ts';
 import {taskSchema,uid,newWorkflow,SERVICES,type Project} from './studio.ts';
+import {sceneHeading,findSceneHeadings} from './scene-headings.ts';
+export {sceneHeading} from './scene-headings.ts';
 export type TextLine={text:string;x:number;y:number;width:number;height:number};
 export type LayoutPage={number:number;width:number;height:number;lines:TextLine[]};
 export type Segment={moduleId:string;page:number;top:number;bottom:number;left?:number;right?:number};
 export type ImagePlacement={key:string;left:number;top:number;right:number;bottom:number;index:number;inline?:unknown};
 export type BriefStructure={modules:BriefModule[];segments:Segment[];warnings:string[]};
-export function sceneHeading(text:string){const m=text.trim().match(/^(sc[eè]ne|sc\.?|s[eé]quence|seq\.?)\s*(?:n[°ºo]?\s*)?(\d{1,3}(?:\s*[a-z](?=\s*[:.)\-–—|]|\s*$))?|[a-z])(?=\s|[:.)\-–—|]|$)\s*[:.)\-–—|]?\s*(.*)$/i);if(!m||text.length>260)return null;const n=m[2].replace(/\s/g,'').toUpperCase();const ref=(/^s[eé]q/i.test(m[1])?'SEQ.':'SC.')+n.replace(/^\d+/,s=>String(Number(s)).padStart(2,'0'));return {ref,title:(m[3].trim()||ref).slice(0,180)};}
 export function normalizeSceneRef(ref:string){if(/^\d{1,3}[a-z]?$/i.test(ref.trim()))return 'SC.'+ref.trim().toUpperCase().replace(/^\d+/,n=>String(Number(n)).padStart(2,'0'));const heading=sceneHeading(ref);return heading?.ref||ref.toUpperCase().replace(/[^A-Z0-9]/g,'');}
 export function structureBrief(pages:LayoutPage[]):BriefStructure{
- const modules:BriefModule[]=[],segments:Segment[]=[],warnings:string[]=[];let current:BriefModule|null=null;const hasScenes=pages.some(p=>p.lines.some(l=>sceneHeading(l.text)));
+ const modules:BriefModule[]=[],segments:Segment[]=[],warnings:string[]=[];let current:BriefModule|null=null;
+ const ordered=pages.flatMap(p=>[...p.lines].sort((a,b)=>a.y-b.y||a.x-b.x));const detected=findSceneHeadings(ordered.map(l=>l.text));const headings=new Map([...detected].map(([i,h])=>[ordered[i],h]));const hasScenes=headings.size>0;
  const make=(title:string,sceneRef:string)=>{const m:BriefModule={id:uid(),title,sceneRef,text:'',pages:[],taskId:sceneRef?'new':'',images:[]};modules.push(m);return m;};
- for(const page of pages){if(!hasScenes)current=null;const sorted=[...page.lines].sort((a,b)=>a.y-b.y||a.x-b.x);const heads=sorted.filter(l=>sceneHeading(l.text));
+ for(const page of pages){if(!hasScenes)current=null;const sorted=[...page.lines].sort((a,b)=>a.y-b.y||a.x-b.x);const heads=sorted.filter(l=>headings.has(l));
   if(sorted.map(l=>l.text).join('').trim().length<35)warnings.push('Page '+page.number+' : peu de texte sélectionnable. Le visuel est conservé ; complète le texte si le PDF est un scan.');
   const multi=heads.some((h,i)=>heads.some((other,j)=>j!==i&&Math.abs(h.y-other.y)<.02&&Math.abs(h.x-other.x)>.25));let columns=[0,1];
   if(multi){const xs:number[]=[];for(const h of [...heads].sort((a,b)=>a.x-b.x))if(!xs.some(x=>Math.abs(x-h.x)<.15))xs.push(h.x);columns=[0,...xs.slice(1).map(x=>x-xs[0]),1];warnings.push('Page '+page.number+' : colonnes détectées. Vérifie le rattachement des visuels.');}
   for(let c=0;c<columns.length-1;c++){const left=columns[c],right=columns[c+1],lines=sorted.filter(l=>l.x>=left-.005&&l.x<right-.005);let start=0;
    const addPage=(m:BriefModule)=>{if(!m.pages.includes(page.number))m.pages.push(page.number);};
-   for(const line of lines){const h=sceneHeading(line.text);
+   for(const line of lines){const h=headings.get(line);
     if(h){const boundary=Math.max(start,Math.min(.995,line.y-.008));if(current&&boundary>start+.01){segments.push({moduleId:current.id,page:page.number,top:start,bottom:boundary,left,right});addPage(current);}
      if((current as BriefModule|null)?.sceneRef!==h.ref){const old=modules.find(m=>m.sceneRef===h.ref);current=old||make(h.title,h.ref);if(old)warnings.push(h.ref+' : plusieurs passages ont été regroupés. Vérifie le module.');}
      start=boundary;addPage(current!);

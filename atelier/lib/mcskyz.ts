@@ -1,15 +1,15 @@
 import { type SourceScene, type McSkyzPlan } from './workspace-extras.ts';
 import { projectSchema, taskSchema, uid, newWorkflow, type Project } from './studio.ts';
+import {findSceneHeadings} from './scene-headings.ts';
 
 export type PdfPage={number:number;text:string};
 export const normalize=(v:string)=>v.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
-const heading=/^\s*(?:sc[eè]ne|sc\.)\s*(?:n[°ºo]?\s*)?(\d{1,3}(?:\s*[a-z](?=\s*[:.)\-–—|]|\s*$))?|[a-z])(?=\s|[:.)\-–—|]|$)\s*[:.)\-–—|]?\s*(.*)$/i;
 const field=(source:string,label:string)=>{const re=new RegExp('(?:^|\\n)\\s*(?:'+label+')\\s*[:–—-]\\s*([^\\n]+)','i');return source.match(re)?.[1]?.trim()??'';};
 const blockField=(source:string,label:string)=>{
   const start=new RegExp('^\\s*(?:'+label+')\\s*[:–—-]\\s*(.*)','i');
-  const next=/^\s*(?:action|description|cam[eé]ras?|cadrages?|plans?|d[eé]cor(?: principal| ma[iî]tre)?|lieu|environnement|location|variante|zone|ambiance|moment|m[eé]t[eé]o|personnages?|protagonistes?|props?|accessoires?|r[eé]f[eé]rences?)\s*[:–—-]/i;
+  const next=/^\s*(?:sc[eè]ne|action|description|phrase du script|dans le script|cam[eé]ras?|cadrages?|plans?|d[eé]cor(?: principal| ma[iî]tre)?|lieu|environnement|location|variante|zone|ambiance|moment|m[eé]t[eé]o|personnages?|protagonistes?|props?|accessoires?|r[eé]f[eé]rences?)\s*[:–—-]/i;
   const values:string[]=[];let active=false;
-  for(const line of source.split('\n')){const match=line.match(start);if(match){values.push(match[1]);active=true;}else if(next.test(line))active=false;else if(active)values.push(line);}
+  for(const line of source.split('\n')){const match=line.match(start);if(match){values.push(match[1]);active=true;}else if(next.test(line)||/\|\s*page\s+\d+\s*$/i.test(line)||(line.trim().length>8&&line===line.toLocaleUpperCase()&&line.toLocaleLowerCase()!==line.toLocaleUpperCase()))active=false;else if(active)values.push(line);}
   return values.join('\n').trim();
 };
 const shorten=(s:string,n:number)=>s.trim().slice(0,n);
@@ -26,13 +26,20 @@ export function parseMcSkyz(pages:PdfPage[],fileName='Brief McSkyz.pdf'):McSkyzP
   const declaredMatch=full.match(/\b(\d{1,3})\s*sc[eè]nes?\s*(?:3d|au total|à réaliser|a realiser)?/i);
   const declaredScenes=declaredMatch?Number(declaredMatch[1]):null;
   const chunks:{label:string;title:string;text:string;pages:number[]}[]=[];let current:typeof chunks[number]|null=null;let preamble='';
-  for(const page of pages){for(const raw of page.text.split(/\r?\n/)){const line=raw.trim();const match=line.match(heading);
-    if(match&&line.length<260){
-      const ref=match[1].replace(/\s/g,'').toUpperCase();const label='SC.'+(/^\d/.test(ref)?ref.replace(/^\d+/,n=>String(Number(n)).padStart(2,'0')):ref);current={label,title:match[2].trim(),text:line,pages:[page.number]};chunks.push(current);
-    }else if(current){current.text+='\n'+raw;if(!current.pages.includes(page.number))current.pages.push(page.number);}else{preamble+='\n'+raw;}
-  }}
+  const lines=pages.flatMap(page=>page.text.split(/\r?\n/).map(text=>({text,page:page.number})));
+  const headings=findSceneHeadings(lines.map(l=>l.text));
+  for(let i=0;i<lines.length;i++){const {text:raw,page}=lines[i],match=headings.get(i);
+    if(match){current={label:match.ref,title:match.title,text:raw.trim(),pages:[page]};chunks.push(current);}
+    else if(current){current.text+='\n'+raw;if(!current.pages.includes(page))current.pages.push(page);}else{preamble+='\n'+raw;}
+  }
   const unique=new Map<string,typeof chunks[number]>();
-  for(const chunk of chunks){const old=unique.get(chunk.label);if(!old)unique.set(chunk.label,chunk);else{if(chunk.text.length>old.text.length)unique.set(chunk.label,chunk);warnings.push(chunk.label+' apparaît plusieurs fois : le passage le plus détaillé est proposé. Vérifie les pages.');}}
+  for(const chunk of chunks){const old=unique.get(chunk.label);if(!old)unique.set(chunk.label,chunk);else{
+    const body=chunk.text.split('\n').slice(1).join('\n').trim();
+    if(chunk.text.length>old.text.length)old.title=chunk.title;
+    if(body&&!old.text.includes(body))old.text+='\n'+body;
+    old.pages=[...new Set([...old.pages,...chunk.pages])];
+    warnings.push(chunk.label+' apparaît plusieurs fois : les passages ont été regroupés sans retirer leur texte. Vérifie les pages.');
+  }}
   if(unique.size>200)throw new Error('Plus de 200 scènes détectées. Découpe le PDF en plusieurs productions.');
   const scenes=[...unique.values()].map(c=>{
     const source=shorten(c.text,18000);const pipe=c.title.split('|').map(x=>x.trim());
@@ -44,9 +51,9 @@ export function parseMcSkyz(pages:PdfPage[],fileName='Brief McSkyz.pdf'):McSkyzP
     if(environment){const prefix=environment.match(/^(INT\.?|EXT\.?)\s*[-–—:]?\s+/i);if(prefix){variants.push(prefix[1]);environment=environment.slice(prefix[0].length);}const moment=environment.match(/\s*[-–—/(,]\s*(jour|nuit|matin|soir|pluie|neige)\s*\)?\s*$/i);if(moment){variants.push(moment[1]);environment=environment.slice(0,moment.index);}const zone=environment.match(/^(.+?)\s*(?:\/|>|\s[–—-]\s)\s*((?:couloir|chambre|hall|toit|parking|salle|[eé]tage|lobby|entr[eé]e|fa[cç]ade)\b.*)$/i);if(zone){environment=zone[1];variants.push(zone[2]);}}
     const variant=[...new Set(variants.filter(Boolean))].join(' · ');
     const title=shorten(pipe.length>=2?pipe[1]:c.title||c.label,180);const d=difficulty(source);
-    return {id:uid(),label:c.label,title,source,pages:c.pages,action:shorten(blockField(source,'action|description')||(pipe.length>=2?pipe.slice(1).join(' | '):source.replace(/^.*\n?/,''))||title,6000),environment:shorten(environment||'À préciser — '+c.label,180),variant:shorten(variant,300),cameras:shorten(blockField(source,'cam[eé]ra(?:s)?|cadrage(?:s)?|plan(?:s)?'),4000),characters:shorten(blockField(source,'personnage(?:s)?|protagoniste(?:s)?'),2000),props:shorten(blockField(source,'props?|accessoire(?:s)?'),2000),difficulty:d.value,reason:d.reason,assignee:'',locked:false,reviewed:false} satisfies SourceScene;
+    return {id:uid(),label:c.label,title,source,pages:c.pages,action:shorten(blockField(source,'sc[eè]ne|action|description')||(pipe.length>=2?pipe.slice(1).join(' | '):source.replace(/^.*\n?/,''))||title,6000),environment:shorten(environment||'À préciser — '+c.label,180),variant:shorten(variant,300),cameras:shorten(blockField(source,'cam[eé]ra(?:s)?|cadrage(?:s)?|plan(?:s)?'),4000),characters:shorten(blockField(source,'personnage(?:s)?|protagoniste(?:s)?'),2000),props:shorten(blockField(source,'props?|accessoire(?:s)?'),2000),difficulty:d.value,reason:d.reason,assignee:'',locked:false,reviewed:false} satisfies SourceScene;
   });
-  if(!scenes.length)warnings.push('Aucune scène détaillée identifiée. Ce document peut être un budget, un sommaire ou un scan. Ajoute le brief détaillé ou colle un texte structuré ; aucun découpage ne sera inventé.');
+  if(!scenes.length)warnings.push('Le texte a été lu, mais les titres des scènes n’ont pas été reconnus. Formats acceptés : « Scène 01 — Titre », « 3D 01 — Titre », ou « 1. Titre » suivi de champs Décor, Scène / Action et Caméra. Vérifie la numérotation dans l’onglet Texte du brief.');
   if(declaredScenes!==null&&declaredScenes!==scenes.length)warnings.push('Le document annonce '+declaredScenes+' scènes ; '+scenes.length+' références distinctes ont été reconnues. Les scènes A/B et les variantes ne sont pas supprimées pour atteindre le chiffre annoncé.');
   const unknown=scenes.filter(s=>s.environment.startsWith('À préciser')).length;if(unknown)warnings.push(unknown+' scène(s) sans décor explicite : indique leur décor ou fusionne les lieux avant de répartir.');
   if(scenes.some(s=>s.source.length===18000))warnings.push('Une scène dépasse la capacité de texte par scène. Vérifie le PDF original avant validation.');
