@@ -16,3 +16,10 @@ test('le logo, les polices et les bundles Next restent exclus',()=>{
 test('régression : le matcher seul excluait exactement /atelier',()=>{
  assert.equal(match({config:{matcher:config.matcher.filter(s=>s!=='/')},nextConfig,url:'https://local.test/atelier'}),false);
 });
+
+// Authenticated API assets retain file extensions, unlike public Next/static assets.
+test('les pages, scripts et polices de Radar passent toujours par Clerk',()=>{
+ for(const asset of ['index.html','scanner.html','app.js','style.css','archivo.woff2']){
+  assert.equal(match({config,nextConfig,url:'https://local.test/atelier/api/radar/ui/'+asset}),true,asset);
+ }
+});
