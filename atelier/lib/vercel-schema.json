@@ -18,5 +18,13 @@
   "CREATE UNIQUE INDEX IF NOT EXISTS \"membership_agency_profile\" ON \"atelier_memberships\" (\"agency_id\",\"profile_id\")",
   "CREATE UNIQUE INDEX IF NOT EXISTS \"membership_agency_user\" ON \"atelier_memberships\" (\"agency_id\",\"user_id\")",
   "CREATE TABLE IF NOT EXISTS atelier_auth_identities (subject text PRIMARY KEY,user_id text NOT NULL UNIQUE,email text NOT NULL,created_at text NOT NULL)",
-  "CREATE TABLE IF NOT EXISTS atelier_hosting_transfer (id text PRIMARY KEY,manifest text NOT NULL,state text NOT NULL,updated_at text NOT NULL)"
+  "CREATE TABLE IF NOT EXISTS atelier_hosting_transfer (id text PRIMARY KEY,manifest text NOT NULL,state text NOT NULL,updated_at text NOT NULL)",
+  "CREATE TABLE IF NOT EXISTS atelier_radar_state (agency_id TEXT PRIMARY KEY, content JSONB NOT NULL, revision INTEGER NOT NULL DEFAULT 0, updated_at TEXT NOT NULL)",
+  "CREATE TABLE IF NOT EXISTS atelier_radar_runs (agency_id TEXT NOT NULL, id TEXT NOT NULL, status TEXT NOT NULL, started_at TEXT NOT NULL, finished_at TEXT, trigger_name TEXT NOT NULL, report_json TEXT, origin TEXT NOT NULL DEFAULT 'atelier', PRIMARY KEY(agency_id,id))",
+  "CREATE UNIQUE INDEX IF NOT EXISTS atelier_radar_one_running ON atelier_radar_runs(agency_id) WHERE status='running'",
+  "CREATE TABLE IF NOT EXISTS atelier_radar_jobs (agency_id TEXT NOT NULL, id TEXT NOT NULL, source_id TEXT NOT NULL, company TEXT NOT NULL, title TEXT NOT NULL, data_json TEXT NOT NULL, first_seen TEXT NOT NULL, last_seen TEXT NOT NULL, missing_count INTEGER NOT NULL DEFAULT 0, status TEXT NOT NULL DEFAULT 'observed', updated_at TEXT NOT NULL, PRIMARY KEY(agency_id,id))",
+  "CREATE TABLE IF NOT EXISTS atelier_radar_source_runs (agency_id TEXT NOT NULL, run_id TEXT NOT NULL, source_id TEXT NOT NULL, status TEXT NOT NULL, data_json TEXT NOT NULL, PRIMARY KEY(agency_id,run_id,source_id))",
+  "CREATE TABLE IF NOT EXISTS atelier_radar_sync (agency_id TEXT PRIMARY KEY, checked_at TEXT NOT NULL, status TEXT NOT NULL)",
+  "CREATE INDEX IF NOT EXISTS atelier_radar_jobs_agency_seen ON atelier_radar_jobs(agency_id,last_seen)",
+  "CREATE INDEX IF NOT EXISTS atelier_radar_runs_agency_started ON atelier_radar_runs(agency_id,started_at)"
 ]

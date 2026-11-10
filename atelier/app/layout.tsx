@@ -10,6 +10,7 @@ import "./order-status.css";
 import "./invoice-paper.css";
 import "./profile-multi.css";
 import "./control-center.css";
+import "./radar.css";
 
 export const metadata: Metadata = {
   title: "Atelier — Explicit Crea",

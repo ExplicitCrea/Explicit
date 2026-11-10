@@ -1,3 +1,4 @@
+import {isAtelierRequestOrigin} from '../../../lib/public-origin';
 import { getChatGPTUser } from '../../chatgpt-auth';
 import { loadWorkspace, saveWorkspace } from '../../../lib/storage';
 import { workspaceSchema } from '../../../lib/studio';
@@ -13,8 +14,7 @@ export async function GET(request?:Request) {
 export async function PUT(request:Request) {
   const user=await getChatGPTUser();
   if(!user) return Response.json({error:'Ta session a expiré. Reconnecte-toi.'},{status:401,headers:noStore});
-  const origin=request.headers.get('origin');
-  if(origin&&origin!==new URL(request.url).origin) return Response.json({error:'Origine refusée.'},{status:403,headers:noStore});
+  if(!isAtelierRequestOrigin(request)) return Response.json({error:'Origine refusée.'},{status:403,headers:noStore});
   try {
     const context=await accountContext(user,new URL(request.url).searchParams.get('agency'));requireEditor(context);
     const body=await request.text();
