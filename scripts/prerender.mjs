@@ -85,6 +85,14 @@ ${servicesHtml}
     noindex: true,
     body: wrap(`<h1>Snake</h1>`),
   },
+  {
+    path: '/404',
+    file: '404.html',
+    title: 'Page introuvable | Explicit Crea',
+    description: "Cette page n'existe pas ou a été déplacée.",
+    noindex: true,
+    body: wrap(`<h1>Page introuvable</h1><p>Cette page n'existe pas ou a été déplacée.</p>`),
+  },
 ];
 
 const setMeta = (html, attr, key, value) => {

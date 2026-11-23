@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import CustomCursor from './components/CustomCursor';
 import ScrollToTop from './components/ScrollToTop';
@@ -131,7 +131,14 @@ const App: React.FC = () => {
             <Seo path="/snake" title="Snake" description="Mini-jeu Snake d'Explicit Crea." noindex />
             <SnakePage />
           </>} />
-          <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="*" element={<>
+            <Seo path="/404" title="Page introuvable" description="Cette page n'existe pas ou a été déplacée." noindex />
+            <main style={{ minHeight: '60vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '24px', padding: '120px 24px', textAlign: 'center' }}>
+              <h1 style={{ fontSize: '2.5rem', margin: 0 }}>Page introuvable</h1>
+              <p style={{ color: 'var(--text-secondary)', margin: 0 }}>Cette page n'existe pas ou a été déplacée.</p>
+              <Link to="/" className="btn-primary" style={{ padding: '12px 28px', borderRadius: '999px', background: '#fff', color: '#111', textDecoration: 'none', fontWeight: 600 }}>Retour à l'accueil</Link>
+            </main>
+          </>} />
         </Routes>
 
         <Footer triggerFairyDust={triggerFairyDust} />
