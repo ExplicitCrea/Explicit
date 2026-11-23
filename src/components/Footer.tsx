@@ -19,10 +19,14 @@ export const Footer: React.FC<FooterProps> = ({ triggerFairyDust }) => {
           <p>&copy; Explicit Créa. Tous droits réservés.</p>
         </div>
         <div className="footer-links">
-          <Link to="/" className="footer-link">Services</Link>
+          <Link to="/services/montage-video" className="footer-link">Montage vidéo</Link>
+          <Link to="/services/motion-design" className="footer-link">Motion design</Link>
+          <Link to="/services/3d" className="footer-link">3D et VFX</Link>
+          <Link to="/services/production-video" className="footer-link">Production vidéo</Link>
           <Link to="/qui-sommes-nous" className="footer-link">Qui sommes nous ?</Link>
           <Link to="/aide" className="footer-link">Aide</Link>
           <Link to="/mentions-legales" className="footer-link">Mentions légales</Link>
+          <a href="https://www.instagram.com/explicit.crea/" className="footer-link" target="_blank" rel="noopener noreferrer">Instagram</a>
           <a href="https://facture.explicitcrea.com/" className="footer-link" target="_blank" rel="noopener noreferrer">Factures</a>
         </div>
       </div>

@@ -1,12 +1,15 @@
 // Pré-rendu SEO post-build : génère un HTML par route avec son <head> et un contenu
 // texte réel, lisibles par Google et les réseaux sociaux sans exécuter le JavaScript.
 // React remplace ce contenu au chargement (createRoot vide #root).
-import { readFileSync, writeFileSync } from 'node:fs';
-import { join } from 'node:path';
+import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { join, dirname } from 'node:path';
 
 const DIST = 'dist';
 const SITE = 'https://www.explicitcrea.com';
 const template = readFileSync(join(DIST, 'index.html'), 'utf8');
+const SERVICE_PAGES = JSON.parse(readFileSync('src/data/services.json', 'utf8'));
+const PROJECTS = JSON.parse(readFileSync('src/data/projects.json', 'utf8'));
+const TODAY = new Date().toISOString().slice(0, 10);
 
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
@@ -31,7 +34,7 @@ const FAQ = [
   ['Comment fonctionne la tarification ?', "Chaque projet est unique : contactez-nous avec un maximum d'informations et nous établissons un devis ensemble."],
 ];
 
-const nav = `<nav aria-label="Navigation"><a href="/">Accueil</a> · <a href="/qui-sommes-nous">Qui sommes-nous</a> · <a href="/aide">FAQ</a> · <a href="/#contact">Contact</a> · <a href="/mentions-legales">Mentions légales</a></nav>`;
+const nav = `<nav aria-label="Navigation"><a href="/">Accueil</a> · ${SERVICE_PAGES.map((x) => `<a href="/services/${x.slug}">${esc(x.name)}</a>`).join(' · ')} · <a href="/qui-sommes-nous">Qui sommes-nous</a> · <a href="/aide">FAQ</a> · <a href="/#contact">Contact</a> · <a href="/mentions-legales">Mentions légales</a></nav>`;
 const wrap = (inner) => `<main style="max-width:760px;margin:12vh auto;padding:0 24px;font-family:system-ui,sans-serif;color:#eee;line-height:1.6">${inner}${nav}</main>`;
 
 const servicesHtml = `<h2>Nos services</h2><ul>${SERVICES.map(([t, d]) => `<li><strong>${esc(t)}</strong> : ${esc(d)}</li>`).join('')}</ul>`;
@@ -45,6 +48,9 @@ const ROUTES = [
     body: wrap(`<h1>Explicit Crea, agence de création audiovisuelle</h1>
 <p>Vous avez une idée ? On la transforme en rendu concret, du concept à la production finale. Explicit Crea accompagne créateurs de contenu, marques et agences : montage vidéo, scènes 3D, motion design, sound design et branding.</p>
 ${servicesHtml}
+<h2>Nos expertises</h2><ul>${SERVICE_PAGES.map((x) => `<li><a href="/services/${x.slug}">${esc(x.name)}</a></li>`).join('')}</ul>
+<h2>Nos travaux</h2><ul>${PROJECTS.map((p) => `<li><a href="${p.url}">${esc(p.title)}</a> (${esc(p.client)})</li>`).join('')}</ul>
+<p>Suivez-nous sur <a href="https://www.instagram.com/explicit.crea/">Instagram</a>.</p>
 <h2>Parlons de votre projet</h2><p>Écrivez-nous à <a href="mailto:contact@explicitcrea.com">contact@explicitcrea.com</a> : premier retour en moins de 24 heures.</p>`),
   },
   {
@@ -95,6 +101,42 @@ ${servicesHtml}
   },
 ];
 
+for (const sv of SERVICE_PAGES) {
+  const related = PROJECTS.filter((p) => sv.projects.includes(p.id));
+  ROUTES.push({
+    path: `/services/${sv.slug}`,
+    file: `services/${sv.slug}.html`,
+    title: sv.metaTitle,
+    description: sv.description,
+    sitemapPriority: '0.9',
+    body: wrap(`<h1>${esc(sv.h1)}</h1><p>${esc(sv.intro)}</p>
+<h2>Ce que nous proposons</h2><ul>${sv.includes.map((i) => `<li>${esc(i)}</li>`).join('')}</ul>
+<h2>Pour qui ?</h2><p>${esc(sv.forWho)}</p>
+${related.length ? `<h2>Quelques réalisations</h2><ul>${related.map((p) => `<li><a href="${p.url}">${esc(p.title)}</a> (${esc(p.client)})</li>`).join('')}</ul>` : ''}
+<h2>Parlons de votre projet</h2><p>Écrivez-nous à <a href="mailto:contact@explicitcrea.com">contact@explicitcrea.com</a> : premier retour en moins de 24 heures.</p>`),
+    jsonld: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: sv.name,
+        serviceType: sv.name,
+        description: sv.description,
+        url: `${SITE}/services/${sv.slug}`,
+        areaServed: 'FR',
+        provider: { '@id': `${SITE}/#organization` },
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Accueil', item: SITE },
+          { '@type': 'ListItem', position: 2, name: sv.name, item: `${SITE}/services/${sv.slug}` },
+        ],
+      },
+    ],
+  });
+}
+
 const setMeta = (html, attr, key, value) => {
   const re = new RegExp(`(<meta ${attr}="${key.replace(/[:]/g, '\\$&')}" content=")[^"]*(")`);
   return re.test(html) ? html.replace(re, `$1${esc(value)}$2`) : html;
@@ -112,10 +154,20 @@ for (const r of ROUTES) {
   html = setMeta(html, 'name', 'twitter:title', r.title);
   html = setMeta(html, 'name', 'twitter:description', r.description);
   html = html.replace(/<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="${url}">`);
-  if (r.jsonld) {
-    html = html.replace('</head>', `<script type="application/ld+json">${JSON.stringify(r.jsonld)}</script>\n  </head>`);
+  for (const ld of [].concat(r.jsonld || [])) {
+    html = html.replace('</head>', `<script type="application/ld+json">${JSON.stringify(ld).replace(/</g, '\\u003c')}</script>\n  </head>`);
   }
   html = html.replace(/<div id="root">[\s\S]*?<\/div>\s*(?=<\/body>|<script)/, `<div id="root">${r.body}</div>\n    `);
+  mkdirSync(dirname(join(DIST, r.file)), { recursive: true });
   writeFileSync(join(DIST, r.file), html);
   console.log(`prerender: ${r.path} -> dist/${r.file}`);
 }
+
+// Sitemap généré à partir des routes indexables
+const PRIORITY = { '/': '1.0', '/qui-sommes-nous': '0.8', '/aide': '0.6', '/mentions-legales': '0.2' };
+const urls = ROUTES.filter((r) => !r.noindex).map((r) => {
+  const loc = SITE + (r.path === '/' ? '/' : r.path);
+  return `  <url><loc>${loc}</loc><lastmod>${TODAY}</lastmod><priority>${r.sitemapPriority || PRIORITY[r.path] || '0.5'}</priority></url>`;
+});
+writeFileSync(join(DIST, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join('\n')}\n</urlset>\n`);
+console.log(`prerender: sitemap.xml (${urls.length} URLs)`);

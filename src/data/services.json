@@ -1,0 +1,111 @@
+[
+  {
+    "slug": "montage-video",
+    "name": "Montage vidéo",
+    "metaTitle": "Montage vidéo YouTube et réseaux sociaux | Explicit Crea",
+    "description": "Montage vidéo YouTube, réseaux sociaux et formats longs : rythme, rétention, sous-titres, vignettes. Explicit Crea monte vos vidéos de A à Z.",
+    "h1": "Montage vidéo pour YouTube et les réseaux sociaux",
+    "intro": "Un bon montage, c'est ce qui fait qu'un spectateur reste jusqu'à la fin. Nous montons vos vidéos avec un objectif clair : un rythme maîtrisé, une narration lisible et une rétention d'audience maximale, que ce soit pour une vidéo YouTube longue, un format court ou un contenu de marque.",
+    "includes": [
+      "Montage de vidéos YouTube, formats longs et documentaires",
+      "Formats courts verticaux : Shorts, Reels, TikTok",
+      "Habillage : titres, sous-titres, transitions et effets",
+      "Étalonnage et mixage audio",
+      "Vignettes YouTube pensées pour le clic"
+    ],
+    "forWho": "Créateurs de contenu, chaînes YouTube, marques et agences qui veulent des vidéos plus engageantes sans y passer leurs journées.",
+    "projects": [
+      "le-grand-jd",
+      "maskey",
+      "vzion"
+    ]
+  },
+  {
+    "slug": "motion-design",
+    "name": "Motion design",
+    "metaTitle": "Motion design et animation 2D | Explicit Crea",
+    "description": "Motion design, animation 2D, infographies animées et habillages : Explicit Crea donne vie à vos idées avec des animations impactantes.",
+    "h1": "Motion design et animation",
+    "intro": "Le motion design permet d'expliquer, de mettre en valeur et de capter l'attention en quelques secondes. Nous concevons des animations sur-mesure, de l'idée au rendu final, pour vos vidéos, vos réseaux et vos présentations.",
+    "includes": [
+      "Vidéos explicatives et infographies animées",
+      "Animation de logos et d'identités visuelles",
+      "Habillage de vidéos : génériques, titres, transitions",
+      "Animations pour réseaux sociaux et publicités",
+      "Intégration d'animations dans vos montages"
+    ],
+    "forWho": "Marques, startups, créateurs et agences qui veulent un rendu animé, clair et mémorable.",
+    "projects": []
+  },
+  {
+    "slug": "3d",
+    "name": "3D et VFX",
+    "metaTitle": "Création 3D, scènes cinématiques et VFX | Explicit Crea",
+    "description": "Scènes cinématiques 3D, modélisation, VFX et simulations : Explicit Crea crée des visuels 3D qui font la différence dans vos vidéos.",
+    "h1": "Création 3D, scènes cinématiques et VFX",
+    "intro": "La 3D permet de montrer ce qu'une caméra ne peut pas filmer. Nous créons des scènes cinématiques, des modèles 3D et des effets visuels pour rendre vos vidéos plus spectaculaires et vos produits plus désirables.",
+    "includes": [
+      "Scènes et séquences cinématiques 3D",
+      "Modélisation 3D d'objets, de produits et de décors",
+      "Effets visuels (VFX) et simulations",
+      "Mise en scène et animation de produits",
+      "Intégration 3D dans des images filmées"
+    ],
+    "forWho": "Créateurs de contenu, marques et agences qui veulent des visuels à fort impact pour leurs vidéos, publicités ou lancements.",
+    "projects": []
+  },
+  {
+    "slug": "production-video",
+    "name": "Production vidéo complète",
+    "metaTitle": "Production vidéo complète, du concept au rendu | Explicit Crea",
+    "description": "Production vidéo de A à Z : concept, écriture, réalisation, montage, 3D, motion design et sound design. Un seul interlocuteur pour tout votre projet.",
+    "h1": "Production vidéo complète, du concept au rendu final",
+    "intro": "Vous avez une idée mais pas l'équipe pour la réaliser ? Nous prenons en charge votre projet vidéo de A à Z. Nos artistes en montage, 3D, motion design et sound design travaillent ensemble, avec un seul interlocuteur pour vous.",
+    "includes": [
+      "Conseil, concept et écriture",
+      "Coordination de toute la production",
+      "Montage, 3D, motion design et effets visuels",
+      "Sound design et mixage",
+      "Livraison dans tous les formats dont vous avez besoin"
+    ],
+    "forWho": "Marques, entreprises et créateurs qui veulent confier un projet vidéo complet à une seule équipe.",
+    "projects": [
+      "le-grand-jd",
+      "maskey",
+      "vzion"
+    ]
+  },
+  {
+    "slug": "sound-design",
+    "name": "Sound design",
+    "metaTitle": "Sound design et mixage audio pour la vidéo | Explicit Crea",
+    "description": "Sound design, bruitages, ambiances et mixage audio pour vos vidéos : Explicit Crea ajoute de la profondeur et de l'impact à vos contenus.",
+    "h1": "Sound design et mixage audio",
+    "intro": "Le son représente la moitié de l'expérience d'une vidéo. Nous créons des ambiances, des bruitages et des mixages qui donnent de la profondeur et de l'impact à vos contenus.",
+    "includes": [
+      "Création d'ambiances et de bruitages",
+      "Sound design pour animations, 3D et motion design",
+      "Mixage et nettoyage des voix",
+      "Habillage sonore de marque",
+      "Mise aux normes de volume pour chaque plateforme"
+    ],
+    "forWho": "Créateurs, marques et studios qui veulent un rendu sonore professionnel.",
+    "projects": []
+  },
+  {
+    "slug": "design-graphique",
+    "name": "Design graphique et illustration",
+    "metaTitle": "Design graphique, branding et illustration | Explicit Crea",
+    "description": "Identité visuelle, branding, supports graphiques, illustrations sur-mesure et vignettes YouTube : un style visuel unique pour votre marque.",
+    "h1": "Design graphique, branding et illustration",
+    "intro": "Une identité visuelle forte vous rend reconnaissable au premier coup d'œil. Nous créons logos, chartes graphiques, illustrations et supports visuels qui renforcent votre image.",
+    "includes": [
+      "Logo et identité visuelle",
+      "Charte graphique et déclinaisons",
+      "Illustrations sur-mesure",
+      "Vignettes YouTube et visuels pour réseaux sociaux"
+    ],
+    "forWho": "Créateurs, marques et entreprises qui veulent une image cohérente et professionnelle sur tous leurs supports.",
+    "projects": []
+  }
+]

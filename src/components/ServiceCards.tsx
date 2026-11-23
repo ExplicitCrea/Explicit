@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useState } from "react";
 import "./ServiceCards.css";
 import ScrollReveal from "./ScrollReveal";
@@ -92,18 +93,18 @@ function cardGradientTs(index: number, total: number) {
 // ─────────────────────────────────────────────────────────────────────────────
 // Data
 // ─────────────────────────────────────────────────────────────────────────────
-interface Service { id: number; icon: React.ReactNode; title: string; subtitle?: string; description: string; }
+interface Service { id: number; icon: React.ReactNode; title: string; subtitle?: string; description: string; slug: string; }
 
 const services: Service[] = [
-  { id: 1, icon: <YoutubeIcon />,      title: "MONTAGE",      subtitle: "YOUTUBE",         description: "Un montage à fort impact pour une rétention d'audience maximale." },
-  { id: 2, icon: <CinematicIcon />,    title: "SCÈNES",       subtitle: "CINÉMATIQUES 3D", description: "Des visuels 3D époustouflants pour rendre vos vidéos virales." },
-  { id: 3, icon: <ProductionIcon />,   title: "PRODUCTION",   subtitle: "VIDÉO COMPLÈTE",  description: "Du concept au rendu final. Une prise en charge de A à Z." },
-  { id: 4, icon: <SoundIcon />,        title: "SOUND",        subtitle: "DESIGN",          description: "Ajoutez de la profondeur et de l'impact à vos contenus." },
-  { id: 5, icon: <MotionIcon />,       title: "MOTION",       subtitle: "DESIGN",          description: "Donnez vie à vos idées avec des animations impactantes." },
-  { id: 6, icon: <ThumbnailIcon />,    title: "VIGNETTE",     subtitle: "YOUTUBE",         description: "Miniatures optimisées pour maximiser le clic." },
-  { id: 7, icon: <ModelIcon />,        title: "MODÉLISATION", subtitle: "3D",              description: "Des assets propres, exploitables et adaptés à vos besoins." },
-  { id: 8, icon: <IllustrationIcon />, title: "ILLUSTRATION", subtitle: "SUR-MESURE",      description: "Un style visuel unique pour renforcer votre identité." },
-  { id: 9, icon: <GraphicIcon />,      title: "DESIGN",       subtitle: "GRAPHIQUE",       description: "Création d'identités visuelles et supports graphiques." },
+  { id: 1, icon: <YoutubeIcon />,      title: "MONTAGE",      subtitle: "YOUTUBE",         description: "Un montage à fort impact pour une rétention d'audience maximale.", slug: "montage-video" },
+  { id: 2, icon: <CinematicIcon />,    title: "SCÈNES",       subtitle: "CINÉMATIQUES 3D", description: "Des visuels 3D époustouflants pour rendre vos vidéos virales.", slug: "3d" },
+  { id: 3, icon: <ProductionIcon />,   title: "PRODUCTION",   subtitle: "VIDÉO COMPLÈTE",  description: "Du concept au rendu final. Une prise en charge de A à Z.", slug: "production-video" },
+  { id: 4, icon: <SoundIcon />,        title: "SOUND",        subtitle: "DESIGN",          description: "Ajoutez de la profondeur et de l'impact à vos contenus.", slug: "sound-design" },
+  { id: 5, icon: <MotionIcon />,       title: "MOTION",       subtitle: "DESIGN",          description: "Donnez vie à vos idées avec des animations impactantes.", slug: "motion-design" },
+  { id: 6, icon: <ThumbnailIcon />,    title: "VIGNETTE",     subtitle: "YOUTUBE",         description: "Miniatures optimisées pour maximiser le clic.", slug: "montage-video" },
+  { id: 7, icon: <ModelIcon />,        title: "MODÉLISATION", subtitle: "3D",              description: "Des assets propres, exploitables et adaptés à vos besoins.", slug: "3d" },
+  { id: 8, icon: <IllustrationIcon />, title: "ILLUSTRATION", subtitle: "SUR-MESURE",      description: "Un style visuel unique pour renforcer votre identité.", slug: "design-graphique" },
+  { id: 9, icon: <GraphicIcon />,      title: "DESIGN",       subtitle: "GRAPHIQUE",       description: "Création d'identités visuelles et supports graphiques.", slug: "design-graphique" },
 ];
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -209,6 +210,9 @@ export default function ServiceCards() {
                     </div>
 
                     <p className="card-description">{service.description}</p>
+                    <Link to={`/services/${service.slug}`} className="card-link interactive" aria-label={`En savoir plus : ${service.title} ${service.subtitle ?? ''}`} style={{ position: 'relative', zIndex: 2, display: 'inline-block', marginTop: '12px', color: '#fff', fontSize: '0.85rem', fontWeight: 600, letterSpacing: '0.05em', textDecoration: 'none', opacity: 0.85 }}>
+                      DÉCOUVRIR →
+                    </Link>
                   </div>
                 </div>
               </ScrollReveal>

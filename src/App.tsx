@@ -5,6 +5,7 @@ import CustomCursor from './components/CustomCursor';
 import ScrollToTop from './components/ScrollToTop';
 import Footer from './components/Footer';
 import Seo from './components/Seo';
+import ServicePage from './pages/Service/ServicePage';
 
 // Pages
 import HomePage from './pages/Home/HomePage';
@@ -131,6 +132,7 @@ const App: React.FC = () => {
             <Seo path="/snake" title="Snake" description="Mini-jeu Snake d'Explicit Crea." noindex />
             <SnakePage />
           </>} />
+          <Route path="/services/:slug" element={<ServicePage />} />
           <Route path="*" element={<>
             <Seo path="/404" title="Page introuvable" description="Cette page n'existe pas ou a été déplacée." noindex />
             <main style={{ minHeight: '60vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '24px', padding: '120px 24px', textAlign: 'center' }}>
