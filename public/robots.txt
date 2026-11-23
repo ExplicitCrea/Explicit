@@ -1,7 +1,6 @@
 User-agent: *
 Allow: /
-
-# Bloquer les crawlers des dossiers d'assets non pertinents
-Disallow: /assets/
+Disallow: /api/
+Disallow: /snake
 
 Sitemap: https://www.explicitcrea.com/sitemap.xml

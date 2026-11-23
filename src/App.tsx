@@ -4,6 +4,7 @@ import './App.css';
 import CustomCursor from './components/CustomCursor';
 import ScrollToTop from './components/ScrollToTop';
 import Footer from './components/Footer';
+import Seo from './components/Seo';
 
 // Pages
 import HomePage from './pages/Home/HomePage';
@@ -13,7 +14,6 @@ import MentionsPage from './pages/Legal/MentionsPage';
 import SnakePage from './pages/Snake/SnakePage';
 
 import { ACTIVE_THEME, ACTIVE_LOGO, applyThemeToDom } from './config/themes';
-import portfolioVideoWebm from '../assets/Showreel2.webm';
 
 const App: React.FC = () => {
   const [loading, setLoading] = useState(true);
@@ -50,27 +50,18 @@ const App: React.FC = () => {
       }, 800);
     };
 
-    // Préchargement de la vidéo Showreel
-    const video = document.createElement('video');
-    video.src = portfolioVideoWebm;
-    video.preload = 'auto';
-
-    // Déclenché quand le navigateur a assez de données pour lire la vidéo d'un bout à l'autre sans interruption
-    video.addEventListener('canplaythrough', handleLoad, { once: true });
-    video.addEventListener('error', handleLoad, { once: true });
-    video.load();
-
-    if (video.readyState >= 4) {
-      handleLoad();
-    }
-
-    // Sécurité de 10s maximum en cas de coupure réseau
-    const safetyTimer = setTimeout(handleLoad, 10000);
+    // On n'attend plus la vidéo complète (jusqu'à 10 s auparavant) : le loader
+    // disparaît dès que la page est prête, avec un plafond court pour le LCP / SEO.
+    const minTimer = setTimeout(() => {
+      if (document.readyState === 'complete') handleLoad();
+      else window.addEventListener('load', handleLoad, { once: true });
+    }, 600);
+    const safetyTimer = setTimeout(handleLoad, 2500);
 
     return () => {
       isMounted = false;
-      video.removeEventListener('canplaythrough', handleLoad);
-      video.removeEventListener('error', handleLoad);
+      window.removeEventListener('load', handleLoad);
+      clearTimeout(minTimer);
       clearTimeout(safetyTimer);
     };
   }, []);
@@ -100,11 +91,46 @@ const App: React.FC = () => {
         <div className="parallax-grid" style={{ transform: `translateY(${-gridOffset % 80}px)` }} />
         
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/qui-sommes-nous" element={<WhoUsPage />} />
-          <Route path="/aide" element={<AidePage />} />
-          <Route path="/mentions-legales" element={<MentionsPage />} />
-          <Route path="/snake" element={<SnakePage />} />
+          <Route path="/" element={<>
+            <Seo
+              path="/"
+              title="Explicit Crea | Agence de création audiovisuelle : montage, motion design, 3D"
+              description="Explicit Crea, agence de création audiovisuelle : montage vidéo, motion design, 3D, VFX, branding et sound design pour marques, créateurs et événements."
+              h1="Explicit Crea, agence de création audiovisuelle"
+            />
+            <HomePage />
+          </>} />
+          <Route path="/qui-sommes-nous" element={<>
+            <Seo
+              path="/qui-sommes-nous"
+              title="Qui sommes-nous ? L'équipe Explicit Crea"
+              description="Découvrez l'équipe d'Explicit Crea : des artistes passionnés en montage, motion design, 3D et sound design au service de vos projets audiovisuels."
+              h1="Qui sommes-nous ? L'équipe Explicit Crea"
+            />
+            <WhoUsPage />
+          </>} />
+          <Route path="/aide" element={<>
+            <Seo
+              path="/aide"
+              title="FAQ : questions fréquentes"
+              description="Délais, tarifs, déroulement d'un projet : toutes les réponses aux questions fréquentes sur les prestations audiovisuelles d'Explicit Crea."
+              h1="Aide et questions fréquentes"
+            />
+            <AidePage />
+          </>} />
+          <Route path="/mentions-legales" element={<>
+            <Seo
+              path="/mentions-legales"
+              title="Mentions légales"
+              description="Mentions légales du site explicitcrea.com, édité par Explicit Crea."
+              h1="Mentions légales"
+            />
+            <MentionsPage />
+          </>} />
+          <Route path="/snake" element={<>
+            <Seo path="/snake" title="Snake" description="Mini-jeu Snake d'Explicit Crea." noindex />
+            <SnakePage />
+          </>} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
 

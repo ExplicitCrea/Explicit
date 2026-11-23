@@ -270,6 +270,8 @@ export const HomePage: React.FC = () => {
                   disablePictureInPicture
                   onContextMenu={(e) => e.preventDefault()}
                   className="hero-video glass"
+                  poster="/showreel-poster.jpg"
+                  preload="auto"
                   style={{ pointerEvents: 'none', userSelect: 'none' }}
                 >
                   <source src={portfolioVideoWebm} type="video/webm" />
@@ -300,7 +302,7 @@ export const HomePage: React.FC = () => {
               <a href="https://www.youtube.com/watch?v=erT9IivBlKA" target="_blank" rel="noopener noreferrer" className="project-link">
                 <div className="card glass project-card interactive">
                   <div className="project-image-container">
-                    <img src={legrandjd} alt="Le Grand JD" />
+                    <img loading="lazy" decoding="async" src={legrandjd} alt="Le Grand JD" />
                   </div>
                   <div className="project-info">
                     <h3>MICHAEL JACKSON EST TOUJOURS EN VIE</h3>
@@ -316,7 +318,7 @@ export const HomePage: React.FC = () => {
               <a href="https://www.youtube.com/watch?v=J7fi9ja87vo" target="_blank" rel="noopener noreferrer" className="project-link">
                 <div className="card glass project-card interactive">
                   <div className="project-image-container">
-                    <img src={maskey} alt="Maskey" />
+                    <img loading="lazy" decoding="async" src={maskey} alt="Maskey" />
                   </div>
                   <div className="project-info">
                     <h3>J'ai passé deux ans sans papiers.</h3>
@@ -332,7 +334,7 @@ export const HomePage: React.FC = () => {
               <a href="https://www.youtube.com/watch?v=BFhN_HLCOzM" target="_blank" rel="noopener noreferrer" className="project-link">
                 <div className="card glass project-card interactive">
                   <div className="project-image-container">
-                    <img src={vzion} alt="Vzion" />
+                    <img loading="lazy" decoding="async" src={vzion} alt="Vzion" />
                   </div>
                   <div className="project-info">
                     <h3>Comment la Justice peut Condamner un Innocent.</h3>
@@ -384,7 +386,7 @@ export const HomePage: React.FC = () => {
                 boxShadow: `0 0 60px rgba(${activeColor}, 0.4), 0 0 20px rgba(${activeColor}, 0.2)`,
                 borderColor: `rgba(${activeColor}, 0.3)`
               }}>
-                <img 
+                <img loading="lazy" decoding="async" 
                   key={collaborators[currentColab].id} 
                   src={collaborators[currentColab].img} 
                   alt={collaborators[currentColab].name} 
@@ -406,7 +408,7 @@ export const HomePage: React.FC = () => {
                   loop
                   muted
                   playsInline
-                  preload="auto"
+                  preload="metadata"
                   controlsList="nodownload noremoteplayback"
                   disablePictureInPicture
                   onContextMenu={(e) => e.preventDefault()}

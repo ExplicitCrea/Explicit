@@ -1,5 +1,5 @@
 import { defineConfig, loadEnv, type Plugin } from 'vite';
-import react from '@vitejs/plugin-react';
+import react from '@vitejs/plugin-react-swc';
 
 // Plugin Vite pour simuler l'API serverless en développement local avec les variables .env.local
 function apiDevPlugin(): Plugin {
@@ -50,4 +50,8 @@ function apiDevPlugin(): Plugin {
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), apiDevPlugin()],
+  build: {
+    target: 'es2020',
+    assetsInlineLimit: 4096,
+  },
 });
