@@ -104,7 +104,7 @@ const App: React.FC = () => {
             <Seo
               path="/qui-sommes-nous"
               title="Qui sommes-nous ? L'équipe Explicit Crea"
-              description="Découvrez l'équipe d'Explicit Crea : des artistes passionnés en montage, motion design, 3D et sound design au service de vos projets audiovisuels."
+              description="Explicit Crea : 7 artistes à plein temps et un réseau de plus de 30 talents en montage, motion design, 3D et graphisme pour vos projets vidéo."
               h1="Qui sommes-nous ? L'équipe Explicit Crea"
             />
             <WhoUsPage />
@@ -112,8 +112,8 @@ const App: React.FC = () => {
           <Route path="/aide" element={<>
             <Seo
               path="/aide"
-              title="FAQ : questions fréquentes"
-              description="Délais, tarifs, déroulement d'un projet : toutes les réponses aux questions fréquentes sur les prestations audiovisuelles d'Explicit Crea."
+              title="FAQ : délais, tarifs, fonctionnement"
+              description="Délais, tarifs, déroulement d'un projet : les réponses aux questions fréquentes sur les prestations audiovisuelles d'Explicit Crea."
               h1="Aide et questions fréquentes"
             />
             <AidePage />

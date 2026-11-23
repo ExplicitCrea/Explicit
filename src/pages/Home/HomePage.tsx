@@ -6,7 +6,7 @@ import { EMAILJS_CONFIG } from '../../config/emailjs';
 import { ACTIVE_THEME, ACTIVE_LOGO } from '../../config/themes';
 
 // Assets
-import portfolioVideoWebm from '../../../assets/Showreel2.webm';
+import portfolioVideoWebm from '../../../assets/HeroLoop.webm';
 import legrandjd from '../../../assets/legrandjd.png';
 import maskey from '../../../assets/maskey.jpg';
 import vzion from '../../../assets/Miniature_Paul_Denham_V4.1.jpg';
